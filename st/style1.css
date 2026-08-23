@@ -278,8 +278,8 @@ body.light #themeBtn:hover {
     }
 
     .pp video {
-        width: 100%;
-        height: auto;
+        width: 260px;
+        height: 260px;
         aspect-ratio: 1 / 1;
     }
 
