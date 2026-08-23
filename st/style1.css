@@ -283,21 +283,22 @@ body.light #themeBtn:hover {
         aspect-ratio: 1 / 1;
     }
 
-    .HA {
-        width: 100%;
-        height: auto;
-        padding: 15px;
-    }
+   .HA {
+    width: 260px;
+    height: auto;
+    padding: 15px;
+    margin: auto;
+}
 
-    .HA h3 {
-        font-size: 25px;
-        margin: 15px;
-    }
+.HA h3 {
+    font-size: 24px;
+    margin: 15px;
+}
 
-    .HA p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
+.HA p {
+    font-size: 16px;
+    line-height: 1.6;
+}
 }
 
 #topBtn {
