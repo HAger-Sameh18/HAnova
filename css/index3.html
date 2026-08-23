@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+    <div id="progressBar"></div>
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../css/index2.html" class="but">CSS Lessons</a>
+        <a href="../css/index4.html" class="but" onclick="completeLesson(event, this.href, 1)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 1 : Introduction To CSS</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is CSS? — ما هي CSS؟</h2>
+
+        <p dir="rtl">
+            CSS هي اختصار للمصطلح
+            <strong>Cascading Style Sheets</strong>
+            أي <strong>أوراق الأنماط المتتالية</strong>.
+            وهي اللغة المستخدمة لتنسيق وتصميم صفحات الويب والتحكم في مظهر
+            العناصر الموجودة داخل صفحة HTML.
+        </p>
+
+        <p dir="rtl">
+            باستخدام CSS يمكننا تغيير ألوان النصوص والخلفيات، وتحديد أحجام
+            العناصر، وتغيير نوع الخط، وإضافة الحدود والمسافات، والتحكم في
+            طريقة ظهور العناصر داخل الصفحة.
+        </p>
+
+
+        <h2>2. What is the Purpose of CSS? — ما الهدف من CSS؟</h2>
+
+        <p dir="rtl">
+            الهدف الأساسي من CSS هو فصل
+            <strong>Content — المحتوى</strong>
+            عن
+            <strong>Design — التصميم</strong>.
+            حيث يتم استخدام HTML لإنشاء وتنظيم محتوى الصفحة،
+            بينما يتم استخدام CSS لتحديد الشكل والمظهر الخاص بهذا المحتوى.
+        </p>
+
+        <p dir="rtl">
+            فبدلًا من كتابة خصائص التصميم داخل كل عنصر في HTML،
+            يمكننا كتابة قواعد CSS والتحكم في عدد كبير من العناصر بسهولة.
+        </p>
+
+
+        <h2>3. CSS and HTML — العلاقة بين CSS و HTML</h2>
+
+        <p dir="rtl">
+            تعمل CSS مع HTML بشكل أساسي في تصميم صفحات الويب.
+            حيث تقوم HTML ببناء
+            <strong>Structure — هيكل</strong>
+            الصفحة، بينما تقوم CSS بتنسيق هذا الهيكل وإعطائه الشكل المناسب.
+        </p>
+
+        <div class="info">
+            <h3>HTML — Structure</h3>
+            <p dir="rtl">
+                تستخدم HTML لبناء هيكل الصفحة وتنظيم محتواها.
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>CSS — Style</h3>
+            <p dir="rtl">
+                تستخدم CSS لتنسيق الصفحة والتحكم في شكل ومظهر العناصر.
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>JavaScript — Interaction</h3>
+            <p dir="rtl">
+                تستخدم JavaScript لإضافة التفاعل والوظائف الديناميكية إلى الصفحة.
+            </p>
+        </div>
+
+
+        <h2>4. Why Do We Use CSS? — لماذا نستخدم CSS؟</h2>
+
+        <p dir="rtl">
+            نستخدم CSS للتحكم في المظهر الخارجي لصفحات الويب وجعلها أكثر
+            تنظيمًا وجاذبية وسهولة في الاستخدام.
+        </p>
+
+        <ul dir="rtl">
+            <li>تغيير ألوان النصوص والعناصر.</li>
+            <li>تغيير نوع وحجم الخطوط.</li>
+            <li>إضافة ألوان وخلفيات للصفحة.</li>
+            <li>إضافة الحدود حول العناصر.</li>
+            <li>تحديد عرض وارتفاع العناصر.</li>
+            <li>التحكم في المسافات بين العناصر.</li>
+            <li>تحديد أماكن العناصر داخل الصفحة.</li>
+            <li>إنشاء تصميم مناسب للشاشات المختلفة.</li>
+        </ul>
+
+
+        <h2>5. Is CSS a Programming Language? — هل CSS لغة برمجة؟</h2>
+
+        <p dir="rtl">
+            لا، CSS ليست لغة برمجة.
+            وإنما هي
+            <strong>Style Sheet Language — لغة تنسيق</strong>
+            تستخدم لتحديد طريقة ظهور عناصر HTML.
+        </p>
+
+        <p dir="rtl">
+            CSS لا تستخدم لتنفيذ الخوارزميات أو العمليات المنطقية مثل لغات
+            البرمجة، وإنما تركز على تصميم وتنسيق واجهة المستخدم.
+        </p>
+
+
+        <h2>6. CSS Syntax — صياغة CSS</h2>
+
+        <p dir="rtl">
+            تتكون قاعدة CSS الأساسية من ثلاثة أجزاء رئيسية:
+            <strong>Selector — المحدد</strong>،
+            <strong>Property — الخاصية</strong>،
+            و<strong>Value — القيمة</strong>.
+        </p>
+
+        <div class="code">
+            h1 {
+                color: blue;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>h1</strong>
+            هو
+            <strong>Selector — المحدد</strong>،
+            و<strong>color</strong>
+            هي
+            <strong>Property — الخاصية</strong>،
+            و<strong>blue</strong>
+            هي
+            <strong>Value — القيمة</strong>.
+        </p>
+
+
+        <h2>7. Selector — المحدد</h2>
+
+        <p dir="rtl">
+            <strong>Selector — المحدد</strong>
+            هو الجزء الذي نستخدمه لتحديد عنصر HTML الذي نريد تطبيق
+            التنسيق عليه.
+        </p>
+
+        <p dir="rtl">
+            على سبيل المثال، إذا أردنا تغيير شكل جميع عناصر
+            <strong>&lt;p&gt;</strong>
+            في الصفحة، يمكننا استخدام اسم العنصر كمحدد.
+        </p>
+
+        <div class="code">
+            p {
+                color: red;
+            }
+        </div>
+
+
+        <h2>8. Property — الخاصية</h2>
+
+        <p dir="rtl">
+            <strong>Property — الخاصية</strong>
+            تحدد الشيء الذي نريد تغييره في العنصر.
+            ومن أمثلة الخصائص:
+            <strong>color</strong>،
+            <strong>font-size</strong>،
+            <strong>background-color</strong>
+            و<strong>width</strong>.
+        </p>
+
+        <div class="code">
+            h1 {
+                color: blue;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تعتبر
+            <strong>color</strong>
+            هي الخاصية التي تحدد لون النص.
+        </p>
+
+
+        <h2>9. Value — القيمة</h2>
+
+        <p dir="rtl">
+            <strong>Value — القيمة</strong>
+            هي القيمة التي نحددها للخاصية.
+            وهي التي تحدد الشكل أو النتيجة التي نريد تطبيقها على العنصر.
+        </p>
+
+        <div class="code">
+            h1 {
+                color: blue;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تعتبر
+            <strong>blue</strong>
+            هي القيمة التي تم تحديدها للخاصية
+            <strong>color</strong>.
+        </p>
+
+
+        <h2>10. CSS Declaration — تصريح CSS</h2>
+
+        <p dir="rtl">
+            <strong>Declaration — التصريح</strong>
+            هو مجموعة
+            <strong>Property</strong>
+            و<strong>Value</strong>
+            التي تحدد التنسيق المطلوب تطبيقه على العنصر.
+        </p>
+
+        <div class="code">
+            color: blue;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>color</strong>
+            هي الخاصية،
+            و<strong>blue</strong>
+            هي القيمة،
+            والاثنان معًا يمثلان
+            <strong>Declaration — تصريح CSS</strong>.
+        </p>
+
+
+        <h2>11. CSS Rule — قاعدة CSS</h2>
+
+        <p dir="rtl">
+            <strong>CSS Rule — قاعدة CSS</strong>
+            هي مجموعة كاملة تتكون من المحدد
+            <strong>Selector</strong>
+            ومجموعة من التصريحات
+            <strong>Declarations</strong>.
+        </p>
+
+        <div class="code">
+            h1 {
+                color: blue;
+                font-size: 30px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد عنصر
+            <strong>h1</strong>
+            ثم تم تطبيق خاصيتين عليه وهما
+            <strong>color</strong>
+            و<strong>font-size</strong>.
+        </p>
+
+
+        <h2>12. Three Ways to Add CSS — طرق إضافة CSS</h2>
+
+        <p dir="rtl">
+            توجد ثلاث طرق أساسية لإضافة CSS إلى صفحات HTML،
+            وهي:
+            <strong>Inline CSS</strong>،
+            <strong>Internal CSS</strong>،
+            و<strong>External CSS</strong>.
+        </p>
+
+
+        <h2>13. Inline CSS — CSS داخل العنصر</h2>
+
+        <p dir="rtl">
+            يتم كتابة
+            <strong>Inline CSS</strong>
+            داخل عنصر HTML نفسه باستخدام الخاصية
+            <strong>style</strong>.
+        </p>
+
+        <div class="code">
+            &lt;h1 style="color: red;"&gt;
+            Welcome to CSS
+            &lt;/h1&gt;
+        </div>
+
+        <p dir="rtl">
+            في هذه الطريقة يتم تطبيق التنسيق مباشرة على العنصر الذي يحتوي
+            على الخاصية
+            <strong>style</strong>.
+        </p>
+
+
+        <h2>14. Internal CSS — CSS داخل الصفحة</h2>
+
+        <p dir="rtl">
+            يتم كتابة
+            <strong>Internal CSS</strong>
+            داخل وسم
+            <strong>&lt;style&gt;</strong>
+            الموجود عادةً داخل
+            <strong>&lt;head&gt;</strong>
+            في صفحة HTML.
+        </p>
+
+        <div class="code">
+            &lt;style&gt;
+
+            h1 {
+                color: green;
+            }
+
+            &lt;/style&gt;
+        </div>
+
+
+        <h2>15. External CSS — CSS خارجي</h2>
+
+        <p dir="rtl">
+            يتم كتابة
+            <strong>External CSS</strong>
+            في ملف CSS منفصل، ثم يتم ربطه بصفحة HTML باستخدام وسم
+            <strong>&lt;link&gt;</strong>.
+        </p>
+
+        <div class="code">
+            &lt;link rel="stylesheet" href="style.css"&gt;
+        </div>
+
+        <p dir="rtl">
+            تعتبر هذه الطريقة من أفضل الطرق عند إنشاء المواقع الكبيرة،
+            لأنها تسمح باستخدام ملف CSS واحد لتنسيق أكثر من صفحة HTML.
+        </p>
+
+
+        <h2>16. First CSS Example — أول مثال CSS</h2>
+
+        <p dir="rtl">
+            في المثال التالي سنقوم بتنسيق عنوان موجود داخل صفحة HTML،
+            وتغيير لونه وحجم الخط الخاص به.
+        </p>
+
+        <div class="code">
+            h1 {
+                color: #6c63ff;
+                font-size: 32px;
+            }
+        </div>
+
+        <p dir="rtl">
+            يقوم الكود السابق بتغيير لون العنوان إلى اللون المحدد،
+            كما يقوم بتحديد حجم الخط ليكون
+            <strong>32px</strong>.
+        </p>
+
+
+        <h2>17. Important CSS Terms — أهم مصطلحات CSS</h2>
+
+        <ul dir="rtl">
+            <li><strong>CSS</strong> — Cascading Style Sheets — أوراق الأنماط المتتالية.</li>
+            <li><strong>Selector</strong> — المحدد.</li>
+            <li><strong>Property</strong> — الخاصية.</li>
+            <li><strong>Value</strong> — القيمة.</li>
+            <li><strong>Declaration</strong> — التصريح.</li>
+            <li><strong>Rule</strong> — قاعدة CSS.</li>
+            <li><strong>Style</strong> — تنسيق أو نمط.</li>
+            <li><strong>External CSS</strong> — ملف CSS خارجي.</li>
+        </ul>
+
+
+        <h2>18. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء صفحة HTML تحتوي على عنوان باستخدام
+            <strong>&lt;h1&gt;</strong>
+            وفقرة باستخدام
+            <strong>&lt;p&gt;</strong>.
+            ثم استخدم CSS لتغيير لون العنوان وحجم الخط،
+            وحاول أيضًا تغيير لون الفقرة.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>CSS = Cascading Style Sheets = أوراق الأنماط المتتالية.</li>
+            <li>CSS تستخدم لتنسيق وتصميم صفحات الويب.</li>
+            <li>HTML تستخدم لبناء هيكل الصفحة.</li>
+            <li>CSS تستخدم للتحكم في مظهر الصفحة.</li>
+            <li>Selector = المحدد.</li>
+            <li>Property = الخاصية.</li>
+            <li>Value = القيمة.</li>
+            <li>Declaration = التصريح.</li>
+            <li>Inline CSS = CSS داخل العنصر.</li>
+            <li>Internal CSS = CSS داخل الصفحة.</li>
+            <li>External CSS = CSS في ملف خارجي.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

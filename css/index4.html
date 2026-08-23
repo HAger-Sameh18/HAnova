@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+    <div id="progressBar"></div>
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../css/index3.html" class="but">Previous Lesson</a>
+        <a href="../css/index2.html" class="but">CSS Lessons</a>
+        <a href="../css/index5.html" class="but"onclick="completeLesson(event, this.href, 2)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 2 : CSS Syntax and Selectors</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is CSS Syntax? — ما هي صياغة CSS؟</h2>
+
+        <p dir="rtl">
+            <strong>CSS Syntax — صياغة CSS</strong>
+            هي الطريقة التي يتم بها كتابة قواعد CSS بشكل صحيح حتى يستطيع
+            المتصفح فهمها وتطبيق التنسيقات على عناصر HTML.
+        </p>
+
+        <p dir="rtl">
+            تتكون قاعدة CSS الأساسية من
+            <strong>Selector — المحدد</strong>
+            ثم مجموعة من
+            <strong>Declarations — التصريحات</strong>
+            التي تحدد الخصائص والقيم التي نريد تطبيقها على العنصر.
+        </p>
+
+        <div class="code">
+            h1 {
+                color: blue;
+                font-size: 30px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>h1</strong>
+            هو المحدد،
+            بينما
+            <strong>color: blue;</strong>
+            و
+            <strong>font-size: 30px;</strong>
+            هما التصريحات التي تحدد شكل العنصر.
+        </p>
+
+
+        <h2>2. Selector — المحدد</h2>
+
+        <p dir="rtl">
+            <strong>Selector — المحدد</strong>
+            هو الجزء الذي يحدد عناصر HTML التي نريد تطبيق CSS عليها.
+        </p>
+
+        <p dir="rtl">
+            يمكن أن يكون المحدد اسم عنصر HTML أو
+            <strong>Class</strong>
+            أو
+            <strong>ID</strong>
+            أو مجموعة من المحددات الأخرى.
+        </p>
+
+        <div class="code">
+            p {
+                color: red;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم استخدام
+            <strong>p</strong>
+            كمحدد، لذلك سيتم تطبيق اللون الأحمر على عناصر الفقرات.
+        </p>
+
+
+        <h2>3. Declaration — التصريح</h2>
+
+        <p dir="rtl">
+            <strong>Declaration — التصريح</strong>
+            هو مجموعة تتكون من
+            <strong>Property — الخاصية</strong>
+            و
+            <strong>Value — القيمة</strong>
+            ويتم الفصل بينهما باستخدام علامة
+            <strong>:</strong>.
+        </p>
+
+        <div class="code">
+            color: blue;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>color</strong>
+            هي الخاصية،
+            و<strong>blue</strong>
+            هي القيمة.
+        </p>
+
+
+        <h2>4. Property and Value — الخاصية والقيمة</h2>
+
+        <p dir="rtl">
+            <strong>Property — الخاصية</strong>
+            تحدد الشيء الذي نريد تغييره،
+            بينما
+            <strong>Value — القيمة</strong>
+            تحدد القيمة التي نريد إعطاءها لهذه الخاصية.
+        </p>
+
+        <div class="code">
+            color: purple;
+            font-size: 25px;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم استخدام خاصيتين:
+            <strong>color</strong>
+            لتحديد اللون،
+            و<strong>font-size</strong>
+            لتحديد حجم الخط.
+        </p>
+
+
+        <h2>5. Curly Brackets — الأقواس المعقوفة</h2>
+
+        <p dir="rtl">
+            تستخدم الأقواس المعقوفة
+            <strong>{ }</strong>
+            لتحديد بداية ونهاية مجموعة التصريحات الخاصة بمحدد معين.
+        </p>
+
+        <div class="code">
+            h1 {
+                color: blue;
+                font-size: 30px;
+            }
+        </div>
+
+        <p dir="rtl">
+            تبدأ التصريحات بعد القوس
+            <strong>{</strong>
+            وتنتهي عند القوس
+            <strong>}</strong>.
+        </p>
+
+
+        <h2>6. Semicolon — الفاصلة المنقوطة</h2>
+
+        <p dir="rtl">
+            يتم استخدام الفاصلة المنقوطة
+            <strong>;</strong>
+            في نهاية كل تصريح CSS للفصل بين الخصائص والقيم المختلفة.
+        </p>
+
+        <div class="code">
+            h1 {
+                color: blue;
+                font-size: 30px;
+                text-align: center;
+            }
+        </div>
+
+        <p dir="rtl">
+            يفضل كتابة الفاصلة المنقوطة بعد كل تصريح حتى يكون الكود منظمًا
+            وواضحًا، وخاصة عند وجود أكثر من خاصية.
+        </p>
+
+
+        <h2>7. Element Selector — محدد العنصر</h2>
+
+        <p dir="rtl">
+            <strong>Element Selector — محدد العنصر</strong>
+            يستخدم اسم عنصر HTML مباشرةً لتطبيق التنسيق على جميع العناصر
+            التي تحمل نفس الاسم.
+        </p>
+
+        <div class="code">
+            p {
+                color: white;
+                font-size: 18px;
+            }
+        </div>
+
+        <p dir="rtl">
+            سيؤثر هذا الكود على جميع عناصر
+            <strong>&lt;p&gt;</strong>
+            الموجودة في الصفحة.
+        </p>
+
+
+        <h2>8. Class Selector — محدد الفئة</h2>
+
+        <p dir="rtl">
+            <strong>Class Selector — محدد الفئة</strong>
+            يستخدم لتنسيق عنصر أو مجموعة من العناصر التي تحمل نفس قيمة
+            <strong>class</strong>.
+        </p>
+
+        <p dir="rtl">
+            يتم كتابة النقطة
+            <strong>.</strong>
+            قبل اسم الـ Class في CSS.
+        </p>
+
+        <div class="code">
+            .title {
+                color: purple;
+            }
+        </div>
+
+        <p dir="rtl">
+            ولتطبيق هذا الـ Class على عنصر HTML نكتب:
+        </p>
+
+        <div class="code">
+            &lt;h1 class="title"&gt;
+                Welcome
+            &lt;/h1&gt;
+        </div>
+
+
+        <h2>9. ID Selector — محدد ID</h2>
+
+        <p dir="rtl">
+            <strong>ID Selector — محدد المعرف</strong>
+            يستخدم لتحديد عنصر معين باستخدام قيمة
+            <strong>id</strong>.
+        </p>
+
+        <p dir="rtl">
+            يتم كتابة علامة
+            <strong>#</strong>
+            قبل اسم الـ ID في CSS.
+        </p>
+
+        <div class="code">
+            #main-title {
+                color: blue;
+            }
+        </div>
+
+        <p dir="rtl">
+            ويتم استخدامه في HTML بالشكل التالي:
+        </p>
+
+        <div class="code">
+            &lt;h1 id="main-title"&gt;
+                Welcome
+            &lt;/h1&gt;
+        </div>
+
+
+        <h2>10. Universal Selector — المحدد العام</h2>
+
+        <p dir="rtl">
+            <strong>Universal Selector — المحدد العام</strong>
+            يستخدم لتطبيق التنسيق على جميع عناصر الصفحة.
+        </p>
+
+        <p dir="rtl">
+            يتم تمثيله بالرمز
+            <strong>*</strong>.
+        </p>
+
+        <div class="code">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم إزالة
+            <strong>margin</strong>
+            و
+            <strong>padding</strong>
+            الافتراضي من جميع عناصر الصفحة.
+        </p>
+
+
+        <h2>11. Grouping Selectors — تجميع المحددات</h2>
+
+        <p dir="rtl">
+            يمكننا تطبيق نفس التنسيق على أكثر من عنصر باستخدام
+            <strong>Grouping Selectors — تجميع المحددات</strong>.
+        </p>
+
+        <p dir="rtl">
+            يتم الفصل بين المحددات باستخدام الفاصلة
+            <strong>,</strong>.
+        </p>
+
+        <div class="code">
+            h1, h2, p {
+                color: white;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق سيتم تطبيق اللون الأبيض على عناصر
+            <strong>h1</strong>
+            و
+            <strong>h2</strong>
+            و
+            <strong>p</strong>.
+        </p>
+
+
+        <h2>12. Descendant Selector — محدد العناصر التابعة</h2>
+
+        <p dir="rtl">
+            يستخدم
+            <strong>Descendant Selector</strong>
+            لتحديد عنصر موجود داخل عنصر آخر.
+        </p>
+
+        <div class="code">
+            div p {
+                color: red;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق سيتم تطبيق التنسيق على عناصر
+            <strong>p</strong>
+            الموجودة داخل عناصر
+            <strong>div</strong>.
+        </p>
+
+
+        <h2>13. Child Selector — محدد الابن المباشر</h2>
+
+        <p dir="rtl">
+            يستخدم
+            <strong>Child Selector</strong>
+            لتحديد العناصر التي تكون أبناء مباشرين لعنصر معين.
+        </p>
+
+        <p dir="rtl">
+            يتم استخدام الرمز
+            <strong>&gt;</strong>
+            بين العنصر الأب والعنصر الابن.
+        </p>
+
+        <div class="code">
+            div &gt; p {
+                color: yellow;
+            }
+        </div>
+
+        <p dir="rtl">
+            هذا المحدد يختار عناصر
+            <strong>p</strong>
+            التي تكون أبناء مباشرين لعناصر
+            <strong>div</strong>.
+        </p>
+
+
+        <h2>14. Multiple Selectors — المحددات المتعددة</h2>
+
+        <p dir="rtl">
+            يمكن استخدام أكثر من نوع من المحددات في نفس صفحة CSS،
+            حسب العناصر التي نريد تنسيقها.
+        </p>
+
+        <div class="code">
+            h1 {
+                color: blue;
+            }
+
+            .title {
+                font-size: 30px;
+            }
+
+            #main {
+                background-color: black;
+            }
+        </div>
+
+
+        <h2>15. CSS Comments — التعليقات في CSS</h2>
+
+        <p dir="rtl">
+            <strong>CSS Comment — تعليق CSS</strong>
+            هو نص نكتبه داخل الكود لتوضيح وظيفة جزء معين من الكود،
+            ولا يقوم المتصفح بتطبيقه كتدسيق.
+        </p>
+
+        <p dir="rtl">
+            تبدأ التعليقات في CSS باستخدام
+            <strong>/*</strong>
+            وتنتهي باستخدام
+            <strong>*/</strong>.
+        </p>
+
+        <div class="code">
+            /* This is a CSS comment */
+
+            h1 {
+                color: blue;
+            }
+        </div>
+
+
+        <h2>16. Combining Selectors — دمج المحددات</h2>
+
+        <p dir="rtl">
+            يمكن دمج أكثر من محدد للوصول إلى عناصر محددة بشكل أكبر.
+        </p>
+
+        <div class="code">
+            p.title {
+                color: purple;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم تحديد عناصر
+            <strong>p</strong>
+            التي تحمل الـ Class المسمى
+            <strong>title</strong>.
+        </p>
+
+
+        <h2>17. Selector Symbols — رموز المحددات</h2>
+
+        <ul dir="rtl">
+            <li><strong>*</strong> — Universal Selector — المحدد العام.</li>
+            <li><strong>.</strong> — Class Selector — محدد الفئة.</li>
+            <li><strong>#</strong> — ID Selector — محدد المعرف.</li>
+            <li><strong>,</strong> — Grouping Selectors — تجميع المحددات.</li>
+            <li><strong>&gt;</strong> — Child Selector — محدد الابن المباشر.</li>
+            <li><strong>مسافة</strong> — Descendant Selector — محدد العناصر التابعة.</li>
+        </ul>
+
+
+        <h2>18. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء صفحة HTML تحتوي على عنوان وفقرة وعدة عناصر أخرى،
+            ثم حاول استخدام أنواع مختلفة من المحددات لتغيير ألوانها وأحجامها.
+        </p>
+
+        <p dir="rtl">
+            جرب استخدام
+            <strong>Element Selector</strong>
+            و
+            <strong>Class Selector</strong>
+            و
+            <strong>ID Selector</strong>
+            و
+            <strong>Universal Selector</strong>
+            ولاحظ الفرق بينهم.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>CSS Rule = قاعدة CSS.</li>
+            <li>Selector = المحدد.</li>
+            <li>Property = الخاصية.</li>
+            <li>Value = القيمة.</li>
+            <li>Declaration = التصريح.</li>
+            <li>Element Selector = محدد العنصر.</li>
+            <li>Class Selector = محدد الفئة.</li>
+            <li>ID Selector = محدد المعرف.</li>
+            <li>Universal Selector = المحدد العام.</li>
+            <li>Grouping Selector = تجميع المحددات.</li>
+            <li>Descendant Selector = محدد العناصر التابعة.</li>
+            <li>Child Selector = محدد الابن المباشر.</li>
+            <li>CSS Comment = تعليق CSS.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

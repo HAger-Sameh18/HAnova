@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+    <div id="progressBar"></div>
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../html/index10.html" class="but">Previous Lesson</a>
+        <a href="../html/index2.html" class="but">HTML Lessons</a>
+        <a href="../html/index12.html" class="but" onclick="completeHTML(event, this.href)"> The Next</a>
+    </div>
+
+    <h1>Lesson 9 : HTML Entities and Special Characters</h1>
+
+    <div class="lesson">
+
+        <h2>1. What are HTML Entities? — ما هي كيانات HTML؟</h2>
+
+        <p dir="rtl">
+            <strong>HTML Entities — كيانات HTML</strong> هي طريقة تستخدم لكتابة
+            بعض الرموز والحروف الخاصة داخل صفحة الويب بطريقة يفهمها المتصفح.
+            بعض الرموز لا يمكن كتابتها بشكل مباشر داخل HTML لأنها قد تتعارض
+            مع طريقة كتابة الكود أو يكون لها معنى خاص داخل HTML.
+        </p>
+
+        <p dir="rtl">
+            لذلك توفر HTML طريقة خاصة لتمثيل هذه الرموز باستخدام صيغة تبدأ
+            غالبًا بالرمز <strong>&amp;</strong> وتنتهي بالرمز
+            <strong>;</strong>.
+        </p>
+
+
+        <h2>2. Why Do We Need Entities? — لماذا نحتاج إلى Entities؟</h2>
+
+        <p dir="rtl">
+            بعض الرموز تستخدم أصلًا في كتابة HTML نفسها، لذلك إذا أردنا
+            عرضها كنص على الصفحة يجب استخدام الكيان الخاص بها.
+        </p>
+
+        <p dir="rtl">
+            على سبيل المثال، الرمزان <strong>&lt;</strong> و
+            <strong>&gt;</strong> يستخدمان في إنشاء HTML Tags.
+            لذلك إذا أردنا عرضهما للمستخدم كرموز عادية نستخدم
+            <strong>HTML Entities</strong>.
+        </p>
+
+
+        <h2>3. Entity Syntax — طريقة كتابة الكيان</h2>
+
+        <p dir="rtl">
+            الصيغة الأساسية لكيان HTML تكون عبارة عن علامة
+            <strong>&amp;</strong> ثم اسم الكيان أو رقمه، وبعد ذلك
+            <strong>;</strong>.
+        </p>
+
+        <div class="code">
+            &amp;entity_name;
+        </div>
+
+        <p dir="rtl">
+            يمكن أن تكون بعض الكيانات عبارة عن اسم معروف، ويمكن أيضًا
+            استخدام رقم خاص يسمى <strong>Numeric Character Reference</strong>.
+        </p>
+
+
+        <h2>4. Less Than — رمز أصغر من</h2>
+
+        <p dir="rtl">
+            الرمز <strong>&lt;</strong> يسمى
+            <strong>Less Than — أصغر من</strong>.
+            وهو يستخدم في HTML لبدء العناصر.
+        </p>
+
+        <p dir="rtl">
+            إذا أردنا عرضه على الصفحة كرمز عادي نستخدم:
+        </p>
+
+        <div class="code">
+            &amp;lt;
+        </div>
+
+        <p dir="rtl">
+            وسيظهر للمستخدم بالشكل:
+            <strong>&lt;</strong>
+        </p>
+
+
+        <h2>5. Greater Than — رمز أكبر من</h2>
+
+        <p dir="rtl">
+            الرمز <strong>&gt;</strong> يسمى
+            <strong>Greater Than — أكبر من</strong>.
+            ويستخدم مع الرمز السابق في كتابة HTML Tags.
+        </p>
+
+        <div class="code">
+            &amp;gt;
+        </div>
+
+        <p dir="rtl">
+            وسيظهر:
+            <strong>&gt;</strong>
+        </p>
+
+
+        <h2>6. Ampersand — علامة &amp;</h2>
+
+        <p dir="rtl">
+            الرمز <strong>&amp;</strong> يسمى
+            <strong>Ampersand — علامة العطف</strong>.
+            وهو أيضًا الرمز الذي تبدأ به معظم HTML Entities.
+        </p>
+
+        <p dir="rtl">
+            لعرض علامة &amp; نفسها داخل الصفحة يمكن استخدام:
+        </p>
+
+        <div class="code">
+            &amp;amp;
+        </div>
+
+
+        <h2>7. Non-Breaking Space — المسافة غير القابلة للكسر</h2>
+
+        <p dir="rtl">
+            الكيان <strong>&amp;nbsp;</strong> يعني
+            <strong>Non-Breaking Space — مسافة غير قابلة للكسر</strong>.
+            ويستخدم لإضافة مسافة لا يريد المتصفح فصلها أو حذفها عند
+            معالجة النص.
+        </p>
+
+        <div class="code">
+            Hello&amp;nbsp;World
+        </div>
+
+        <p dir="rtl">
+            ويمكن استخدامه عند الحاجة إلى وجود مسافة خاصة داخل النص.
+        </p>
+
+
+        <h2>8. Copyright — رمز حقوق النشر</h2>
+
+        <p dir="rtl">
+            رمز <strong>Copyright — حقوق النشر</strong> هو:
+            <strong>©</strong>.
+        </p>
+
+        <p dir="rtl">
+            ويمكن كتابته باستخدام:
+        </p>
+
+        <div class="code">
+            &amp;copy;
+        </div>
+
+        <p dir="rtl">
+            مثال:
+        </p>
+
+        <div class="code">
+            HAnova &amp;copy; 2026
+        </div>
+
+
+        <h2>9. Registered Trademark — العلامة التجارية المسجلة</h2>
+
+        <p dir="rtl">
+            الرمز <strong>®</strong> يسمى
+            <strong>Registered Trademark — علامة تجارية مسجلة</strong>.
+        </p>
+
+        <div class="code">
+            &amp;reg;
+        </div>
+
+        <p dir="rtl">
+            يستخدم هذا الرمز للدلالة على علامة تجارية مسجلة.
+        </p>
+
+
+        <h2>10. Trademark — العلامة التجارية</h2>
+
+        <p dir="rtl">
+            الرمز <strong>™</strong> يسمى
+            <strong>Trademark — علامة تجارية</strong>.
+        </p>
+
+        <div class="code">
+            &amp;trade;
+        </div>
+
+
+        <h2>11. Quotation Mark — علامات الاقتباس</h2>
+
+        <p dir="rtl">
+            يمكن استخدام Entities لعرض علامات الاقتباس بطريقة واضحة
+            داخل HTML.
+        </p>
+
+        <div class="code">
+            &amp;quot;
+        </div>
+
+        <p dir="rtl">
+            ويظهر الرمز:
+            <strong>"</strong>
+        </p>
+
+
+        <h2>12. Apostrophe — علامة الاقتباس المفردة</h2>
+
+        <p dir="rtl">
+            الرمز <strong>'</strong> يسمى
+            <strong>Apostrophe — علامة الاقتباس المفردة</strong>.
+        </p>
+
+        <div class="code">
+            &amp;apos;
+        </div>
+
+
+        <h2>13. Currency Symbols — رموز العملات</h2>
+
+        <p dir="rtl">
+            يمكن أيضًا استخدام بعض Entities لعرض رموز العملات المختلفة.
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>&amp;dollar;</strong> = $ — الدولار.</li>
+            <li><strong>&amp;euro;</strong> = € — اليورو.</li>
+            <li><strong>&amp;pound;</strong> = £ — الجنيه الإسترليني.</li>
+            <li><strong>&amp;yen;</strong> = ¥ — الين.</li>
+        </ul>
+
+        <div class="code">
+            Price: &amp;dollar;100
+            <br>
+            Price: &amp;euro;80
+        </div>
+
+
+        <h2>14. Mathematical Symbols — الرموز الرياضية</h2>
+
+        <p dir="rtl">
+            توفر HTML أيضًا Entities لبعض الرموز الرياضية التي يمكن
+            استخدامها داخل النصوص.
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>&amp;plusmn;</strong> = ±</li>
+            <li><strong>&amp;times;</strong> = ×</li>
+            <li><strong>&amp;divide;</strong> = ÷</li>
+            <li><strong>&amp;ne;</strong> = ≠</li>
+            <li><strong>&amp;le;</strong> = ≤</li>
+            <li><strong>&amp;ge;</strong> = ≥</li>
+        </ul>
+
+        <div class="code">
+            10 &amp;times; 5 = 50
+            <br>
+            20 &amp;divide; 4 = 5
+            <br>
+            5 &amp;lt; 10
+        </div>
+
+
+        <h2>15. Arrows — الأسهم</h2>
+
+        <p dir="rtl">
+            يمكن استخدام Entities لعرض بعض الأسهم داخل صفحات HTML.
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>&amp;larr;</strong> = ←</li>
+            <li><strong>&amp;rarr;</strong> = →</li>
+            <li><strong>&amp;uarr;</strong> = ↑</li>
+            <li><strong>&amp;darr;</strong> = ↓</li>
+        </ul>
+
+        <div class="code">
+            Home &amp;rarr; HTML &amp;rarr; Lesson 9
+        </div>
+
+
+        <h2>16. Currency and Special Symbols Example — مثال على الرموز</h2>
+
+        <p dir="rtl">
+            يمكن استخدام أكثر من Entity داخل نفس النص.
+        </p>
+
+        <div class="code">
+            HAnova &amp;copy; 2026
+            <br>
+            Price: &amp;dollar;50
+            <br>
+            10 &amp;times; 5 = 50
+            <br>
+            5 &amp;lt; 10
+        </div>
+
+
+        <h2>17. HTML Tags as Text — عرض Tags كالنص</h2>
+
+        <p dir="rtl">
+            من أهم استخدامات Entities في HTML هو شرح أكواد HTML نفسها.
+            فإذا أردنا أن نعرض Tag مثل
+            <strong>&lt;p&gt;</strong>
+            داخل الصفحة بدلًا من أن يقوم المتصفح بتنفيذه،
+            نستخدم Entities.
+        </p>
+
+        <div class="code">
+            &amp;lt;p&amp;gt;
+        </div>
+
+        <p dir="rtl">
+            وسيظهر للمستخدم:
+            <strong>&lt;p&gt;</strong>
+        </p>
+
+
+        <h2>18. Example of Explaining HTML Code — مثال لشرح كود HTML</h2>
+
+        <p dir="rtl">
+            عند إنشاء موقع تعليمي مثل HAnova نحتاج إلى عرض الأكواد
+            للطلاب حتى يستطيعوا قراءتها وفهمها.
+            لذلك لا يمكن كتابة بعض Tags بشكل مباشر داخل الصفحة،
+            لأن المتصفح قد يحاول تفسيرها كعناصر HTML.
+        </p>
+
+        <div class="code">
+            &amp;lt;h1&amp;gt;Hello World&amp;lt;/h1&amp;gt;
+        </div>
+
+        <p dir="rtl">
+            سيظهر الكود للطالب كما هو:
+        </p>
+
+        <div class="code">
+            &lt;h1&gt;Hello World&lt;/h1&gt;
+        </div>
+
+
+        <h2>19. Named Entities vs Numeric Entities — الكيانات الاسمية والرقمية</h2>
+
+        <p dir="rtl">
+            يمكن تمثيل بعض الرموز بطريقتين:
+            <strong>Named Entity — كيان اسمي</strong>
+            أو
+            <strong>Numeric Character Reference — مرجع حرفي رقمي</strong>.
+        </p>
+
+        <p dir="rtl">
+            الكيان الاسمي يستخدم اسمًا معروفًا للرمز، بينما الطريقة الرقمية
+            تستخدم رقمًا خاصًا يمثل الحرف أو الرمز.
+        </p>
+
+        <div class="code">
+            &amp;copy;
+            <br>
+            &amp;#169;
+        </div>
+
+        <p dir="rtl">
+            الطريقتان تستخدمان لتمثيل رمز حقوق النشر.
+        </p>
+
+
+        <h2>20. Unicode — يونيكود</h2>
+
+        <p dir="rtl">
+            <strong>Unicode — يونيكود</strong> هو معيار عالمي يستخدم لتمثيل
+            الحروف والرموز من لغات مختلفة بطريقة موحدة يمكن للأجهزة
+            والبرامج التعامل معها.
+        </p>
+
+        <p dir="rtl">
+            بفضل Unicode يمكن لصفحات الويب التعامل مع اللغة العربية
+            والإنجليزية والعديد من اللغات والرموز المختلفة.
+        </p>
+
+        <p dir="rtl">
+            ولهذا نستخدم في بداية صفحة HTML:
+        </p>
+
+        <div class="code">
+            &lt;meta charset="UTF-8"&gt;
+        </div>
+
+        <p dir="rtl">
+            حيث <strong>UTF-8</strong> هو ترميز شائع يسمح للصفحة بعرض
+            مجموعة كبيرة جدًا من الحروف والرموز.
+        </p>
+
+
+        <h2>21. Emoji — الرموز التعبيرية</h2>
+
+        <p dir="rtl">
+            يمكن لصفحات HTML عرض الرموز التعبيرية
+            <strong>Emoji — الرموز التعبيرية</strong>
+            باستخدام Unicode.
+        </p>
+
+        <div class="code">
+            &amp;#128512;
+        </div>
+
+        <p dir="rtl">
+            ويمكن استخدام الرموز التعبيرية لإضافة عناصر بصرية بسيطة
+            إلى النصوص، بشرط استخدامها بطريقة مناسبة لمحتوى الموقع.
+        </p>
+
+
+        <h2>22. Common HTML Entities — أشهر HTML Entities</h2>
+
+        <ul dir="rtl">
+            <li><strong>&amp;lt;</strong> = &lt;</li>
+            <li><strong>&amp;gt;</strong> = &gt;</li>
+            <li><strong>&amp;amp;</strong> = &amp;</li>
+            <li><strong>&amp;nbsp;</strong> = مسافة غير قابلة للكسر.</li>
+            <li><strong>&amp;quot;</strong> = "</li>
+            <li><strong>&amp;apos;</strong> = '</li>
+            <li><strong>&amp;copy;</strong> = ©</li>
+            <li><strong>&amp;reg;</strong> = ®</li>
+            <li><strong>&amp;trade;</strong> = ™</li>
+            <li><strong>&amp;euro;</strong> = €</li>
+            <li><strong>&amp;pound;</strong> = £</li>
+            <li><strong>&amp;yen;</strong> = ¥</li>
+            <li><strong>&amp;times;</strong> = ×</li>
+            <li><strong>&amp;divide;</strong> = ÷</li>
+        </ul>
+
+
+        <h2>23. Complete Example — مثال كامل</h2>
+
+        <p dir="rtl">
+            المثال التالي يجمع مجموعة من Entities داخل صفحة HTML.
+        </p>
+
+        <div class="code">
+            &lt;h1&gt;HAnova &amp;copy; 2026&lt;/h1&gt;
+            <br>
+            <br>
+            &lt;p&gt;
+            <br>
+            HTML uses &amp;lt; and &amp;gt; to write special symbols.
+            <br>
+            &lt;/p&gt;
+            <br>
+            <br>
+            &lt;p&gt;
+            Price: &amp;dollar;100
+            <br>
+            10 &amp;times; 5 = 50
+            <br>
+            &lt;/p&gt;
+        </div>
+
+
+        <h2>24. Common Mistakes — الأخطاء الشائعة</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                كتابة الرمز الخاص مباشرة عندما يكون له معنى داخل HTML.
+            </li>
+
+            <li>
+                نسيان وضع <strong>&amp;</strong> في بداية Entity.
+            </li>
+
+            <li>
+                نسيان وضع <strong>;</strong> في نهاية Entity.
+            </li>
+
+            <li>
+                كتابة اسم Entity بطريقة خاطئة.
+            </li>
+
+            <li>
+                عدم استخدام <strong>UTF-8</strong> عند الحاجة إلى دعم
+                الحروف والرموز المختلفة.
+            </li>
+
+            <li>
+                استخدام Entities بدون الحاجة إليها في كل النصوص.
+            </li>
+
+        </ul>
+
+
+        <h2>25. When Should We Use HTML Entities? — متى نستخدمها؟</h2>
+
+        <p dir="rtl">
+            نستخدم <strong>HTML Entities</strong> عندما نحتاج إلى عرض
+            رمز له معنى خاص داخل HTML، أو عندما نريد كتابة رمز بطريقة
+            موحدة يمكن للمتصفح تفسيرها بشكل صحيح.
+        </p>
+
+        <p dir="rtl">
+            وهي مفيدة بشكل خاص في المواقع التعليمية التي تشرح البرمجة،
+            لأننا نحتاج إلى عرض Tags وأجزاء من الأكواد داخل الصفحة
+            دون أن يقوم المتصفح بتفسيرها كعناصر HTML.
+        </p>
+
+
+        <h2>26. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            أنشئ صفحة HTML بسيطة تحتوي على عنوان باسم موقعك.
+            أضف فقرة تعرض الرموز
+            <strong>&lt;</strong> و<strong>&gt;</strong> و<strong>&amp;</strong>.
+            ثم أضف رمز حقوق النشر ورمز العملة ورمزًا رياضيًا.
+            حاول أيضًا كتابة Tag مثل
+            <strong>&lt;h1&gt;</strong>
+            داخل الصفحة بحيث يظهر كنص وليس كعنصر HTML.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                <strong>HTML Entity</strong> = كيان HTML.
+            </li>
+
+            <li>
+                <strong>Special Character</strong> = حرف أو رمز خاص.
+            </li>
+
+            <li>
+                <strong>&amp;lt;</strong> = رمز أصغر من.
+            </li>
+
+            <li>
+                <strong>&amp;gt;</strong> = رمز أكبر من.
+            </li>
+
+            <li>
+                <strong>&amp;amp;</strong> = علامة &amp;.
+            </li>
+
+            <li>
+                <strong>&amp;nbsp;</strong> = مسافة غير قابلة للكسر.
+            </li>
+
+            <li>
+                <strong>&amp;copy;</strong> = حقوق النشر.
+            </li>
+
+            <li>
+                <strong>&amp;reg;</strong> = علامة تجارية مسجلة.
+            </li>
+
+            <li>
+                <strong>&amp;trade;</strong> = علامة تجارية.
+            </li>
+
+            <li>
+                <strong>Unicode</strong> = معيار لتمثيل الحروف والرموز.
+            </li>
+
+            <li>
+                <strong>UTF-8</strong> = ترميز يدعم مجموعة كبيرة من الحروف والرموز.
+            </li>
+
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+        <a href="https://hager-sameh18.github.io/ME/"
+           target="_blank"
+           class="but">
+            Designed by: Eng/ HAger
+        </a>
+
+    </div>
+    <button id="topBtn">↑</button>
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../css/index4.html" class="but">Previous Lesson</a>
+        <a href="../css/index2.html" class="but">CSS Lessons</a>
+        <a href="../css/index6.html" class="but"onclick="completeLesson(event, this.href, 3)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 3 : Colors, Text and Fonts</h1>
+
+    <div class="lesson">
+
+        <h2>1. CSS Colors — ألوان CSS</h2>
+
+        <p dir="rtl">
+            تستخدم CSS للتحكم في ألوان عناصر صفحة الويب، مثل لون النص
+            ولون الخلفية ولون الحدود.
+            ويمكن تحديد الألوان بعدة طرق مختلفة.
+        </p>
+
+        <p dir="rtl">
+            من أشهر طرق كتابة الألوان في CSS:
+            <strong>Color Names</strong>،
+            <strong>Hexadecimal</strong>،
+            <strong>RGB</strong>،
+            و<strong>RGBA</strong>.
+        </p>
+
+
+        <h2>2. Color Property — خاصية Color</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>color</strong>
+            لتحديد لون النص داخل العنصر.
+        </p>
+
+        <div class="code">
+            h1 {
+            color: blue;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق سيتم تغيير لون النص الموجود داخل
+            <strong>h1</strong>
+            إلى اللون الأزرق.
+        </p>
+
+
+        <h2>3. Color Names — أسماء الألوان</h2>
+
+        <p dir="rtl">
+            يمكن كتابة اللون في CSS باستخدام اسمه مباشرةً.
+            وتحتوي CSS على العديد من أسماء الألوان المعروفة.
+        </p>
+
+        <div class="code">
+            h1 {
+            color: red;
+            }
+
+            p {
+            color: green;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم استخدام أسماء الألوان
+            <strong>red</strong>
+            و
+            <strong>green</strong>.
+        </p>
+
+
+        <h2>4. Hexadecimal Colors — ألوان Hexadecimal</h2>
+
+        <p dir="rtl">
+            يمكن تحديد الألوان باستخدام نظام
+            <strong>Hexadecimal</strong>
+            أو ما يسمى
+            <strong>Hex Color</strong>.
+        </p>
+
+        <p dir="rtl">
+            يبدأ اللون السداسي عشر عادةً بالرمز
+            <strong>#</strong>
+            ويتكون من ستة أرقام أو حروف.
+        </p>
+
+        <div class="code">
+            h1 {
+            color: #6c63ff;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم استخدام اللون
+            <strong>#6c63ff</strong>
+            لتحديد لون النص.
+        </p>
+
+
+        <h2>5. RGB Colors — ألوان RGB</h2>
+
+        <p dir="rtl">
+            <strong>RGB</strong>
+            هي اختصار لـ
+            <strong>Red, Green, Blue</strong>.
+            ويعتمد نظام RGB على دمج الألوان الأحمر والأخضر والأزرق
+            للحصول على ألوان مختلفة.
+        </p>
+        <p dir="rtl">
+            يتم تحديد قيمة كل لون من خلال رقم يتراوح عادةً من
+            <strong>0</strong>
+            إلى
+            <strong>255</strong>.
+        </p>
+
+        <div class="code">
+            h1 {
+            color: rgb(108, 99, 255);
+            }
+        </div>
+
+        <h2>6. RGBA Colors — ألوان RGBA</h2>
+
+        <p dir="rtl">
+            <strong>RGBA</strong>
+            تشبه RGB، ولكنها تضيف قيمة رابعة تسمى
+            <strong>Alpha</strong>
+            للتحكم في درجة الشفافية.
+        </p>
+
+        <p dir="rtl">
+            قيمة
+            <strong>Alpha</strong>
+            تكون بين
+            <strong>0</strong>
+            و<strong>1</strong>.
+            حيث يمثل
+            <strong>0</strong>
+            الشفافية الكاملة، بينما يمثل
+            <strong>1</strong>
+            اللون بدون شفافية.
+        </p>
+
+
+        <div class="code">
+            p {
+            color: rgba(108, 99, 255, 0.7);
+            }
+        </div>
+
+
+        <h2>7. Background Color — لون الخلفية</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>background-color</strong>
+            لتحديد لون خلفية العنصر.
+        </p>
+
+        <div class="code">
+            body {
+            background-color: #1e293b;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد لون خلفية الصفحة.
+        </p>
+
+
+        <h2>8. Text Color — لون النص</h2>
+
+        <p dir="rtl">
+            يمكن استخدام الخاصية
+            <strong>color</strong>
+            لتغيير لون النصوص داخل عناصر HTML.
+        </p>
+
+        <div class="code">
+            p {
+            color: white;
+            }
+        </div>
+
+        <p dir="rtl">
+            سيؤدي الكود السابق إلى جعل النص الموجود داخل الفقرات باللون الأبيض.
+        </p>
+
+
+        <h2>9. Text Alignment — محاذاة النص</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>text-align</strong>
+            لتحديد طريقة محاذاة النص داخل العنصر.
+        </p>
+
+        <p dir="rtl">
+            من أشهر القيم:
+            <strong>left</strong>،
+            <strong>center</strong>،
+            <strong>right</strong>،
+            و<strong>justify</strong>.
+        </p>
+
+        <div class="code">
+            h1 {
+            text-align: center;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق سيتم وضع النص في منتصف العنصر.
+        </p>
+
+
+        <h2>10. Text Decoration — زخرفة النص</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>text-decoration</strong>
+            لإضافة أو إزالة زخرفة معينة من النص.
+        </p>
+
+        <div class="code">
+            a {
+            text-decoration: none;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إزالة الخط الموجود أسفل الرابط.
+        </p>
+
+
+        <h2>11. Text Transformation — تحويل حالة النص</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>text-transform</strong>
+            للتحكم في حالة الأحرف الإنجليزية داخل النص.
+        </p>
+
+        <p dir="rtl">
+            القيمة
+            <strong>uppercase</strong>
+            تجعل الحروف الإنجليزية كبيرة.
+        </p>
+
+        <div class="code">
+            p {
+            text-transform: uppercase;
+            }
+        </div>
+
+
+        <h2>12. Text Shadow — ظل النص</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>text-shadow</strong>
+            لإضافة ظل إلى النص.
+        </p>
+
+        <p dir="rtl">
+            يمكن التحكم في اتجاه الظل وحجمه ودرجة التمويه ولونه.
+        </p>
+
+        <div class="code">
+            h1 {
+            text-shadow: 2px 2px 5px black;
+            }
+        </div>
+
+        <h2>13. Font Family — نوع الخط</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>font-family</strong>
+            لتحديد نوع الخط المستخدم في النص.
+        </p>
+
+        <div class="code">
+            body {
+            font-family: Arial, sans-serif;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد
+            <strong>Arial</strong>
+            كخط أساسي، مع وضع
+            <strong>sans-serif</strong>
+            كخط بديل.
+        </p>
+
+
+        <h2>14. Font Size — حجم الخط</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>font-size</strong>
+            لتحديد حجم النص.
+        </p>
+
+        <div class="code">
+            h1 {
+            font-size: 32px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد حجم الخط ليكون
+            <strong>32px</strong>.
+        </p>
+
+
+        <h2>15. Font Weight — سمك الخط</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>font-weight</strong>
+            للتحكم في سمك الخط.
+        </p>
+
+        <p dir="rtl">
+            يمكن استخدام قيم مثل
+            <strong>normal</strong>
+            و<strong>bold</strong>
+            أو استخدام أرقام مثل
+            <strong>400</strong>
+            و<strong>700</strong>.
+        </p>
+
+        <div class="code">
+            h1 {
+            font-weight: bold;
+            }
+        </div>
+
+
+
+        <h2>16. Font Style — نمط الخط</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>font-style</strong>
+            لتحديد نمط الخط، مثل جعل النص مائلًا.
+        </p>
+
+        <div class="code">
+            p {
+            font-style: italic;
+            }
+        </div>
+
+
+        <h2>17. Line Height — ارتفاع السطر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>line-height</strong>
+            للتحكم في المسافة الرأسية بين أسطر النص.
+        </p>
+        <p dir="rtl">
+            تساعد هذه الخاصية على جعل النصوص الطويلة أكثر وضوحًا وسهولة في القراءة.
+        </p>
+        <div class="code">
+            p {
+            line-height: 1.8;
+            }
+        </div>
+
+
+
+
+        <h2>18. Letter Spacing — المسافة بين الحروف</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>letter-spacing</strong>
+            للتحكم في المسافة بين الحروف.
+        </p>
+
+        <div class="code">
+            h1 {
+            letter-spacing: 2px;
+            }
+        </div>
+
+
+        <h2>19. Word Spacing — المسافة بين الكلمات</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>word-spacing</strong>
+            للتحكم في المسافة بين الكلمات.
+        </p>
+
+        <div class="code">
+            p {
+            word-spacing: 5px;
+            }
+        </div>
+
+
+        <h2>20. Combining Text and Font Properties — دمج خصائص النص والخط</h2>
+
+        <p dir="rtl">
+            يمكن استخدام أكثر من خاصية في نفس قاعدة CSS للحصول على تنسيق
+            متكامل للنص.
+        </p>
+
+        <div class="code">
+            h1 {
+            color: #6c63ff;
+            font-family: Arial, sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 5px black;
+            }
+        </div>
+
+
+        <h2>21. Important Text and Font Properties — أهم خصائص النصوص والخطوط</h2>
+
+        <ul dir="rtl">
+            <li><strong>color</strong> — تحديد لون النص.</li>
+            <li><strong>background-color</strong> — تحديد لون الخلفية.</li>
+            <li><strong>text-align</strong> — محاذاة النص.</li>
+            <li><strong>text-decoration</strong> — زخرفة النص.</li>
+            <li><strong>text-transform</strong> — تحويل حالة النص.</li>
+            <li><strong>text-shadow</strong> — إضافة ظل للنص.</li>
+            <li><strong>font-family</strong> — تحديد نوع الخط.</li>
+            <li><strong>font-size</strong> — تحديد حجم الخط.</li>
+            <li><strong>font-weight</strong> — تحديد سمك الخط.</li>
+            <li><strong>font-style</strong> — تحديد نمط الخط.</li>
+            <li><strong>line-height</strong> — تحديد ارتفاع السطر.</li>
+            <li><strong>letter-spacing</strong> — المسافة بين الحروف.</li>
+            <li><strong>word-spacing</strong> — المسافة بين الكلمات.</li>
+        </ul>
+
+
+        <h2>22. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء عنوان وفقرة باستخدام HTML، ثم استخدم CSS لتغيير
+            لون النص وحجم الخط ونوعه ومحاذاته.
+            حاول أيضًا إضافة ظل للنص وتغيير المسافة بين الحروف.
+        </p>
+
+        <p dir="rtl">
+            جرب استخدام أكثر من طريقة لكتابة الألوان مثل
+            <strong>Color Name</strong>
+            و<strong>Hex</strong>
+            و<strong>RGB</strong>
+            ولاحظ الفرق بينها.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>color = لون النص.</li>
+            <li>background-color = لون الخلفية.</li>
+            <li>text-align = محاذاة النص.</li>
+            <li>text-decoration = زخرفة النص.</li>
+            <li>text-transform = تحويل حالة النص.</li>
+            <li>text-shadow = ظل النص.</li>
+            <li>font-family = نوع الخط.</li>
+            <li>font-size = حجم الخط.</li>
+            <li>font-weight = سمك الخط.</li>
+            <li>font-style = نمط الخط.</li>
+            <li>line-height = ارتفاع السطر.</li>
+            <li>letter-spacing = المسافة بين الحروف.</li>
+            <li>word-spacing = المسافة بين الكلمات.</li>
+            <li>يمكن كتابة الألوان باستخدام Names و Hex و RGB و RGBA.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

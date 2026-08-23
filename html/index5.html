@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+    <div id="progressBar"></div>
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../html/index4.html" class="but">Previous Lesson</a>
+        <a href="../html/index2.html" class="but">HTML Lessons</a>
+        <a href="../html/index6.html" class="but" onclick="completeLesson(event, this.href, 3)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 3 : Links And Images</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is a Link? — ما هو الرابط؟</h2>
+
+        <p dir="rtl">
+            <strong>Link — الرابط</strong> هو عنصر يسمح للمستخدم بالانتقال من صفحة
+            إلى صفحة أخرى أو الانتقال إلى موقع آخر أو جزء مختلف من نفس الصفحة.
+            وتعتبر الروابط من أهم عناصر مواقع الويب لأنها تربط صفحات الموقع ببعضها.
+        </p>
+
+        <h2>2. Anchor Element — عنصر الرابط</h2>
+
+        <p dir="rtl">
+            يستخدم العنصر <strong>a</strong> لإنشاء رابط، وهو اختصار لكلمة
+            <strong>Anchor — مرساة</strong>.
+            أما <strong>href</strong> فهي اختصار لفكرة
+            <strong>Hypertext Reference — مرجع النص التشعبي</strong>
+            وتحدد المكان الذي سينتقل إليه المستخدم.
+        </p>
+
+        <div class="code">
+            &lt;a href="https://www.google.com"&gt;
+            Visit Google
+            &lt;/a&gt;
+        </div>
+
+
+        <h2>3. Link Text — نص الرابط</h2>
+
+        <p dir="rtl">
+            النص الموجود بين وسم الفتح ووسم الإغلاق هو
+            <strong>Link Text — نص الرابط</strong>.
+            وهو النص الذي يراه المستخدم ويمكنه الضغط عليه.
+        </p>
+
+        <div class="code">
+            &lt;a href="lesson1.html"&gt;
+            Introduction To HTML
+            &lt;/a&gt;
+        </div>
+
+        <h2>4. External Link — رابط خارجي</h2>
+
+        <p dir="rtl">
+            <strong>External Link — الرابط الخارجي</strong> هو رابط ينقل المستخدم
+            إلى موقع مختلف عن الموقع الحالي.
+        </p>
+
+        <div class="code">
+            &lt;a href="https://www.google.com"&gt;
+            Google
+            &lt;/a&gt;
+        </div>
+
+        <h2>5. Internal Link — رابط داخلي</h2>
+
+        <p dir="rtl">
+            <strong>Internal Link — الرابط الداخلي</strong> يستخدم للانتقال بين
+            صفحات الموقع نفسه.
+            وهذا النوع مهم جدًا في موقعنا لأنه يسمح للمستخدم بالتنقل بين الدروس.
+        </p>
+
+        <div class="code">
+            &lt;a href="lesson2.html"&gt;
+            HTML Structure
+            &lt;/a&gt;
+        </div>
+
+        <h2>6. Target Attribute — خاصية الهدف</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>target</strong> تحدد المكان الذي سيتم فيه فتح الرابط.
+            وعندما نستخدم القيمة <strong>_blank</strong> يتم فتح الرابط في علامة
+            تبويب جديدة.
+        </p>
+
+        <div class="code">
+            &lt;a href="https://example.com" target="_blank"&gt;
+            Visit Website
+            &lt;/a&gt;
+        </div>
+
+
+
+        <h2>7. Email Link — رابط البريد الإلكتروني</h2>
+
+        <p dir="rtl">
+            يمكن إنشاء رابط لفتح تطبيق البريد الإلكتروني باستخدام
+            <strong>mailto:</strong>.
+            وعند الضغط عليه يستطيع المستخدم كتابة رسالة بريد إلكتروني.
+        </p>
+
+        <div class="code">
+            &lt;a href="mailto:example@gmail.com"&gt;
+            Send Email
+            &lt;/a&gt;
+        </div>
+
+
+
+        <h2>8. What is an Image? — ما هي الصورة؟</h2>
+
+        <p dir="rtl">
+            <strong>Image — الصورة</strong> هي عنصر مرئي يمكن إضافته إلى صفحة الويب
+            لتوضيح المعلومات أو جعل الصفحة أكثر جاذبية.
+        </p>
+
+        <h2>9. Image Element — عنصر الصورة</h2>
+
+        <p dir="rtl">
+            نستخدم العنصر <strong>img</strong> لإضافة صورة إلى الصفحة.
+            وهو عنصر لا يحتاج إلى Closing Tag.
+        </p>
+
+        <div class="code">
+            &lt;img src="image.jpg" alt="Beautiful Image"&gt;
+        </div>
+
+
+        <h2>10. src Attribute — خاصية مصدر الصورة</h2>
+
+        <p dir="rtl">
+            <strong>src</strong> اختصار لـ <strong>Source — المصدر</strong>.
+            وتستخدم لتحديد مكان الصورة أو اسم ملف الصورة الذي نريد عرضه.
+        </p>
+
+        <div class="code">
+            &lt;img src="HTML.jpeg"&gt;
+        </div>
+
+        <h2>11. alt Attribute — النص البديل</h2>
+
+        <p dir="rtl">
+            <strong>alt</strong> اختصار لـ <strong>Alternative Text — النص البديل</strong>.
+            وهو وصف مختصر لمحتوى الصورة.
+            إذا لم يتم تحميل الصورة يستطيع المستخدم معرفة محتواها من النص البديل.
+            كما يساعد أدوات قراءة الشاشة على فهم الصور.
+        </p>
+
+        <div class="code">
+            &lt;img src="HTML.jpeg" alt="HTML Logo"&gt;
+        </div>
+
+
+
+        <h2>12. Image Width and Height — عرض وارتفاع الصورة</h2>
+
+        <p dir="rtl">
+            يمكن تحديد أبعاد الصورة باستخدام
+            <strong>width — العرض</strong>
+            و<strong>height — الارتفاع</strong>.
+        </p>
+
+        <div class="code">
+            &lt;img src="image.jpg"
+            width="300"
+            height="200"
+            alt="Landscape"&gt;
+        </div>
+
+
+        <h2>13. Relative Path — المسار النسبي</h2>
+
+        <p dir="rtl">
+            <strong>Relative Path — المسار النسبي</strong> يستخدم للوصول إلى ملف
+            موجود داخل ملفات المشروع.
+            في المثال السابق توجد الصورة داخل مجلد يسمى
+            <strong>images</strong>.
+        </p>
+
+        <div class="code">
+            &lt;img src="images/photo.jpg" alt="Photo"&gt;
+        </div>
+
+        <h2>14. Images Folder — مجلد الصور</h2>
+
+        <p dir="rtl">
+            من الأفضل تنظيم ملفات الموقع داخل مجلدات حتى يكون المشروع مرتبًا
+            وسهل التعامل معه. يمكن إنشاء مجلد باسم <strong>images</strong>
+            ووضع جميع الصور بداخله.
+        </p>
+
+        <p dir="rtl">
+            على سبيل المثال، إذا كان شكل المشروع كالتالي:
+        </p>
+
+        <div class="code">
+            My Website
+            <br>
+            │
+            ├── index.html
+            <br>
+            ├── lesson3.html
+            <br>
+            ├── lesson.css
+            <br>
+            │
+            └── images
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;├── HTML.jpeg
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;├── CSS.jpeg
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;└── JS.jpeg
+        </div>
+
+        <p dir="rtl">
+            فإننا نستخدم المسار النسبي للوصول إلى الصورة الموجودة داخل مجلد
+            <strong>images</strong>.
+        </p>
+
+        <div class="code">
+            &lt;img src="images/HTML.jpeg" alt="HTML Logo"&gt;
+        </div>
+
+        <p dir="rtl">
+            كلمة <strong>images</strong> تعني اسم المجلد، وبعدها نكتب اسم الصورة
+            وامتدادها. لذلك يجب أن يكون اسم الملف المكتوب في الكود مطابقًا
+            لاسم الملف الحقيقي.
+        </p>
+        <h2>15. Absolute URL — العنوان الكامل</h2>
+
+        <p dir="rtl">
+            يمكن استخدام عنوان كامل للصورة يسمى
+            <strong>Absolute URL — عنوان URL كامل</strong>
+            للوصول إلى صورة موجودة على الإنترنت.
+        </p>
+
+        <div class="code">
+            &lt;img src="https://example.com/photo.jpg"
+            alt="Photo"&gt;
+        </div>
+
+        <h2>16. Image as a Link — جعل الصورة رابطًا</h2>
+
+        <p dir="rtl">
+            يمكن وضع عنصر الصورة داخل عنصر الرابط.
+            وبذلك تصبح الصورة قابلة للضغط، وعند الضغط عليها ينتقل المستخدم
+            إلى الصفحة المحددة في href.
+        </p>
+
+        <div class="code">
+            &lt;a href="index.html"&gt;<br>
+            &nbsp;&nbsp;&lt;img src="home.jpg" alt="Home"&gt;<br>
+            &lt;/a&gt;
+        </div>
+
+
+        <h2>17. Common Image Formats — أشهر صيغ الصور</h2>
+
+        <ul dir="rtl">
+            <li><strong>JPG / JPEG</strong> — مناسبة للصور الفوتوغرافية.</li>
+            <li><strong>PNG</strong> — تدعم الخلفية الشفافة.</li>
+            <li><strong>GIF</strong> — يمكن استخدامها للصور المتحركة البسيطة.</li>
+            <li><strong>SVG</strong> — مناسبة للرسومات والشعارات المتجهة.</li>
+            <li><strong>WebP</strong> — صيغة حديثة تساعد على تقليل حجم الصور.</li>
+        </ul>
+
+        <h2>18. Common Mistakes — الأخطاء الشائعة</h2>
+
+        <ul dir="rtl">
+            <li>نسيان كتابة href في الرابط.</li>
+            <li>كتابة عنوان URL بطريقة خاطئة.</li>
+            <li>نسيان src في عنصر الصورة.</li>
+            <li>كتابة اسم ملف الصورة بطريقة مختلفة عن اسم الملف الحقيقي.</li>
+            <li>نسيان alt.</li>
+            <li>وضع الصورة في مجلد مختلف عن المسار المكتوب في الكود.</li>
+        </ul>
+
+        <h2>19. Complete Example — مثال كامل</h2>
+
+        <div class="code">
+            &lt;h1&gt;Learn HTML&lt;/h1&gt;<br>
+            <br>
+            &lt;p&gt;HTML is the foundation of web pages.&lt;/p&gt;<br>
+            <br>
+            &lt;a href="lesson2.html"&gt;<br>
+            Learn HTML Structure<br>
+            &lt;/a&gt;<br>
+            <br>
+            &lt;br&gt;&lt;br&gt;<br>
+            <br>
+            &lt;a href="https://www.google.com" target="_blank"&gt;<br>
+            Visit Google<br>
+            &lt;/a&gt;<br>
+            <br>
+            &lt;br&gt;&lt;br&gt;<br>
+            <br>
+            &lt;img src="HTML.jpeg"
+            alt="HTML Logo"
+            width="300"&gt;
+        </div>
+
+        <h2>20. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            أنشئ صفحة تحتوي على عنوان وفقرة وصورة.
+            بعد ذلك أضف رابطًا داخليًا ينقلك إلى صفحة أخرى داخل موقعك،
+            ثم أضف رابطًا خارجيًا يفتح موقعًا آخر في علامة تبويب جديدة.
+            حاول أيضًا جعل الصورة نفسها رابطًا قابلًا للضغط.
+        </p>
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Link = رابط.</li>
+            <li>Anchor = عنصر الرابط.</li>
+            <li>href = عنوان الرابط.</li>
+            <li>target = تحديد مكان فتح الرابط.</li>
+            <li>Image = صورة.</li>
+            <li>src = مصدر الصورة.</li>
+            <li>alt = النص البديل.</li>
+            <li>width = العرض.</li>
+            <li>height = الارتفاع.</li>
+            <li>Internal Link = رابط داخلي.</li>
+            <li>External Link = رابط خارجي.</li>
+            <li>URL = عنوان المورد على الإنترنت.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+              <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">Designed by: Eng/ HAger</a>
+
+    </div>
+    <button id="topBtn">↑</button>
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

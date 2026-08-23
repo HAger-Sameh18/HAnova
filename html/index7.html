@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+    <div id="progressBar"></div>
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../html/index6.html" class="but">Previous Lesson</a>
+        <a href="../html/index2.html" class="but">HTML Lessons</a>
+        <a href="../html/index8.html" class="but" onclick="completeLesson(event, this.href, 5)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 5 : HTML Lists</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is a List? — ما هي القائمة؟</h2>
+
+        <p dir="rtl">
+            <strong>List — القائمة</strong> هي طريقة لتنظيم مجموعة من المعلومات أو
+            العناصر بطريقة مرتبة وسهلة القراءة.
+            وتستخدم القوائم في صفحات الويب لعرض الخطوات، أو الأدوات، أو المنتجات،
+            أو الموضوعات، أو أي مجموعة من العناصر المرتبطة ببعضها.
+        </p>
+
+        <p dir="rtl">
+            تستخدم HTML ثلاثة أنواع رئيسية من القوائم:
+            <strong>Unordered List</strong>، و<strong>Ordered List</strong>،
+            و<strong>Description List</strong>.
+        </p>
+
+
+        <h2>2. Types of Lists — أنواع القوائم</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                <strong>Unordered List — القائمة غير المرتبة</strong>
+                <br>
+                تستخدم عندما لا يكون ترتيب العناصر مهمًا.
+            </li>
+
+            <li>
+                <strong>Ordered List — القائمة المرتبة</strong>
+                <br>
+                تستخدم عندما يكون ترتيب العناصر مهمًا.
+            </li>
+
+            <li>
+                <strong>Description List — قائمة الوصف</strong>
+                <br>
+                تستخدم لعرض مصطلحات مع وصف أو شرح لكل مصطلح.
+            </li>
+
+        </ul>
+
+
+        <h2>3. Unordered List — القائمة غير المرتبة</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;ul&gt;</strong> هو اختصار لـ
+            <strong>Unordered List</strong>، أي القائمة غير المرتبة.
+            وتظهر عناصرها عادةً على شكل نقاط.
+        </p>
+
+        <div class="code">
+            &lt;ul&gt;
+
+            &nbsp;&nbsp;&lt;li&gt;HTML&lt;/li&gt;
+            &nbsp;&nbsp;&lt;li&gt;CSS&lt;/li&gt;
+            &nbsp;&nbsp;&lt;li&gt;JavaScript&lt;/li&gt;
+
+            &lt;/ul&gt;
+        </div>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;li&gt;</strong> هو اختصار لـ
+            <strong>List Item — عنصر في القائمة</strong>،
+            ويستخدم لكتابة كل عنصر من عناصر القائمة.
+        </p>
+
+
+        <h2>4. List Item — عنصر القائمة</h2>
+
+        <p dir="rtl">
+            لا نكتب العناصر مباشرة داخل <strong>&lt;ul&gt;</strong> أو
+            <strong>&lt;ol&gt;</strong>، وإنما نضع كل عنصر داخل
+            <strong>&lt;li&gt;</strong>.
+        </p>
+
+        <div class="code">
+            &lt;ul&gt;
+
+            &nbsp;&nbsp;&lt;li&gt;First Item&lt;/li&gt;
+            &nbsp;&nbsp;&lt;li&gt;Second Item&lt;/li&gt;
+            &nbsp;&nbsp;&lt;li&gt;Third Item&lt;/li&gt;
+
+            &lt;/ul&gt;
+        </div>
+
+
+        <h2>5. Ordered List — القائمة المرتبة</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;ol&gt;</strong> هو اختصار لـ
+            <strong>Ordered List — القائمة المرتبة</strong>.
+            ويستخدم عندما يكون ترتيب العناصر مهمًا.
+            وتظهر العناصر افتراضيًا بأرقام.
+        </p>
+
+        <div class="code">
+            &lt;ol&gt;
+
+            &nbsp;&nbsp;&lt;li&gt;Open HTML file&lt;/li&gt;
+            &nbsp;&nbsp;&lt;li&gt;Write the code&lt;/li&gt;
+            &nbsp;&nbsp;&lt;li&gt;Save the file&lt;/li&gt;
+            &nbsp;&nbsp;&lt;li&gt;Open it in the browser&lt;/li&gt;
+
+            &lt;/ol&gt;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم استخدام القائمة المرتبة لعرض خطوات بالترتيب،
+            لأن ترتيب الخطوات مهم.
+        </p>
+
+
+        <h2>6. Unordered vs Ordered List</h2>
+
+        <p dir="rtl">
+            الفرق الأساسي بين النوعين هو أن <strong>Unordered List</strong> تستخدم
+            عندما لا يكون هناك ترتيب ضروري للعناصر، بينما
+            <strong>Ordered List</strong> تستخدم عندما يكون ترتيب العناصر مهمًا.
+        </p>
+
+        <div class="code">
+            &lt;!-- Unordered List --&gt;
+
+            &lt;ul&gt;
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+            &lt;/ul&gt;
+
+
+            &lt;!-- Ordered List --&gt;
+
+            &lt;ol&gt;
+            &lt;li&gt;Step One&lt;/li&gt;
+            &lt;li&gt;Step Two&lt;/li&gt;
+            &lt;li&gt;Step Three&lt;/li&gt;
+            &lt;/ol&gt;
+        </div>
+
+
+        <h2>7. Ordered List Types — أنواع الترقيم</h2>
+
+        <p dir="rtl">
+            يمكن تغيير شكل الترقيم في القائمة المرتبة باستخدام الخاصية
+            <strong>type</strong>.
+        </p>
+
+        <p dir="rtl">
+            يمكن أن تكون القيم:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>1</strong> — أرقام.</li>
+            <li><strong>A</strong> — حروف إنجليزية كبيرة.</li>
+            <li><strong>a</strong> — حروف إنجليزية صغيرة.</li>
+            <li><strong>I</strong> — أرقام رومانية كبيرة.</li>
+            <li><strong>i</strong> — أرقام رومانية صغيرة.</li>
+        </ul>
+
+        <div class="code">
+            &lt;ol type="A"&gt;
+
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+
+            &lt;/ol&gt;
+        </div>
+
+
+        <h2>8. Start Attribute — تحديد بداية الترقيم</h2>
+
+        <p dir="rtl">
+            يمكن استخدام الخاصية <strong>start</strong> لتحديد الرقم الذي تبدأ منه
+            القائمة المرتبة.
+        </p>
+
+        <div class="code">
+            &lt;ol start="5"&gt;
+
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+
+            &lt;/ol&gt;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق ستبدأ القائمة من الرقم 5 بدلًا من الرقم 1.
+        </p>
+
+
+        <h2>9. Reversed List — القائمة المعكوسة</h2>
+
+        <p dir="rtl">
+            يمكن استخدام الخاصية <strong>reversed</strong> لجعل القائمة المرتبة
+            تبدأ من الرقم الأكبر ثم تنخفض تدريجيًا.
+        </p>
+
+        <div class="code">
+            &lt;ol reversed&gt;
+
+            &lt;li&gt;Third&lt;/li&gt;
+            &lt;li&gt;Second&lt;/li&gt;
+            &lt;li&gt;First&lt;/li&gt;
+
+            &lt;/ol&gt;
+        </div>
+
+
+        <h2>10. Nested Lists — القوائم المتداخلة</h2>
+
+        <p dir="rtl">
+            <strong>Nested List — القائمة المتداخلة</strong> هي قائمة يتم وضعها
+            داخل عنصر من عناصر قائمة أخرى.
+            وتستخدم عندما نريد تقسيم المعلومات إلى أقسام رئيسية وفرعية.
+        </p>
+
+        <div class="code">
+            &lt;ul&gt;
+
+            &lt;li&gt;Front-End Development
+
+            &lt;ul&gt;
+
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+
+            &lt;/ul&gt;
+
+            &lt;/li&gt;
+
+            &lt;li&gt;Back-End Development&lt;/li&gt;
+
+            &lt;/ul&gt;
+        </div>
+
+
+        <h2>11. Description List — قائمة الوصف</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;dl&gt;</strong> هو اختصار لـ
+            <strong>Description List — قائمة الوصف</strong>.
+            وتستخدم لعرض مصطلحات مع تعريف أو وصف لكل مصطلح.
+        </p>
+
+        <p dir="rtl">
+            وتتكون من عنصرين أساسيين:
+        </p>
+
+        <ul dir="rtl">
+            <li>
+                <strong>&lt;dt&gt;</strong> =
+                <strong>Description Term — المصطلح</strong>
+            </li>
+
+            <li>
+                <strong>&lt;dd&gt;</strong> =
+                <strong>Description Details — وصف المصطلح</strong>
+            </li>
+        </ul>
+
+        <div class="code">
+            &lt;dl&gt;
+
+            &lt;dt&gt;HTML&lt;/dt&gt;
+
+            &lt;dd&gt;
+            HTML is used to create the structure of web pages.
+            &lt;/dd&gt;
+
+            &lt;dt&gt;CSS&lt;/dt&gt;
+
+            &lt;dd&gt;
+            CSS is used to style web pages.
+            &lt;/dd&gt;
+
+            &lt;/dl&gt;
+        </div>
+
+
+        <h2>12. Lists in Web Development — استخدام القوائم في المواقع</h2>
+
+        <p dir="rtl">
+            القوائم من أكثر العناصر استخدامًا في مواقع الويب.
+            فيمكن استخدامها لإنشاء قائمة التنقل
+            <strong>Navigation Menu</strong>، أو قائمة الخدمات، أو قائمة المنتجات،
+            أو خطوات تنفيذ مهمة، أو قائمة بالمميزات.
+        </p>
+
+        <p dir="rtl">
+            على سبيل المثال، يمكن إنشاء قائمة لمحتويات موقع تعليمي:
+        </p>
+
+        <div class="code">
+            &lt;ul&gt;
+
+            &lt;li&gt;HTML Lessons&lt;/li&gt;
+            &lt;li&gt;CSS Lessons&lt;/li&gt;
+            &lt;li&gt;JavaScript Lessons&lt;/li&gt;
+            &lt;li&gt;Projects&lt;/li&gt;
+
+            &lt;/ul&gt;
+        </div>
+
+
+        <h2>13. List With Links — قائمة تحتوي على روابط</h2>
+
+        <p dir="rtl">
+            يمكن وضع الروابط داخل عناصر القائمة لإنشاء قوائم تنقل في صفحات
+            المواقع.
+        </p>
+
+        <div class="code">
+            &lt;ul&gt;
+
+            &lt;li&gt;
+            &lt;a href="index.html"&gt;Home&lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+            &lt;a href="about.html"&gt;About&lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;li&gt;
+            &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+            &lt;/li&gt;
+
+            &lt;/ul&gt;
+        </div>
+
+
+        <h2>14. Combining Different Lists — دمج أنواع القوائم</h2>
+
+        <p dir="rtl">
+            يمكن الجمع بين القوائم المرتبة وغير المرتبة لإنشاء هيكل أكثر تنظيمًا.
+        </p>
+
+        <div class="code">
+            &lt;ol&gt;
+
+            &lt;li&gt;Learn HTML
+
+            &lt;ul&gt;
+            &lt;li&gt;Headings&lt;/li&gt;
+            &lt;li&gt;Paragraphs&lt;/li&gt;
+            &lt;li&gt;Images&lt;/li&gt;
+            &lt;li&gt;Tables&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;/li&gt;
+
+            &lt;li&gt;Learn CSS&lt;/li&gt;
+
+            &lt;li&gt;Learn JavaScript&lt;/li&gt;
+
+            &lt;/ol&gt;
+        </div>
+
+
+        <h2>15. Common Mistakes — الأخطاء الشائعة</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                نسيان وضع عناصر القائمة داخل
+                <strong>&lt;li&gt;</strong>.
+            </li>
+
+            <li>
+                استخدام <strong>&lt;ol&gt;</strong> عندما لا يكون ترتيب العناصر مهمًا.
+            </li>
+
+            <li>
+                استخدام <strong>&lt;ul&gt;</strong> عندما يكون ترتيب الخطوات ضروريًا.
+            </li>
+
+            <li>
+                وضع القائمة المتداخلة خارج عنصر
+                <strong>&lt;li&gt;</strong> بدلًا من وضعها داخله.
+            </li>
+
+            <li>
+                نسيان إغلاق عناصر القائمة.
+            </li>
+
+            <li>
+                استخدام القوائم بطريقة غير منظمة مما يجعل الكود صعب القراءة.
+            </li>
+
+        </ul>
+
+
+        <h2>16. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            أنشئ قائمة غير مرتبة تحتوي على لغات وتقنيات تطوير الويب:
+            HTML وCSS وJavaScript.
+            ثم أنشئ قائمة مرتبة تحتوي على خطوات إنشاء صفحة HTML.
+            بعد ذلك حاول إنشاء قائمة متداخلة تحتوي على Front-End
+            وتحتها HTML وCSS وJavaScript.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                <strong>List</strong> = قائمة.
+            </li>
+
+            <li>
+                <strong>Unordered List</strong> = قائمة غير مرتبة.
+            </li>
+
+            <li>
+                <strong>Ordered List</strong> = قائمة مرتبة.
+            </li>
+
+            <li>
+                <strong>Description List</strong> = قائمة وصف.
+            </li>
+
+            <li>
+                <strong>ul</strong> = Unordered List.
+            </li>
+
+            <li>
+                <strong>ol</strong> = Ordered List.
+            </li>
+
+            <li>
+                <strong>li</strong> = List Item.
+            </li>
+
+            <li>
+                <strong>dl</strong> = Description List.
+            </li>
+
+            <li>
+                <strong>dt</strong> = Description Term.
+            </li>
+
+            <li>
+                <strong>dd</strong> = Description Details.
+            </li>
+
+            <li>
+                <strong>Nested List</strong> = قائمة متداخلة.
+            </li>
+
+            <li>
+                <strong>type</strong> = تحديد نوع الترقيم.
+            </li>
+
+            <li>
+                <strong>start</strong> = تحديد بداية الترقيم.
+            </li>
+
+            <li>
+                <strong>reversed</strong> = عكس ترتيب القائمة.
+            </li>
+
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+                <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">Designed by: Eng/ HAger</a>
+
+    </div>
+    <button id="topBtn">↑</button>
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

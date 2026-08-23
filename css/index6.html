@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+       <div id="progressBar"></div>
+ 
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../css/index5.html" class="but">Previous Lesson</a>
+        <a href="../css/index2.html" class="but">CSS Lessons</a>
+        <a href="../css/index7.html" class="but"onclick="completeLesson(event, this.href, 4)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 4 : CSS Box Model</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is the CSS Box Model? — ما هو CSS Box Model؟</h2>
+
+        <p dir="rtl">
+            <strong>CSS Box Model — نموذج الصندوق في CSS</strong>
+            هو الطريقة التي يتعامل بها المتصفح مع كل عنصر HTML على أنه
+            صندوق مستطيل له أبعاد ومساحات وحدود.
+        </p>
+
+        <p dir="rtl">
+            يساعدنا Box Model على فهم حجم العنصر والمسافات الموجودة حوله
+            وداخله، وبالتالي التحكم في طريقة ظهوره وترتيبه داخل الصفحة.
+        </p>
+
+
+        <h2>2. Parts of the Box Model — أجزاء نموذج الصندوق</h2>
+
+        <p dir="rtl">
+            يتكون CSS Box Model من أربعة أجزاء أساسية:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>Content — المحتوى</strong></li>
+            <li><strong>Padding — الحشو الداخلي</strong></li>
+            <li><strong>Border — الحدود</strong></li>
+            <li><strong>Margin — الهامش الخارجي</strong></li>
+        </ul>
+
+        <div class="info">
+            <h3>Content — المحتوى</h3>
+            <p dir="rtl">
+                هو النص أو الصورة أو أي محتوى موجود داخل العنصر.
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>Padding — الحشو الداخلي</h3>
+            <p dir="rtl">
+                هو المسافة بين المحتوى والحدود الداخلية للعنصر.
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>Border — الحدود</h3>
+            <p dir="rtl">
+                هو الخط الذي يحيط بالعنصر ويفصل بينه وبين الـ Margin.
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>Margin — الهامش الخارجي</h3>
+            <p dir="rtl">
+                هو المسافة الموجودة خارج حدود العنصر والتي تفصله عن العناصر الأخرى.
+            </p>
+        </div>
+
+
+        <h2>3. Content — المحتوى</h2>
+
+        <p dir="rtl">
+            <strong>Content — المحتوى</strong>
+            هو الجزء الأساسي الموجود داخل العنصر، مثل النصوص والصور
+            والعناوين والفيديوهات وغيرها من عناصر HTML.
+        </p>
+
+        <div class="code">
+            div {
+                width: 300px;
+                height: 150px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد مساحة المحتوى باستخدام
+            <strong>width</strong>
+            و<strong>height</strong>.
+        </p>
+
+
+        <h2>4. Width and Height — العرض والارتفاع</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>width</strong>
+            لتحديد عرض العنصر،
+            بينما تستخدم الخاصية
+            <strong>height</strong>
+            لتحديد ارتفاعه.
+        </p>
+
+        <div class="code">
+            div {
+                width: 300px;
+                height: 150px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في هذا المثال يبلغ عرض العنصر
+            <strong>300px</strong>
+            وارتفاعه
+            <strong>150px</strong>.
+        </p>
+
+
+        <h2>5. Padding — الحشو الداخلي</h2>
+
+        <p dir="rtl">
+            <strong>Padding — الحشو الداخلي</strong>
+            هو المسافة بين محتوى العنصر وحدوده.
+            ويستخدم لإعطاء مساحة داخلية حول المحتوى.
+        </p>
+
+        <div class="code">
+            div {
+                padding: 20px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إضافة مسافة داخلية مقدارها
+            <strong>20px</strong>
+            من جميع الجهات.
+        </p>
+
+
+        <h2>6. Padding on Each Side — الحشو لكل جانب</h2>
+
+        <p dir="rtl">
+            يمكن تحديد قيمة مختلفة للـ
+            <strong>Padding</strong>
+            لكل جانب من جوانب العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                padding-top: 10px;
+                padding-right: 20px;
+                padding-bottom: 30px;
+                padding-left: 40px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد Padding بشكل منفصل للجهات الأربع:
+            الأعلى واليمين والأسفل واليسار.
+        </p>
+
+
+        <h2>7. Padding Shorthand — الاختصار في Padding</h2>
+
+        <p dir="rtl">
+            يمكن كتابة قيم Padding الأربع في سطر واحد بدلًا من كتابة كل خاصية
+            بشكل منفصل.
+        </p>
+
+        <div class="code">
+            div {
+                padding: 10px 20px 30px 40px;
+            }
+        </div>
+
+        <p dir="rtl">
+            يتم ترتيب القيم بالترتيب التالي:
+            <strong>Top → Right → Bottom → Left</strong>.
+        </p>
+
+
+        <h2>8. Border — الحدود</h2>
+
+        <p dir="rtl">
+            <strong>Border — الحدود</strong>
+            هو الخط الذي يحيط بمحتوى العنصر والـ Padding.
+            ويمكن التحكم في سمكه ونوعه ولونه.
+        </p>
+
+        <div class="code">
+            div {
+                border: 2px solid blue;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إنشاء حد سمكه
+            <strong>2px</strong>
+            ونوعه
+            <strong>solid</strong>
+            ولونه أزرق.
+        </p>
+
+
+        <h2>9. Border Width — سمك الحدود</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>border-width</strong>
+            لتحديد سمك الحدود.
+        </p>
+
+        <div class="code">
+            div {
+                border-width: 3px;
+            }
+        </div>
+
+
+        <h2>10. Border Style — نوع الحدود</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>border-style</strong>
+            لتحديد شكل الحدود.
+        </p>
+
+        <div class="code">
+            div {
+                border-style: solid;
+            }
+        </div>
+
+        <p dir="rtl">
+            من أشهر أنواع الحدود:
+            <strong>solid</strong>،
+            <strong>dashed</strong>،
+            <strong>dotted</strong>،
+            و<strong>double</strong>.
+        </p>
+
+
+        <h2>11. Border Color — لون الحدود</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>border-color</strong>
+            لتحديد لون الحدود.
+        </p>
+
+        <div class="code">
+            div {
+                border-color: #6c63ff;
+            }
+        </div>
+
+
+        <h2>12. Border Radius — تدوير الحواف</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>border-radius</strong>
+            لتدوير زوايا العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                border-radius: 15px;
+            }
+        </div>
+
+        <p dir="rtl">
+            كلما زادت قيمة
+            <strong>border-radius</strong>
+            أصبحت الزوايا أكثر استدارة.
+        </p>
+
+
+        <h2>13. Margin — الهامش الخارجي</h2>
+
+        <p dir="rtl">
+            <strong>Margin — الهامش الخارجي</strong>
+            هو المسافة الموجودة خارج حدود العنصر.
+            ويستخدم لفصل العنصر عن العناصر الأخرى الموجودة حوله.
+        </p>
+
+        <div class="code">
+            div {
+                margin: 20px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إضافة مسافة خارجية مقدارها
+            <strong>20px</strong>
+            من جميع الجهات.
+        </p>
+
+
+        <h2>14. Margin on Each Side — الهامش لكل جانب</h2>
+
+        <p dir="rtl">
+            يمكن تحديد قيمة مختلفة للـ
+            <strong>Margin</strong>
+            لكل جانب.
+        </p>
+
+        <div class="code">
+            div {
+                margin-top: 10px;
+                margin-right: 20px;
+                margin-bottom: 30px;
+                margin-left: 40px;
+            }
+        </div>
+
+
+        <h2>15. Margin Shorthand — الاختصار في Margin</h2>
+
+        <p dir="rtl">
+            يمكن أيضًا كتابة قيم Margin الأربع في سطر واحد.
+        </p>
+
+        <div class="code">
+            div {
+                margin: 10px 20px 30px 40px;
+            }
+        </div>
+
+        <p dir="rtl">
+            يتم ترتيب القيم بالترتيب:
+            <strong>Top → Right → Bottom → Left</strong>.
+        </p>
+
+
+        <h2>16. Margin Auto — التوسيط باستخدام Auto</h2>
+
+        <p dir="rtl">
+            يمكن استخدام القيمة
+            <strong>auto</strong>
+            مع Margin لتوسيط عنصر له عرض محدد أفقيًا.
+        </p>
+
+        <div class="code">
+            div {
+                width: 500px;
+                margin: 0 auto;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق سيتم توسيط العنصر أفقيًا داخل العنصر الأب
+            عندما تكون هناك مساحة كافية.
+        </p>
+
+
+        <h2>17. Box Sizing — طريقة حساب حجم العنصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>box-sizing</strong>
+            لتحديد الطريقة التي يحسب بها المتصفح الحجم النهائي للعنصر.
+        </p>
+
+        <div class="code">
+            * {
+                box-sizing: border-box;
+            }
+        </div>
+
+        <p dir="rtl">
+            عند استخدام
+            <strong>border-box</strong>
+            يتم احتساب الـ Padding والـ Border ضمن
+            <strong>width</strong>
+            و<strong>height</strong>
+            المحددين للعنصر.
+        </p>
+
+
+        <h2>18. Content-box — نموذج المحتوى</h2>
+
+        <p dir="rtl">
+            القيمة الافتراضية للخاصية
+            <strong>box-sizing</strong>
+            هي
+            <strong>content-box</strong>.
+        </p>
+
+        <div class="code">
+            div {
+                box-sizing: content-box;
+                width: 300px;
+                padding: 20px;
+                border: 5px solid black;
+            }
+        </div>
+
+        <p dir="rtl">
+            في هذه الحالة يتم حساب الـ Padding والـ Border بالإضافة إلى
+            عرض المحتوى، وبالتالي يمكن أن يصبح الحجم النهائي للعنصر أكبر
+            من قيمة الـ width المحددة.
+        </p>
+
+
+        <h2>19. Border-box — نموذج الحدود</h2>
+
+        <p dir="rtl">
+            عند استخدام
+            <strong>border-box</strong>
+            يتم تضمين الـ Padding والـ Border داخل الحجم المحدد للعنصر.
+        </p>
+
+        <div class="code">
+            div {
+                box-sizing: border-box;
+                width: 300px;
+                padding: 20px;
+                border: 5px solid black;
+            }
+        </div>
+
+        <p dir="rtl">
+            لذلك يظل العرض الكلي للعنصر
+            <strong>300px</strong>
+            مع احتساب الـ Padding والـ Border داخله.
+        </p>
+
+
+        <h2>20. Box Model Calculation — حساب حجم العنصر</h2>
+
+        <p dir="rtl">
+            عند استخدام
+            <strong>content-box</strong>
+            يمكن حساب العرض الكلي للعنصر باستخدام:
+        </p>
+
+        <div class="code">
+            Total Width =
+            Width +
+            Left Padding +
+            Right Padding +
+            Left Border +
+            Right Border
+        </div>
+
+        <p dir="rtl">
+            وبالمثل يمكن حساب الارتفاع الكلي باستخدام ارتفاع المحتوى
+            بالإضافة إلى الـ Padding والـ Border العلوي والسفلي.
+        </p>
+
+
+        <h2>21. Complete Box Model Example — مثال كامل على Box Model</h2>
+
+        <p dir="rtl">
+            يمكن استخدام جميع أجزاء Box Model معًا في عنصر واحد.
+        </p>
+
+        <div class="code">
+            div {
+                width: 300px;
+                padding: 20px;
+                border: 3px solid #6c63ff;
+                margin: 30px;
+                box-sizing: border-box;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد عرض العنصر،
+            وإضافة Padding داخلي،
+            وحدود حول العنصر،
+            وMargin خارجي،
+            مع استخدام
+            <strong>border-box</strong>
+            لحساب الحجم بطريقة أسهل.
+        </p>
+
+
+        <h2>22. Box Model Order — ترتيب أجزاء نموذج الصندوق</h2>
+
+        <p dir="rtl">
+            يمكن ترتيب أجزاء Box Model من الداخل إلى الخارج كالتالي:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>Content</strong> — المحتوى.</li>
+            <li><strong>Padding</strong> — الحشو الداخلي.</li>
+            <li><strong>Border</strong> — الحدود.</li>
+            <li><strong>Margin</strong> — الهامش الخارجي.</li>
+        </ul>
+
+
+        <h2>23. Important Box Model Properties — أهم خصائص Box Model</h2>
+
+        <ul dir="rtl">
+            <li><strong>width</strong> — تحديد عرض العنصر.</li>
+            <li><strong>height</strong> — تحديد ارتفاع العنصر.</li>
+            <li><strong>padding</strong> — تحديد المسافة الداخلية.</li>
+            <li><strong>border</strong> — إضافة حدود للعنصر.</li>
+            <li><strong>border-radius</strong> — تدوير زوايا العنصر.</li>
+            <li><strong>margin</strong> — تحديد المسافة الخارجية.</li>
+            <li><strong>box-sizing</strong> — تحديد طريقة حساب حجم العنصر.</li>
+        </ul>
+
+
+        <h2>24. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء عنصر
+            <strong>&lt;div&gt;</strong>
+            ثم حدد له عرضًا وارتفاعًا، وأضف إليه
+            <strong>Padding</strong>
+            و<strong>Border</strong>
+            و<strong>Margin</strong>.
+        </p>
+
+        <p dir="rtl">
+            حاول تغيير قيم هذه الخصائص ولاحظ كيف يتغير حجم العنصر
+            والمسافات الموجودة حوله.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Box Model = نموذج الصندوق.</li>
+            <li>Content = المحتوى.</li>
+            <li>Padding = الحشو الداخلي.</li>
+            <li>Border = الحدود.</li>
+            <li>Margin = الهامش الخارجي.</li>
+            <li>width = عرض العنصر.</li>
+            <li>height = ارتفاع العنصر.</li>
+            <li>border-radius = تدوير الحواف.</li>
+            <li>box-sizing = طريقة حساب حجم العنصر.</li>
+            <li>content-box = الحجم يعتمد على المحتوى وتضاف إليه المساحات والحدود.</li>
+            <li>border-box = الـ Padding والـ Border يتم احتسابهما داخل الحجم المحدد.</li>
+            <li>ترتيب Box Model من الداخل للخارج: Content → Padding → Border → Margin.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

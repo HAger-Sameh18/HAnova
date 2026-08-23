@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+    <div id="progressBar"></div>
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../html/index7.html" class="but">Previous Lesson</a>
+        <a href="../html/index2.html" class="but">HTML Lessons</a>
+        <a href="../html/index9.html" class="but" onclick="completeLesson(event, this.href, 6)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 6 : Forms and User Input</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is a Form? — ما هو النموذج؟</h2>
+
+        <p dir="rtl">
+            <strong>Form — النموذج</strong> هو جزء من صفحة الويب يسمح للمستخدم
+            بإدخال البيانات وإرسالها إلى الموقع. تستخدم النماذج في تسجيل الدخول،
+            وإنشاء الحسابات، وإرسال الرسائل، والبحث، والتسجيل في المواقع التعليمية
+            وغيرها من التطبيقات.
+        </p>
+
+        <h2>2. The &lt;form&gt; Element — عنصر النموذج</h2>
+
+        <p dir="rtl">
+            يستخدم العنصر <strong>&lt;form&gt;</strong> لإنشاء النموذج الذي يحتوي
+            على عناصر إدخال البيانات المختلفة.
+        </p>
+
+        <div class="code">
+            &lt;form&gt;
+
+            Form Content
+
+            &lt;/form&gt;
+        </div>
+
+        <h2>3. Input Element — عنصر إدخال البيانات</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;input&gt;</strong> يستخدم لإنشاء حقول إدخال البيانات.
+            ويمكن تغيير نوع الحقل باستخدام الخاصية <strong>type</strong>.
+        </p>
+
+        <div class="code">
+            &lt;input type="text"&gt;
+        </div>
+
+        <h2>4. Text Input — إدخال النص</h2>
+
+        <p dir="rtl">
+            يستخدم <strong>type="text"</strong> لإنشاء حقل يسمح للمستخدم
+            بكتابة نص قصير، مثل الاسم أو اسم المستخدم.
+        </p>
+
+        <div class="code">
+            &lt;input type="text"&gt;
+        </div>
+
+        <h2>5. Label — تسمية الحقل</h2>
+
+        <p dir="rtl">
+            عنصر <strong>&lt;label&gt;</strong> يستخدم لكتابة وصف يوضح للمستخدم
+            البيانات المطلوبة في كل حقل.
+        </p>
+
+        <div class="code">
+            &lt;label&gt;Full Name&lt;/label&gt;
+
+            &lt;input type="text"&gt;
+        </div>
+
+        <h2>6. For and ID — ربط التسمية بالحقل</h2>
+
+        <p dir="rtl">
+            يمكن ربط <strong>Label — التسمية</strong> بحقل الإدخال باستخدام
+            الخاصية <strong>for</strong> مع الخاصية <strong>id</strong>.
+            يجب أن تكون قيمة for مساوية لقيمة id.
+        </p>
+
+        <div class="code">
+            &lt;label for="name"&gt;Full Name&lt;/label&gt;
+
+            &lt;input type="text" id="name"&gt;
+        </div>
+
+        <h2>7. Placeholder — النص الإرشادي</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>placeholder</strong> تعرض نصًا إرشاديًا داخل
+            حقل الإدخال، وتختفي عند بدء المستخدم في الكتابة.
+        </p>
+
+        <div class="code">
+            &lt;input
+            type="text"
+            placeholder="Enter your name"&gt;
+        </div>
+
+        <h2>8. Name Attribute — اسم الحقل</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>name</strong> تعطي اسمًا للبيانات الموجودة داخل
+            الحقل، وتكون مهمة عند إرسال بيانات النموذج.
+        </p>
+
+        <div class="code">
+            &lt;input type="text" name="username"&gt;
+        </div>
+
+        <h2>9. Required — الحقل المطلوب</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>required</strong> تجعل إدخال البيانات في الحقل
+            إلزاميًا قبل إرسال النموذج.
+        </p>
+
+        <div class="code">
+            &lt;input type="text" required&gt;
+        </div>
+
+        <h2>10. Password Input — كلمة المرور</h2>
+
+        <p dir="rtl">
+            يستخدم <strong>type="password"</strong> لإنشاء حقل مخصص
+            لكلمة المرور، ويقوم المتصفح بإخفاء الأحرف التي يكتبها المستخدم.
+        </p>
+
+        <div class="code">
+            &lt;label for="password"&gt;Password&lt;/label&gt;
+
+            &lt;input
+            type="password"
+            id="password"
+            name="password"&gt;
+        </div>
+
+        <h2>11. Email Input — البريد الإلكتروني</h2>
+
+        <p dir="rtl">
+            يستخدم <strong>type="email"</strong> لإدخال عنوان البريد الإلكتروني.
+            ويساعد المتصفح في التحقق من أن البيانات تبدو كعنوان بريد إلكتروني.
+        </p>
+
+        <div class="code">
+            &lt;input
+            type="email"
+            placeholder="Enter your email"&gt;
+        </div>
+
+        <h2>12. Number Input — إدخال الأرقام</h2>
+
+        <p dir="rtl">
+            يستخدم <strong>type="number"</strong> لإنشاء حقل مخصص لإدخال
+            الأرقام مثل العمر أو الدرجة.
+        </p>
+
+        <div class="code">
+            &lt;label for="age"&gt;Age&lt;/label&gt;
+
+            &lt;input type="number" id="age"&gt;
+        </div>
+
+        <h2>13. Date Input — إدخال التاريخ</h2>
+
+        <p dir="rtl">
+            يستخدم <strong>type="date"</strong> للسماح للمستخدم باختيار تاريخ.
+        </p>
+
+        <div class="code">
+            &lt;label for="date"&gt;Birth Date&lt;/label&gt;
+
+            &lt;input type="date" id="date"&gt;
+        </div>
+
+        <h2>14. Radio Button — زر الاختيار</h2>
+
+        <p dir="rtl">
+            <strong>Radio Button — زر الاختيار</strong> يستخدم عندما نريد
+            السماح للمستخدم باختيار خيار واحد من مجموعة خيارات.
+            ويجب أن تكون عناصر المجموعة لها نفس قيمة <strong>name</strong>.
+        </p>
+
+        <div class="code">
+            &lt;input type="radio" name="level" value="beginner"&gt;
+            Beginner
+
+            &lt;input type="radio" name="level" value="advanced"&gt;
+            Advanced
+        </div>
+
+        <h2>15. Checkbox — مربع الاختيار</h2>
+
+        <p dir="rtl">
+            <strong>Checkbox — مربع الاختيار</strong> يستخدم عندما يستطيع
+            المستخدم اختيار أكثر من خيار.
+        </p>
+
+        <div class="code">
+            &lt;input type="checkbox" name="skill"&gt;
+            HTML
+
+            &lt;input type="checkbox" name="skill"&gt;
+            CSS
+
+            &lt;input type="checkbox" name="skill"&gt;
+            JavaScript
+        </div>
+
+        <h2>16. Radio Button vs Checkbox — الفرق بينهما</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                <strong>Radio Button</strong> = اختيار واحد من مجموعة.
+            </li>
+
+            <li>
+                <strong>Checkbox</strong> = اختيار واحد أو أكثر.
+            </li>
+
+        </ul>
+
+        <h2>17. Textarea — مربع النص</h2>
+
+        <p dir="rtl">
+            يستخدم <strong>&lt;textarea&gt;</strong> لإدخال نصوص طويلة
+            أو متعددة الأسطر، مثل الرسائل والتعليقات.
+        </p>
+
+        <div class="code">
+            &lt;label for="message"&gt;Message&lt;/label&gt;
+
+            &lt;textarea
+            id="message"
+            placeholder="Write your message"&gt;
+
+            &lt;/textarea&gt;
+        </div>
+
+        <h2>18. Select — القائمة المنسدلة</h2>
+
+        <p dir="rtl">
+            يستخدم العنصر <strong>&lt;select&gt;</strong> لإنشاء
+            <strong>Dropdown List — قائمة منسدلة</strong> تسمح للمستخدم
+            باختيار عنصر من مجموعة اختيارات.
+        </p>
+
+        <div class="code">
+            &lt;select&gt;
+
+            &lt;option&gt;HTML&lt;/option&gt;
+
+            &lt;option&gt;CSS&lt;/option&gt;
+
+            &lt;option&gt;JavaScript&lt;/option&gt;
+
+            &lt;/select&gt;
+        </div>
+
+        <h2>19. Option — الاختيار</h2>
+
+        <p dir="rtl">
+            عنصر <strong>&lt;option&gt;</strong> يستخدم لإنشاء كل اختيار
+            داخل القائمة المنسدلة.
+        </p>
+
+        <div class="code">
+            &lt;select&gt;
+
+            &lt;option&gt;HTML&lt;/option&gt;
+            &lt;option&gt;CSS&lt;/option&gt;
+            &lt;option&gt;JavaScript&lt;/option&gt;
+
+            &lt;/select&gt;
+        </div>
+
+        <h2>20. Selected — الاختيار الافتراضي</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>selected</strong> تجعل اختيارًا معينًا هو
+            الاختيار المحدد افتراضيًا.
+        </p>
+
+        <div class="code">
+            &lt;select&gt;
+
+            &lt;option&gt;Choose Course&lt;/option&gt;
+
+            &lt;option selected&gt;HTML&lt;/option&gt;
+
+            &lt;option&gt;CSS&lt;/option&gt;
+
+            &lt;/select&gt;
+        </div>
+
+        <h2>21. Submit Button — زر الإرسال</h2>
+
+        <p dir="rtl">
+            يستخدم زر <strong>Submit — إرسال</strong> لإرسال البيانات
+            الموجودة داخل النموذج.
+        </p>
+
+        <div class="code">
+            &lt;button type="submit"&gt;
+            Submit
+            &lt;/button&gt;
+        </div>
+
+        <h2>22. Reset Button — زر إعادة التعيين</h2>
+
+        <p dir="rtl">
+            يستخدم <strong>Reset — إعادة التعيين</strong> لإعادة حقول
+            النموذج إلى حالتها الأصلية.
+        </p>
+
+        <div class="code">
+            &lt;button type="reset"&gt;
+            Reset
+            &lt;/button&gt;
+        </div>
+
+        <h2>23. Fieldset and Legend — تجميع الحقول وعنوانها</h2>
+
+        <p dir="rtl">
+            يستخدم <strong>fieldset</strong> لتجميع مجموعة من الحقول
+            المرتبطة ببعضها، بينما يستخدم <strong>legend</strong>
+            لإضافة عنوان لهذه المجموعة.
+        </p>
+
+        <div class="code">
+            &lt;fieldset&gt;
+
+            &lt;legend&gt;Personal Information&lt;/legend&gt;
+
+            &lt;input type="text"&gt;
+
+            &lt;input type="email"&gt;
+
+            &lt;/fieldset&gt;
+        </div>
+
+        <h2>24. Action — مكان إرسال البيانات</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>action</strong> تحدد المكان الذي سيتم إرسال
+            بيانات النموذج إليه عند الضغط على زر Submit.
+        </p>
+
+        <div class="code">
+            &lt;form action="submit.html"&gt;
+
+            Form Content
+
+            &lt;/form&gt;
+        </div>
+
+        <h2>25. Method — طريقة إرسال البيانات</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>method</strong> تحدد طريقة إرسال بيانات النموذج.
+            ومن أشهر الطرق <strong>GET</strong> و<strong>POST</strong>.
+        </p>
+
+        <div class="code">
+            &lt;form action="submit.html" method="post"&gt;
+
+            Form Content
+
+            &lt;/form&gt;
+        </div>
+
+        <h2>26. Complete Form Example — مثال كامل</h2>
+
+        <p dir="rtl">
+            الآن سنجمع العناصر السابقة لإنشاء نموذج تسجيل لطالب
+            في موقع تعليمي.
+        </p>
+
+        <div class="code">
+
+            &lt;form&gt;
+
+            &lt;fieldset&gt;
+
+            &lt;legend&gt;Student Registration&lt;/legend&gt;
+
+            &lt;label for="name"&gt;Full Name&lt;/label&gt;
+
+            &lt;input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required&gt;
+
+            &lt;br&gt;&lt;br&gt;
+
+            &lt;label for="email"&gt;Email&lt;/label&gt;
+
+            &lt;input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required&gt;
+
+            &lt;br&gt;&lt;br&gt;
+
+            &lt;label for="password"&gt;Password&lt;/label&gt;
+
+            &lt;input
+            type="password"
+            id="password"
+            required&gt;
+
+            &lt;br&gt;&lt;br&gt;
+
+            &lt;label for="age"&gt;Age&lt;/label&gt;
+
+            &lt;input
+            type="number"
+            id="age"&gt;
+
+            &lt;br&gt;&lt;br&gt;
+
+            &lt;label&gt;Choose your level:&lt;/label&gt;
+
+            &lt;br&gt;
+
+            &lt;input type="radio" name="level"&gt;
+            Beginner
+
+            &lt;input type="radio" name="level"&gt;
+            Advanced
+
+            &lt;br&gt;&lt;br&gt;
+
+            &lt;label&gt;Choose your skills:&lt;/label&gt;
+
+            &lt;br&gt;
+
+            &lt;input type="checkbox"&gt;
+            HTML
+
+            &lt;input type="checkbox"&gt;
+            CSS
+
+            &lt;input type="checkbox"&gt;
+            JavaScript
+
+            &lt;br&gt;&lt;br&gt;
+
+            &lt;label for="course"&gt;Choose a Course:&lt;/label&gt;
+
+            &lt;select id="course"&gt;
+
+            &lt;option&gt;HTML&lt;/option&gt;
+
+            &lt;option&gt;CSS&lt;/option&gt;
+
+            &lt;option&gt;JavaScript&lt;/option&gt;
+
+            &lt;/select&gt;
+
+            &lt;br&gt;&lt;br&gt;
+
+            &lt;label for="message"&gt;Message&lt;/label&gt;
+
+            &lt;br&gt;
+
+            &lt;textarea
+            id="message"
+            placeholder="Write your message"&gt;
+
+            &lt;/textarea&gt;
+
+            &lt;br&gt;&lt;br&gt;
+
+            &lt;button type="submit"&gt;
+            Submit
+            &lt;/button&gt;
+
+            &lt;button type="reset"&gt;
+            Reset
+            &lt;/button&gt;
+
+            &lt;/fieldset&gt;
+
+            &lt;/form&gt;
+
+        </div>
+
+        <h2>27. Common Mistakes — الأخطاء الشائعة</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                نسيان وضع عناصر الإدخال داخل <strong>form</strong>.
+            </li>
+
+            <li>
+                نسيان كتابة <strong>label</strong> لكل حقل.
+            </li>
+
+            <li>
+                استخدام نفس <strong>id</strong> لأكثر من عنصر.
+            </li>
+
+            <li>
+                نسيان ربط <strong>label</strong> بالحقل باستخدام
+                <strong>for</strong> و<strong>id</strong>.
+            </li>
+
+            <li>
+                نسيان استخدام <strong>name</strong> عند الحاجة إلى إرسال البيانات.
+            </li>
+
+            <li>
+                استخدام Radio Buttons بأسماء مختلفة عندما نريد اختيارًا واحدًا.
+            </li>
+
+            <li>
+                نسيان وضع عناصر <strong>option</strong> داخل
+                <strong>select</strong>.
+            </li>
+
+            <li>
+                استخدام placeholder بدلًا من label.
+            </li>
+
+        </ul>
+
+        <h2>28. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            أنشئ نموذج تسجيل في موقع تعليمي يحتوي على:
+            اسم الطالب، البريد الإلكتروني، كلمة المرور، العمر،
+            اختيار المستوى باستخدام Radio Buttons، واختيار المهارات
+            باستخدام Checkboxes، واختيار المادة باستخدام قائمة منسدلة،
+            بالإضافة إلى مربع لكتابة رسالة وزري Submit وReset.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+
+            <li><strong>Form</strong> = نموذج.</li>
+
+            <li><strong>Input</strong> = حقل إدخال.</li>
+
+            <li><strong>Label</strong> = تسمية الحقل.</li>
+
+            <li><strong>Placeholder</strong> = نص إرشادي.</li>
+
+            <li><strong>Required</strong> = حقل مطلوب.</li>
+
+            <li><strong>Password</strong> = كلمة مرور.</li>
+
+            <li><strong>Radio Button</strong> = اختيار واحد.</li>
+
+            <li><strong>Checkbox</strong> = اختيار واحد أو أكثر.</li>
+
+            <li><strong>Textarea</strong> = مربع نص متعدد الأسطر.</li>
+
+            <li><strong>Select</strong> = قائمة منسدلة.</li>
+
+            <li><strong>Option</strong> = اختيار داخل القائمة.</li>
+
+            <li><strong>Submit</strong> = إرسال.</li>
+
+            <li><strong>Reset</strong> = إعادة تعيين.</li>
+
+            <li><strong>Fieldset</strong> = تجميع الحقول.</li>
+
+            <li><strong>Legend</strong> = عنوان مجموعة الحقول.</li>
+
+            <li><strong>Action</strong> = مكان إرسال البيانات.</li>
+
+            <li><strong>Method</strong> = طريقة إرسال البيانات.</li>
+
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+             <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">Designed by: Eng/ HAger</a>
+
+    </div>
+    <button id="topBtn">↑</button>
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

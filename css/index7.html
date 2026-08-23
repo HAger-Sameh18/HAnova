@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../css/index6.html" class="but">Previous Lesson</a>
+        <a href="../css/index2.html" class="but">CSS Lessons</a>
+        <a href="../css/index8.html" class="but"onclick="completeLesson(event, this.href, 5)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 5 : Width, Height and Units</h1>
+
+    <div class="lesson">
+
+        <h2>1. Width and Height — العرض والارتفاع</h2>
+
+        <p dir="rtl">
+            تستخدم CSS خصائص مختلفة للتحكم في أبعاد عناصر HTML،
+            ومن أهم هذه الخصائص
+            <strong>Width — العرض</strong>
+            و
+            <strong>Height — الارتفاع</strong>.
+        </p>
+
+        <p dir="rtl">
+            تساعد هذه الخصائص على تحديد المساحة التي يشغلها العنصر
+            داخل صفحة الويب.
+        </p>
+
+
+        <h2>2. Width Property — خاصية Width</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>width</strong>
+            لتحديد عرض العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                width: 300px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد عرض العنصر ليكون
+            <strong>300px</strong>.
+        </p>
+
+
+        <h2>3. Height Property — خاصية Height</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>height</strong>
+            لتحديد ارتفاع العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                height: 200px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد ارتفاع العنصر ليكون
+            <strong>200px</strong>.
+        </p>
+
+
+        <h2>4. Width and Height Together — استخدام Width و Height معًا</h2>
+
+        <p dir="rtl">
+            يمكن استخدام الخاصيتين
+            <strong>width</strong>
+            و
+            <strong>height</strong>
+            معًا لتحديد أبعاد العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                width: 400px;
+                height: 200px;
+            }
+        </div>
+
+        <p dir="rtl">
+            أصبح للعنصر في المثال السابق عرض مقداره
+            <strong>400px</strong>
+            وارتفاع مقداره
+            <strong>200px</strong>.
+        </p>
+
+
+        <h2>5. CSS Units — وحدات القياس في CSS</h2>
+
+        <p dir="rtl">
+            تستخدم CSS وحدات مختلفة لتحديد الأحجام والمسافات.
+            وتنقسم وحدات القياس إلى نوعين أساسيين:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>Absolute Units — وحدات ثابتة.</strong></li>
+            <li><strong>Relative Units — وحدات نسبية.</strong></li>
+        </ul>
+
+
+        <h2>6. Absolute Units — الوحدات الثابتة</h2>
+
+        <p dir="rtl">
+            <strong>Absolute Units — الوحدات الثابتة</strong>
+            هي وحدات لا تعتمد بشكل مباشر على حجم العنصر الأب
+            أو حجم الشاشة.
+        </p>
+
+        <p dir="rtl">
+            من أشهر الوحدات الثابتة المستخدمة في CSS:
+            <strong>px</strong>.
+        </p>
+
+        <div class="code">
+            div {
+                width: 300px;
+                height: 150px;
+            }
+        </div>
+
+
+        <h2>7. Pixel (px) — البكسل</h2>
+
+        <p dir="rtl">
+            <strong>px — Pixel</strong>
+            هي من أكثر وحدات القياس استخدامًا في CSS.
+            وتستخدم لتحديد أحجام دقيقة نسبيًا مثل عرض العناصر
+            وحجم الخطوط والحدود.
+        </p>
+
+        <div class="code">
+            h1 {
+                font-size: 32px;
+            }
+
+            div {
+                width: 300px;
+            }
+        </div>
+
+
+        <h2>8. Percentage (%) — النسبة المئوية</h2>
+
+        <p dir="rtl">
+            تستخدم وحدة
+            <strong>%</strong>
+            لتحديد حجم العنصر كنسبة من حجم العنصر الأب.
+        </p>
+
+        <div class="code">
+            .box {
+                width: 50%;
+            }
+        </div>
+
+        <p dir="rtl">
+            إذا كان عرض العنصر الأب
+            <strong>1000px</strong>
+            فإن عرض العنصر الذي يساوي
+            <strong>50%</strong>
+            سيكون
+            <strong>500px</strong>.
+        </p>
+
+
+        <h2>9. Percentage Height — النسبة المئوية للارتفاع</h2>
+
+        <p dir="rtl">
+            يمكن استخدام النسبة المئوية أيضًا مع
+            <strong>height</strong>،
+            ولكن يجب أن يكون ارتفاع العنصر الأب محددًا حتى يكون الحساب واضحًا.
+        </p>
+
+        <div class="code">
+            .parent {
+                height: 400px;
+            }
+
+            .child {
+                height: 50%;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق سيكون ارتفاع العنصر الابن
+            <strong>200px</strong>
+            لأنه يساوي 50% من ارتفاع العنصر الأب.
+        </p>
+
+
+        <h2>10. Viewport Units — وحدات الشاشة</h2>
+
+        <p dir="rtl">
+            <strong>Viewport Units</strong>
+            هي وحدات تعتمد على حجم نافذة المتصفح
+            <strong>Viewport — مساحة العرض</strong>.
+        </p>
+
+        <p dir="rtl">
+            من أشهر هذه الوحدات:
+            <strong>vw</strong>
+            و
+            <strong>vh</strong>.
+        </p>
+
+
+        <h2>11. VW — عرض نافذة المتصفح</h2>
+
+        <p dir="rtl">
+            <strong>vw</strong>
+            هي اختصار لـ
+            <strong>Viewport Width</strong>.
+            وتمثل نسبة من عرض نافذة المتصفح.
+        </p>
+
+        <div class="code">
+            div {
+                width: 50vw;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>50vw</strong>
+            تعني أن عرض العنصر يساوي 50% من عرض نافذة المتصفح.
+        </p>
+
+
+        <h2>12. VH — ارتفاع نافذة المتصفح</h2>
+
+        <p dir="rtl">
+            <strong>vh</strong>
+            هي اختصار لـ
+            <strong>Viewport Height</strong>.
+            وتمثل نسبة من ارتفاع نافذة المتصفح.
+        </p>
+
+        <div class="code">
+            div {
+                height: 50vh;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>50vh</strong>
+            تعني أن ارتفاع العنصر يساوي 50% من ارتفاع نافذة المتصفح.
+        </p>
+
+
+        <h2>13. EM Unit — وحدة EM</h2>
+
+        <p dir="rtl">
+            <strong>em</strong>
+            هي وحدة نسبية تعتمد بشكل أساسي على حجم خط العنصر
+            أو العنصر الأب حسب الخاصية المستخدمة.
+        </p>
+
+        <div class="code">
+            p {
+                font-size: 2em;
+            }
+        </div>
+
+        <p dir="rtl">
+            عند استخدام
+            <strong>em</strong>
+            مع حجم الخط، تكون القيمة مرتبطة بحجم الخط المرجعي.
+        </p>
+
+
+        <h2>14. REM Unit — وحدة REM</h2>
+
+        <p dir="rtl">
+            <strong>rem</strong>
+            هي اختصار لـ
+            <strong>Root EM</strong>.
+            وتعتمد على حجم خط العنصر الجذر
+            <strong>html</strong>.
+        </p>
+
+        <div class="code">
+            html {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        </div>
+
+        <p dir="rtl">
+            إذا كان حجم خط العنصر
+            <strong>html</strong>
+            يساوي
+            <strong>16px</strong>،
+            فإن
+            <strong>2rem</strong>
+            تساوي
+            <strong>32px</strong>.
+        </p>
+
+
+        <h2>15. Difference Between EM and REM — الفرق بين EM و REM</h2>
+
+        <p dir="rtl">
+            كلاهما وحدات نسبية، ولكن هناك اختلاف في المرجع الذي تعتمد عليه كل وحدة.
+        </p>
+
+        <ul dir="rtl">
+            <li>
+                <strong>em</strong>
+                تعتمد على حجم الخط المرجعي للعنصر أو العنصر الأب.
+            </li>
+
+            <li>
+                <strong>rem</strong>
+                تعتمد على حجم خط العنصر الجذر
+                <strong>html</strong>.
+            </li>
+        </ul>
+
+
+        <h2>16. Max-Width — أقصى عرض</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>max-width</strong>
+            لتحديد أقصى عرض يمكن أن يصل إليه العنصر.
+        </p>
+
+        <div class="code">
+            .container {
+                width: 90%;
+                max-width: 1000px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يمكن أن يكون عرض العنصر 90% من المساحة المتاحة،
+            ولكنه لن يتجاوز
+            <strong>1000px</strong>.
+        </p>
+
+
+        <h2>17. Min-Width — أقل عرض</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>min-width</strong>
+            لتحديد أقل عرض يمكن أن يصل إليه العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                min-width: 200px;
+            }
+        </div>
+
+        <p dir="rtl">
+            لن يقل عرض العنصر عن
+            <strong>200px</strong>
+            عند وجود مساحة كافية لتطبيق هذا الحد.
+        </p>
+
+
+        <h2>18. Max-Height — أقصى ارتفاع</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>max-height</strong>
+            لتحديد أقصى ارتفاع يمكن أن يصل إليه العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                max-height: 400px;
+            }
+        </div>
+
+
+        <h2>19. Min-Height — أقل ارتفاع</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>min-height</strong>
+            لتحديد أقل ارتفاع يمكن أن يصل إليه العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                min-height: 200px;
+            }
+        </div>
+
+
+        <h2>20. Auto Value — القيمة Auto</h2>
+
+        <p dir="rtl">
+            تستخدم القيمة
+            <strong>auto</strong>
+            للسماح للمتصفح بتحديد الحجم تلقائيًا
+            وفقًا للمحتوى والمساحة المتاحة.
+        </p>
+
+        <div class="code">
+            div {
+                width: auto;
+                height: auto;
+            }
+        </div>
+
+
+        <h2>21. Width and Height with Box Model — الأبعاد مع Box Model</h2>
+
+        <p dir="rtl">
+            عند تحديد
+            <strong>width</strong>
+            و<strong>height</strong>
+            يجب الانتباه إلى طريقة حساب الحجم عند استخدام
+            <strong>box-sizing</strong>.
+        </p>
+
+        <div class="code">
+            div {
+                width: 300px;
+                height: 200px;
+                padding: 20px;
+                border: 5px solid #6c63ff;
+                box-sizing: border-box;
+            }
+        </div>
+
+        <p dir="rtl">
+            باستخدام
+            <strong>border-box</strong>
+            يتم احتساب الـ Padding والـ Border داخل العرض والارتفاع المحددين.
+        </p>
+
+
+        <h2>22. Choosing the Right Unit — اختيار وحدة القياس المناسبة</h2>
+
+        <p dir="rtl">
+            اختيار وحدة القياس يعتمد على نوع التصميم والهدف من استخدامها.
+        </p>
+
+        <ul dir="rtl">
+            <li>
+                <strong>px</strong>
+                مناسبة للأحجام التي تحتاج إلى قيمة محددة.
+            </li>
+
+            <li>
+                <strong>%</strong>
+                مناسبة للأحجام المرتبطة بالعنصر الأب.
+            </li>
+
+            <li>
+                <strong>vw</strong>
+                مناسبة للأحجام المرتبطة بعرض الشاشة.
+            </li>
+
+            <li>
+                <strong>vh</strong>
+                مناسبة للأحجام المرتبطة بارتفاع الشاشة.
+            </li>
+
+            <li>
+                <strong>em</strong>
+                مناسبة للأحجام المرتبطة بحجم الخط المرجعي.
+            </li>
+
+            <li>
+                <strong>rem</strong>
+                مناسبة للأحجام المرتبطة بحجم خط العنصر الجذر.
+            </li>
+        </ul>
+
+
+        <h2>23. Complete Example — مثال كامل</h2>
+
+        <p dir="rtl">
+            يمكن استخدام أكثر من وحدة قياس في نفس التصميم.
+        </p>
+
+        <div class="code">
+            .container {
+                width: 90%;
+                max-width: 1000px;
+                min-height: 300px;
+                padding: 2rem;
+                margin: auto;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم استخدام النسبة المئوية مع
+            <strong>max-width</strong>
+            للتحكم في عرض العنصر،
+            واستخدام
+            <strong>rem</strong>
+            لحجم الخط والمسافات.
+        </p>
+
+
+        <h2>24. Important Width, Height and Units Properties — أهم الخصائص</h2>
+
+        <ul dir="rtl">
+            <li><strong>width</strong> — تحديد عرض العنصر.</li>
+            <li><strong>height</strong> — تحديد ارتفاع العنصر.</li>
+            <li><strong>min-width</strong> — تحديد أقل عرض.</li>
+            <li><strong>max-width</strong> — تحديد أقصى عرض.</li>
+            <li><strong>min-height</strong> — تحديد أقل ارتفاع.</li>
+            <li><strong>max-height</strong> — تحديد أقصى ارتفاع.</li>
+            <li><strong>auto</strong> — تحديد الحجم تلقائيًا.</li>
+            <li><strong>px</strong> — وحدة البكسل.</li>
+            <li><strong>%</strong> — النسبة المئوية.</li>
+            <li><strong>vw</strong> — نسبة من عرض نافذة المتصفح.</li>
+            <li><strong>vh</strong> — نسبة من ارتفاع نافذة المتصفح.</li>
+            <li><strong>em</strong> — وحدة نسبية مرتبطة بحجم الخط المرجعي.</li>
+            <li><strong>rem</strong> — وحدة نسبية مرتبطة بحجم خط العنصر الجذر.</li>
+        </ul>
+
+
+        <h2>25. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء عنصر
+            <strong>&lt;div&gt;</strong>
+            وحاول تغيير
+            <strong>width</strong>
+            و<strong>height</strong>
+            باستخدام وحدات مختلفة مثل
+            <strong>px</strong>
+            و<strong>%</strong>
+            و<strong>vw</strong>
+            و<strong>vh</strong>.
+        </p>
+
+        <p dir="rtl">
+            حاول أيضًا استخدام
+            <strong>min-width</strong>
+            و<strong>max-width</strong>
+            ولاحظ كيف يتغير حجم العنصر عند تغيير حجم نافذة المتصفح.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>width = عرض العنصر.</li>
+            <li>height = ارتفاع العنصر.</li>
+            <li>min-width = أقل عرض.</li>
+            <li>max-width = أقصى عرض.</li>
+            <li>min-height = أقل ارتفاع.</li>
+            <li>max-height = أقصى ارتفاع.</li>
+            <li>px = Pixel = البكسل.</li>
+            <li>% = Percentage = النسبة المئوية.</li>
+            <li>vw = نسبة من عرض نافذة المتصفح.</li>
+            <li>vh = نسبة من ارتفاع نافذة المتصفح.</li>
+            <li>em = وحدة نسبية مرتبطة بحجم الخط المرجعي.</li>
+            <li>rem = وحدة نسبية مرتبطة بحجم خط العنصر الجذر.</li>
+            <li>auto = تحديد الحجم تلقائيًا.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

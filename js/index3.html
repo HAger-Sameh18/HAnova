@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../js/index2.html" class="but">JavaScript Lessons</a>
+        <a href="../js/index4.html" class="but" onclick="completeLesson(event, this.href, 1)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 1 : Introduction To JavaScript</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is JavaScript? — ما هي JavaScript؟</h2>
+
+        <p dir="rtl">
+            JavaScript هي لغة برمجة تستخدم لإضافة
+            <strong>Interactivity — التفاعل</strong>
+            والوظائف الديناميكية إلى صفحات الويب.
+            وهي واحدة من أهم التقنيات الأساسية المستخدمة في تطوير مواقع الويب
+            إلى جانب
+            <strong>HTML</strong>
+            و<strong>CSS</strong>.
+        </p>
+
+        <p dir="rtl">
+            باستخدام JavaScript يمكننا جعل صفحة الويب تتفاعل مع المستخدم،
+            مثل تغيير محتوى الصفحة، وإظهار الرسائل، والاستجابة للضغط على
+            الأزرار، والتحقق من البيانات، وإنشاء تأثيرات وحركات مختلفة.
+        </p>
+
+
+        <h2>2. What is the Purpose of JavaScript? — ما الهدف من JavaScript؟</h2>
+
+        <p dir="rtl">
+            الهدف الأساسي من JavaScript هو إضافة
+            <strong>Behavior — السلوك والتفاعل</strong>
+            إلى صفحات الويب.
+        </p>
+
+        <p dir="rtl">
+            فبينما تستخدم HTML لإنشاء هيكل الصفحة،
+            وتستخدم CSS لتنسيق هذا الهيكل،
+            تستخدم JavaScript لإضافة الوظائف والتفاعل مع المستخدم.
+        </p>
+
+
+        <h2>3. HTML, CSS and JavaScript — العلاقة بين HTML و CSS و JavaScript</h2>
+
+        <p dir="rtl">
+            تعمل التقنيات الثلاث معًا لإنشاء صفحات ويب متكاملة.
+            لكل تقنية وظيفة أساسية مختلفة.
+        </p>
+
+        <div class="info">
+            <h3>HTML — Structure</h3>
+            <p dir="rtl">
+                تستخدم HTML لبناء هيكل الصفحة وتنظيم محتواها،
+                مثل العناوين والفقرات والصور والأزرار.
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>CSS — Style</h3>
+            <p dir="rtl">
+                تستخدم CSS لتنسيق الصفحة والتحكم في الألوان والخطوط
+                والأحجام والمسافات ومظهر العناصر.
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>JavaScript — Behavior</h3>
+            <p dir="rtl">
+                تستخدم JavaScript لإضافة التفاعل والوظائف الديناميكية
+                والاستجابة لأفعال المستخدم.
+            </p>
+        </div>
+
+
+        <h2>4. Why Do We Use JavaScript? — لماذا نستخدم JavaScript؟</h2>
+
+        <p dir="rtl">
+            نستخدم JavaScript لجعل صفحات الويب أكثر تفاعلًا وديناميكية،
+            بحيث لا تكون الصفحة مجرد محتوى ثابت.
+        </p>
+
+        <ul dir="rtl">
+            <li>إظهار الرسائل والتنبيهات للمستخدم.</li>
+            <li>تغيير محتوى الصفحة.</li>
+            <li>تغيير ألوان أو خصائص العناصر.</li>
+            <li>التفاعل مع الأزرار.</li>
+            <li>التحقق من البيانات التي يدخلها المستخدم.</li>
+            <li>إظهار وإخفاء عناصر الصفحة.</li>
+            <li>إنشاء تأثيرات وحركات تفاعلية.</li>
+            <li>التعامل مع النماذج Forms.</li>
+            <li>التعامل مع عناصر HTML باستخدام DOM.</li>
+        </ul>
+
+
+        <h2>5. Is JavaScript a Programming Language? — هل JavaScript لغة برمجة؟</h2>
+
+        <p dir="rtl">
+            نعم، JavaScript هي
+            <strong>Programming Language — لغة برمجة</strong>
+            تستخدم لكتابة التعليمات البرمجية وتنفيذ العمليات المنطقية
+            والتعامل مع البيانات.
+        </p>
+
+        <p dir="rtl">
+            يمكن باستخدام JavaScript إنشاء
+            <strong>Variables — متغيرات</strong>،
+            واستخدام
+            <strong>Conditions — شروط</strong>،
+            و<strong>Loops — حلقات تكرار</strong>،
+            و<strong>Functions — دوال</strong>،
+            بالإضافة إلى التعامل مع عناصر صفحات الويب.
+        </p>
+
+
+        <h2>6. JavaScript Syntax — صياغة JavaScript</h2>
+
+        <p dir="rtl">
+            <strong>Syntax — الصياغة</strong>
+            هي مجموعة القواعد التي يجب اتباعها عند كتابة كود JavaScript
+            بطريقة صحيحة.
+        </p>
+
+        <p dir="rtl">
+            على سبيل المثال، يمكننا استخدام الأمر
+            <strong>console.log()</strong>
+            لعرض قيمة أو رسالة داخل
+            <strong>Console — وحدة التحكم</strong>.
+        </p>
+
+        <div class="code">
+            console.log("Hello JavaScript");
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يقوم
+            <strong>console.log()</strong>
+            بعرض النص الموجود داخل الأقواس في وحدة التحكم.
+        </p>
+
+
+        <h2>7. Statement — التعليمة</h2>
+
+        <p dir="rtl">
+            <strong>Statement — التعليمة</strong>
+            هي أمر برمجي يخبر JavaScript بتنفيذ عملية معينة.
+        </p>
+
+        <div class="code">
+            console.log("Welcome to HAnova");
+        </div>
+
+        <p dir="rtl">
+            التعليمة السابقة تطلب من JavaScript عرض الرسالة
+            <strong>Welcome to HAnova</strong>
+            داخل وحدة التحكم.
+        </p>
+
+
+        <h2>8. Comments — التعليقات</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>Comments — التعليقات</strong>
+            لكتابة ملاحظات داخل الكود.
+            ولا يتم تنفيذ التعليقات بواسطة JavaScript.
+        </p>
+
+        <p dir="rtl">
+            يمكن كتابة تعليق في سطر واحد باستخدام
+            <strong>//</strong>.
+        </p>
+
+        <div class="code">
+            // This is a comment
+
+            console.log("Hello");
+        </div>
+
+        <p dir="rtl">
+            يمكن أيضًا كتابة تعليق يمتد إلى أكثر من سطر باستخدام
+            <strong>/* */</strong>.
+        </p>
+
+        <div class="code">
+            /*
+            This is a multi-line comment.
+            */
+
+            console.log("Hello");
+        </div>
+
+
+        <h2>9. Where Can We Write JavaScript? — أين نكتب JavaScript؟</h2>
+
+        <p dir="rtl">
+            يمكن كتابة JavaScript داخل صفحة HTML باستخدام وسم
+            <strong>&lt;script&gt;</strong>.
+        </p>
+
+        <p dir="rtl">
+            ويمكن وضع JavaScript داخل الصفحة نفسها،
+            أو في ملف JavaScript خارجي.
+        </p>
+
+
+        <h2>10. Internal JavaScript — JavaScript داخل الصفحة</h2>
+
+        <p dir="rtl">
+            يمكن كتابة كود JavaScript مباشرة داخل ملف HTML
+            باستخدام وسم
+            <strong>&lt;script&gt;</strong>.
+        </p>
+
+        <div class="code">
+            &lt;script&gt;
+
+            console.log("Hello JavaScript");
+
+            &lt;/script&gt;
+        </div>
+
+        <p dir="rtl">
+            في هذه الطريقة يكون كود JavaScript موجودًا داخل ملف HTML
+            نفسه.
+        </p>
+
+
+        <h2>11. External JavaScript — JavaScript خارجي</h2>
+
+        <p dir="rtl">
+            يمكن أيضًا كتابة JavaScript في ملف منفصل بامتداد
+            <strong>.js</strong>
+            ثم ربطه بصفحة HTML.
+        </p>
+
+        <p dir="rtl">
+            يتم ربط ملف JavaScript باستخدام وسم
+            <strong>&lt;script&gt;</strong>
+            مع الخاصية
+            <strong>src</strong>.
+        </p>
+
+        <div class="code">
+            &lt;script src="script.js"&gt;&lt;/script&gt;
+        </div>
+
+        <p dir="rtl">
+            تعتبر هذه الطريقة مناسبة للمشروعات الكبيرة،
+            لأنها تساعد على تنظيم الكود وفصل JavaScript عن HTML.
+        </p>
+
+
+        <h2>12. JavaScript in the Browser — JavaScript في المتصفح</h2>
+
+        <p dir="rtl">
+            يمكن تشغيل JavaScript داخل
+            <strong>Web Browser — متصفح الويب</strong>
+            مثل Chrome وFirefox وEdge.
+        </p>
+
+        <p dir="rtl">
+            عندما يقوم المتصفح بتحميل صفحة HTML تحتوي على JavaScript،
+            يقوم بتنفيذ الكود البرمجي وفقًا للتعليمات الموجودة فيه.
+        </p>
+
+
+        <h2>13. Console — وحدة التحكم</h2>
+
+        <p dir="rtl">
+            <strong>Console — وحدة التحكم</strong>
+            هي جزء موجود داخل أدوات المطور
+            <strong>Developer Tools</strong>
+            في المتصفح.
+        </p>
+
+        <p dir="rtl">
+            تستخدم الـ Console لعرض النتائج والرسائل،
+            كما تساعد المبرمج في اكتشاف الأخطاء أثناء كتابة الكود.
+        </p>
+
+        <div class="code">
+            console.log("Hello from JavaScript");
+        </div>
+
+
+        <h2>14. JavaScript Example — مثال على JavaScript</h2>
+
+        <p dir="rtl">
+            في المثال التالي سنستخدم JavaScript لعرض رسالة داخل
+            Console.
+        </p>
+
+        <div class="code">
+            &lt;script&gt;
+
+            console.log("Welcome to HAnova");
+
+            &lt;/script&gt;
+        </div>
+
+        <p dir="rtl">
+            عند تشغيل الصفحة وفتح الـ Console،
+            ستظهر الرسالة الموجودة داخل
+            <strong>console.log()</strong>.
+        </p>
+
+
+        <h2>15. JavaScript and User Interaction — JavaScript وتفاعل المستخدم</h2>
+
+        <p dir="rtl">
+            من أهم مميزات JavaScript قدرتها على الاستجابة لتفاعل المستخدم
+            مع الصفحة.
+        </p>
+
+        <p dir="rtl">
+            على سبيل المثال، يمكن تنفيذ كود معين عندما يقوم المستخدم
+            بالضغط على زر باستخدام
+            <strong>Click Event — حدث النقر</strong>.
+        </p>
+
+        <div class="code">
+            &lt;button onclick="alert('Hello!')"&gt;
+            Click Me
+            &lt;/button&gt;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق، عند الضغط على الزر تظهر رسالة للمستخدم.
+        </p>
+
+
+        <h2>16. JavaScript Features — مميزات JavaScript</h2>
+
+        <ul dir="rtl">
+            <li>إضافة التفاعل إلى صفحات الويب.</li>
+            <li>سهلة التعلم بالنسبة للمبتدئين.</li>
+            <li>تعمل مباشرة داخل متصفحات الويب.</li>
+            <li>تتعامل مع عناصر HTML.</li>
+            <li>تتعامل مع بيانات المستخدم.</li>
+            <li>تستخدم لإنشاء صفحات ويب ديناميكية.</li>
+            <li>يمكن استخدامها مع HTML وCSS.</li>
+        </ul>
+
+
+        <h2>17. Important JavaScript Terms — أهم مصطلحات JavaScript</h2>
+
+        <ul dir="rtl">
+            <li><strong>JavaScript</strong> — لغة برمجة لإضافة التفاعل إلى صفحات الويب.</li>
+            <li><strong>Programming Language</strong> — لغة برمجة.</li>
+            <li><strong>Syntax</strong> — صياغة الكود.</li>
+            <li><strong>Statement</strong> — تعليمة برمجية.</li>
+            <li><strong>Comment</strong> — تعليق.</li>
+            <li><strong>Console</strong> — وحدة التحكم.</li>
+            <li><strong>Browser</strong> — متصفح الويب.</li>
+            <li><strong>Script</strong> — كود برمجي.</li>
+            <li><strong>Interaction</strong> — تفاعل.</li>
+            <li><strong>Event</strong> — حدث.</li>
+        </ul>
+
+
+        <h2>18. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء صفحة HTML بسيطة، ثم أضف وسم
+            <strong>&lt;script&gt;</strong>
+            واكتب بداخله أمر
+            <strong>console.log()</strong>
+            لعرض رسالة من اختيارك داخل Console.
+        </p>
+
+        <p dir="rtl">
+            بعد ذلك جرّب إنشاء زر
+            <strong>&lt;button&gt;</strong>
+            واستخدم JavaScript لجعل الزر يعرض رسالة عند الضغط عليه.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>JavaScript هي لغة برمجة تستخدم لإضافة التفاعل إلى صفحات الويب.</li>
+            <li>HTML تستخدم لبناء هيكل الصفحة.</li>
+            <li>CSS تستخدم لتنسيق وتصميم الصفحة.</li>
+            <li>JavaScript تستخدم لإضافة السلوك والتفاعل.</li>
+            <li>Syntax = صياغة الكود.</li>
+            <li>Statement = تعليمة برمجية.</li>
+            <li>Comment = تعليق لا يتم تنفيذه.</li>
+            <li>Console = وحدة التحكم.</li>
+            <li>يمكن كتابة JavaScript داخل HTML باستخدام &lt;script&gt;.</li>
+            <li>يمكن وضع JavaScript في ملف خارجي بامتداد .js.</li>
+            <li>console.log() تستخدم لعرض الرسائل والقيم في Console.</li>
+            <li>JavaScript يمكنها الاستجابة لتفاعل المستخدم مع الصفحة.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

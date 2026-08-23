@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+    <div id="progressBar"></div>
+    <button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../html/index2.html" class="but">HTML Lessons</a>
+        <a href="../html/index4.html" class="but" onclick="completeLesson(event, this.href, 1)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 1 : Introduction To HTML</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is HTML? — ما هي HTML؟</h2>
+
+        <p dir="rtl">
+            HTML هي اختصار للمصطلح
+            <strong>HyperText Markup Language</strong>
+            أي <strong>لغة ترميز النص التشعبي</strong>.
+            وهي اللغة الأساسية المستخدمة في إنشاء وبناء صفحات الويب وتنظيم المحتوى
+            الذي يظهر داخل المتصفح.
+        </p>
+
+        <p dir="rtl">
+            عندما نفتح أي موقع على الإنترنت، فإن الصفحة التي نراها تحتوي على
+            عناوين وفقرات وصور وروابط وقوائم وغيرها من العناصر. يتم تحديد هيكل
+            هذه العناصر وتنظيمها باستخدام HTML.
+        </p>
+
+        <h2>2. Meaning of HyperText — معنى HyperText</h2>
+
+        <p dir="rtl">
+            كلمة <strong>HyperText</strong> تعني النص التشعبي.
+            وهو نص يحتوي على روابط تسمح للمستخدم بالانتقال من صفحة إلى صفحة أخرى
+            أو من جزء إلى جزء آخر داخل الموقع.
+        </p>
+
+        <p dir="rtl">
+            على سبيل المثال، عندما نضغط على كلمة
+            <strong>Learn HTML</strong>
+            وتنتقل إلى صفحة أخرى، فإن هذه الكلمة تمثل رابطًا
+            <strong>Link — رابط</strong>.
+        </p>
+
+        <h2>3. Meaning of Markup — معنى Markup</h2>
+
+        <p dir="rtl">
+            كلمة <strong>Markup</strong> تعني الترميز أو وضع علامات لتحديد وتنظيم
+            المحتوى. تستخدم HTML مجموعة من العلامات تسمى
+            <strong>Tags — الوسوم</strong>
+            لتخبر المتصفح بنوع كل جزء من أجزاء الصفحة.
+        </p>
+
+        <p dir="rtl">
+            فمثلًا عندما نستخدم الوسم
+            <strong>&lt;h1&gt;</strong>
+            فإننا نخبر المتصفح أن النص الموجود بداخله يمثل
+            <strong>Heading — عنوان</strong>.
+        </p>
+
+        <h2>4. Meaning of Language — معنى Language</h2>
+
+        <p dir="rtl">
+            كلمة <strong>Language</strong> تعني لغة. ولكن HTML ليست لغة برمجة
+            بالمعنى التقليدي، وإنما هي
+            <strong>Markup Language — لغة ترميز</strong>
+            تستخدم لوصف وتنظيم محتوى صفحة الويب.
+        </p>
+
+        <h2>5. Is HTML a Programming Language?</h2>
+
+        <p dir="rtl">
+            هل HTML لغة برمجة؟
+            الإجابة هي: لا.
+            HTML هي لغة ترميز وليست لغة برمجة، لأنها لا تستخدم لتنفيذ الخوارزميات
+            والعمليات المنطقية مثل لغات البرمجة.
+            وظيفتها الأساسية هي بناء
+            <strong>Structure — هيكل</strong>
+            صفحة الويب.
+        </p>
+
+        <h2>6. HTML and Front-End Development</h2>
+
+        <p dir="rtl">
+            تعتبر HTML واحدة من أهم أساسيات
+            <strong>Front-End Development — تطوير الواجهة الأمامية</strong>.
+            والـ Front-End هو الجزء من الموقع الذي يراه المستخدم ويتعامل معه
+            مباشرة.
+        </p>
+
+        <div class="info">
+            <h3>HTML — Structure</h3>
+            <p dir="rtl">تستخدم لبناء هيكل الصفحة وتنظيم محتواها.</p>
+        </div>
+
+        <div class="info">
+            <h3>CSS — Style</h3>
+            <p dir="rtl">تستخدم لتنسيق الصفحة والتحكم في الألوان والخطوط والأحجام.</p>
+        </div>
+
+        <div class="info">
+            <h3>JavaScript — Interaction</h3>
+            <p dir="rtl">تستخدم لإضافة التفاعل والحركة والوظائف الديناميكية.</p>
+        </div>
+
+        <h2>7. What is a Web Page? — ما هي صفحة الويب؟</h2>
+
+        <p dir="rtl">
+            <strong>Web Page — صفحة الويب</strong> هي مستند يمكن عرضه باستخدام
+            <strong>Web Browser — متصفح الويب</strong> مثل Google Chrome أو Microsoft Edge
+            أو Firefox.
+        </p>
+
+        <h2>8. What is a Website? — ما هو الموقع الإلكتروني؟</h2>
+
+        <p dir="rtl">
+            <strong>Website — موقع الويب</strong> هو مجموعة من صفحات الويب المرتبطة
+            ببعضها، ويمكن الوصول إليها من خلال عنوان الموقع
+            <strong>URL — Uniform Resource Locator</strong>.
+        </p>
+
+        <h2>9. What is an HTML Tag? — ما هو HTML Tag؟</h2>
+
+        <p dir="rtl">
+            الـ <strong>Tag — الوسم</strong> هو جزء من كود HTML يستخدم لتحديد نوع
+            المحتوى الموجود في الصفحة.
+        </p>
+
+        <div class="code">
+            &lt;h1&gt;Welcome to HAnova&lt;/h1&gt;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>&lt;h1&gt;</strong> هو Opening Tag — وسم الفتح،
+            و<strong>&lt;/h1&gt;</strong> هو Closing Tag — وسم الإغلاق،
+            والنص الموجود بينهما يسمى
+            <strong>Content — المحتوى</strong>.
+        </p>
+
+        <h2>10. What is an HTML Element? — ما هو HTML Element؟</h2>
+
+        <p dir="rtl">
+            <strong>HTML Element — عنصر HTML</strong> هو العنصر الكامل الذي يتكون
+            عادةً من وسم الفتح والمحتوى ووسم الإغلاق.
+        </p>
+
+        <div class="code">
+            &lt;p&gt;Welcome to my website&lt;/p&gt;
+        </div>
+
+        <p dir="rtl">
+            العنصر السابق يحتوي على وسم الفتح
+            <strong>&lt;p&gt;</strong>
+            والمحتوى
+            <strong>Welcome to my website</strong>
+            ووسم الإغلاق
+            <strong>&lt;/p&gt;</strong>.
+        </p>
+
+        <h2>11. Attributes — الخصائص</h2>
+
+        <p dir="rtl">
+            <strong>Attribute — الخاصية</strong> هي معلومات إضافية يتم وضعها داخل
+            Opening Tag لإضافة خصائص أو معلومات للعنصر.
+        </p>
+
+        <div class="code">
+            &lt;a href="https://example.com"&gt;Visit Website&lt;/a&gt;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تعتبر
+            <strong>href</strong>
+            خاصية تحدد عنوان الرابط الذي سينتقل إليه المستخدم.
+        </p>
+
+        <h2>12. Common HTML Tags — أشهر وسوم HTML</h2>
+
+        <ul dir="rtl">
+            <li><strong>&lt;h1&gt;</strong> — عنوان رئيسي.</li>
+            <li><strong>&lt;h2&gt;</strong> — عنوان فرعي.</li>
+            <li><strong>&lt;p&gt;</strong> — فقرة نصية.</li>
+            <li><strong>&lt;a&gt;</strong> — رابط.</li>
+            <li><strong>&lt;img&gt;</strong> — صورة.</li>
+            <li><strong>&lt;br&gt;</strong> — الانتقال إلى سطر جديد.</li>
+            <li><strong>&lt;hr&gt;</strong> — خط أفقي.</li>
+        </ul>
+
+        <h2>13. First HTML Example — أول مثال HTML</h2>
+
+        <div class="code">
+            &lt;h1&gt;My First Website&lt;/h1&gt;<br>
+            &lt;p&gt;Welcome to my first webpage.&lt;/p&gt;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق قمنا بإنشاء عنوان رئيسي باستخدام
+            <strong>h1</strong>
+            ثم أضفنا فقرة باستخدام
+            <strong>p</strong>.
+        </p>
+
+        <h2>14. Important Rules — قواعد مهمة</h2>
+
+        <ul dir="rtl">
+            <li>يجب كتابة الوسوم بطريقة صحيحة.</li>
+            <li>يجب إغلاق العناصر التي تحتاج إلى Closing Tag.</li>
+            <li>يجب كتابة أسماء الملفات والمسارات بشكل صحيح.</li>
+            <li>يجب وضع قيم الخصائص بين علامات اقتباس.</li>
+            <li>يفضل تنظيم الكود باستخدام المسافات والتنسيق المناسب.</li>
+        </ul>
+
+        <h2>15. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء صفحة تحتوي على عنوان رئيسي باستخدام
+            <strong>&lt;h1&gt;</strong>
+            وفقرة باستخدام
+            <strong>&lt;p&gt;</strong>
+            ورابط باستخدام
+            <strong>&lt;a&gt;</strong>.
+            حاول أيضًا تغيير النص الموجود داخل كل عنصر ومشاهدة النتيجة في المتصفح.
+        </p>
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>HTML = HyperText Markup Language = لغة ترميز النص التشعبي.</li>
+            <li>HTML تستخدم لبناء هيكل صفحات الويب.</li>
+            <li>Tag = وسم.</li>
+            <li>Element = عنصر.</li>
+            <li>Attribute = خاصية.</li>
+            <li>Content = محتوى.</li>
+            <li>Front-End = الواجهة الأمامية.</li>
+            <li>Browser = متصفح الويب.</li>
+            <li>Website = موقع إلكتروني.</li>
+            <li>Web Page = صفحة ويب.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+              <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">Designed by: Eng/ HAger</a>
+
+    </div>
+    <button id="topBtn">↑</button>
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

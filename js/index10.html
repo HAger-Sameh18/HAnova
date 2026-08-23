@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../js/index9.html" class="but">Previous Lesson</a>
+        <a href="../js/index2.html" class="but">JavaScript Lessons</a>
+        <a href="../js/index11.html" class="but" onclick="completeLesson(event, this.href, 8)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 8 : Objects</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is an Object? — ما هو الكائن؟</h2>
+
+        <p dir="rtl">
+            <strong>Object — الكائن</strong>
+            هو نوع من أنواع البيانات في JavaScript يستخدم لتخزين مجموعة
+            من البيانات المرتبطة ببعضها.
+        </p>
+
+        <p dir="rtl">
+            يتم تخزين البيانات داخل الـ Object في صورة
+            <strong>Key — مفتاح</strong>
+            و
+            <strong>Value — قيمة</strong>.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20,
+                grade: 95
+            };
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يمثل
+            <strong>student</strong>
+            كائنًا يحتوي على بيانات الطالب مثل الاسم والعمر والدرجة.
+        </p>
+
+
+        <h2>2. Why Do We Use Objects? — لماذا نستخدم Objects؟</h2>
+
+        <p dir="rtl">
+            نستخدم الـ Objects عندما نحتاج إلى تجميع بيانات مختلفة
+            مرتبطة بشيء واحد داخل متغير واحد.
+        </p>
+
+        <p dir="rtl">
+            على سبيل المثال، بدلًا من إنشاء متغير منفصل لكل معلومة عن
+            الطالب، يمكن جمع جميع البيانات داخل Object واحد.
+        </p>
+
+        <div class="code">
+            let name = "Hager";
+            let age = 20;
+            let grade = 95;
+        </div>
+
+        <p dir="rtl">
+            يمكن تنظيم هذه البيانات بشكل أفضل باستخدام Object.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20,
+                grade: 95
+            };
+        </div>
+
+
+        <h2>3. Creating an Object — إنشاء Object</h2>
+
+        <p dir="rtl">
+            يتم إنشاء الـ Object باستخدام الأقواس المعقوفة
+            <strong>{ }</strong>.
+        </p>
+
+        <div class="code">
+            let person = {
+                name: "Ahmed",
+                age: 21
+            };
+        </div>
+
+        <p dir="rtl">
+            يحتوي الكائن السابق على خاصيتين هما
+            <strong>name</strong>
+            و
+            <strong>age</strong>.
+        </p>
+
+
+        <h2>4. Properties — الخصائص</h2>
+
+        <p dir="rtl">
+            <strong>Property — الخاصية</strong>
+            هي البيانات التي تصف الكائن.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20,
+                grade: 95
+            };
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>name</strong> و<strong>age</strong> و<strong>grade</strong>
+            هي خصائص الكائن.
+        </p>
+
+
+        <h2>5. Key and Value — المفتاح والقيمة</h2>
+
+        <p dir="rtl">
+            تتكون كل خاصية داخل الـ Object من جزأين:
+            <strong>Key — المفتاح</strong>
+            و
+            <strong>Value — القيمة</strong>.
+        </p>
+
+        <div class="code">
+            name: "Hager"
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>name</strong>
+            هو الـ Key،
+            بينما
+            <strong>"Hager"</strong>
+            هي الـ Value.
+        </p>
+
+
+        <h2>6. Accessing Object Properties — الوصول إلى خصائص Object</h2>
+
+        <p dir="rtl">
+            يمكن الوصول إلى خصائص الـ Object باستخدام اسم الكائن ثم النقطة
+            <strong>.</strong>
+            ثم اسم الخاصية.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20
+            };
+
+            console.log(student.name);
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة:
+            <strong>Hager</strong>.
+        </p>
+
+
+        <h2>7. Dot Notation — طريقة النقطة</h2>
+
+        <p dir="rtl">
+            <strong>Dot Notation — طريقة النقطة</strong>
+            هي إحدى الطرق المستخدمة للوصول إلى خصائص الـ Object.
+        </p>
+
+        <div class="code">
+            let car = {
+                brand: "BMW",
+                model: "X5"
+            };
+
+            console.log(car.brand);
+            console.log(car.model);
+        </div>
+
+
+        <h2>8. Bracket Notation — طريقة الأقواس المربعة</h2>
+
+        <p dir="rtl">
+            يمكن أيضًا الوصول إلى خصائص الـ Object باستخدام
+            <strong>Bracket Notation — طريقة الأقواس المربعة</strong>.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20
+            };
+
+            console.log(student["name"]);
+            console.log(student["age"]);
+        </div>
+
+        <p dir="rtl">
+            هذه الطريقة مفيدة عندما يكون اسم الخاصية موجودًا داخل متغير.
+        </p>
+
+
+        <h2>9. Changing Object Properties — تغيير خصائص Object</h2>
+
+        <p dir="rtl">
+            يمكن تغيير قيمة خاصية موجودة داخل Object عن طريق إعطائها
+            قيمة جديدة.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                grade: 90
+            };
+
+            student.grade = 95;
+
+            console.log(student.grade);
+        </div>
+
+        <p dir="rtl">
+            تم تغيير قيمة
+            <strong>grade</strong>
+            من
+            <strong>90</strong>
+            إلى
+            <strong>95</strong>.
+        </p>
+
+
+        <h2>10. Adding New Properties — إضافة خصائص جديدة</h2>
+
+        <p dir="rtl">
+            يمكن إضافة خاصية جديدة إلى Object بعد إنشائه.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20
+            };
+
+            student.grade = 95;
+
+            console.log(student);
+        </div>
+
+        <p dir="rtl">
+            تمت إضافة الخاصية
+            <strong>grade</strong>
+            إلى الكائن.
+        </p>
+
+
+        <h2>11. Deleting Properties — حذف الخصائص</h2>
+
+        <p dir="rtl">
+            يمكن حذف خاصية من Object باستخدام الكلمة المفتاحية
+            <strong>delete</strong>.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20,
+                grade: 95
+            };
+
+            delete student.grade;
+
+            console.log(student);
+        </div>
+
+        <p dir="rtl">
+            سيتم حذف الخاصية
+            <strong>grade</strong>
+            من الكائن.
+        </p>
+
+
+        <h2>12. Objects with Different Data Types — أنواع بيانات مختلفة</h2>
+
+        <p dir="rtl">
+            يمكن أن يحتوي Object على أنواع مختلفة من البيانات في نفس الوقت.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20,
+                grade: 95,
+                passed: true
+            };
+        </div>
+
+        <p dir="rtl">
+            يحتوي الكائن السابق على:
+            <strong>String</strong>،
+            <strong>Number</strong>،
+            و<strong>Boolean</strong>.
+        </p>
+
+
+        <h2>13. Object with Array — Object يحتوي على Array</h2>
+
+        <p dir="rtl">
+            يمكن أن تحتوي إحدى خصائص الـ Object على Array.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                subjects: ["HTML", "CSS", "JavaScript"]
+            };
+        </div>
+
+        <p dir="rtl">
+            يمكن الوصول إلى المصفوفة الموجودة داخل الكائن باستخدام:
+        </p>
+
+        <div class="code">
+            console.log(student.subjects);
+        </div>
+
+
+        <h2>14. Accessing Array Inside Object — الوصول إلى Array داخل Object</h2>
+
+        <p dir="rtl">
+            يمكن الوصول إلى عنصر معين داخل Array الموجودة داخل Object
+            باستخدام أكثر من Index.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                subjects: ["HTML", "CSS", "JavaScript"]
+            };
+
+            console.log(student.subjects[0]);
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة:
+            <strong>HTML</strong>.
+        </p>
+
+
+        <h2>15. Nested Objects — الكائنات المتداخلة</h2>
+
+        <p dir="rtl">
+            يمكن أن يحتوي Object على Object آخر بداخله،
+            ويسمى ذلك
+            <strong>Nested Object — كائن متداخل</strong>.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                address: {
+                    city: "Banha",
+                    country: "Egypt"
+                }
+            };
+        </div>
+
+        <p dir="rtl">
+            للوصول إلى المدينة يمكن كتابة:
+        </p>
+
+        <div class="code">
+            console.log(student.address.city);
+        </div>
+
+
+        <h2>16. Object Methods — دوال الكائن</h2>
+
+        <p dir="rtl">
+            يمكن أن يحتوي Object على دالة،
+            وعندما تكون الدالة داخل Object تسمى
+            <strong>Method — دالة كائن</strong>.
+        </p>
+
+        <div class="code">
+            let person = {
+
+                name: "Hager",
+
+                sayHello: function() {
+                    console.log("Hello");
+                }
+
+            };
+
+            person.sayHello();
+        </div>
+
+
+        <h2>17. Using this — استخدام this</h2>
+
+        <p dir="rtl">
+            الكلمة المفتاحية
+            <strong>this</strong>
+            تستخدم للإشارة إلى الكائن الحالي في كثير من سياقات
+            التعامل مع Objects.
+        </p>
+
+        <div class="code">
+            let person = {
+
+                name: "Hager",
+
+                sayHello: function() {
+                    console.log("Hello " + this.name);
+                }
+
+            };
+
+            person.sayHello();
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تشير
+            <strong>this.name</strong>
+            إلى الخاصية
+            <strong>name</strong>
+            الموجودة داخل الكائن الحالي.
+        </p>
+
+
+        <h2>18. Object.keys() — الحصول على المفاتيح</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>Object.keys()</strong>
+            للحصول على Array تحتوي على جميع مفاتيح الـ Object.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20,
+                grade: 95
+            };
+
+            console.log(Object.keys(student));
+        </div>
+
+
+        <h2>19. Object.values() — الحصول على القيم</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>Object.values()</strong>
+            للحصول على Array تحتوي على جميع القيم الموجودة داخل Object.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20,
+                grade: 95
+            };
+
+            console.log(Object.values(student));
+        </div>
+
+
+        <h2>20. Object.entries() — الحصول على المفاتيح والقيم</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>Object.entries()</strong>
+            للحصول على Array تحتوي على أزواج من المفاتيح والقيم.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20
+            };
+
+            console.log(Object.entries(student));
+        </div>
+
+
+        <h2>21. for...in — المرور على خصائص Object</h2>
+
+        <p dir="rtl">
+            يمكن استخدام
+            <strong>for...in</strong>
+            للمرور على جميع خصائص Object.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20,
+                grade: 95
+            };
+
+            for (let key in student) {
+                console.log(key);
+            }
+        </div>
+
+        <p dir="rtl">
+            في كل تكرار يتم الحصول على اسم خاصية من خصائص الكائن.
+        </p>
+
+
+        <h2>22. Objects with Functions — Objects مع الدوال</h2>
+
+        <p dir="rtl">
+            يمكن استخدام الدوال مع Objects لتنفيذ عمليات تعتمد على البيانات
+            الموجودة داخل الكائن.
+        </p>
+
+        <div class="code">
+            let calculator = {
+
+                number1: 10,
+                number2: 5,
+
+                add: function() {
+                    return this.number1 + this.number2;
+                }
+
+            };
+
+            console.log(calculator.add());
+        </div>
+
+
+        <h2>23. Objects as Function Arguments — إرسال Object إلى دالة</h2>
+
+        <p dir="rtl">
+            يمكن إرسال Object إلى دالة كـ
+            <strong>Argument</strong>
+            والتعامل مع خصائصه داخل الدالة.
+        </p>
+
+        <div class="code">
+            function showStudent(student) {
+
+                console.log(student.name);
+                console.log(student.grade);
+
+            }
+
+            let student = {
+                name: "Hager",
+                grade: 95
+            };
+
+            showStudent(student);
+        </div>
+
+
+        <h2>24. Array of Objects — Array من Objects</h2>
+
+        <p dir="rtl">
+            يمكن إنشاء Array تحتوي على مجموعة من Objects،
+            وهذا أسلوب شائع جدًا في JavaScript لتخزين مجموعة من البيانات
+            المتشابهة.
+        </p>
+
+        <div class="code">
+            let students = [
+
+                {
+                    name: "Hager",
+                    grade: 95
+                },
+
+                {
+                    name: "Ahmed",
+                    grade: 90
+                },
+
+                {
+                    name: "Mona",
+                    grade: 93
+                }
+
+            ];
+        </div>
+
+        <p dir="rtl">
+            يحتوي الـ Array السابق على ثلاثة Objects،
+            وكل Object يمثل طالبًا وبياناته.
+        </p>
+
+
+        <h2>25. Accessing Objects in an Array — الوصول إلى Objects داخل Array</h2>
+
+        <p dir="rtl">
+            يمكن الوصول إلى Object معين داخل Array باستخدام الـ Index،
+            ثم الوصول إلى الخاصية المطلوبة.
+        </p>
+
+        <div class="code">
+            console.log(students[0].name);
+            console.log(students[1].grade);
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم الوصول إلى اسم الطالب الأول ودرجة الطالب
+            الثاني.
+        </p>
+
+
+        <h2>26. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء Object باسم
+            <strong>student</strong>
+            يحتوي على:
+        </p>
+
+        <ul dir="rtl">
+            <li>اسم الطالب باستخدام <strong>name</strong>.</li>
+            <li>عمر الطالب باستخدام <strong>age</strong>.</li>
+            <li>درجة الطالب باستخدام <strong>grade</strong>.</li>
+            <li>مادة دراسية باستخدام <strong>subject</strong>.</li>
+        </ul>
+
+        <p dir="rtl">
+            بعد ذلك قم بطباعة اسم الطالب ودرجته،
+            ثم قم بتغيير الدرجة وإضافة خاصية جديدة للكائن.
+        </p>
+
+        <p dir="rtl">
+            وأخيرًا أنشئ Array تحتوي على ثلاثة Objects يمثل كل منها طالبًا
+            مختلفًا.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Object = الكائن.</li>
+            <li>Property = الخاصية.</li>
+            <li>Key = المفتاح.</li>
+            <li>Value = القيمة.</li>
+            <li>Dot Notation = طريقة النقطة.</li>
+            <li>Bracket Notation = طريقة الأقواس المربعة.</li>
+            <li>Method = دالة داخل Object.</li>
+            <li>this = الإشارة إلى الكائن الحالي.</li>
+            <li>Object.keys() = الحصول على مفاتيح الكائن.</li>
+            <li>Object.values() = الحصول على قيم الكائن.</li>
+            <li>Object.entries() = الحصول على المفاتيح والقيم.</li>
+            <li>for...in = المرور على خصائص Object.</li>
+            <li>Nested Object = كائن متداخل.</li>
+            <li>Array of Objects = مصفوفة تحتوي على Objects.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../css/index11.html" class="but">Previous Lesson</a>
+        <a href="../css/index2.html" class="but">CSS Lessons</a>
+        <a href="../css/index13.html" class="but" onclick="completeCSS(event, this.href)">The Next</a>
+    </div>
+
+    <h1>Lesson 10 : Responsive Design</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is Responsive Design? — ما هو التصميم المتجاوب؟</h2>
+
+        <p dir="rtl">
+            <strong>Responsive Design — التصميم المتجاوب</strong>
+            هو أسلوب في تصميم مواقع الويب يجعل الصفحة تتكيف مع أحجام
+            الشاشات والأجهزة المختلفة.
+        </p>
+
+        <p dir="rtl">
+            بمعنى أن الموقع يمكن أن يظهر بشكل مناسب على
+            <strong>Desktop — الكمبيوتر</strong>
+            و<strong>Tablet — الجهاز اللوحي</strong>
+            و<strong>Mobile — الهاتف المحمول</strong>
+            دون الحاجة إلى إنشاء صفحة منفصلة لكل جهاز.
+        </p>
+
+
+        <h2>2. Why Responsive Design? — لماذا نستخدم التصميم المتجاوب؟</h2>
+
+        <p dir="rtl">
+            تختلف أحجام شاشات الأجهزة التي يستخدمها الأشخاص للوصول إلى المواقع،
+            لذلك يجب أن يكون تصميم الموقع قادرًا على التكيف مع هذه الأحجام.
+        </p>
+
+        <ul dir="rtl">
+            <li>تحسين تجربة المستخدم.</li>
+            <li>جعل الموقع مناسبًا للهواتف والأجهزة اللوحية.</li>
+            <li>منع ظهور المحتوى خارج حدود الشاشة.</li>
+            <li>تنظيم العناصر بشكل أفضل على الشاشات الصغيرة.</li>
+            <li>الحفاظ على سهولة استخدام الموقع على الأجهزة المختلفة.</li>
+        </ul>
+
+
+        <h2>3. Viewport — مساحة عرض الصفحة</h2>
+
+        <p dir="rtl">
+            <strong>Viewport — منفذ العرض</strong>
+            هو المساحة التي يستطيع المستخدم رؤية صفحة الويب من خلالها
+            على جهازه.
+        </p>
+
+        <p dir="rtl">
+            لذلك من المهم إضافة
+            <strong>Viewport Meta Tag</strong>
+            داخل صفحة HTML حتى يتم عرض الصفحة بشكل مناسب على الأجهزة المختلفة.
+        </p>
+
+        <div class="code">
+            &lt;meta name="viewport"
+            content="width=device-width, initial-scale=1.0"&gt;
+        </div>
+
+        <p dir="rtl">
+            تعني
+            <strong>width=device-width</strong>
+            أن عرض الصفحة يتوافق مع عرض شاشة الجهاز،
+            بينما
+            <strong>initial-scale=1.0</strong>
+            تحدد مستوى التكبير الأولي للصفحة.
+        </p>
+
+
+        <h2>4. Media Query — الاستعلامات الإعلامية</h2>
+
+        <p dir="rtl">
+            <strong>Media Query — الاستعلام الإعلامي</strong>
+            هي إحدى أهم أدوات CSS المستخدمة في إنشاء التصميم المتجاوب.
+        </p>
+
+        <p dir="rtl">
+            تسمح لنا بتطبيق تنسيقات مختلفة عندما يكون عرض الشاشة
+            أكبر أو أصغر من قيمة معينة.
+        </p>
+
+        <div class="code">
+            @media (max-width: 600px) {
+
+                body {
+                    font-size: 16px;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم تطبيق التنسيق عندما يكون عرض الشاشة
+            <strong>600px</strong>
+            أو أقل.
+        </p>
+
+
+        <h2>5. Max-width — أقصى عرض</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>max-width</strong>
+            لتطبيق تنسيق معين عندما لا يتجاوز عرض الشاشة قيمة محددة.
+        </p>
+
+        <div class="code">
+            @media (max-width: 768px) {
+
+                .container {
+                    width: 90%;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            سيتم تطبيق هذه القاعدة عندما يكون عرض الشاشة
+            <strong>768px</strong>
+            أو أقل.
+        </p>
+
+
+        <h2>6. Min-width — أقل عرض</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>min-width</strong>
+            لتطبيق تنسيق عندما يكون عرض الشاشة مساويًا أو أكبر
+            من قيمة محددة.
+        </p>
+
+        <div class="code">
+            @media (min-width: 768px) {
+
+                .container {
+                    width: 80%;
+                }
+
+            }
+        </div>
+
+
+        <h2>7. Breakpoints — نقاط التوقف</h2>
+
+        <p dir="rtl">
+            <strong>Breakpoints — نقاط التوقف</strong>
+            هي أحجام معينة للشاشة نستخدمها لتغيير شكل التصميم
+            عندما يتغير حجم الجهاز.
+        </p>
+
+        <p dir="rtl">
+            يمكن استخدام Media Queries عند نقاط مختلفة مثل:
+        </p>
+
+        <ul dir="rtl">
+            <li>الشاشات الصغيرة جدًا.</li>
+            <li>الهواتف المحمولة.</li>
+            <li>الأجهزة اللوحية.</li>
+            <li>أجهزة الكمبيوتر.</li>
+            <li>الشاشات الكبيرة.</li>
+        </ul>
+
+
+        <h2>8. Mobile First — تصميم الهاتف أولًا</h2>
+
+        <p dir="rtl">
+            <strong>Mobile First — الهاتف أولًا</strong>
+            هو أسلوب تصميم نبدأ فيه بتصميم الصفحة للشاشات الصغيرة،
+            ثم نضيف التنسيقات اللازمة للشاشات الأكبر.
+        </p>
+
+        <div class="code">
+            .container {
+                width: 100%;
+            }
+
+            @media (min-width: 768px) {
+
+                .container {
+                    width: 80%;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يبدأ التصميم بعرض كامل مناسب للشاشات الصغيرة،
+            ثم يتغير عند الشاشات الأكبر.
+        </p>
+
+
+        <h2>9. Flexible Width — العرض المرن</h2>
+
+        <p dir="rtl">
+            من الأفضل في التصميم المتجاوب استخدام قيم مرنة بدلًا من
+            الاعتماد دائمًا على قيم ثابتة مثل
+            <strong>500px</strong>.
+        </p>
+
+        <div class="code">
+            .container {
+                width: 90%;
+            }
+        </div>
+
+        <p dir="rtl">
+            استخدام النسبة المئوية يجعل العنصر يتكيف مع عرض الشاشة.
+        </p>
+
+
+        <h2>10. Percentage Units — النسبة المئوية</h2>
+
+        <p dir="rtl">
+            يمكن استخدام
+            <strong>%</strong>
+            لتحديد حجم العنصر بالنسبة إلى العنصر الأب.
+        </p>
+
+        <div class="code">
+            .box {
+                width: 50%;
+            }
+        </div>
+
+        <p dir="rtl">
+            يعني ذلك أن عرض العنصر يساوي نصف عرض العنصر الأب.
+        </p>
+
+
+        <h2>11. Viewport Units — وحدات الشاشة</h2>
+
+        <p dir="rtl">
+            توفر CSS وحدات تعتمد على حجم الشاشة،
+            ومن أهمها:
+            <strong>vw</strong>
+            و<strong>vh</strong>.
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>vw</strong> — نسبة من عرض نافذة المتصفح.</li>
+            <li><strong>vh</strong> — نسبة من ارتفاع نافذة المتصفح.</li>
+        </ul>
+
+        <div class="code">
+            .box {
+                width: 50vw;
+                height: 50vh;
+            }
+        </div>
+
+
+        <h2>12. max-width — الحد الأقصى لعرض العنصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>max-width</strong>
+            لمنع العنصر من أن يصبح أكبر من حجم معين.
+        </p>
+
+        <div class="code">
+            img {
+                width: 100%;
+                max-width: 500px;
+            }
+        </div>
+
+        <p dir="rtl">
+            يسمح هذا المثال للصورة بالتكيف مع المساحة المتاحة،
+            ولكن لا يتجاوز عرضها
+            <strong>500px</strong>.
+        </p>
+
+
+        <h2>13. Responsive Images — الصور المتجاوبة</h2>
+
+        <p dir="rtl">
+            يجب أن تتكيف الصور مع حجم الشاشة حتى لا تتجاوز حدود العنصر
+            أو تسبب ظهور شريط تمرير أفقي.
+        </p>
+
+        <div class="code">
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        </div>
+
+        <p dir="rtl">
+            تعني
+            <strong>max-width: 100%</strong>
+            أن الصورة لا تتجاوز عرض العنصر الأب،
+            بينما تحافظ
+            <strong>height: auto</strong>
+            على تناسب أبعاد الصورة.
+        </p>
+
+
+        <h2>14. Responsive Text — النص المتجاوب</h2>
+
+        <p dir="rtl">
+            يجب أيضًا مراعاة حجم النص عند تصميم المواقع للشاشات الصغيرة.
+            يمكن استخدام Media Queries لتغيير حجم الخط.
+        </p>
+
+        <div class="code">
+            h1 {
+                font-size: 36px;
+            }
+
+            @media (max-width: 600px) {
+
+                h1 {
+                    font-size: 24px;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            في الشاشات الصغيرة يصبح حجم العنوان أصغر حتى لا يأخذ مساحة كبيرة.
+        </p>
+
+
+        <h2>15. Responsive Navigation — قائمة التنقل المتجاوبة</h2>
+
+        <p dir="rtl">
+            يمكن استخدام Media Queries لتغيير طريقة عرض قائمة التنقل
+            على الشاشات الصغيرة.
+        </p>
+
+        <div class="code">
+            .nav {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            @media (max-width: 600px) {
+
+                .nav {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            في الشاشات الكبيرة تظهر العناصر بجانب بعضها،
+            بينما في الشاشات الصغيرة يمكن ترتيبها بشكل رأسي.
+        </p>
+
+
+        <h2>16. Flexbox and Responsive Design — Flexbox والتصميم المتجاوب</h2>
+
+        <p dir="rtl">
+            يعتبر
+            <strong>Flexbox</strong>
+            من أهم الأدوات المستخدمة لإنشاء تصميمات متجاوبة،
+            لأنه يسمح بترتيب العناصر وتوزيع المساحات بينها بشكل مرن.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+        </div>
+
+        <p dir="rtl">
+            استخدام
+            <strong>flex-wrap</strong>
+            يسمح للعناصر بالانتقال إلى سطر جديد عندما لا تكون المساحة كافية.
+        </p>
+
+
+        <h2>17. Grid and Responsive Design — Grid والتصميم المتجاوب</h2>
+
+        <p dir="rtl">
+            يمكن أيضًا استخدام
+            <strong>CSS Grid</strong>
+            لإنشاء تخطيطات متجاوبة تحتوي على عدة أعمدة وصفوف.
+        </p>
+
+        <div class="code">
+            .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            @media (max-width: 600px) {
+
+                .container {
+                    grid-template-columns: 1fr;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم عرض ثلاثة أعمدة على الشاشات الأكبر،
+            بينما يصبح التخطيط بعمود واحد على الشاشات الصغيرة.
+        </p>
+
+
+        <h2>18. Responsive Cards — البطاقات المتجاوبة</h2>
+
+        <p dir="rtl">
+            يمكن إنشاء مجموعة من البطاقات بحيث تتكيف مع حجم الشاشة.
+        </p>
+
+        <div class="code">
+            .cards {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                flex: 1;
+                min-width: 200px;
+            }
+        </div>
+
+        <p dir="rtl">
+            عندما تقل المساحة المتاحة، يمكن أن تنتقل البطاقات إلى سطر جديد.
+        </p>
+
+
+        <h2>19. Overflow — المحتوى الزائد</h2>
+
+        <p dir="rtl">
+            <strong>Overflow — تجاوز المحتوى</strong>
+            يحدث عندما يكون محتوى العنصر أكبر من المساحة المتاحة له.
+        </p>
+
+        <p dir="rtl">
+            يمكن التحكم في ذلك باستخدام الخاصية
+            <strong>overflow</strong>.
+        </p>
+
+        <div class="code">
+            .box {
+                overflow: auto;
+            }
+        </div>
+
+        <p dir="rtl">
+            تسمح القيمة
+            <strong>auto</strong>
+            للمتصفح بإظهار شريط تمرير عند الحاجة.
+        </p>
+
+
+        <h2>20. Horizontal Scrolling — التمرير الأفقي</h2>
+
+        <p dir="rtl">
+            يجب تجنب خروج العناصر خارج حدود الشاشة،
+            لأن ذلك قد يؤدي إلى ظهور
+            <strong>Horizontal Scrolling — تمرير أفقي</strong>
+            غير مرغوب فيه.
+        </p>
+
+        <div class="code">
+            * {
+                box-sizing: border-box;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        </div>
+
+        <p dir="rtl">
+            تساعد هذه القواعد في تقليل المشكلات الناتجة عن تجاوز المحتوى
+            لعرض الشاشة.
+        </p>
+
+
+        <h2>21. Responsive Units — وحدات مناسبة للتصميم المتجاوب</h2>
+
+        <ul dir="rtl">
+            <li><strong>%</strong> — النسبة المئوية.</li>
+            <li><strong>vw</strong> — نسبة من عرض الشاشة.</li>
+            <li><strong>vh</strong> — نسبة من ارتفاع الشاشة.</li>
+            <li><strong>rem</strong> — وحدة تعتمد على حجم الخط الأساسي.</li>
+            <li><strong>em</strong> — وحدة تعتمد على حجم خط العنصر الأب.</li>
+            <li><strong>px</strong> — وحدة ثابتة تستخدم عندما نحتاج إلى قياس محدد.</li>
+        </ul>
+
+
+        <h2>22. Common Breakpoints — أمثلة على نقاط التوقف</h2>
+
+        <p dir="rtl">
+            يمكن اختيار نقاط التوقف حسب تصميم الموقع والمحتوى،
+            وليس من الضروري الالتزام بأرقام محددة لكل مشروع.
+        </p>
+
+        <div class="code">
+            @media (max-width: 600px) {
+
+                /* Small screens */
+
+            }
+
+            @media (min-width: 601px) and (max-width: 1024px) {
+
+                /* Medium screens */
+
+            }
+
+            @media (min-width: 1025px) {
+
+                /* Large screens */
+
+            }
+        </div>
+
+
+        <h2>23. Responsive Layout Example — مثال على تصميم متجاوب</h2>
+
+        <div class="code">
+            .container {
+                width: 90%;
+                margin: auto;
+                display: flex;
+                gap: 20px;
+            }
+
+            .box {
+                flex: 1;
+                padding: 20px;
+            }
+
+            @media (max-width: 600px) {
+
+                .container {
+                    flex-direction: column;
+                }
+
+                .box {
+                    width: 100%;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تظهر العناصر بجانب بعضها على الشاشات الكبيرة،
+            بينما يتم ترتيبها فوق بعضها على الشاشات الصغيرة.
+        </p>
+
+
+        <h2>24. Mobile Responsive Example — مثال للهاتف</h2>
+
+        <div class="code">
+            .content {
+                width: 80%;
+                margin: auto;
+                font-size: 20px;
+            }
+
+            @media (max-width: 600px) {
+
+                .content {
+                    width: 95%;
+                    font-size: 16px;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            عند استخدام الموقع من الهاتف يتم زيادة المساحة المتاحة للمحتوى
+            وتقليل حجم الخط ليتناسب مع الشاشة الصغيرة.
+        </p>
+
+
+        <h2>25. Tablet Responsive Example — مثال للجهاز اللوحي</h2>
+
+        <div class="code">
+            @media (min-width: 601px) and (max-width: 1024px) {
+
+                .container {
+                    width: 90%;
+                }
+
+                .box {
+                    font-size: 18px;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            يمكن تخصيص تنسيقات معينة للأجهزة اللوحية باستخدام
+            Media Query مناسبة.
+        </p>
+
+
+        <h2>26. Desktop Responsive Example — مثال للكمبيوتر</h2>
+
+        <div class="code">
+            @media (min-width: 1025px) {
+
+                .container {
+                    width: 80%;
+                    max-width: 1200px;
+                    margin: auto;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            يمكن تحديد عرض مناسب للمحتوى على الشاشات الكبيرة حتى لا يصبح
+            المحتوى ممتدًا بشكل مبالغ فيه.
+        </p>
+
+
+        <h2>27. Responsive Design with Flexbox — التصميم المتجاوب باستخدام Flexbox</h2>
+
+        <div class="code">
+            .container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .item {
+                flex: 1;
+                min-width: 250px;
+            }
+
+            @media (max-width: 600px) {
+
+                .item {
+                    min-width: 100%;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            يجمع المثال بين
+            <strong>Flexbox</strong>
+            و<strong>flex-wrap</strong>
+            و<strong>Media Query</strong>
+            لإنشاء تخطيط متجاوب.
+        </p>
+
+
+        <h2>28. Best Practices — أفضل الممارسات</h2>
+
+        <ul dir="rtl">
+            <li>استخدم Viewport Meta Tag في صفحات HTML.</li>
+            <li>استخدم وحدات مرنة عندما يكون ذلك مناسبًا.</li>
+            <li>استخدم Media Queries لتغيير التصميم حسب حجم الشاشة.</li>
+            <li>تأكد من أن الصور لا تتجاوز عرض الشاشة.</li>
+            <li>استخدم Flexbox أو Grid لإنشاء تخطيطات مرنة.</li>
+            <li>اختبر الموقع على أحجام شاشات مختلفة.</li>
+            <li>تجنب الاعتماد على قيم ثابتة في كل أجزاء التصميم.</li>
+        </ul>
+
+
+        <h2>29. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء صفحة تحتوي على عدة عناصر بجانب بعضها باستخدام
+            <strong>Flexbox</strong>.
+        </p>
+
+        <p dir="rtl">
+            بعد ذلك استخدم
+            <strong>@media</strong>
+            لجعل العناصر تظهر فوق بعضها عندما يصبح عرض الشاشة
+            صغيرًا.
+        </p>
+
+        <p dir="rtl">
+            جرب أيضًا تغيير حجم الخط والعرض والمسافات عند استخدام الهاتف،
+            ثم افتح الصفحة على أحجام مختلفة ولاحظ التغييرات.
+        </p>
+
+
+        <h2>30. Complete Responsive Example — مثال متكامل</h2>
+
+        <div class="code">
+            * {
+                box-sizing: border-box;
+            }
+
+            .container {
+                width: 90%;
+                max-width: 1200px;
+                margin: auto;
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .box {
+                flex: 1;
+                min-width: 250px;
+                padding: 20px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            @media (max-width: 600px) {
+
+                .container {
+                    width: 95%;
+                    flex-direction: column;
+                }
+
+                .box {
+                    width: 100%;
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            يجمع المثال السابق مجموعة من أهم تقنيات التصميم المتجاوب،
+            مثل
+            <strong>Flexbox</strong>
+            و<strong>Media Queries</strong>
+            و<strong>max-width</strong>
+            والوحدات المرنة.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Responsive Design = التصميم المتجاوب.</li>
+            <li>Viewport = مساحة عرض الصفحة.</li>
+            <li>Media Query = الاستعلام الإعلامي.</li>
+            <li>Breakpoint = نقطة توقف.</li>
+            <li>Mobile First = تصميم الهاتف أولًا.</li>
+            <li>max-width = أقصى عرض.</li>
+            <li>min-width = أقل عرض.</li>
+            <li>% = النسبة المئوية.</li>
+            <li>vw = نسبة من عرض الشاشة.</li>
+            <li>vh = نسبة من ارتفاع الشاشة.</li>
+            <li>Responsive Image = صورة متجاوبة.</li>
+            <li>Flexbox = نظام تخطيط مرن.</li>
+            <li>Grid = نظام تخطيط شبكي.</li>
+            <li>Overflow = تجاوز المحتوى.</li>
+            <li>Horizontal Scrolling = التمرير الأفقي.</li>
+            <li>Media Queries تسمح بتغيير التصميم حسب حجم الشاشة.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+        <a href="https://hager-sameh18.github.io/ME/"
+           target="_blank"
+           class="but">
+            Designed by: Eng/ HAger
+        </a>
+
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

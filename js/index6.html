@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+    <div id="progressBar"></div>
+    <button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../js/index5.html" class="but">Previous Lesson</a>
+        <a href="../js/index2.html" class="but">JavaScript Lessons</a>
+        <a href="../js/index7.html" class="but" onclick="completeLesson(event, this.href, 4)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 4 : Conditions</h1>
+
+    <div class="lesson">
+
+        <h2>1. What are Conditions? — ما هي الشروط؟</h2>
+
+        <p dir="rtl">
+            <strong>Conditions — الشروط</strong>
+            هي طريقة تستخدم في JavaScript لاتخاذ قرارات مختلفة
+            بناءً على نتيجة اختبار أو مقارنة معينة.
+        </p>
+
+        <p dir="rtl">
+            بمعنى آخر، يمكن للبرنامج أن يتحقق من شرط معين،
+            وإذا كان الشرط صحيحًا ينفذ مجموعة من التعليمات،
+            وإذا كان غير صحيح يمكنه تنفيذ تعليمات أخرى.
+        </p>
+
+        <div class="code">
+            let age = 20;
+
+            if (age &gt;= 18) {
+            console.log("Adult");
+            }
+        </div>
+
+
+        <h2>2. Why Do We Use Conditions? — لماذا نستخدم الشروط؟</h2>
+
+        <p dir="rtl">
+            نستخدم الشروط عندما نريد أن يتصرف البرنامج بطريقة مختلفة
+            حسب البيانات أو الموقف.
+        </p>
+
+        <ul dir="rtl">
+            <li>التحقق من عمر المستخدم.</li>
+            <li>التحقق من صحة كلمة المرور.</li>
+            <li>تحديد نجاح أو رسوب الطالب.</li>
+            <li>معرفة إذا كان الرقم موجبًا أو سالبًا.</li>
+            <li>إظهار رسالة مختلفة حسب حالة المستخدم.</li>
+            <li>تنفيذ تعليمات معينة عند تحقق شرط معين.</li>
+        </ul>
+
+
+        <h2>3. if Statement — جملة if</h2>
+
+        <p dir="rtl">
+            <strong>if Statement — جملة if</strong>
+            تستخدم لتنفيذ مجموعة من التعليمات إذا كان الشرط صحيحًا
+            <strong>true</strong>.
+        </p>
+
+        <div class="code">
+            let age = 20;
+
+            if (age &gt;= 18) {
+            console.log("You are an adult");
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتحقق البرنامج من أن قيمة
+            <strong>age</strong>
+            أكبر من أو تساوي
+            <strong>18</strong>.
+            إذا كان الشرط صحيحًا، يتم تنفيذ الرسالة الموجودة داخل
+            الأقواس المعقوفة.
+        </p>
+
+
+        <h2>4. Condition — الشرط</h2>
+
+        <p dir="rtl">
+            <strong>Condition — الشرط</strong>
+            هو التعبير الذي يتم اختباره لمعرفة هل نتيجته
+            <strong>true</strong>
+            أم
+            <strong>false</strong>.
+        </p>
+
+        <div class="code">
+            let age = 20;
+
+            age &gt;= 18
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>age &gt;= 18</strong>
+            هو الشرط الذي يتم اختباره.
+        </p>
+
+
+        <h2>5. Curly Brackets — الأقواس المعقوفة</h2>
+
+        <p dir="rtl">
+            تستخدم الأقواس المعقوفة
+            <strong>{ }</strong>
+            لتحديد مجموعة التعليمات التي سيتم تنفيذها عندما يكون الشرط
+            صحيحًا.
+        </p>
+
+        <div class="code">
+            if (age &gt;= 18) {
+            console.log("Allowed");
+            console.log("Welcome");
+            }
+        </div>
+
+        <p dir="rtl">
+            جميع التعليمات الموجودة داخل الأقواس سيتم تنفيذها إذا كان
+            الشرط صحيحًا.
+        </p>
+
+
+        <h2>6. if...else Statement — جملة if...else</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>if...else</strong>
+            عندما نريد تنفيذ مجموعة من التعليمات إذا كان الشرط صحيحًا،
+            ومجموعة أخرى إذا كان الشرط غير صحيح.
+        </p>
+
+        <div class="code">
+            let age = 16;
+
+            if (age &gt;= 18) {
+            console.log("Adult");
+            } else {
+            console.log("Not Adult");
+            }
+        </div>
+
+        <p dir="rtl">
+            إذا كان العمر أكبر من أو يساوي
+            <strong>18</strong>
+            سيتم تنفيذ الجزء الموجود داخل
+            <strong>if</strong>،
+            وإلا سيتم تنفيذ الجزء الموجود داخل
+            <strong>else</strong>.
+        </p>
+
+
+        <h2>7. else Statement — جملة else</h2>
+
+        <p dir="rtl">
+            <strong>else Statement — جملة else</strong>
+            تستخدم لتنفيذ تعليمات عندما يكون شرط
+            <strong>if</strong>
+            غير صحيح.
+        </p>
+
+        <div class="code">
+            let number = 5;
+
+            if (number &gt; 10) {
+            console.log("Number is greater than 10");
+            } else {
+            console.log("Number is not greater than 10");
+            }
+        </div>
+
+
+        <h2>8. else if Statement — جملة else if</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>else if</strong>
+            عندما يكون لدينا أكثر من شرط ونريد اختبارها بالترتيب.
+        </p>
+
+        <div class="code">
+            let mark = 85;
+
+            if (mark &gt;= 90) {
+            console.log("Excellent");
+            } else if (mark &gt;= 80) {
+            console.log("Very Good");
+            } else {
+            console.log("Good");
+            }
+        </div>
+
+        <p dir="rtl">
+            يقوم البرنامج باختبار الشروط بالترتيب،
+            وعندما يجد أول شرط صحيح ينفذ التعليمات الخاصة به
+            ويتوقف عن اختبار باقي الشروط.
+        </p>
+
+
+        <h2>9. Multiple Conditions — الشروط المتعددة</h2>
+
+        <p dir="rtl">
+            يمكن استخدام أكثر من شرط داخل البرنامج،
+            ويمكن دمج الشروط باستخدام
+            <strong>Logical Operators — العوامل المنطقية</strong>.
+        </p>
+
+        <div class="code">
+            let age = 20;
+            let hasID = true;
+
+            if (age &gt;= 18 &amp;&amp; hasID === true) {
+            console.log("Access Allowed");
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يجب أن يكون العمر مناسبًا وأن تكون قيمة
+            <strong>hasID</strong>
+            صحيحة حتى يتم تنفيذ الكود.
+        </p>
+
+
+        <h2>10. Using Comparison Operators — استخدام عوامل المقارنة</h2>
+
+        <p dir="rtl">
+            تعتمد الشروط بشكل كبير على
+            <strong>Comparison Operators — عوامل المقارنة</strong>
+            مثل:
+            <strong>==</strong>،
+            <strong>===</strong>،
+            <strong>!=</strong>،
+            <strong>!==</strong>،
+            <strong>&gt;</strong>،
+            <strong>&lt;</strong>،
+            <strong>&gt;=</strong>،
+            و<strong>&lt;=</strong>.
+        </p>
+
+        <div class="code">
+            let age = 20;
+
+            if (age &gt; 18) {
+            console.log("Age is greater than 18");
+            }
+        </div>
+
+
+        <h2>11. Strict Comparison — المقارنة الصارمة</h2>
+
+        <p dir="rtl">
+            يمكن استخدام
+            <strong>===</strong>
+            و<strong>!==</strong>
+            في الشروط لمقارنة القيمة والنوع معًا.
+        </p>
+
+        <div class="code">
+            let number = 10;
+
+            if (number === 10) {
+            console.log("Correct");
+            }
+        </div>
+
+        <p dir="rtl">
+            تعتبر المقارنة باستخدام
+            <strong>===</strong>
+            مفيدة عندما نريد التأكد من أن القيمة والنوع متطابقان.
+        </p>
+
+
+        <h2>12. Logical AND (&&) — العامل AND</h2>
+
+        <p dir="rtl">
+            يستخدم
+            <strong>&amp;&amp;</strong>
+            عندما نريد أن تكون جميع الشروط المطلوبة صحيحة.
+        </p>
+
+        <div class="code">
+            let age = 20;
+            let student = true;
+
+            if (age &gt;= 18 &amp;&amp; student === true) {
+            console.log("Allowed");
+            }
+        </div>
+
+        <p dir="rtl">
+            يجب أن يكون الشرطان صحيحين حتى يتم تنفيذ الكود.
+        </p>
+
+
+        <h2>13. Logical OR (||) — العامل OR</h2>
+
+        <p dir="rtl">
+            يستخدم
+            <strong>||</strong>
+            عندما يكفي أن يكون أحد الشروط صحيحًا.
+        </p>
+
+        <div class="code">
+            let day = "Friday";
+
+            if (day === "Friday" || day === "Saturday") {
+            console.log("Weekend");
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق إذا كان اليوم Friday أو Saturday،
+            فسيتم تنفيذ الكود.
+        </p>
+
+
+        <h2>14. Logical NOT (!) — العامل NOT</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>!</strong>
+            لعكس القيمة المنطقية للشرط.
+        </p>
+
+        <div class="code">
+            let loggedIn = false;
+
+            if (!loggedIn) {
+            console.log("Please Login");
+            }
+        </div>
+
+        <p dir="rtl">
+            لأن قيمة
+            <strong>loggedIn</strong>
+            تساوي
+            <strong>false</strong>،
+            فإن
+            <strong>!loggedIn</strong>
+            تصبح
+            <strong>true</strong>.
+        </p>
+
+
+        <h2>15. Nested if — الشروط المتداخلة</h2>
+
+        <p dir="rtl">
+            <strong>Nested if — الشرط المتداخل</strong>
+            يعني وضع جملة
+            <strong>if</strong>
+            داخل جملة
+            <strong>if</strong>
+            أخرى.
+        </p>
+
+        <div class="code">
+            let age = 20;
+            let hasID = true;
+
+            if (age &gt;= 18) {
+
+            if (hasID === true) {
+            console.log("Access Allowed");
+            }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يجب أولًا أن يكون العمر مناسبًا،
+            ثم يتم التحقق من وجود بطاقة الهوية.
+        </p>
+
+
+        <h2>16. Ternary Operator — العامل الثلاثي</h2>
+
+        <p dir="rtl">
+            <strong>Ternary Operator — العامل الثلاثي</strong>
+            هو طريقة مختصرة لكتابة شرط بسيط بدلًا من استخدام
+            <strong>if...else</strong>.
+        </p>
+
+        <div class="code">
+            let age = 20;
+
+            let result = age &gt;= 18 ? "Adult" : "Not Adult";
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            إذا كان الشرط صحيحًا يتم استخدام القيمة الموجودة بعد
+            <strong>?</strong>،
+            وإذا كان غير صحيح يتم استخدام القيمة الموجودة بعد
+            <strong>:</strong>.
+        </p>
+
+
+        <h2>17. switch Statement — جملة switch</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>switch Statement — جملة switch</strong>
+            عندما نريد مقارنة قيمة واحدة بعدة قيم محتملة.
+        </p>
+
+        <div class="code">
+            let day = "Friday";
+
+            switch (day) {
+
+            case "Friday":
+            console.log("Weekend");
+            break;
+
+            case "Saturday":
+            console.log("Weekend");
+            break;
+
+            default:
+            console.log("Working Day");
+            }
+        </div>
+
+        <p dir="rtl">
+            تقوم
+            <strong>switch</strong>
+            بمقارنة قيمة المتغير مع الحالات
+            <strong>case</strong>.
+            وإذا تطابقت القيمة يتم تنفيذ التعليمات الخاصة بهذه الحالة.
+        </p>
+
+
+        <h2>18. break Statement — جملة break</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>break</strong>
+            لإيقاف تنفيذ جملة
+            <strong>switch</strong>
+            بعد الوصول إلى الحالة المطلوبة.
+        </p>
+
+        <div class="code">
+            let number = 2;
+
+            switch (number) {
+
+            case 1:
+            console.log("One");
+            break;
+
+            case 2:
+            console.log("Two");
+            break;
+
+            default:
+            console.log("Other");
+            }
+        </div>
+
+
+        <h2>19. default Statement — الحالة الافتراضية</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>default</strong>
+            داخل
+            <strong>switch</strong>
+            لتنفيذ كود عندما لا تتطابق القيمة مع أي
+            <strong>case</strong>.
+        </p>
+
+        <div class="code">
+            let color = "black";
+
+            switch (color) {
+
+            case "red":
+            console.log("Red");
+            break;
+
+            case "blue":
+            console.log("Blue");
+            break;
+
+            default:
+            console.log("Unknown Color");
+            }
+        </div>
+
+
+        <h2>20. Truthy and Falsy Values — القيم التي تعتبر صحيحة أو خاطئة</h2>
+
+        <p dir="rtl">
+            في JavaScript توجد بعض القيم التي يتم التعامل معها داخل الشروط
+            على أنها
+            <strong>true</strong>
+            أو
+            <strong>false</strong>.
+        </p>
+
+        <p dir="rtl">
+            من أشهر القيم التي تعتبر
+            <strong>Falsy</strong>:
+            <strong>false</strong>،
+            <strong>0</strong>،
+            <strong>""</strong>،
+            <strong>null</strong>،
+            و<strong>undefined</strong>.
+        </p>
+
+        <div class="code">
+            let name = "";
+
+            if (name) {
+            console.log("Name exists");
+            } else {
+            console.log("Name is empty");
+            }
+        </div>
+
+
+        <h2>21. Conditions with Variables — الشروط مع المتغيرات</h2>
+
+        <p dir="rtl">
+            يمكن استخدام المتغيرات داخل الشروط لاتخاذ قرارات بناءً على
+            القيم المخزنة فيها.
+        </p>
+
+        <div class="code">
+            let mark = 95;
+
+            if (mark &gt;= 90) {
+            console.log("Excellent");
+            } else if (mark &gt;= 80) {
+            console.log("Very Good");
+            } else if (mark &gt;= 70) {
+            console.log("Good");
+            } else {
+            console.log("Try Again");
+            }
+        </div>
+
+
+        <h2>22. Conditions and User Interaction — الشروط وتفاعل المستخدم</h2>
+
+        <p dir="rtl">
+            يمكن استخدام الشروط مع البيانات التي يدخلها المستخدم،
+            مثل التحقق من العمر أو كلمة المرور أو البيانات الموجودة داخل
+            نموذج.
+        </p>
+
+        <div class="code">
+            let password = "12345";
+
+            if (password === "12345") {
+            console.log("Correct Password");
+            } else {
+            console.log("Wrong Password");
+            }
+        </div>
+
+
+        <h2>23. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء متغير يحتوي على درجة طالب،
+            ثم استخدم
+            <strong>if</strong>
+            و<strong>else if</strong>
+            و<strong>else</strong>
+            لتحديد التقدير حسب الدرجة.
+        </p>
+
+        <p dir="rtl">
+            بعد ذلك جرب استخدام
+            <strong>switch</strong>
+            لإنشاء برنامج يعرض اسم يوم معين بناءً على رقم اليوم.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Condition = الشرط.</li>
+            <li>if = تنفيذ كود عند تحقق الشرط.</li>
+            <li>else = تنفيذ كود عندما يكون الشرط غير صحيح.</li>
+            <li>else if = اختبار شرط إضافي.</li>
+            <li>Nested if = الشروط المتداخلة.</li>
+            <li>&amp;&amp; = AND.</li>
+            <li>|| = OR.</li>
+            <li>! = NOT.</li>
+            <li>switch = مقارنة قيمة بعدة حالات.</li>
+            <li>case = حالة داخل switch.</li>
+            <li>break = إيقاف تنفيذ الحالة.</li>
+            <li>default = الحالة الافتراضية.</li>
+            <li>Ternary Operator = العامل الثلاثي.</li>
+            <li>Truthy = قيمة تعامل كـ true.</li>
+            <li>Falsy = قيمة تعامل كـ false.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+    <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

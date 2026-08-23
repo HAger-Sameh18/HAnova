@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+    <div id="progressBar"></div>
+
+    <button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../js/index7.html" class="but">Previous Lesson</a>
+        <a href="../js/index2.html" class="but">JavaScript Lessons</a>
+        <a href="../js/index9.html" class="but" onclick="completeLesson(event, this.href, 6)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 6 : Functions</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is a Function? — ما هي الدالة؟</h2>
+
+        <p dir="rtl">
+            <strong>Function — الدالة</strong>
+            هي مجموعة من التعليمات البرمجية يتم تجميعها معًا لتنفيذ مهمة
+            معينة.
+        </p>
+
+        <p dir="rtl">
+            يمكننا إنشاء الدالة مرة واحدة ثم استدعاؤها
+            <strong>Call</strong>
+            كلما احتجنا إلى تنفيذ نفس المهمة، بدلًا من كتابة نفس الكود
+            أكثر من مرة.
+        </p>
+
+        <div class="code">
+            function sayHello() {
+            console.log("Hello");
+            }
+
+            sayHello();
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إنشاء دالة باسم
+            <strong>sayHello</strong>
+            ثم تم استدعاؤها لتنفيذ الكود الموجود بداخلها.
+        </p>
+
+
+        <h2>2. Why Do We Use Functions? — لماذا نستخدم الدوال؟</h2>
+
+        <p dir="rtl">
+            تساعدنا الدوال على تنظيم الكود وجعله أكثر سهولة في القراءة
+            وإعادة الاستخدام.
+        </p>
+
+        <ul dir="rtl">
+            <li>تقليل تكرار الكود.</li>
+            <li>تنظيم البرنامج إلى أجزاء صغيرة.</li>
+            <li>إعادة استخدام نفس الكود أكثر من مرة.</li>
+            <li>تسهيل اكتشاف الأخطاء وتعديلها.</li>
+            <li>جعل البرنامج أكثر وضوحًا وتنظيمًا.</li>
+        </ul>
+
+
+        <h2>3. Function Declaration — تعريف الدالة</h2>
+
+        <p dir="rtl">
+            <strong>Function Declaration — تعريف الدالة</strong>
+            هو إنشاء دالة باستخدام الكلمة المفتاحية
+            <strong>function</strong>.
+        </p>
+
+        <div class="code">
+            function greet() {
+            console.log("Welcome to JavaScript");
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق قمنا بإنشاء دالة باسم
+            <strong>greet</strong>.
+            ولكن الدالة لن تنفذ حتى نقوم باستدعائها.
+        </p>
+
+
+        <h2>4. Function Call — استدعاء الدالة</h2>
+
+        <p dir="rtl">
+            <strong>Function Call — استدعاء الدالة</strong>
+            يعني تشغيل الدالة وتنفيذ التعليمات الموجودة بداخلها.
+        </p>
+
+        <div class="code">
+            function greet() {
+            console.log("Hello");
+            }
+
+            greet();
+        </div>
+
+        <p dir="rtl">
+            يتم استدعاء الدالة عن طريق كتابة اسمها ثم الأقواس
+            <strong>( )</strong>.
+        </p>
+
+
+        <h2>5. Function Name — اسم الدالة</h2>
+
+        <p dir="rtl">
+            <strong>Function Name — اسم الدالة</strong>
+            هو الاسم الذي نستخدمه للتعرف على الدالة واستدعائها.
+        </p>
+
+        <div class="code">
+            function showMessage() {
+            console.log("Welcome");
+            }
+
+            showMessage();
+        </div>
+
+        <p dir="rtl">
+            اسم الدالة في المثال السابق هو
+            <strong>showMessage</strong>.
+        </p>
+
+
+        <h2>6. Parameters — المعاملات</h2>
+
+        <p dir="rtl">
+            <strong>Parameters — المعاملات</strong>
+            هي المتغيرات التي نضعها داخل أقواس الدالة لاستقبال البيانات
+            التي سيتم إرسالها إليها.
+        </p>
+
+        <div class="code">
+            function greet(name) {
+            console.log("Hello " + name);
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يعتبر
+            <strong>name</strong>
+            معاملًا للدالة.
+        </p>
+
+
+        <h2>7. Arguments — القيم المرسلة</h2>
+
+        <p dir="rtl">
+            <strong>Arguments — القيم المرسلة</strong>
+            هي القيم التي نرسلها إلى الدالة عند استدعائها.
+        </p>
+
+        <div class="code">
+            function greet(name) {
+            console.log("Hello " + name);
+            }
+
+            greet("Hager");
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إرسال القيمة
+            <strong>"Hager"</strong>
+            إلى المعامل
+            <strong>name</strong>.
+        </p>
+
+
+        <h2>8. Multiple Parameters — معاملات متعددة</h2>
+
+        <p dir="rtl">
+            يمكن للدالة أن تحتوي على أكثر من معامل.
+        </p>
+
+        <div class="code">
+            function add(a, b) {
+            console.log(a + b);
+            }
+
+            add(10, 5);
+        </div>
+
+        <p dir="rtl">
+            تستقبل الدالة قيمتين هما
+            <strong>a</strong>
+            و<strong>b</strong>
+            ثم تقوم بجمعهما.
+        </p>
+
+
+        <h2>9. Return Statement — جملة return</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>return</strong>
+            لإرجاع نتيجة من الدالة إلى المكان الذي تم فيه استدعاء الدالة.
+        </p>
+
+        <div class="code">
+            function add(a, b) {
+            return a + b;
+            }
+
+            let result = add(10, 5);
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            تقوم الدالة بإرجاع نتيجة الجمع، ثم يتم تخزين النتيجة في المتغير
+            <strong>result</strong>.
+        </p>
+
+
+        <h2>10. Function with No Return — دالة بدون return</h2>
+
+        <p dir="rtl">
+            ليست كل الدوال بحاجة إلى استخدام
+            <strong>return</strong>.
+            يمكن للدالة تنفيذ مهمة مباشرة مثل طباعة رسالة.
+        </p>
+
+        <div class="code">
+            function welcome() {
+            console.log("Welcome");
+            }
+
+            welcome();
+        </div>
+
+
+        <h2>11. Function with Return Value — دالة ترجع قيمة</h2>
+
+        <p dir="rtl">
+            يمكن للدالة تنفيذ عملية ثم إرجاع النتيجة باستخدام
+            <strong>return</strong>.
+        </p>
+
+        <div class="code">
+            function square(number) {
+            return number * number;
+            }
+
+            let result = square(5);
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            تقوم الدالة بحساب مربع الرقم وإرجاع النتيجة.
+        </p>
+
+
+        <h2>12. Default Parameters — المعاملات الافتراضية</h2>
+
+        <p dir="rtl">
+            يمكن تحديد قيمة افتراضية للمعامل في حالة عدم إرسال قيمة عند
+            استدعاء الدالة.
+        </p>
+
+        <div class="code">
+            function greet(name = "Guest") {
+            console.log("Hello " + name);
+            }
+
+            greet();
+        </div>
+
+        <p dir="rtl">
+            إذا لم يتم إرسال قيمة إلى
+            <strong>name</strong>،
+            سيتم استخدام القيمة الافتراضية
+            <strong>"Guest"</strong>.
+        </p>
+
+
+        <h2>13. Function Expressions — تعبيرات الدوال</h2>
+
+        <p dir="rtl">
+            يمكن تخزين الدالة داخل متغير، وتسمى هذه الطريقة
+            <strong>Function Expression — تعبير الدالة</strong>.
+        </p>
+
+        <div class="code">
+            const greet = function() {
+            console.log("Hello");
+            };
+
+            greet();
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تخزين الدالة داخل المتغير
+            <strong>greet</strong>
+            ثم تم استدعاؤها باستخدام اسم المتغير.
+        </p>
+
+
+        <h2>14. Arrow Functions — الدوال السهمية</h2>
+
+        <p dir="rtl">
+            <strong>Arrow Function — الدالة السهمية</strong>
+            هي طريقة مختصرة لكتابة الدوال، وتم تقديمها في
+            <strong>ES6</strong>.
+        </p>
+
+        <div class="code">
+            const greet = () =&gt; {
+            console.log("Hello");
+            };
+
+            greet();
+        </div>
+
+        <p dir="rtl">
+            تستخدم الدوال السهمية بكثرة في JavaScript الحديثة،
+            خاصة عند التعامل مع المصفوفات والعمليات المختلفة.
+        </p>
+
+
+        <h2>15. Arrow Function with Parameters — الدالة السهمية مع معاملات</h2>
+
+        <p dir="rtl">
+            يمكن أن تحتوي الدوال السهمية على معاملات مثل الدوال العادية.
+        </p>
+
+        <div class="code">
+            const add = (a, b) =&gt; {
+            return a + b;
+            };
+
+            console.log(add(10, 5));
+        </div>
+
+
+        <h2>16. Short Arrow Function — الدالة السهمية المختصرة</h2>
+
+        <p dir="rtl">
+            عندما تحتوي الدالة السهمية على تعبير واحد فقط يعيد قيمة،
+            يمكن اختصار كتابتها.
+        </p>
+
+        <div class="code">
+            const square = number =&gt; number * number;
+
+            console.log(square(5));
+        </div>
+
+        <p dir="rtl">
+            في هذه الحالة يتم إرجاع النتيجة تلقائيًا دون الحاجة إلى كتابة
+            <strong>return</strong>.
+        </p>
+
+
+        <h2>17. Local Variables — المتغيرات المحلية</h2>
+
+        <p dir="rtl">
+            المتغير الذي يتم إنشاؤه داخل الدالة يكون متاحًا داخل الدالة
+            نفسها فقط، ويسمى
+            <strong>Local Variable — متغير محلي</strong>.
+        </p>
+
+        <div class="code">
+            function test() {
+
+            let message = "Hello";
+
+            console.log(message);
+            }
+
+            test();
+        </div>
+
+        <p dir="rtl">
+            المتغير
+            <strong>message</strong>
+            تم إنشاؤه داخل الدالة، لذلك لا يمكن استخدامه خارج نطاقها.
+        </p>
+
+
+        <h2>18. Global Variables — المتغيرات العامة</h2>
+
+        <p dir="rtl">
+            المتغير الذي يتم تعريفه خارج الدوال يمكن الوصول إليه من أجزاء
+            مختلفة من البرنامج حسب نطاقه، ويسمى
+            <strong>Global Variable — متغير عام</strong>.
+        </p>
+
+        <div class="code">
+            let name = "Hager";
+
+            function showName() {
+            console.log(name);
+            }
+
+            showName();
+        </div>
+
+
+        <h2>19. Function Scope — نطاق الدالة</h2>
+
+        <p dir="rtl">
+            <strong>Function Scope — نطاق الدالة</strong>
+            يحدد الأماكن التي يمكن من خلالها الوصول إلى المتغيرات
+            الموجودة داخل الدالة.
+        </p>
+
+        <div class="code">
+            function calculate() {
+
+            let x = 10;
+
+            console.log(x);
+            }
+
+            calculate();
+        </div>
+
+        <p dir="rtl">
+            المتغير
+            <strong>x</strong>
+            يمكن استخدامه داخل الدالة
+            <strong>calculate</strong>.
+        </p>
+
+
+        <h2>20. Calling a Function Multiple Times — استدعاء الدالة عدة مرات</h2>
+
+        <p dir="rtl">
+            من أهم مميزات الدوال إمكانية استدعائها أكثر من مرة باستخدام
+            قيم مختلفة.
+        </p>
+
+        <div class="code">
+            function greet(name) {
+            console.log("Hello " + name);
+            }
+
+            greet("Hager");
+            greet("Ahmed");
+            greet("Mona");
+        </div>
+
+        <p dir="rtl">
+            تم استخدام نفس الدالة ثلاث مرات، ولكن كل مرة تم إرسال قيمة
+            مختلفة.
+        </p>
+
+
+        <h2>21. Function with Conditions — الدوال مع الشروط</h2>
+
+        <p dir="rtl">
+            يمكن استخدام
+            <strong>if</strong>
+            داخل الدوال لتنفيذ تعليمات مختلفة حسب البيانات التي تستقبلها
+            الدالة.
+        </p>
+
+        <div class="code">
+            function checkAge(age) {
+
+            if (age &gt;= 18) {
+            return "Adult";
+            } else {
+            return "Not Adult";
+            }
+
+            }
+
+            console.log(checkAge(20));
+        </div>
+
+
+        <h2>22. Function with Loops — الدوال مع الحلقات</h2>
+
+        <p dir="rtl">
+            يمكن أيضًا استخدام
+            <strong>Loops</strong>
+            داخل الدوال لتنفيذ عمليات متكررة.
+        </p>
+
+        <div class="code">
+            function printNumbers() {
+
+            for (let i = 1; i &lt;= 5; i++) {
+            console.log(i);
+            }
+
+            }
+
+            printNumbers();
+        </div>
+
+
+        <h2>23. Function Naming — تسمية الدوال</h2>
+
+        <p dir="rtl">
+            يفضل اختيار أسماء واضحة تصف المهمة التي تقوم بها الدالة.
+        </p>
+
+        <div class="code">
+            function calculateTotal() {
+            // Code
+            }
+
+            function showMessage() {
+            // Code
+            }
+
+            function checkPassword() {
+            // Code
+            }
+        </div>
+
+        <p dir="rtl">
+            الأسماء مثل
+            <strong>calculateTotal</strong>
+            و<strong>showMessage</strong>
+            و<strong>checkPassword</strong>
+            توضح وظيفة كل دالة.
+        </p>
+
+
+        <h2>24. Functions and Reusability — إعادة استخدام الكود</h2>
+
+        <p dir="rtl">
+            تساعد الدوال على
+            <strong>Code Reusability — إعادة استخدام الكود</strong>،
+            حيث يمكن كتابة الكود مرة واحدة ثم استخدامه عدة مرات.
+        </p>
+
+        <div class="code">
+            function add(a, b) {
+            return a + b;
+            }
+
+            console.log(add(5, 3));
+            console.log(add(10, 7));
+            console.log(add(20, 4));
+        </div>
+
+        <p dir="rtl">
+            تم استخدام نفس الدالة لإجراء عمليات جمع مختلفة دون الحاجة إلى
+            كتابة عملية الجمع من جديد.
+        </p>
+
+
+        <h2>25. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء دالة باسم
+            <strong>calculateSum</strong>
+            تستقبل رقمين وتعيد ناتج جمعهما باستخدام
+            <strong>return</strong>.
+        </p>
+
+        <p dir="rtl">
+            بعد ذلك أنشئ دالة أخرى تستقبل درجة طالب،
+            وتستخدم
+            <strong>if...else</strong>
+            لتحديد ما إذا كان الطالب ناجحًا أم لا.
+        </p>
+
+        <p dir="rtl">
+            وأخيرًا جرب كتابة إحدى الدوال باستخدام
+            <strong>Arrow Function</strong>.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Function = الدالة.</li>
+            <li>Function Declaration = تعريف الدالة.</li>
+            <li>Function Call = استدعاء الدالة.</li>
+            <li>Function Name = اسم الدالة.</li>
+            <li>Parameter = معامل الدالة.</li>
+            <li>Argument = القيمة المرسلة للدالة.</li>
+            <li>return = إرجاع قيمة من الدالة.</li>
+            <li>Default Parameter = معامل بقيمة افتراضية.</li>
+            <li>Function Expression = تعبير الدالة.</li>
+            <li>Arrow Function = الدالة السهمية.</li>
+            <li>Local Variable = متغير محلي.</li>
+            <li>Global Variable = متغير عام.</li>
+            <li>Function Scope = نطاق الدالة.</li>
+            <li>Code Reusability = إعادة استخدام الكود.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+
+    </div>
+    <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

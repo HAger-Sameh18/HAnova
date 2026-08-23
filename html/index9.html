@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+    <div id="progressBar"></div>
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../html/index8.html" class="but">Previous Lesson</a>
+        <a href="../html/index2.html" class="but">HTML Lessons</a>
+        <a href="../html/index10.html" class="but" onclick="completeLesson(event, this.href, 7)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 7 : HTML Media</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is Media? — ما هي الوسائط؟</h2>
+
+        <p dir="rtl">
+            <strong>Media — الوسائط</strong> هي العناصر التي تستخدم لعرض المحتوى
+            المرئي أو الصوتي داخل صفحات الويب، مثل الصور والصوت والفيديو.
+            تساعد الوسائط على جعل صفحات الويب أكثر تفاعلاً وجاذبية للمستخدم.
+        </p>
+
+        <p dir="rtl">
+            في هذا الدرس سنتعلم كيفية إضافة ملفات
+            <strong>Audio — الصوت</strong> و
+            <strong>Video — الفيديو</strong>
+            إلى صفحات HTML، بالإضافة إلى أهم الخصائص المستخدمة للتحكم فيها.
+        </p>
+
+
+        <h2>2. Audio — الصوت</h2>
+
+        <p dir="rtl">
+            يستخدم العنصر <strong>&lt;audio&gt;</strong> لإضافة ملف صوتي
+            إلى صفحة الويب، مثل الموسيقى أو التسجيلات الصوتية أو الملفات التعليمية.
+        </p>
+
+        <div class="code">
+            &lt;audio controls&gt;
+
+            &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+
+            &lt;/audio&gt;
+        </div>
+
+
+        <h2>3. Controls — أدوات التحكم</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>controls — أدوات التحكم</strong> تضيف أدوات التحكم
+            في ملف الصوت، مثل زر التشغيل والإيقاف وشريط مستوى الصوت.
+        </p>
+
+        <p dir="rtl">
+            إذا لم نكتب الخاصية <strong>controls</strong> فقد لا يظهر للمستخدم
+            أي زر للتحكم في الملف الصوتي.
+        </p>
+
+        <div class="code">
+            &lt;audio controls&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source src="lesson.mp3" type="audio/mpeg"&gt;
+            <br>
+            &lt;/audio&gt;
+        </div>
+
+
+        <h2>4. Source — مصدر الملف</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;source&gt;</strong> يستخدم لتحديد ملف الوسائط
+            الذي سيتم تشغيله، سواء كان ملف صوت أو فيديو.
+        </p>
+
+        <p dir="rtl">
+            الخاصية <strong>src — Source</strong> تحدد مكان الملف،
+            بينما الخاصية <strong>type — نوع الملف</strong> تحدد نوع الوسائط.
+        </p>
+
+        <div class="code">
+            &lt;source src="music.mp3" type="audio/mpeg"&gt;
+        </div>
+
+
+        <h2>5. Audio File Formats — صيغ الملفات الصوتية</h2>
+
+        <p dir="rtl">
+            توجد عدة صيغ للملفات الصوتية، ومن أشهرها:
+        </p>
+
+        <ul dir="rtl">
+
+            <li>
+                <strong>MP3</strong> — صيغة صوتية شائعة ومدعومة على نطاق واسع.
+            </li>
+
+            <li>
+                <strong>WAV</strong> — صيغة صوتية عالية الجودة وغالبًا يكون حجمها أكبر.
+            </li>
+
+            <li>
+                <strong>OGG</strong> — صيغة صوتية مفتوحة الاستخدام.
+            </li>
+
+        </ul>
+
+
+        <h2>6. Complete Audio Example — مثال كامل للصوت</h2>
+
+        <p dir="rtl">
+            يمكننا الآن إنشاء مشغل صوت بسيط داخل صفحة HTML.
+        </p>
+
+        <div class="code">
+            &lt;h2&gt;My Audio&lt;/h2&gt;
+            <br><br>
+            &lt;audio controls&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source src="music.mp3" type="audio/mpeg"&gt;
+            <br>
+            &nbsp;&nbsp;Your browser does not support audio.
+            <br>
+            &lt;/audio&gt;
+        </div>
+
+
+        <h2>7. Video — الفيديو</h2>
+
+        <p dir="rtl">
+            يستخدم العنصر <strong>&lt;video&gt;</strong> لإضافة ملفات الفيديو
+            إلى صفحات الويب.
+        </p>
+
+        <p dir="rtl">
+            يمكن استخدام الفيديو لعرض الدروس التعليمية أو الشروحات أو العروض
+            التوضيحية أو أي محتوى مرئي آخر.
+        </p>
+
+        <div class="code">
+            &lt;video controls&gt;
+
+            &lt;source src="video.mp4" type="video/mp4"&gt;
+
+            &lt;/video&gt;
+        </div>
+
+
+        <h2>8. Video Controls — أدوات التحكم في الفيديو</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>controls</strong> تستخدم أيضًا مع الفيديو لإظهار
+            أدوات التحكم مثل التشغيل والإيقاف ومستوى الصوت وشريط تقدم الفيديو.
+        </p>
+
+        <div class="code">
+            &lt;video controls&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source src="lesson.mp4" type="video/mp4"&gt;
+            <br>
+            &lt;/video&gt;
+        </div>
+
+
+        <h2>9. Width and Height — عرض وارتفاع الفيديو</h2>
+
+        <p dir="rtl">
+            يمكن تحديد حجم الفيديو باستخدام الخاصيتين
+            <strong>width — العرض</strong> و
+            <strong>height — الارتفاع</strong>.
+        </p>
+
+        <div class="code">
+            &lt;video
+            width="600"
+            height="350"
+            controls&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source src="lesson.mp4" type="video/mp4"&gt;
+            <br>
+            &lt;/video&gt;
+        </div>
+
+
+        <h2>10. Autoplay — التشغيل التلقائي</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>autoplay — التشغيل التلقائي</strong> تجعل الفيديو
+            يبدأ في التشغيل تلقائيًا عند تحميل الصفحة.
+        </p>
+
+        <div class="code">
+            &lt;video controls autoplay&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source src="video.mp4" type="video/mp4"&gt;
+            <br>
+            &lt;/video&gt;
+        </div>
+
+        <p dir="rtl">
+            قد تمنع بعض المتصفحات التشغيل التلقائي للصوت حتى يتفاعل المستخدم
+            مع الصفحة، لذلك لا يجب الاعتماد على autoplay وحدها.
+        </p>
+
+
+        <h2>11. Muted — كتم الصوت</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>muted — كتم الصوت</strong> تجعل الفيديو يبدأ
+            بدون صوت.
+        </p>
+
+        <div class="code">
+            &lt;video autoplay muted&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source src="background.mp4" type="video/mp4"&gt;
+            <br>
+            &lt;/video&gt;
+        </div>
+
+
+        <h2>12. Loop — التكرار</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>loop — التكرار</strong> تجعل الفيديو أو الصوت
+            يعاد تشغيله تلقائيًا بعد انتهاء الملف.
+        </p>
+
+        <div class="code">
+            &lt;video controls loop&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source src="video.mp4" type="video/mp4"&gt;
+            <br>
+            &lt;/video&gt;
+        </div>
+
+
+        <h2>13. Poster — صورة البداية</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>poster — صورة المعاينة</strong> تستخدم لإظهار
+            صورة قبل تشغيل الفيديو.
+        </p>
+
+        <p dir="rtl">
+            تظهر الصورة عادةً عندما لا يكون الفيديو قيد التشغيل.
+        </p>
+
+        <div class="code">
+            &lt;video
+            controls
+            poster="preview.jpg"&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source src="lesson.mp4" type="video/mp4"&gt;
+            <br>
+            &lt;/video&gt;
+        </div>
+
+
+        <h2>14. Video File Formats — صيغ الفيديو</h2>
+
+        <p dir="rtl">
+            توجد عدة صيغ للفيديو، ومن أشهرها:
+        </p>
+
+        <ul dir="rtl">
+
+            <li>
+                <strong>MP4</strong> — من أكثر صيغ الفيديو استخدامًا على الويب.
+            </li>
+
+            <li>
+                <strong>WebM</strong> — صيغة مصممة للاستخدام على الويب.
+            </li>
+
+            <li>
+                <strong>OGG / OGV</strong> — صيغة مفتوحة يمكن استخدامها للفيديو.
+            </li>
+
+        </ul>
+
+
+        <h2>15. Multiple Sources — أكثر من مصدر</h2>
+
+        <p dir="rtl">
+            يمكن وضع أكثر من عنصر <strong>&lt;source&gt;</strong> داخل
+            عنصر الصوت أو الفيديو.
+            يسمح ذلك للمتصفح باختيار صيغة مناسبة من الصيغ المتاحة.
+        </p>
+
+        <div class="code">
+            &lt;video controls&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source src="video.mp4" type="video/mp4"&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source src="video.webm" type="video/webm"&gt;
+            <br>
+            &lt;/video&gt;
+        </div>
+
+
+        <h2>16. Fallback Text — النص البديل</h2>
+
+        <p dir="rtl">
+            يمكن كتابة نص داخل عنصر <strong>audio</strong> أو
+            <strong>video</strong> يظهر إذا كان المتصفح لا يدعم تشغيل الوسائط.
+        </p>
+
+        <div class="code">
+            &lt;video controls&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source src="video.mp4" type="video/mp4"&gt;
+            <br>
+            &nbsp;&nbsp;Your browser does not support video.
+            <br>
+            &lt;/video&gt;
+        </div>
+
+
+        <h2>17. Audio vs Video — الفرق بين الصوت والفيديو</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                <strong>Audio</strong> = يستخدم لعرض الملفات الصوتية.
+            </li>
+
+            <li>
+                <strong>Video</strong> = يستخدم لعرض الملفات المرئية مع الصوت.
+            </li>
+
+            <li>
+                <strong>&lt;audio&gt;</strong> = عنصر تشغيل الصوت.
+            </li>
+
+            <li>
+                <strong>&lt;video&gt;</strong> = عنصر تشغيل الفيديو.
+            </li>
+
+        </ul>
+
+
+        <h2>18. Complete Video Example — مثال كامل للفيديو</h2>
+
+        <p dir="rtl">
+            المثال التالي يجمع مجموعة من الخصائص التي تعلمناها لإنشاء
+            مشغل فيديو أكثر اكتمالًا.
+        </p>
+
+        <div class="code">
+            &lt;h2&gt;HTML Lesson Video&lt;/h2&gt;
+            <br><br>
+            &lt;video
+            width="700"
+            height="400"
+            controls
+            poster="preview.jpg"&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source
+            src="html-lesson.mp4"
+            type="video/mp4"&gt;
+            <br>
+            &nbsp;&nbsp;Your browser does not support video.
+            <br>
+            &lt;/video&gt;
+        </div>
+
+
+        <h2>19. Complete Audio and Video Example — مثال للصوت والفيديو معًا</h2>
+
+        <div class="code">
+
+            &lt;h1&gt;HTML Learning Media&lt;/h1&gt;
+            <br><br>
+
+            &lt;h2&gt;Lesson Audio&lt;/h2&gt;
+            <br>
+
+            &lt;audio controls&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source
+            src="lesson.mp3"
+            type="audio/mpeg"&gt;
+            <br>
+            &lt;/audio&gt;
+
+            <br><br>
+
+            &lt;h2&gt;Lesson Video&lt;/h2&gt;
+            <br>
+
+            &lt;video
+            width="600"
+            controls
+            poster="preview.jpg"&gt;
+            <br>
+            &nbsp;&nbsp;&lt;source
+            src="lesson.mp4"
+            type="video/mp4"&gt;
+            <br>
+            &lt;/video&gt;
+
+        </div>
+
+
+        <h2>20. Media in Educational Websites — الوسائط في المواقع التعليمية</h2>
+
+        <p dir="rtl">
+            تعتبر الوسائط مهمة جدًا في المواقع التعليمية، لأنها تساعد على
+            تقديم المعلومات بأكثر من طريقة.
+        </p>
+
+        <p dir="rtl">
+            على سبيل المثال يمكن استخدام فيديو لشرح درس معين، وإضافة ملف صوتي
+            لشرح جزء من الدرس، مما يساعد المتعلم على فهم المحتوى بطريقة أفضل.
+        </p>
+
+        <p dir="rtl">
+            لذلك تعتبر عناصر <strong>Audio</strong> و<strong>Video</strong>
+            من العناصر المهمة عند إنشاء موقع تعليمي متكامل.
+        </p>
+
+
+        <h2>21. Common Mistakes — الأخطاء الشائعة</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                كتابة اسم ملف الصوت أو الفيديو بطريقة غير صحيحة.
+            </li>
+
+            <li>
+                وضع الملف في مجلد مختلف عن المسار الموجود في <strong>src</strong>.
+            </li>
+
+            <li>
+                نسيان كتابة <strong>controls</strong> عند الحاجة إلى إظهار أدوات التحكم.
+            </li>
+
+            <li>
+                كتابة نوع الملف في <strong>type</strong> بطريقة خاطئة.
+            </li>
+
+            <li>
+                استخدام ملف بصيغة لا يدعمها المتصفح بشكل مناسب.
+            </li>
+
+            <li>
+                استخدام <strong>autoplay</strong> والاعتماد على تشغيل الصوت تلقائيًا
+                في جميع المتصفحات.
+            </li>
+
+        </ul>
+
+
+        <h2>22. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            أنشئ صفحة تعليمية تحتوي على عنوان للدرس، ثم أضف ملفًا صوتيًا
+            باستخدام <strong>&lt;audio&gt;</strong> مع أدوات التحكم.
+            بعد ذلك أضف فيديو باستخدام <strong>&lt;video&gt;</strong>
+            وحدد له العرض والارتفاع، وأضف صورة معاينة باستخدام
+            <strong>poster</strong>.
+        </p>
+
+        <p dir="rtl">
+            حاول أيضًا استخدام أكثر من <strong>&lt;source&gt;</strong>
+            للفيديو وتجربة الخصائص <strong>loop</strong> و<strong>muted</strong>.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+
+            <li><strong>Media</strong> = الوسائط.</li>
+
+            <li><strong>Audio</strong> = الصوت.</li>
+
+            <li><strong>Video</strong> = الفيديو.</li>
+
+            <li><strong>Controls</strong> = أدوات التحكم.</li>
+
+            <li><strong>Source</strong> = مصدر الملف.</li>
+
+            <li><strong>Autoplay</strong> = التشغيل التلقائي.</li>
+
+            <li><strong>Muted</strong> = كتم الصوت.</li>
+
+            <li><strong>Loop</strong> = التكرار.</li>
+
+            <li><strong>Poster</strong> = صورة المعاينة.</li>
+
+            <li><strong>Width</strong> = العرض.</li>
+
+            <li><strong>Height</strong> = الارتفاع.</li>
+
+            <li><strong>MP3</strong> = صيغة صوتية.</li>
+
+            <li><strong>MP4</strong> = صيغة فيديو شائعة.</li>
+
+            <li><strong>Fallback Text</strong> = نص بديل عند عدم دعم الوسائط.</li>
+
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+
+    </div>
+    <button id="topBtn">↑</button>
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

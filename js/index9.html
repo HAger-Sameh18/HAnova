@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../js/index8.html" class="but">Previous Lesson</a>
+        <a href="../js/index2.html" class="but">JavaScript Lessons</a>
+        <a href="../js/index10.html" class="but" onclick="completeLesson(event, this.href, 7)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 7 : Arrays</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is an Array? — ما هي المصفوفة؟</h2>
+
+        <p dir="rtl">
+            <strong>Array — المصفوفة</strong>
+            هي نوع من أنواع البيانات في JavaScript يستخدم لتخزين مجموعة
+            من القيم داخل متغير واحد.
+        </p>
+
+        <p dir="rtl">
+            يمكن أن تحتوي المصفوفة على أرقام أو نصوص أو قيم منطقية أو
+            أنواع أخرى من البيانات.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يحتوي المتغير
+            <strong>fruits</strong>
+            على ثلاثة عناصر:
+            <strong>Apple</strong>،
+            <strong>Banana</strong>،
+            و<strong>Orange</strong>.
+        </p>
+
+
+        <h2>2. Why Do We Use Arrays? — لماذا نستخدم المصفوفات؟</h2>
+
+        <p dir="rtl">
+            نستخدم المصفوفات عندما نحتاج إلى تخزين مجموعة من القيم
+            المرتبطة ببعضها بدلًا من إنشاء متغير منفصل لكل قيمة.
+        </p>
+
+        <div class="code">
+            let student1 = "Ahmed";
+            let student2 = "Mona";
+            let student3 = "Hager";
+        </div>
+
+        <p dir="rtl">
+            يمكن بدلًا من ذلك تخزين الأسماء كلها داخل Array واحدة.
+        </p>
+
+        <div class="code">
+            let students = ["Ahmed", "Mona", "Hager"];
+        </div>
+
+
+        <h2>3. Creating an Array — إنشاء المصفوفة</h2>
+
+        <p dir="rtl">
+            يمكن إنشاء المصفوفة باستخدام الأقواس المربعة
+            <strong>[ ]</strong>.
+        </p>
+
+        <div class="code">
+            let numbers = [10, 20, 30, 40, 50];
+        </div>
+
+        <p dir="rtl">
+            يتم الفصل بين عناصر المصفوفة باستخدام الفاصلة
+            <strong>,</strong>.
+        </p>
+
+
+        <h2>4. Array Elements — عناصر المصفوفة</h2>
+
+        <p dir="rtl">
+            <strong>Array Elements — عناصر المصفوفة</strong>
+            هي القيم الموجودة داخل الـ Array.
+        </p>
+
+        <div class="code">
+            let colors = ["Red", "Blue", "Green"];
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>Red</strong>
+            و<strong>Blue</strong>
+            و<strong>Green</strong>
+            هي عناصر المصفوفة.
+        </p>
+
+
+        <h2>5. Array Index — فهرس المصفوفة</h2>
+
+        <p dir="rtl">
+            كل عنصر داخل المصفوفة له رقم يسمى
+            <strong>Index — الفهرس</strong>.
+        </p>
+
+        <p dir="rtl">
+            تبدأ الفهارس في JavaScript من الرقم
+            <strong>0</strong>
+            وليس من الرقم
+            <strong>1</strong>.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+        </div>
+
+        <ul dir="rtl">
+            <li>Apple → Index 0</li>
+            <li>Banana → Index 1</li>
+            <li>Orange → Index 2</li>
+        </ul>
+
+
+        <h2>6. Accessing Array Elements — الوصول إلى عناصر المصفوفة</h2>
+
+        <p dir="rtl">
+            يمكن الوصول إلى عنصر معين باستخدام رقم الـ
+            <strong>Index</strong>
+            الخاص به.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            console.log(fruits[0]);
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة:
+            <strong>Apple</strong>.
+        </p>
+
+
+        <h2>7. Changing Array Elements — تغيير عناصر المصفوفة</h2>
+
+        <p dir="rtl">
+            يمكن تغيير قيمة عنصر معين عن طريق الوصول إليه باستخدام الـ
+            <strong>Index</strong>
+            ثم إعطائه قيمة جديدة.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            fruits[1] = "Mango";
+
+            console.log(fruits);
+        </div>
+
+        <p dir="rtl">
+            سيتم تغيير العنصر الموجود في الفهرس
+            <strong>1</strong>
+            من
+            <strong>Banana</strong>
+            إلى
+            <strong>Mango</strong>.
+        </p>
+
+
+        <h2>8. Array length — عدد عناصر المصفوفة</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>length</strong>
+            لمعرفة عدد العناصر الموجودة داخل المصفوفة.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            console.log(fruits.length);
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة:
+            <strong>3</strong>.
+        </p>
+
+
+        <h2>9. Adding Elements with push() — إضافة عناصر باستخدام push()</h2>
+
+        <p dir="rtl">
+            تستخدم الدالة
+            <strong>push()</strong>
+            لإضافة عنصر جديد إلى نهاية المصفوفة.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana"];
+
+            fruits.push("Orange");
+
+            console.log(fruits);
+        </div>
+
+        <p dir="rtl">
+            أصبحت المصفوفة تحتوي على:
+            <strong>Apple</strong>،
+            <strong>Banana</strong>،
+            و<strong>Orange</strong>.
+        </p>
+
+
+        <h2>10. Removing Elements with pop() — حذف العناصر باستخدام pop()</h2>
+
+        <p dir="rtl">
+            تستخدم الدالة
+            <strong>pop()</strong>
+            لحذف آخر عنصر من المصفوفة.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            fruits.pop();
+
+            console.log(fruits);
+        </div>
+
+        <p dir="rtl">
+            سيتم حذف العنصر
+            <strong>Orange</strong>.
+        </p>
+
+
+        <h2>11. Adding Elements with unshift() — الإضافة في البداية</h2>
+
+        <p dir="rtl">
+            تستخدم الدالة
+            <strong>unshift()</strong>
+            لإضافة عنصر في بداية المصفوفة.
+        </p>
+
+        <div class="code">
+            let fruits = ["Banana", "Orange"];
+
+            fruits.unshift("Apple");
+
+            console.log(fruits);
+        </div>
+
+
+        <h2>12. Removing Elements with shift() — الحذف من البداية</h2>
+
+        <p dir="rtl">
+            تستخدم الدالة
+            <strong>shift()</strong>
+            لحذف أول عنصر من المصفوفة.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            fruits.shift();
+
+            console.log(fruits);
+        </div>
+
+        <p dir="rtl">
+            سيتم حذف العنصر الأول
+            <strong>Apple</strong>.
+        </p>
+
+
+        <h2>13. indexOf() — البحث عن فهرس عنصر</h2>
+
+        <p dir="rtl">
+            تستخدم الدالة
+            <strong>indexOf()</strong>
+            لمعرفة فهرس عنصر معين داخل المصفوفة.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            console.log(fruits.indexOf("Banana"));
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة:
+            <strong>1</strong>.
+        </p>
+
+
+        <h2>14. includes() — التحقق من وجود عنصر</h2>
+
+        <p dir="rtl">
+            تستخدم الدالة
+            <strong>includes()</strong>
+            للتحقق مما إذا كانت المصفوفة تحتوي على قيمة معينة.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            console.log(fruits.includes("Apple"));
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة
+            <strong>true</strong>
+            لأن العنصر موجود داخل المصفوفة.
+        </p>
+
+
+        <h2>15. join() — تحويل عناصر المصفوفة إلى نص</h2>
+
+        <p dir="rtl">
+            تستخدم الدالة
+            <strong>join()</strong>
+            لدمج عناصر المصفوفة وتحويلها إلى نص واحد.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            console.log(fruits.join(", "));
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة نصًا يحتوي على العناصر مفصولة بفواصل.
+        </p>
+
+
+        <h2>16. slice() — استخراج جزء من المصفوفة</h2>
+
+        <p dir="rtl">
+            تستخدم الدالة
+            <strong>slice()</strong>
+            للحصول على جزء من المصفوفة دون تغيير المصفوفة الأصلية.
+        </p>
+
+        <div class="code">
+            let numbers = [10, 20, 30, 40, 50];
+
+            let result = numbers.slice(1, 4);
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            سيتم الحصول على العناصر الموجودة من الفهرس
+            <strong>1</strong>
+            وحتى قبل الفهرس
+            <strong>4</strong>.
+        </p>
+
+
+        <h2>17. splice() — إضافة أو حذف عناصر</h2>
+
+        <p dir="rtl">
+            تستخدم الدالة
+            <strong>splice()</strong>
+            لإضافة أو حذف أو استبدال عناصر داخل المصفوفة.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            fruits.splice(1, 1);
+
+            console.log(fruits);
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم حذف عنصر واحد بدايةً من الفهرس
+            <strong>1</strong>.
+        </p>
+
+
+        <h2>18. Sorting Arrays with sort() — ترتيب المصفوفة</h2>
+
+        <p dir="rtl">
+            تستخدم الدالة
+            <strong>sort()</strong>
+            لترتيب عناصر المصفوفة.
+        </p>
+
+        <div class="code">
+            let fruits = ["Orange", "Apple", "Banana"];
+
+            fruits.sort();
+
+            console.log(fruits);
+        </div>
+
+        <p dir="rtl">
+            سيتم ترتيب العناصر أبجديًا في هذا المثال.
+        </p>
+
+
+        <h2>19. reverse() — عكس ترتيب العناصر</h2>
+
+        <p dir="rtl">
+            تستخدم الدالة
+            <strong>reverse()</strong>
+            لعكس ترتيب عناصر المصفوفة.
+        </p>
+
+        <div class="code">
+            let numbers = [1, 2, 3, 4, 5];
+
+            numbers.reverse();
+
+            console.log(numbers);
+        </div>
+
+        <p dir="rtl">
+            سيصبح ترتيب العناصر:
+            <strong>5, 4, 3, 2, 1</strong>.
+        </p>
+
+
+        <h2>20. Loop Through an Array — المرور على عناصر المصفوفة</h2>
+
+        <p dir="rtl">
+            يمكن استخدام الحلقات للمرور على جميع عناصر المصفوفة.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            for (let i = 0; i &lt; fruits.length; i++) {
+                console.log(fruits[i]);
+            }
+        </div>
+
+        <p dir="rtl">
+            يقوم البرنامج بطباعة كل عنصر في المصفوفة بدايةً من الفهرس
+            <strong>0</strong>.
+        </p>
+
+
+        <h2>21. for...of with Arrays — استخدام for...of مع المصفوفات</h2>
+
+        <p dir="rtl">
+            يمكن استخدام
+            <strong>for...of</strong>
+            للمرور على قيم عناصر المصفوفة بطريقة أبسط.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            for (let fruit of fruits) {
+                console.log(fruit);
+            }
+        </div>
+
+        <p dir="rtl">
+            في كل تكرار يتم تخزين قيمة العنصر الحالي داخل المتغير
+            <strong>fruit</strong>.
+        </p>
+
+
+        <h2>22. Arrays with Functions — المصفوفات مع الدوال</h2>
+
+        <p dir="rtl">
+            يمكن إرسال المصفوفة إلى دالة كـ
+            <strong>Argument</strong>
+            ثم التعامل مع عناصرها داخل الدالة.
+        </p>
+
+        <div class="code">
+            function showFruits(fruits) {
+
+                for (let fruit of fruits) {
+                    console.log(fruit);
+                }
+
+            }
+
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            showFruits(fruits);
+        </div>
+
+
+        <h2>23. Multidimensional Arrays — المصفوفات متعددة الأبعاد</h2>
+
+        <p dir="rtl">
+            يمكن أن تحتوي المصفوفة على مصفوفات أخرى بداخلها،
+            وتسمى
+            <strong>Multidimensional Array — مصفوفة متعددة الأبعاد</strong>.
+        </p>
+
+        <div class="code">
+            let numbers = [
+                [1, 2, 3],
+                [4, 5, 6]
+            ];
+
+            console.log(numbers[0][1]);
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم الوصول إلى العنصر
+            <strong>2</strong>
+            باستخدام الفهرسين
+            <strong>0</strong>
+            و<strong>1</strong>.
+        </p>
+
+
+        <h2>24. Array Methods — دوال المصفوفات</h2>
+
+        <p dir="rtl">
+            توفر JavaScript العديد من
+            <strong>Array Methods — دوال المصفوفات</strong>
+            التي تساعدنا على إضافة العناصر وحذفها والبحث عنها والتعامل معها.
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>push()</strong> — إضافة عنصر في النهاية.</li>
+            <li><strong>pop()</strong> — حذف آخر عنصر.</li>
+            <li><strong>unshift()</strong> — إضافة عنصر في البداية.</li>
+            <li><strong>shift()</strong> — حذف أول عنصر.</li>
+            <li><strong>indexOf()</strong> — معرفة فهرس عنصر.</li>
+            <li><strong>includes()</strong> — التحقق من وجود عنصر.</li>
+            <li><strong>join()</strong> — دمج العناصر في نص.</li>
+            <li><strong>slice()</strong> — استخراج جزء من المصفوفة.</li>
+            <li><strong>splice()</strong> — إضافة أو حذف أو استبدال عناصر.</li>
+            <li><strong>sort()</strong> — ترتيب العناصر.</li>
+            <li><strong>reverse()</strong> — عكس ترتيب العناصر.</li>
+        </ul>
+
+
+        <h2>25. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء Array تحتوي على خمسة أسماء، ثم:
+        </p>
+
+        <ul dir="rtl">
+            <li>اطبع أول عنصر في المصفوفة.</li>
+            <li>اطبع عدد العناصر باستخدام <strong>length</strong>.</li>
+            <li>أضف اسمًا جديدًا باستخدام <strong>push()</strong>.</li>
+            <li>احذف آخر عنصر باستخدام <strong>pop()</strong>.</li>
+            <li>استخدم <strong>for...of</strong> لطباعة جميع الأسماء.</li>
+            <li>تحقق من وجود اسم معين باستخدام <strong>includes()</strong>.</li>
+        </ul>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Array = المصفوفة.</li>
+            <li>Element = عنصر.</li>
+            <li>Index = فهرس.</li>
+            <li>length = عدد عناصر المصفوفة.</li>
+            <li>push() = إضافة عنصر في النهاية.</li>
+            <li>pop() = حذف آخر عنصر.</li>
+            <li>unshift() = إضافة عنصر في البداية.</li>
+            <li>shift() = حذف أول عنصر.</li>
+            <li>indexOf() = البحث عن فهرس عنصر.</li>
+            <li>includes() = التحقق من وجود عنصر.</li>
+            <li>join() = دمج عناصر المصفوفة في نص.</li>
+            <li>slice() = استخراج جزء من المصفوفة.</li>
+            <li>splice() = إضافة أو حذف أو استبدال عناصر.</li>
+            <li>sort() = ترتيب العناصر.</li>
+            <li>reverse() = عكس ترتيب العناصر.</li>
+            <li>Multidimensional Array = مصفوفة متعددة الأبعاد.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

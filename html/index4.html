@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+    <div id="progressBar"></div>
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../html/index3.html" class="but">Previous Lesson</a>
+        <a href="../html/index2.html" class="but">HTML Lessons</a>
+        <a href="../html/index5.html" class="but" onclick="completeLesson(event, this.href, 2)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 2 : HTML Structure</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is HTML Structure? — ما هو هيكل HTML؟</h2>
+
+        <p dir="rtl">
+            <strong>HTML Structure — هيكل HTML</strong> هو الطريقة التي يتم بها
+            ترتيب وتنظيم عناصر صفحة الويب داخل مستند HTML.
+            كل صفحة HTML تحتاج إلى هيكل أساسي يساعد المتصفح على قراءة الكود
+            وفهم محتواه وعرضه بالشكل الصحيح.
+        </p>
+
+        <h2>2. Basic HTML Structure — الهيكل الأساسي</h2>
+
+        <div class="code">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html lang="en"&gt;<br>
+            <br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;HAnova&lt;/title&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            <br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;My First Website&lt;/p&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            <br>
+            &lt;/html&gt;
+        </div>
+
+        <h2>3. DOCTYPE — تعريف نوع المستند</h2>
+
+        <p dir="rtl">
+            <strong>DOCTYPE</strong> هو اختصار لفكرة
+            <strong>Document Type Declaration — تعريف نوع المستند</strong>.
+            ويستخدم هذا الأمر لإخبار المتصفح بأن المستند مكتوب باستخدام HTML5.
+            وهو ليس عنصرًا عاديًا من عناصر الصفحة.
+        </p>
+
+        <div class="code">
+            &lt;!DOCTYPE html&gt;
+        </div>
+
+
+
+        <h2>4. HTML Element — عنصر html</h2>
+
+        <p dir="rtl">
+            عنصر <strong>html</strong> هو العنصر الرئيسي الذي يحتوي على جميع
+            عناصر صفحة HTML.
+            أما الخاصية <strong>lang</strong> فهي اختصار لكلمة
+            <strong>Language — اللغة</strong>، وتحدد اللغة الأساسية للصفحة.
+        </p>
+
+        <div class="code">
+            &lt;html lang="en"&gt;<br>
+            <br>
+            &lt;/html&gt;
+        </div>
+
+
+
+        <h2>5. Head — الرأس</h2>
+
+        <p dir="rtl">
+            عنصر <strong>head</strong> يحتوي على المعلومات الخاصة بالصفحة والتي
+            يحتاج إليها المتصفح، ولكنها لا تظهر عادةً كمحتوى مباشر داخل الصفحة.
+        </p>
+
+        <div class="code">
+            &lt;head&gt;<br>
+            &nbsp;&nbsp;...<br>
+            &lt;/head&gt;
+        </div>
+
+
+        <h2>6. Meta Charset — ترميز الأحرف</h2>
+        <p dir="rtl">
+            <strong>Character Encoding — ترميز الأحرف</strong> يحدد الطريقة التي
+            يتم بها تمثيل الأحرف داخل الصفحة.
+            ويعتبر <strong>UTF-8</strong> من أشهر أنواع الترميز، ويدعم عددًا كبيرًا
+            من اللغات ومنها اللغة العربية والإنجليزية.
+        </p>
+
+        <div class="code">
+            &lt;meta charset="UTF-8"&gt;
+        </div>
+
+
+
+        <h2>7. Viewport — منطقة العرض</h2>
+
+
+        <p dir="rtl">
+            هذا السطر مهم لجعل الصفحة مناسبة لمختلف أحجام الشاشات.
+            ويستخدم في تصميم المواقع
+            <strong>Responsive Design — التصميم المتجاوب</strong>
+            الذي يسمح للموقع بالظهور بصورة مناسبة على الهاتف والكمبيوتر والتابلت.
+        </p>
+
+        <div class="code">
+            &lt;meta name="viewport"
+            content="width=device-width, initial-scale=1.0"&gt;
+        </div>
+
+
+        <h2>8. Title — عنوان الصفحة</h2>
+
+        <p dir="rtl">
+            <strong>Title — العنوان</strong> هو النص الذي يظهر في علامة تبويب
+            المتصفح، ويساعد المستخدم على معرفة اسم الصفحة المفتوحة.
+        </p>
+
+        <div class="code">
+            &lt;title&gt;My Website&lt;/title&gt;
+        </div>
+
+
+        <h2>9. Body — جسم الصفحة</h2>
+
+        <p dir="rtl">
+            <strong>Body — جسم الصفحة</strong> يحتوي على المحتوى الذي يظهر للمستخدم
+            داخل صفحة الويب، مثل العناوين والفقرات والصور والروابط والقوائم.
+        </p>
+
+        <div class="code">
+            &lt;body&gt;<br>
+            &nbsp;&nbsp;Website Content<br>
+            &lt;/body&gt;
+        </div>
+
+        <h2>10. Headings — العناوين</h2>
+
+        <p dir="rtl">
+            يوجد في HTML ستة مستويات للعناوين تبدأ من
+            <strong>h1</strong> وحتى <strong>h6</strong>.
+            ويعتبر h1 العنوان الأعلى أهمية، بينما h6 هو الأقل.
+        </p>
+
+        <div class="code">
+            &lt;h1&gt;Main Heading&lt;/h1&gt;<br>
+            &lt;h2&gt;Second Heading&lt;/h2&gt;<br>
+            &lt;h3&gt;Third Heading&lt;/h3&gt;
+        </div>
+
+        <h2>11. Paragraph — الفقرة</h2>
+
+        <p dir="rtl">
+            يستخدم عنصر <strong>p</strong> لإنشاء
+            <strong>Paragraph — فقرة</strong>.
+            ويمكن أن تحتوي الفقرة على نصوص ومعلومات مختلفة.
+        </p>
+
+        <div class="code">
+            &lt;p&gt;This is a paragraph.&lt;/p&gt;
+        </div>
+
+        <h2>12. Line Break — الانتقال لسطر جديد</h2>
+
+        <p dir="rtl">
+            الوسم <strong>br</strong> يستخدم للانتقال إلى سطر جديد.
+            وهو من العناصر التي لا تحتاج إلى Closing Tag.
+        </p>
+
+        <div class="code">
+            Hello&lt;br&gt;World
+        </div>
+
+        <h2>13. Horizontal Rule — الخط الأفقي</h2>
+
+        <p dir="rtl">
+            يستخدم <strong>hr</strong> لإضافة خط أفقي يساعد على الفصل بين أجزاء
+            مختلفة من محتوى الصفحة.
+        </p>
+
+        <div class="code">
+            &lt;hr&gt;
+        </div>
+
+        <h2>14. Comments — التعليقات</h2>
+
+        <p dir="rtl">
+            <strong>Comment — التعليق</strong> هو نص يكتبه المبرمج داخل الكود
+            لإضافة ملاحظات أو توضيحات.
+            ولا يظهر التعليق للمستخدم داخل الصفحة.
+        </p>
+
+        <div class="code">
+            &lt;!-- This is a comment --&gt;
+        </div>
+
+
+
+        <h2>15. Complete Example — مثال كامل</h2>
+
+        <div class="code">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html lang="en"&gt;<br>
+            <br>
+            &nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;HAnova&lt;/title&gt;<br>
+            &nbsp;&nbsp;&lt;/head&gt;<br>
+            <br>
+            &nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome to HAnova&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Learn HTML&lt;/h2&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;HTML is easy to learn.&lt;/p&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Start learning today!&lt;/p&gt;<br>
+            &nbsp;&nbsp;&lt;/body&gt;<br>
+            <br>
+            &lt;/html&gt;
+        </div>
+
+        <h2>16. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            أنشئ صفحة HTML جديدة واكتب الهيكل الأساسي كاملًا.
+            بعد ذلك أضف عنوانًا رئيسيًا، عنوانًا فرعيًا، فقرتين، وخطًا أفقيًا.
+            ثم أضف Comment يوضح وظيفة أحد أجزاء الكود.
+        </p>
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>DOCTYPE = تعريف نوع المستند.</li>
+            <li>html = العنصر الرئيسي للصفحة.</li>
+            <li>head = يحتوي على معلومات الصفحة.</li>
+            <li>title = عنوان الصفحة في المتصفح.</li>
+            <li>body = المحتوى الظاهر للمستخدم.</li>
+            <li>h1 إلى h6 = العناوين.</li>
+            <li>p = الفقرة.</li>
+            <li>br = سطر جديد.</li>
+            <li>hr = خط أفقي.</li>
+            <li>comment = تعليق داخل الكود.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+               <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">Designed by: Eng/ HAger</a>
+
+    </div>
+    <button id="topBtn">↑</button>
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

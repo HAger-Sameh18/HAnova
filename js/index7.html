@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../js/index6.html" class="but">Previous Lesson</a>
+        <a href="../js/index2.html" class="but">JavaScript Lessons</a>
+        <a href="../js/index8.html" class="but" onclick="completeLesson(event, this.href, 5)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 5 : Loops</h1>
+
+    <div class="lesson">
+
+        <h2>1. What are Loops? — ما هي الحلقات التكرارية؟</h2>
+
+        <p dir="rtl">
+            <strong>Loops — الحلقات التكرارية</strong>
+            هي طريقة تستخدم في JavaScript لتكرار تنفيذ مجموعة من التعليمات
+            أكثر من مرة، بدلًا من كتابة نفس الكود عدة مرات.
+        </p>
+
+        <p dir="rtl">
+            يمكن التحكم في عدد مرات التكرار باستخدام شرط أو عدد محدد من
+            المرات.
+        </p>
+
+        <div class="code">
+            console.log("Hello");
+            console.log("Hello");
+            console.log("Hello");
+        </div>
+
+        <p dir="rtl">
+            بدلًا من تكرار نفس السطر عدة مرات، يمكننا استخدام
+            <strong>Loop</strong>
+            لتنفيذ الكود بشكل أسهل وأكثر تنظيمًا.
+        </p>
+
+
+        <h2>2. Why Do We Use Loops? — لماذا نستخدم الحلقات؟</h2>
+
+        <p dir="rtl">
+            نستخدم الحلقات عندما نحتاج إلى تنفيذ نفس التعليمات عدة مرات.
+        </p>
+
+        <ul dir="rtl">
+            <li>تكرار طباعة مجموعة من القيم.</li>
+            <li>المرور على عناصر Array.</li>
+            <li>تنفيذ عملية عددًا معينًا من المرات.</li>
+            <li>البحث عن قيمة داخل مجموعة من البيانات.</li>
+            <li>تكرار تنفيذ كود حتى يتحقق شرط معين.</li>
+        </ul>
+
+
+        <h2>3. for Loop — حلقة for</h2>
+
+        <p dir="rtl">
+            <strong>for Loop — حلقة for</strong>
+            تستخدم عندما نعرف غالبًا عدد مرات التكرار التي نريد تنفيذها.
+        </p>
+
+        <div class="code">
+            for (let i = 1; i &lt;= 5; i++) {
+                console.log(i);
+            }
+        </div>
+
+        <p dir="rtl">
+            سيقوم الكود السابق بطباعة الأرقام من
+            <strong>1</strong>
+            إلى
+            <strong>5</strong>.
+        </p>
+
+
+        <h2>4. Parts of a for Loop — أجزاء حلقة for</h2>
+
+        <p dir="rtl">
+            تتكون حلقة
+            <strong>for</strong>
+            من ثلاثة أجزاء رئيسية:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>Initialization</strong> — التهيئة.</li>
+            <li><strong>Condition</strong> — الشرط.</li>
+            <li><strong>Update</strong> — التحديث.</li>
+        </ul>
+
+        <div class="code">
+            for (let i = 1; i &lt;= 5; i++) {
+                console.log(i);
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>let i = 1</strong>
+            هي التهيئة،
+            و<strong>i &lt;= 5</strong>
+            هو الشرط،
+            و<strong>i++</strong>
+            هو التحديث.
+        </p>
+
+
+        <h2>5. Initialization — التهيئة</h2>
+
+        <p dir="rtl">
+            <strong>Initialization — التهيئة</strong>
+            هي الخطوة التي يتم فيها إنشاء المتغير الذي سنستخدمه للتحكم
+            في الحلقة وتحديد قيمته الابتدائية.
+        </p>
+
+        <div class="code">
+            for (let i = 1; i &lt;= 5; i++) {
+                console.log(i);
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تبدأ قيمة
+            <strong>i</strong>
+            من
+            <strong>1</strong>.
+        </p>
+
+
+        <h2>6. Condition — شرط الحلقة</h2>
+
+        <p dir="rtl">
+            <strong>Condition — الشرط</strong>
+            يحدد ما إذا كانت الحلقة ستستمر في التكرار أم ستتوقف.
+        </p>
+
+        <div class="code">
+            for (let i = 1; i &lt;= 5; i++) {
+                console.log(i);
+            }
+        </div>
+
+        <p dir="rtl">
+            طالما أن
+            <strong>i &lt;= 5</strong>
+            صحيحة، تستمر الحلقة في التنفيذ.
+            وعندما يصبح الشرط غير صحيح تتوقف الحلقة.
+        </p>
+
+
+        <h2>7. Update — التحديث</h2>
+
+        <p dir="rtl">
+            <strong>Update — التحديث</strong>
+            هو الجزء الذي يغير قيمة المتغير بعد كل تكرار.
+        </p>
+
+        <div class="code">
+            for (let i = 1; i &lt;= 5; i++) {
+                console.log(i);
+            }
+        </div>
+
+        <p dir="rtl">
+            العامل
+            <strong>++</strong>
+            يزيد قيمة
+            <strong>i</strong>
+            بمقدار واحد بعد كل تكرار.
+        </p>
+
+
+        <h2>8. Counting with for Loop — العد باستخدام for</h2>
+
+        <p dir="rtl">
+            يمكن استخدام حلقة
+            <strong>for</strong>
+            لطباعة الأرقام بالتتابع.
+        </p>
+
+        <div class="code">
+            for (let i = 1; i &lt;= 10; i++) {
+                console.log(i);
+            }
+        </div>
+
+        <p dir="rtl">
+            سيقوم البرنامج بطباعة الأرقام من
+            <strong>1</strong>
+            إلى
+            <strong>10</strong>.
+        </p>
+
+
+        <h2>9. Counting Backwards — العد التنازلي</h2>
+
+        <p dir="rtl">
+            يمكن استخدام الحلقة للعد من رقم كبير إلى رقم أصغر باستخدام
+            العامل
+            <strong>--</strong>.
+        </p>
+
+        <div class="code">
+            for (let i = 5; i &gt;= 1; i--) {
+                console.log(i);
+            }
+        </div>
+
+        <p dir="rtl">
+            ستتم طباعة الأرقام:
+            <strong>5، 4، 3، 2، 1</strong>.
+        </p>
+
+
+        <h2>10. while Loop — حلقة while</h2>
+
+        <p dir="rtl">
+            <strong>while Loop — حلقة while</strong>
+            تستخدم لتكرار تنفيذ مجموعة من التعليمات طالما أن شرطًا معينًا
+            صحيح.
+        </p>
+
+        <div class="code">
+            let i = 1;
+
+            while (i &lt;= 5) {
+                console.log(i);
+                i++;
+            }
+        </div>
+
+        <p dir="rtl">
+            تستمر الحلقة في التنفيذ طالما أن
+            <strong>i &lt;= 5</strong>
+            صحيحة.
+        </p>
+
+
+        <h2>11. Difference Between for and while — الفرق بين for و while</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>for</strong>
+            غالبًا عندما يكون عدد مرات التكرار معروفًا أو يمكن تحديده،
+            بينما تستخدم
+            <strong>while</strong>
+            عندما يعتمد استمرار الحلقة بشكل أساسي على شرط.
+        </p>
+
+        <div class="info">
+            <h3>for Loop</h3>
+            <p dir="rtl">
+                مناسبة عندما نعرف عدد مرات التكرار.
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>while Loop</h3>
+            <p dir="rtl">
+                مناسبة عندما يعتمد التكرار على شرط معين.
+            </p>
+        </div>
+
+
+        <h2>12. do...while Loop — حلقة do...while</h2>
+
+        <p dir="rtl">
+            <strong>do...while Loop — حلقة do...while</strong>
+            تشبه حلقة
+            <strong>while</strong>،
+            ولكنها تنفذ الكود الموجود داخلها مرة واحدة على الأقل قبل
+            اختبار الشرط.
+        </p>
+
+        <div class="code">
+            let i = 1;
+
+            do {
+                console.log(i);
+                i++;
+            } while (i &lt;= 5);
+        </div>
+
+
+        <h2>13. Difference Between while and do...while — الفرق بين while و do...while</h2>
+
+        <p dir="rtl">
+            في حلقة
+            <strong>while</strong>
+            يتم فحص الشرط أولًا، لذلك قد لا يتم تنفيذ الكود حتى مرة واحدة.
+        </p>
+
+        <p dir="rtl">
+            أما في
+            <strong>do...while</strong>
+            يتم تنفيذ الكود أولًا ثم يتم فحص الشرط.
+        </p>
+
+        <div class="code">
+            let x = 10;
+
+            do {
+                console.log(x);
+            } while (x &lt; 5);
+        </div>
+
+        <p dir="rtl">
+            رغم أن الشرط غير صحيح، سيتم تنفيذ الكود مرة واحدة على الأقل.
+        </p>
+
+
+        <h2>14. break Statement — جملة break</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>break</strong>
+            لإيقاف الحلقة فورًا حتى لو كان شرط الحلقة ما زال صحيحًا.
+        </p>
+
+        <div class="code">
+            for (let i = 1; i &lt;= 10; i++) {
+
+                if (i === 5) {
+                    break;
+                }
+
+                console.log(i);
+            }
+        </div>
+
+        <p dir="rtl">
+            ستتوقف الحلقة عندما تصل قيمة
+            <strong>i</strong>
+            إلى
+            <strong>5</strong>.
+        </p>
+
+
+        <h2>15. continue Statement — جملة continue</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>continue</strong>
+            لتخطي التكرار الحالي والانتقال مباشرةً إلى التكرار التالي.
+        </p>
+
+        <div class="code">
+            for (let i = 1; i &lt;= 5; i++) {
+
+                if (i === 3) {
+                    continue;
+                }
+
+                console.log(i);
+            }
+        </div>
+
+        <p dir="rtl">
+            سيتم تخطي الرقم
+            <strong>3</strong>
+            ولن تتم طباعته، ثم تستمر الحلقة في باقي التكرارات.
+        </p>
+
+
+        <h2>16. Nested Loops — الحلقات المتداخلة</h2>
+
+        <p dir="rtl">
+            <strong>Nested Loops — الحلقات المتداخلة</strong>
+            تعني وضع حلقة داخل حلقة أخرى.
+        </p>
+
+        <div class="code">
+            for (let i = 1; i &lt;= 3; i++) {
+
+                for (let j = 1; j &lt;= 2; j++) {
+                    console.log(i, j);
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق توجد حلقة
+            <strong>for</strong>
+            داخل حلقة
+            <strong>for</strong>.
+            ويتم تنفيذ الحلقة الداخلية مع كل تكرار للحلقة الخارجية.
+        </p>
+
+
+        <h2>17. Loops with Conditions — الحلقات مع الشروط</h2>
+
+        <p dir="rtl">
+            يمكن دمج الحلقات مع
+            <strong>if Statement</strong>
+            لتنفيذ تعليمات معينة عند تحقق شرط أثناء التكرار.
+        </p>
+
+        <div class="code">
+            for (let i = 1; i &lt;= 10; i++) {
+
+                if (i % 2 === 0) {
+                    console.log(i);
+                }
+
+            }
+        </div>
+
+        <p dir="rtl">
+            يقوم الكود السابق بطباعة الأرقام الزوجية فقط من
+            <strong>1</strong>
+            إلى
+            <strong>10</strong>.
+        </p>
+
+
+        <h2>18. Infinite Loop — الحلقة اللانهائية</h2>
+
+        <p dir="rtl">
+            <strong>Infinite Loop — الحلقة اللانهائية</strong>
+            هي حلقة تستمر في التنفيذ دون توقف لأن شرطها يظل صحيحًا.
+        </p>
+
+        <div class="code">
+            let i = 1;
+
+            while (i &lt;= 5) {
+                console.log(i);
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق لم يتم تغيير قيمة
+            <strong>i</strong>،
+            لذلك سيظل الشرط صحيحًا وتستمر الحلقة.
+        </p>
+
+        <p dir="rtl">
+            لذلك يجب التأكد دائمًا من وجود طريقة تجعل شرط الحلقة يصبح
+            غير صحيح في الوقت المناسب.
+        </p>
+
+
+        <h2>19. Looping Through an Array — المرور على عناصر Array</h2>
+
+        <p dir="rtl">
+            يمكن استخدام الحلقات للمرور على العناصر الموجودة داخل
+            <strong>Array — المصفوفة</strong>.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            for (let i = 0; i &lt; fruits.length; i++) {
+                console.log(fruits[i]);
+            }
+        </div>
+
+        <p dir="rtl">
+            يقوم البرنامج بالمرور على كل عنصر داخل المصفوفة وطباعته.
+        </p>
+
+
+        <h2>20. for...of Loop — حلقة for...of</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>for...of</strong>
+            للمرور على القيم الموجودة داخل العناصر القابلة للتكرار،
+            مثل
+            <strong>Array</strong>.
+        </p>
+
+        <div class="code">
+            let fruits = ["Apple", "Banana", "Orange"];
+
+            for (let fruit of fruits) {
+                console.log(fruit);
+            }
+        </div>
+
+        <p dir="rtl">
+            في كل تكرار يتم وضع قيمة عنصر من المصفوفة داخل المتغير
+            <strong>fruit</strong>.
+        </p>
+
+
+        <h2>21. for...in Loop — حلقة for...in</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>for...in</strong>
+            للمرور على أسماء الخصائص أو المفاتيح
+            <strong>Keys</strong>
+            الموجودة داخل الكائن
+            <strong>Object</strong>.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20
+            };
+
+            for (let key in student) {
+                console.log(key);
+            }
+        </div>
+
+        <p dir="rtl">
+            يقوم الكود السابق بالمرور على مفاتيح الكائن مثل
+            <strong>name</strong>
+            و<strong>age</strong>.
+        </p>
+
+
+        <h2>22. Loop Counter — عداد الحلقة</h2>
+
+        <p dir="rtl">
+            <strong>Loop Counter — عداد الحلقة</strong>
+            هو المتغير الذي نستخدمه لتتبع عدد مرات التكرار.
+        </p>
+
+        <div class="code">
+            for (let i = 0; i &lt; 5; i++) {
+                console.log("Iteration:", i);
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يستخدم المتغير
+            <strong>i</strong>
+            كعداد للحلقة.
+        </p>
+
+
+        <h2>23. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء حلقة
+            <strong>for</strong>
+            تطبع الأرقام من
+            <strong>1</strong>
+            إلى
+            <strong>20</strong>.
+        </p>
+
+        <p dir="rtl">
+            بعد ذلك حاول تعديل الكود ليطبع الأرقام الزوجية فقط،
+            ثم جرب استخدام
+            <strong>while</strong>
+            و<strong>do...while</strong>
+            لتنفيذ نفس الفكرة.
+        </p>
+
+        <p dir="rtl">
+            وأخيرًا أنشئ
+            <strong>Array</strong>
+            تحتوي على مجموعة من الأسماء، واستخدم
+            <strong>for...of</strong>
+            لطباعة كل اسم.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Loop = حلقة تكرارية.</li>
+            <li>for Loop = حلقة تستخدم غالبًا عندما يكون عدد التكرارات معروفًا.</li>
+            <li>while Loop = حلقة تستمر طالما أن الشرط صحيح.</li>
+            <li>do...while = تنفذ الكود مرة واحدة على الأقل قبل فحص الشرط.</li>
+            <li>Initialization = التهيئة.</li>
+            <li>Condition = الشرط.</li>
+            <li>Update = التحديث.</li>
+            <li>break = إيقاف الحلقة.</li>
+            <li>continue = تخطي التكرار الحالي.</li>
+            <li>Nested Loop = حلقة متداخلة.</li>
+            <li>Infinite Loop = حلقة لا نهائية.</li>
+            <li>Loop Counter = عداد الحلقة.</li>
+            <li>for...of = المرور على القيم.</li>
+            <li>for...in = المرور على المفاتيح أو الخصائص.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

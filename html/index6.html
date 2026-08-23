@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+    <div id="progressBar"></div>
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../html/index5.html" class="but">Previous Lesson</a>
+        <a href="../html/index2.html" class="but">HTML Lessons</a>
+        <a href="../html/index7.html" class="but" onclick="completeLesson(event, this.href, 4)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 4 : HTML Tables</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is a Table? — ما هو الجدول؟</h2>
+
+        <p dir="rtl">
+            <strong>Table — الجدول</strong> هو طريقة تستخدم لعرض البيانات في صورة
+            منظمة تتكون من صفوف وأعمدة. تستخدم الجداول عندما نريد عرض مجموعة من
+            المعلومات بطريقة سهلة القراءة والمقارنة.
+        </p>
+
+        <p dir="rtl">
+            يمكن استخدام الجداول لعرض درجات الطلاب، بيانات الموظفين، أسعار المنتجات،
+            مواعيد المحاضرات، نتائج المباريات، أو أي بيانات أخرى يمكن تنظيمها في
+            صفوف وأعمدة.
+        </p>
+
+
+        <h2>2. Table Structure — تركيب الجدول</h2>
+
+        <p dir="rtl">
+            يتكون جدول HTML من مجموعة من العناصر الأساسية، ولكل عنصر وظيفة محددة.
+            أهم هذه العناصر هي:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>table</strong> — الجدول.</li>
+            <li><strong>tr</strong> — صف الجدول.</li>
+            <li><strong>th</strong> — خلية عنوان.</li>
+            <li><strong>td</strong> — خلية بيانات.</li>
+        </ul>
+
+
+        <h2>3. The &lt;table&gt; Element — عنصر الجدول</h2>
+
+        <p dir="rtl">
+            يستخدم عنصر <strong>&lt;table&gt;</strong> لإنشاء الجدول نفسه، ويجب أن
+            توضع جميع صفوف وخلايا الجدول داخله.
+        </p>
+
+        <div class="code">
+            &lt;table&gt;
+
+            &nbsp;&nbsp;Table Content
+
+            &lt;/table&gt;
+        </div>
+
+
+        <h2>4. Table Row — صف الجدول</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;tr&gt;</strong> هو اختصار لـ
+            <strong>Table Row — صف الجدول</strong>.
+            ويستخدم لإنشاء صف جديد داخل الجدول.
+        </p>
+
+        <div class="code">
+            &lt;table&gt;
+
+            &nbsp;&nbsp;&lt;tr&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;Row Content
+            &nbsp;&nbsp;&lt;/tr&gt;
+
+            &lt;/table&gt;
+        </div>
+
+
+        <h2>5. Table Header — عنوان العمود</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;th&gt;</strong> هو اختصار لـ
+            <strong>Table Header — عنوان الجدول أو عنوان العمود</strong>.
+            ويستخدم لكتابة أسماء الأعمدة.
+        </p>
+
+        <div class="code">
+            &lt;tr&gt;
+
+            &nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;
+            &nbsp;&nbsp;&lt;th&gt;Age&lt;/th&gt;
+            &nbsp;&nbsp;&lt;th&gt;Grade&lt;/th&gt;
+
+            &lt;/tr&gt;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق لدينا ثلاثة عناوين للأعمدة:
+            Name و Age و Grade.
+        </p>
+
+
+        <h2>6. Table Data — بيانات الجدول</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;td&gt;</strong> هو اختصار لـ
+            <strong>Table Data — بيانات الجدول</strong>.
+            ويستخدم لإضافة البيانات داخل خلايا الجدول.
+        </p>
+
+        <div class="code">
+            &lt;tr&gt;
+
+            &nbsp;&nbsp;&lt;td&gt;Ahmed&lt;/td&gt;
+            &nbsp;&nbsp;&lt;td&gt;20&lt;/td&gt;
+            &nbsp;&nbsp;&lt;td&gt;95&lt;/td&gt;
+
+            &lt;/tr&gt;
+        </div>
+
+
+        <h2>7. Creating Your First Table — إنشاء أول جدول</h2>
+
+        <p dir="rtl">
+            يمكن الآن دمج العناصر السابقة لإنشاء جدول بسيط يحتوي على أسماء الطلاب
+            ودرجاتهم.
+        </p>
+
+        <div class="code">
+            &lt;table&gt;
+            <br>
+            &nbsp;&nbsp;&lt;tr&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Course&lt;/th&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Grade&lt;/th&gt;
+            &nbsp;&nbsp;&lt;/tr&gt;
+            <br>
+            &nbsp;&nbsp;&lt;tr&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ahmed&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;HTML&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;95&lt;/td&gt;
+            &nbsp;&nbsp;&lt;/tr&gt;
+            <br>
+            &nbsp;&nbsp;&lt;tr&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Mona&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;CSS&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;90&lt;/td&gt;
+            &nbsp;&nbsp;&lt;/tr&gt;
+            <br>
+            &lt;/table&gt;
+        </div>
+
+
+        <h2>8. Caption — عنوان الجدول</h2>
+
+        <p dir="rtl">
+            يمكن استخدام العنصر <strong>&lt;caption&gt;</strong> لإضافة عنوان يصف
+            محتوى الجدول.
+        </p>
+
+        <p dir="rtl">
+            <strong>Caption — عنوان توضيحي</strong> يساعد المستخدم على معرفة الغرض
+            من الجدول قبل قراءة البيانات الموجودة بداخله.
+        </p>
+
+        <div class="code">
+            &lt;table&gt;
+
+            &nbsp;&nbsp;&lt;caption&gt;Students Grades&lt;/caption&gt;
+
+            &nbsp;&nbsp;&lt;tr&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Grade&lt;/th&gt;
+            &nbsp;&nbsp;&lt;/tr&gt;
+
+            &lt;/table&gt;
+        </div>
+
+
+
+
+        <h2>9. Table Head — رأس الجدول</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;thead&gt;</strong> يعني
+            <strong>Table Head — رأس الجدول</strong>.
+            ويستخدم لتجميع الصفوف التي تحتوي على عناوين الأعمدة.
+        </p>
+
+        <div class="code">
+            &lt;table&gt;
+
+            &nbsp;&nbsp;&lt;thead&gt;
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Grade&lt;/th&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+
+            &nbsp;&nbsp;&lt;/thead&gt;
+
+            &lt;/table&gt;
+        </div>
+
+
+        <h2>10. Table Body — جسم الجدول</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;tbody&gt;</strong> يعني
+            <strong>Table Body — جسم الجدول</strong>.
+            ويستخدم لتجميع صفوف البيانات الأساسية الموجودة داخل الجدول.
+        </p>
+
+        <div class="code">
+            &lt;tbody&gt;
+
+            &nbsp;&nbsp;&lt;tr&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ahmed&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;95&lt;/td&gt;
+            &nbsp;&nbsp;&lt;/tr&gt;
+
+            &lt;/tbody&gt;
+        </div>
+
+
+        <h2>11. Table Footer — تذييل الجدول</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;tfoot&gt;</strong> يعني
+            <strong>Table Footer — تذييل الجدول</strong>.
+            ويستخدم لعرض معلومات أو نتائج في نهاية الجدول.
+        </p>
+
+        <div class="code">
+            &lt;tfoot&gt;
+
+            &nbsp;&nbsp;&lt;tr&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Total&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;185&lt;/td&gt;
+            &nbsp;&nbsp;&lt;/tr&gt;
+
+            &lt;/tfoot&gt;
+        </div>
+
+
+        <h2>12. Colspan — دمج الأعمدة</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>colspan</strong> تستخدم لدمج خليتين أو أكثر من الخلايا
+            في نفس الصف لتكوين خلية واحدة تمتد عبر عدة أعمدة.
+        </p>
+
+        <p dir="rtl">
+            إذا كانت قيمة colspan تساوي 2 فهذا يعني أن الخلية ستأخذ مساحة عمودين.
+        </p>
+
+        <div class="code">
+            &lt;tr&gt;
+
+            &nbsp;&nbsp;&lt;td colspan="2"&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;Student Information
+            &nbsp;&nbsp;&lt;/td&gt;
+
+            &lt;/tr&gt;
+        </div>
+
+
+
+        <h2>13. Rowspan — دمج الصفوف</h2>
+
+        <p dir="rtl">
+            الخاصية <strong>rowspan</strong> تستخدم لدمج خلايا موجودة في صفوف
+            مختلفة، بحيث تمتد الخلية رأسيًا عبر أكثر من صف.
+        </p>
+
+        <div class="code">
+            &lt;tr&gt;
+
+            &nbsp;&nbsp;&lt;td rowspan="2"&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;HTML
+            &nbsp;&nbsp;&lt;/td&gt;
+
+            &nbsp;&nbsp;&lt;td&gt;Lesson 1&lt;/td&gt;
+
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+
+            &nbsp;&nbsp;&lt;td&gt;Lesson 2&lt;/td&gt;
+
+            &lt;/tr&gt;
+        </div>
+
+
+        <h2>14. Complete Table Example — مثال جدول كامل</h2>
+
+        <div class="code">
+            &lt;table&gt;
+            <br>
+            &nbsp;&nbsp;&lt;caption&gt;Student Grades&lt;/caption&gt;
+            <br>
+            &nbsp;&nbsp;&lt;thead&gt;
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;HTML&lt;/th&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;CSS&lt;/th&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;JavaScript&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+            <br>
+            &nbsp;&nbsp;&lt;/thead&gt;
+            <br>
+            &nbsp;&nbsp;&lt;tbody&gt;
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ahmed&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;95&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;90&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;88&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Mona&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;92&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;94&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;96&lt;/td&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+            <br>
+            &nbsp;&nbsp;&lt;/tbody&gt;
+            <br>
+            &lt;/table&gt;
+        </div>
+
+
+        <h2>15. When Should We Use Tables? — متى نستخدم الجداول؟</h2>
+
+        <p dir="rtl">
+            الجداول مناسبة عندما تكون البيانات بطبيعتها منظمة في صورة صفوف وأعمدة،
+            مثل جداول الدرجات والأسعار والمواعيد والبيانات الإحصائية.
+            لكن لا يفضل استخدام الجداول لتقسيم وتصميم صفحة الويب بالكامل؛
+            فالتنسيق والتخطيط يتم باستخدام CSS وأدوات التخطيط الحديثة.
+        </p>
+
+
+        <h2>16. Common Mistakes — الأخطاء الشائعة</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                نسيان وضع خلايا الجدول داخل صف
+                <strong>&lt;tr&gt;</strong>.
+            </li>
+
+            <li>
+                استخدام <strong>&lt;td&gt;</strong> بدلًا من
+                <strong>&lt;th&gt;</strong> لعناوين الأعمدة.
+            </li>
+
+            <li>
+                نسيان إغلاق العناصر.
+            </li>
+
+            <li>
+                استخدام colspan أو rowspan بقيمة غير مناسبة.
+            </li>
+
+            <li>
+                استخدام الجداول لتصميم الصفحة بدلًا من استخدامها للبيانات الجدولية.
+            </li>
+
+        </ul>
+
+
+        <h2>17. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            أنشئ جدولًا لثلاثة طلاب، ويحتوي الجدول على اسم الطالب وثلاث مواد
+            ودرجة كل مادة.
+            استخدم <strong>table</strong> و<strong>tr</strong> و<strong>th</strong>
+            و<strong>td</strong>.
+            بعد ذلك حاول إضافة <strong>caption</strong> للجدول وتجربة
+            <strong>colspan</strong> و<strong>rowspan</strong>.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+
+            <li><strong>Table</strong> = جدول.</li>
+
+            <li><strong>Row</strong> = صف.</li>
+
+            <li><strong>Cell</strong> = خلية.</li>
+
+            <li><strong>Table Header</strong> = عنوان الجدول أو العمود.</li>
+
+            <li><strong>Table Data</strong> = بيانات الجدول.</li>
+
+            <li><strong>Caption</strong> = عنوان توضيحي للجدول.</li>
+
+            <li><strong>Thead</strong> = رأس الجدول.</li>
+
+            <li><strong>Tbody</strong> = جسم الجدول.</li>
+
+            <li><strong>Tfoot</strong> = تذييل الجدول.</li>
+
+            <li><strong>Colspan</strong> = دمج أعمدة.</li>
+
+            <li><strong>Rowspan</strong> = دمج صفوف.</li>
+
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+             <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">Designed by: Eng/ HAger</a>
+
+    </div>
+    <button id="topBtn">↑</button>
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

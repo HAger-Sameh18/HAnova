@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../css/index8.html" class="but">Previous Lesson</a>
+        <a href="../css/index2.html" class="but">CSS Lessons</a>
+        <a href="../css/index10.html" class="but"onclick="completeLesson(event, this.href, 7)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 7 : Display and Positioning</h1>
+
+    <div class="lesson">
+
+        <h2>1. Display Property — خاصية Display</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>display</strong>
+            لتحديد طريقة ظهور العنصر وكيفية وضعه بالنسبة إلى العناصر الأخرى
+            داخل الصفحة.
+        </p>
+
+        <p dir="rtl">
+            تعتبر
+            <strong>display</strong>
+            من أهم خصائص CSS لأنها تتحكم في طريقة ترتيب العناصر
+            والمساحة التي يشغلها كل عنصر.
+        </p>
+
+
+        <h2>2. Block Element — العنصر Block</h2>
+
+        <p dir="rtl">
+            العنصر الذي تكون قيمة
+            <strong>display</strong>
+            الخاصة به
+            <strong>block</strong>
+            يبدأ عادةً في سطر جديد ويأخذ المساحة المتاحة أفقيًا.
+        </p>
+
+        <div class="code">
+            div {
+                display: block;
+            }
+        </div>
+
+        <p dir="rtl">
+            من أمثلة العناصر التي تكون Block بشكل افتراضي:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>&lt;div&gt;</strong></li>
+            <li><strong>&lt;p&gt;</strong></li>
+            <li><strong>&lt;h1&gt;</strong></li>
+            <li><strong>&lt;h2&gt;</strong></li>
+        </ul>
+
+
+        <h2>3. Inline Element — العنصر Inline</h2>
+
+        <p dir="rtl">
+            العنصر الذي تكون قيمة
+            <strong>display</strong>
+            الخاصة به
+            <strong>inline</strong>
+            يظهر داخل نفس السطر مع العناصر الأخرى،
+            ويأخذ فقط المساحة التي يحتاج إليها محتواه.
+        </p>
+
+        <div class="code">
+            span {
+                display: inline;
+            }
+        </div>
+
+        <p dir="rtl">
+            من أمثلة العناصر التي تكون Inline بشكل افتراضي:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>&lt;span&gt;</strong></li>
+            <li><strong>&lt;a&gt;</strong></li>
+            <li><strong>&lt;strong&gt;</strong></li>
+        </ul>
+
+
+        <h2>4. Inline-Block — العنصر Inline-Block</h2>
+
+        <p dir="rtl">
+            تجمع قيمة
+            <strong>inline-block</strong>
+            بين خصائص
+            <strong>inline</strong>
+            و
+            <strong>block</strong>.
+        </p>
+
+        <div class="code">
+            .box {
+                display: inline-block;
+                width: 200px;
+                height: 100px;
+            }
+        </div>
+
+        <p dir="rtl">
+            يسمح
+            <strong>inline-block</strong>
+            بظهور العناصر بجانب بعضها،
+            مع إمكانية تحديد
+            <strong>width</strong>
+            و<strong>height</strong>
+            لها.
+        </p>
+
+
+        <h2>5. None — إخفاء العنصر</h2>
+
+        <p dir="rtl">
+            تستخدم القيمة
+            <strong>none</strong>
+            لإخفاء العنصر من الصفحة.
+        </p>
+
+        <div class="code">
+            .hidden {
+                display: none;
+            }
+        </div>
+
+        <p dir="rtl">
+            عند استخدام
+            <strong>display: none</strong>
+            لا يظهر العنصر ولا يحجز مساحة له في تخطيط الصفحة.
+        </p>
+
+
+        <h2>6. Visibility — خاصية Visibility</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>visibility</strong>
+            للتحكم في ظهور العنصر مع إمكانية الاحتفاظ بمساحته في الصفحة.
+        </p>
+
+        <div class="code">
+            .hidden {
+                visibility: hidden;
+            }
+        </div>
+
+        <p dir="rtl">
+            الفرق الأساسي هو أن
+            <strong>visibility: hidden</strong>
+            يخفي العنصر ولكنه يحتفظ بمكانه،
+            بينما
+            <strong>display: none</strong>
+            يخفي العنصر ويزيل مساحته من التخطيط.
+        </p>
+
+
+        <h2>7. Display Comparison — مقارنة قيم Display</h2>
+
+        <ul dir="rtl">
+            <li><strong>block</strong> — يظهر في سطر جديد ويأخذ المساحة المتاحة.</li>
+            <li><strong>inline</strong> — يظهر داخل نفس السطر ويأخذ مساحة المحتوى.</li>
+            <li><strong>inline-block</strong> — يظهر بجانب العناصر مع إمكانية تحديد أبعاده.</li>
+            <li><strong>none</strong> — يخفي العنصر ويزيل مساحته.</li>
+        </ul>
+
+
+        <h2>8. Position Property — خاصية Position</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>position</strong>
+            لتحديد طريقة وضع العنصر داخل الصفحة.
+        </p>
+
+        <p dir="rtl">
+            ومن أهم قيمها:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>static</strong></li>
+            <li><strong>relative</strong></li>
+            <li><strong>absolute</strong></li>
+            <li><strong>fixed</strong></li>
+            <li><strong>sticky</strong></li>
+        </ul>
+
+
+        <h2>9. Static Position — الموضع Static</h2>
+
+        <p dir="rtl">
+            القيمة
+            <strong>static</strong>
+            هي القيمة الافتراضية لمعظم العناصر.
+        </p>
+
+        <div class="code">
+            div {
+                position: static;
+            }
+        </div>
+
+        <p dir="rtl">
+            في الوضع
+            <strong>static</strong>
+            يتبع العنصر ترتيب الصفحة الطبيعي،
+            ولا يتم تطبيق خصائص
+            <strong>top</strong>
+            و<strong>right</strong>
+            و<strong>bottom</strong>
+            و<strong>left</strong>
+            لتغيير موضعه.
+        </p>
+
+
+        <h2>10. Relative Position — الموضع Relative</h2>
+
+        <p dir="rtl">
+            تستخدم القيمة
+            <strong>relative</strong>
+            لوضع العنصر بالنسبة إلى موضعه الطبيعي في الصفحة.
+        </p>
+
+        <div class="code">
+            .box {
+                position: relative;
+                left: 20px;
+                top: 10px;
+            }
+        </div>
+
+        <p dir="rtl">
+            يمكن تحريك العنصر باستخدام
+            <strong>top</strong>
+            و<strong>right</strong>
+            و<strong>bottom</strong>
+            و<strong>left</strong>
+            مع احتفاظه بمكانه الأصلي في تخطيط الصفحة.
+        </p>
+
+
+        <h2>11. Absolute Position — الموضع Absolute</h2>
+
+        <p dir="rtl">
+            تستخدم القيمة
+            <strong>absolute</strong>
+            لوضع العنصر بالنسبة إلى أقرب عنصر أب له
+            لديه قيمة
+            <strong>position</strong>
+            مختلفة عن
+            <strong>static</strong>.
+        </p>
+
+        <div class="code">
+            .box {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+            }
+        </div>
+
+        <p dir="rtl">
+            إذا لم يوجد عنصر أب مناسب، يتم تحديد موضع العنصر بالنسبة
+            إلى مساحة الصفحة.
+        </p>
+
+
+        <h2>12. Parent and Child with Absolute — الأب والابن مع Absolute</h2>
+
+        <p dir="rtl">
+            من الشائع استخدام
+            <strong>position: relative</strong>
+            للعنصر الأب،
+            ثم استخدام
+            <strong>position: absolute</strong>
+            للعنصر الابن.
+        </p>
+
+        <div class="code">
+            .parent {
+                position: relative;
+            }
+
+            .child {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في هذه الحالة يتم تحديد موضع العنصر الابن بالنسبة
+            إلى العنصر الأب.
+        </p>
+
+
+        <h2>13. Fixed Position — الموضع Fixed</h2>
+
+        <p dir="rtl">
+            تستخدم القيمة
+            <strong>fixed</strong>
+            لتثبيت العنصر بالنسبة إلى نافذة المتصفح.
+        </p>
+
+        <div class="code">
+            .menu {
+                position: fixed;
+                top: 0;
+                right: 0;
+            }
+        </div>
+
+        <p dir="rtl">
+            يظل العنصر في نفس الموضع داخل نافذة المتصفح
+            حتى عند تمرير الصفحة.
+        </p>
+
+
+        <h2>14. Sticky Position — الموضع Sticky</h2>
+
+        <p dir="rtl">
+            تستخدم القيمة
+            <strong>sticky</strong>
+            لجعل العنصر يتصرف بشكل طبيعي في البداية،
+            ثم يثبت في موضع معين عند التمرير.
+        </p>
+
+        <div class="code">
+            .menu {
+                position: sticky;
+                top: 0;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يظل العنصر في موضعه الطبيعي،
+            وعند وصوله إلى أعلى نافذة المتصفح أثناء التمرير
+            يمكن أن يثبت هناك.
+        </p>
+
+
+        <h2>15. Top, Right, Bottom and Left — تحديد موضع العنصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخصائص التالية مع أنواع معينة من
+            <strong>position</strong>
+            للتحكم في موضع العنصر:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>top</strong> — المسافة من الأعلى.</li>
+            <li><strong>right</strong> — المسافة من اليمين.</li>
+            <li><strong>bottom</strong> — المسافة من الأسفل.</li>
+            <li><strong>left</strong> — المسافة من اليسار.</li>
+        </ul>
+
+        <div class="code">
+            .box {
+                position: relative;
+                top: 20px;
+                left: 30px;
+            }
+        </div>
+
+
+        <h2>16. Z-Index — ترتيب العناصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>z-index</strong>
+            لتحديد ترتيب العناصر التي تتداخل مع بعضها.
+        </p>
+
+        <div class="code">
+            .box1 {
+                position: absolute;
+                z-index: 1;
+            }
+
+            .box2 {
+                position: absolute;
+                z-index: 2;
+            }
+        </div>
+
+        <p dir="rtl">
+            عندما تتداخل العناصر، فإن العنصر الذي يمتلك قيمة
+            <strong>z-index</strong>
+            أعلى يظهر فوق العنصر الذي يمتلك قيمة أقل.
+        </p>
+
+
+        <h2>17. Overflow — المحتوى الزائد</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>overflow</strong>
+            للتحكم في المحتوى الذي يتجاوز حدود العنصر.
+        </p>
+
+        <div class="code">
+            .box {
+                width: 300px;
+                height: 100px;
+                overflow: hidden;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>hidden</strong>
+            تخفي الجزء من المحتوى الذي يتجاوز حدود العنصر.
+        </p>
+
+
+        <h2>18. Overflow Auto — التمرير التلقائي</h2>
+
+        <p dir="rtl">
+            يمكن استخدام القيمة
+            <strong>auto</strong>
+            لإظهار أشرطة التمرير عند الحاجة.
+        </p>
+
+        <div class="code">
+            .box {
+                width: 300px;
+                height: 150px;
+                overflow: auto;
+            }
+        </div>
+
+
+        <h2>19. Overflow Scroll — أشرطة التمرير</h2>
+
+        <p dir="rtl">
+            تستخدم القيمة
+            <strong>scroll</strong>
+            لإظهار أشرطة التمرير للعنصر.
+        </p>
+
+        <div class="code">
+            .box {
+                overflow: scroll;
+            }
+        </div>
+
+
+        <h2>20. Display and Positioning Together — استخدام Display و Position معًا</h2>
+
+        <p dir="rtl">
+            يمكن استخدام خصائص
+            <strong>display</strong>
+            و<strong>position</strong>
+            معًا للتحكم في طريقة عرض العناصر ومكانها.
+        </p>
+
+        <div class="code">
+            .box {
+                display: inline-block;
+                position: relative;
+                top: 10px;
+            }
+        </div>
+
+
+        <h2>21. Difference Between Relative and Absolute — الفرق بين Relative و Absolute</h2>
+
+        <ul dir="rtl">
+            <li>
+                <strong>relative</strong>
+                يحرك العنصر من موضعه الطبيعي مع احتفاظه بمكانه في التخطيط.
+            </li>
+
+            <li>
+                <strong>absolute</strong>
+                يخرج العنصر من التدفق الطبيعي للصفحة ويتم تحديد موضعه
+                بالنسبة إلى أقرب أب مناسب.
+            </li>
+        </ul>
+
+
+        <h2>22. Difference Between Fixed and Sticky — الفرق بين Fixed و Sticky</h2>
+
+        <ul dir="rtl">
+            <li>
+                <strong>fixed</strong>
+                يثبت العنصر بالنسبة إلى نافذة المتصفح.
+            </li>
+
+            <li>
+                <strong>sticky</strong>
+                يبدأ كعنصر طبيعي ثم يمكن أن يثبت عند الوصول إلى موضع محدد أثناء التمرير.
+            </li>
+        </ul>
+
+
+        <h2>23. Display Values — أهم قيم Display</h2>
+
+        <ul dir="rtl">
+            <li><strong>block</strong> — عنصر Block.</li>
+            <li><strong>inline</strong> — عنصر Inline.</li>
+            <li><strong>inline-block</strong> — عنصر Inline-Block.</li>
+            <li><strong>none</strong> — إخفاء العنصر.</li>
+            <li><strong>flex</strong> — استخدام Flexbox.</li>
+            <li><strong>grid</strong> — استخدام CSS Grid.</li>
+        </ul>
+
+
+        <h2>24. Position Values — أهم قيم Position</h2>
+
+        <ul dir="rtl">
+            <li><strong>static</strong> — الوضع الافتراضي.</li>
+            <li><strong>relative</strong> — الموضع النسبي.</li>
+            <li><strong>absolute</strong> — الموضع المطلق.</li>
+            <li><strong>fixed</strong> — الموضع الثابت.</li>
+            <li><strong>sticky</strong> — الموضع اللاصق.</li>
+        </ul>
+
+
+        <h2>25. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء عدة عناصر
+            <strong>&lt;div&gt;</strong>
+            وحاول تغيير قيمة
+            <strong>display</strong>
+            لكل عنصر إلى
+            <strong>block</strong>
+            و<strong>inline</strong>
+            و<strong>inline-block</strong>.
+        </p>
+
+        <p dir="rtl">
+            بعد ذلك جرب استخدام
+            <strong>position: relative</strong>
+            و<strong>position: absolute</strong>
+            ولاحظ الفرق بينهما.
+        </p>
+
+        <p dir="rtl">
+            حاول أيضًا استخدام
+            <strong>fixed</strong>
+            و<strong>sticky</strong>
+            مع تمرير الصفحة وملاحظة سلوك كل عنصر.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>display = تحديد طريقة عرض العنصر.</li>
+            <li>block = عنصر يظهر في سطر جديد.</li>
+            <li>inline = عنصر يظهر داخل نفس السطر.</li>
+            <li>inline-block = عنصر يظهر بجانب العناصر مع إمكانية تحديد أبعاده.</li>
+            <li>none = إخفاء العنصر وإزالة مساحته.</li>
+            <li>visibility: hidden = إخفاء العنصر مع الاحتفاظ بمكانه.</li>
+            <li>position = تحديد طريقة وضع العنصر.</li>
+            <li>static = الوضع الافتراضي.</li>
+            <li>relative = الموضع النسبي.</li>
+            <li>absolute = الموضع المطلق.</li>
+            <li>fixed = الموضع الثابت.</li>
+            <li>sticky = الموضع اللاصق.</li>
+            <li>top = تحديد المسافة من الأعلى.</li>
+            <li>right = تحديد المسافة من اليمين.</li>
+            <li>bottom = تحديد المسافة من الأسفل.</li>
+            <li>left = تحديد المسافة من اليسار.</li>
+            <li>z-index = التحكم في ترتيب العناصر المتداخلة.</li>
+            <li>overflow = التحكم في المحتوى الزائد.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

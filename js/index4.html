@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../js/index3.html" class="but">Previous Lesson</a>
+        <a href="../js/index2.html" class="but">JavaScript Lessons</a>
+        <a href="../js/index5.html" class="but" onclick="completeLesson(event, this.href, 2)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 2 : Variables and Data Types</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is a Variable? — ما هو المتغير؟</h2>
+
+        <p dir="rtl">
+            <strong>Variable — المتغير</strong>
+            هو مكان في الذاكرة يستخدم لتخزين البيانات التي يمكن للبرنامج
+            استخدامها أثناء تنفيذ الكود.
+        </p>
+
+        <p dir="rtl">
+            يمكن أن يحتوي المتغير على أنواع مختلفة من البيانات، مثل النصوص
+            والأرقام والقيم المنطقية، ويمكن استخدام قيمة المتغير في العمليات
+            المختلفة داخل البرنامج.
+        </p>
+
+        <div class="code">
+            let name = "Hager";
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إنشاء متغير باسم
+            <strong>name</strong>
+            وتخزين القيمة
+            <strong>"Hager"</strong>
+            بداخله.
+        </p>
+
+
+        <h2>2. Why Do We Use Variables? — لماذا نستخدم المتغيرات؟</h2>
+
+        <p dir="rtl">
+            نستخدم المتغيرات لتخزين البيانات وإعادة استخدامها داخل البرنامج
+            بدلًا من كتابة نفس البيانات أكثر من مرة.
+        </p>
+
+        <ul dir="rtl">
+            <li>تخزين أسماء المستخدمين.</li>
+            <li>تخزين الأرقام والقيم الحسابية.</li>
+            <li>تخزين البيانات التي يدخلها المستخدم.</li>
+            <li>تخزين النتائج أثناء تنفيذ البرنامج.</li>
+            <li>تسهيل التعامل مع البيانات وتغييرها.</li>
+        </ul>
+
+
+        <h2>3. Declaring a Variable — تعريف المتغير</h2>
+
+        <p dir="rtl">
+            <strong>Declaring a Variable — تعريف المتغير</strong>
+            يعني إنشاء متغير جديد في JavaScript.
+        </p>
+
+        <p dir="rtl">
+            يمكن تعريف المتغيرات باستخدام الكلمات المفتاحية:
+            <strong>let</strong>،
+            <strong>const</strong>،
+            و<strong>var</strong>.
+        </p>
+
+
+        <h2>4. let — تعريف متغير قابل للتغيير</h2>
+
+        <p dir="rtl">
+            تستخدم كلمة
+            <strong>let</strong>
+            لإنشاء متغير يمكن تغيير قيمته بعد تعريفه.
+        </p>
+
+        <div class="code">
+            let age = 20;
+
+            age = 21;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إنشاء المتغير
+            <strong>age</strong>
+            بقيمة
+            <strong>20</strong>،
+            ثم تم تغيير قيمته إلى
+            <strong>21</strong>.
+        </p>
+
+
+        <h2>5. const — تعريف ثابت</h2>
+
+        <p dir="rtl">
+            تستخدم كلمة
+            <strong>const</strong>
+            لإنشاء متغير لا يمكن إعادة إسناد قيمة جديدة له بعد تعريفه.
+        </p>
+
+        <div class="code">
+            const country = "Egypt";
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إنشاء متغير ثابت باسم
+            <strong>country</strong>.
+            لا يمكن بعد ذلك إعطاؤه قيمة جديدة باستخدام إعادة الإسناد.
+        </p>
+
+        <div class="code">
+            const country = "Egypt";
+
+            country = "USA";
+        </div>
+
+        <p dir="rtl">
+            الكود السابق يؤدي إلى حدوث خطأ لأن المتغير الذي تم تعريفه باستخدام
+            <strong>const</strong>
+            لا يمكن إعادة إسناد قيمة جديدة له.
+        </p>
+
+
+        <h2>6. var — الطريقة القديمة لتعريف المتغيرات</h2>
+
+        <p dir="rtl">
+            <strong>var</strong>
+            هي طريقة قديمة لإنشاء المتغيرات في JavaScript.
+            وكانت تستخدم بشكل كبير في الإصدارات القديمة من JavaScript.
+        </p>
+
+        <div class="code">
+            var name = "Hager";
+        </div>
+
+        <p dir="rtl">
+            في JavaScript الحديثة يفضل استخدام
+            <strong>let</strong>
+            و<strong>const</strong>
+            بدلًا من
+            <strong>var</strong>
+            في معظم الحالات بسبب طريقة تعاملها المختلفة مع نطاق المتغيرات.
+        </p>
+
+
+        <h2>7. let vs const vs var — الفرق بين طرق تعريف المتغير</h2>
+
+        <div class="code">
+            let age = 20;
+
+            const name = "Hager";
+
+            var city = "Banha";
+        </div>
+
+        <ul dir="rtl">
+            <li><strong>let</strong> — يمكن تغيير قيمة المتغير.</li>
+            <li><strong>const</strong> — لا يمكن إعادة إسناد قيمة جديدة للمتغير.</li>
+            <li><strong>var</strong> — طريقة قديمة لتعريف المتغيرات.</li>
+        </ul>
+
+
+        <h2>8. Variable Naming Rules — قواعد تسمية المتغيرات</h2>
+
+        <p dir="rtl">
+            عند إنشاء متغير في JavaScript يجب اتباع بعض القواعد الخاصة
+            بتسمية المتغير.
+        </p>
+
+        <ul dir="rtl">
+            <li>يمكن أن يحتوي الاسم على حروف وأرقام و<strong>_</strong> و<strong>$</strong>.</li>
+            <li>لا يمكن أن يبدأ اسم المتغير برقم.</li>
+            <li>لا يمكن استخدام الكلمات المحجوزة كأسماء للمتغيرات.</li>
+            <li>JavaScript تفرق بين الحروف الكبيرة والصغيرة.</li>
+            <li>يفضل استخدام أسماء واضحة تصف البيانات التي يخزنها المتغير.</li>
+        </ul>
+
+        <div class="code">
+            let userName = "Hager";
+            let age2 = 20;
+            let user_city = "Banha";
+        </div>
+
+
+        <h2>9. Case Sensitivity — حساسية حالة الأحرف</h2>
+
+        <p dir="rtl">
+            JavaScript هي لغة
+            <strong>Case Sensitive — حساسة لحالة الأحرف</strong>.
+            وهذا يعني أن الحروف الكبيرة والصغيرة تعتبر مختلفة.
+        </p>
+
+        <div class="code">
+            let name = "Hager";
+
+            let Name = "Sara";
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يعتبر
+            <strong>name</strong>
+            و<strong>Name</strong>
+            متغيرين مختلفين لأن حرف
+            <strong>n</strong>
+            مكتوب بحالة مختلفة.
+        </p>
+
+
+        <h2>10. Data Types — أنواع البيانات</h2>
+
+        <p dir="rtl">
+            <strong>Data Types — أنواع البيانات</strong>
+            تحدد نوع القيمة التي يتم تخزينها داخل المتغير.
+        </p>
+
+        <p dir="rtl">
+            توفر JavaScript عدة أنواع من البيانات، ومن أهمها:
+            <strong>String</strong>،
+            <strong>Number</strong>،
+            <strong>Boolean</strong>،
+            <strong>Undefined</strong>،
+            <strong>Null</strong>،
+            بالإضافة إلى أنواع أخرى مثل
+            <strong>Object</strong>
+            و<strong>Array</strong>.
+        </p>
+
+
+        <h2>11. String — النص</h2>
+
+        <p dir="rtl">
+            <strong>String — النص</strong>
+            يستخدم لتخزين مجموعة من الأحرف والكلمات.
+        </p>
+
+        <p dir="rtl">
+            يتم كتابة النصوص بين علامات اقتباس مثل
+            <strong>" "</strong>
+            أو
+            <strong>' '</strong>.
+        </p>
+
+        <div class="code">
+            let name = "Hager";
+
+            let message = "Welcome to JavaScript";
+        </div>
+
+
+        <h2>12. Number — الرقم</h2>
+
+        <p dir="rtl">
+            <strong>Number — الرقم</strong>
+            يستخدم لتخزين القيم الرقمية، سواء كانت أعدادًا صحيحة أو أعدادًا
+            عشرية.
+        </p>
+
+        <div class="code">
+            let age = 20;
+
+            let price = 99.5;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>20</strong>
+            عدد صحيح،
+            بينما
+            <strong>99.5</strong>
+            عدد عشري.
+        </p>
+
+
+        <h2>13. Boolean — القيمة المنطقية</h2>
+
+        <p dir="rtl">
+            <strong>Boolean — القيمة المنطقية</strong>
+            تستخدم لتخزين إحدى قيمتين فقط:
+            <strong>true</strong>
+            أو
+            <strong>false</strong>.
+        </p>
+
+        <div class="code">
+            let isStudent = true;
+
+            let isAdmin = false;
+        </div>
+
+        <p dir="rtl">
+            تستخدم القيم المنطقية بشكل كبير في الشروط واتخاذ القرارات
+            داخل البرامج.
+        </p>
+
+
+        <h2>14. Undefined — قيمة غير محددة</h2>
+
+        <p dir="rtl">
+            <strong>Undefined</strong>
+            تعني أن المتغير تم تعريفه ولكن لم يتم إعطاؤه قيمة بعد.
+        </p>
+
+        <div class="code">
+            let result;
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إنشاء المتغير
+            <strong>result</strong>
+            بدون إعطائه قيمة، لذلك تكون قيمته
+            <strong>undefined</strong>.
+        </p>
+
+
+        <h2>15. Null — قيمة فارغة</h2>
+
+        <p dir="rtl">
+            <strong>Null</strong>
+            تستخدم للتعبير عن عدم وجود قيمة بشكل مقصود.
+        </p>
+
+        <div class="code">
+            let user = null;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إعطاء المتغير قيمة
+            <strong>null</strong>
+            بشكل صريح للدلالة على عدم وجود قيمة حاليًا.
+        </p>
+
+
+        <h2>16. Object — الكائن</h2>
+
+        <p dir="rtl">
+            <strong>Object — الكائن</strong>
+            يستخدم لتجميع مجموعة من البيانات المرتبطة ببعضها في مكان واحد.
+        </p>
+
+        <div class="code">
+            let student = {
+                name: "Hager",
+                age: 20
+            };
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يحتوي الكائن
+            <strong>student</strong>
+            على بيانات مختلفة مثل الاسم والعمر.
+        </p>
+
+
+        <h2>17. Array — المصفوفة</h2>
+
+        <p dir="rtl">
+            <strong>Array — المصفوفة</strong>
+            تستخدم لتخزين مجموعة من القيم داخل متغير واحد.
+        </p>
+
+        <div class="code">
+            let colors = ["red", "blue", "green"];
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يحتوي المتغير
+            <strong>colors</strong>
+            على مجموعة من الألوان.
+        </p>
+
+
+        <h2>18. typeof Operator — معرفة نوع البيانات</h2>
+
+        <p dir="rtl">
+            يمكن استخدام
+            <strong>typeof</strong>
+            لمعرفة نوع البيانات المخزنة داخل متغير.
+        </p>
+
+        <div class="code">
+            let name = "Hager";
+
+            console.log(typeof name);
+        </div>
+
+        <p dir="rtl">
+            سيقوم الكود السابق بإظهار
+            <strong>string</strong>
+            في الـ Console لأن القيمة المخزنة داخل المتغير عبارة عن نص.
+        </p>
+
+
+        <h2>19. Multiple Variables — إنشاء أكثر من متغير</h2>
+
+        <p dir="rtl">
+            يمكننا إنشاء أكثر من متغير لتخزين بيانات مختلفة داخل البرنامج.
+        </p>
+
+        <div class="code">
+            let name = "Hager";
+            let age = 20;
+            let city = "Banha";
+            let isStudent = true;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إنشاء أربعة متغيرات، وكل متغير يحتوي على
+            نوع مختلف من البيانات.
+        </p>
+
+
+        <h2>20. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء أربعة متغيرات باستخدام
+            <strong>let</strong>
+            و<strong>const</strong>
+            لتخزين اسم، وعمر، ومدينة، وقيمة منطقية.
+        </p>
+
+        <p dir="rtl">
+            بعد ذلك استخدم
+            <strong>console.log()</strong>
+            لعرض القيم داخل الـ Console،
+            وجرب استخدام
+            <strong>typeof</strong>
+            لمعرفة نوع كل قيمة.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Variable = المتغير.</li>
+            <li>let = متغير يمكن تغيير قيمته.</li>
+            <li>const = متغير لا يمكن إعادة إسناد قيمة جديدة له.</li>
+            <li>var = طريقة قديمة لتعريف المتغيرات.</li>
+            <li>String = النص.</li>
+            <li>Number = الرقم.</li>
+            <li>Boolean = true أو false.</li>
+            <li>Undefined = متغير بدون قيمة محددة.</li>
+            <li>Null = قيمة فارغة يتم تحديدها بشكل مقصود.</li>
+            <li>Object = الكائن.</li>
+            <li>Array = المصفوفة.</li>
+            <li>typeof = معرفة نوع البيانات.</li>
+            <li>JavaScript حساسة لحالة الأحرف Case Sensitive.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

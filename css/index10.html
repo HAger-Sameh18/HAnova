@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../css/index9.html" class="but">Previous Lesson</a>
+        <a href="../css/index2.html" class="but">CSS Lessons</a>
+        <a href="../css/index11.html" class="but" onclick="completeLesson(event, this.href, 7)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 8 : Flexbox</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is Flexbox? — ما هو Flexbox؟</h2>
+
+        <p dir="rtl">
+            <strong>Flexbox</strong>
+            هو نظام تخطيط في CSS يستخدم لترتيب العناصر داخل الحاوية
+            بطريقة مرنة وسهلة.
+        </p>
+
+        <p dir="rtl">
+            يستخدم Flexbox بشكل كبير في تصميم صفحات الويب لترتيب العناصر
+            أفقيًا أو رأسيًا والتحكم في المسافات والمحاذاة بينها.
+        </p>
+
+        <p dir="rtl">
+            كلمة
+            <strong>Flex</strong>
+            تشير إلى المرونة، لأن العناصر يمكنها التكيف مع المساحة المتاحة
+            داخل الحاوية.
+        </p>
+
+
+        <h2>2. Flex Container — الحاوية المرنة</h2>
+
+        <p dir="rtl">
+            حتى نستخدم Flexbox، يجب أولًا جعل العنصر الأب
+            <strong>Flex Container — حاوية مرنة</strong>
+            باستخدام:
+            <strong>display: flex;</strong>
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+            }
+        </div>
+
+        <p dir="rtl">
+            بعد إضافة
+            <strong>display: flex</strong>
+            تصبح العناصر الموجودة داخل الحاوية
+            <strong>Flex Items — عناصر مرنة</strong>.
+        </p>
+
+
+        <h2>3. Flex Items — العناصر المرنة</h2>
+
+        <p dir="rtl">
+            العناصر الموجودة مباشرة داخل
+            <strong>Flex Container</strong>
+            تسمى
+            <strong>Flex Items</strong>.
+        </p>
+
+        <div class="code">
+            &lt;div class="container"&gt;
+
+                &lt;div&gt;Item 1&lt;/div&gt;
+                &lt;div&gt;Item 2&lt;/div&gt;
+                &lt;div&gt;Item 3&lt;/div&gt;
+
+            &lt;/div&gt;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يعتبر العنصر
+            <strong>container</strong>
+            هو الحاوية،
+            بينما العناصر الثلاثة الموجودة بداخله هي
+            <strong>Flex Items</strong>.
+        </p>
+
+
+        <h2>4. Flex Direction — اتجاه العناصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>flex-direction</strong>
+            لتحديد الاتجاه الذي يتم فيه ترتيب العناصر.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                flex-direction: row;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>row</strong>
+            تجعل العناصر مرتبة في اتجاه أفقي.
+        </p>
+
+
+        <h2>5. Row — الاتجاه الأفقي</h2>
+
+        <p dir="rtl">
+            القيمة الافتراضية للخاصية
+            <strong>flex-direction</strong>
+            هي
+            <strong>row</strong>.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                flex-direction: row;
+            }
+        </div>
+
+        <p dir="rtl">
+            يتم وضع العناصر بجانب بعضها على المحور الرئيسي
+            <strong>Main Axis</strong>.
+        </p>
+
+
+        <h2>6. Column — الاتجاه الرأسي</h2>
+
+        <p dir="rtl">
+            يمكن ترتيب العناصر رأسيًا باستخدام القيمة
+            <strong>column</strong>.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+        </div>
+
+        <p dir="rtl">
+            في هذه الحالة تظهر العناصر فوق بعضها من أعلى إلى أسفل.
+        </p>
+
+
+        <h2>7. Row Reverse and Column Reverse — عكس الاتجاه</h2>
+
+        <p dir="rtl">
+            يمكن عكس اتجاه العناصر باستخدام:
+            <strong>row-reverse</strong>
+            أو
+            <strong>column-reverse</strong>.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        </div>
+
+        <p dir="rtl">
+            تقوم
+            <strong>row-reverse</strong>
+            بعكس ترتيب العناصر أفقيًا.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        </div>
+
+        <p dir="rtl">
+            تقوم
+            <strong>column-reverse</strong>
+            بعكس ترتيب العناصر رأسيًا.
+        </p>
+
+
+        <h2>8. Main Axis — المحور الرئيسي</h2>
+
+        <p dir="rtl">
+            <strong>Main Axis — المحور الرئيسي</strong>
+            هو الاتجاه الأساسي الذي تتحرك فيه عناصر Flexbox.
+        </p>
+
+        <p dir="rtl">
+            عندما تكون قيمة
+            <strong>flex-direction: row</strong>
+            يكون المحور الرئيسي أفقيًا.
+        </p>
+
+        <p dir="rtl">
+            وعندما تكون القيمة
+            <strong>flex-direction: column</strong>
+            يكون المحور الرئيسي رأسيًا.
+        </p>
+
+
+        <h2>9. Cross Axis — المحور المتقاطع</h2>
+
+        <p dir="rtl">
+            <strong>Cross Axis — المحور المتقاطع</strong>
+            هو المحور الذي يكون عموديًا على المحور الرئيسي.
+        </p>
+
+        <p dir="rtl">
+            فهم المحورين مهم جدًا عند استخدام
+            <strong>justify-content</strong>
+            و<strong>align-items</strong>.
+        </p>
+
+
+        <h2>10. Justify Content — توزيع العناصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>justify-content</strong>
+            للتحكم في توزيع العناصر على
+            <strong>Main Axis</strong>.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                justify-content: center;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>center</strong>
+            تضع العناصر في منتصف المحور الرئيسي.
+        </p>
+
+
+        <h2>11. Justify Content Values — قيم Justify Content</h2>
+
+        <ul dir="rtl">
+            <li><strong>flex-start</strong> — وضع العناصر في بداية المحور.</li>
+            <li><strong>flex-end</strong> — وضع العناصر في نهاية المحور.</li>
+            <li><strong>center</strong> — وضع العناصر في المنتصف.</li>
+            <li><strong>space-between</strong> — توزيع المساحة بين العناصر.</li>
+            <li><strong>space-around</strong> — إضافة مساحة حول العناصر.</li>
+            <li><strong>space-evenly</strong> — توزيع المسافات بالتساوي.</li>
+        </ul>
+
+
+        <h2>12. Align Items — محاذاة العناصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>align-items</strong>
+            لمحاذاة العناصر على
+            <strong>Cross Axis</strong>.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                align-items: center;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>center</strong>
+            تجعل العناصر في منتصف المحور المتقاطع.
+        </p>
+
+
+        <h2>13. Align Items Values — قيم Align Items</h2>
+
+        <ul dir="rtl">
+            <li><strong>stretch</strong> — تمديد العناصر حسب المساحة المتاحة.</li>
+            <li><strong>flex-start</strong> — بداية المحور المتقاطع.</li>
+            <li><strong>flex-end</strong> — نهاية المحور المتقاطع.</li>
+            <li><strong>center</strong> — المنتصف.</li>
+            <li><strong>baseline</strong> — المحاذاة حسب خط الأساس للنص.</li>
+        </ul>
+
+
+        <h2>14. Centering with Flexbox — توسيط العناصر باستخدام Flexbox</h2>
+
+        <p dir="rtl">
+            من أشهر استخدامات Flexbox وضع عنصر في منتصف الحاوية
+            أفقيًا ورأسيًا.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </div>
+
+        <p dir="rtl">
+            باستخدام الخاصيتين معًا يمكن الوصول إلى توسيط العناصر
+            بسهولة داخل الحاوية.
+        </p>
+
+
+        <h2>15. Gap — المسافة بين العناصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>gap</strong>
+            لتحديد المسافة بين عناصر Flexbox.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                gap: 20px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق توجد مسافة مقدارها
+            <strong>20px</strong>
+            بين العناصر.
+        </p>
+
+
+        <h2>16. Flex Wrap — التفاف العناصر</h2>
+
+        <p dir="rtl">
+            بشكل افتراضي تحاول عناصر Flexbox البقاء في صف واحد.
+            ويمكن السماح لها بالانتقال إلى سطر آخر باستخدام
+            <strong>flex-wrap</strong>.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        </div>
+
+        <p dir="rtl">
+            عندما لا توجد مساحة كافية، تنتقل العناصر إلى سطر جديد.
+        </p>
+
+
+        <h2>17. Flex Wrap Values — قيم Flex Wrap</h2>
+
+        <ul dir="rtl">
+            <li><strong>nowrap</strong> — عدم التفاف العناصر، وهي القيمة الافتراضية.</li>
+            <li><strong>wrap</strong> — السماح بانتقال العناصر إلى سطر جديد.</li>
+            <li><strong>wrap-reverse</strong> — الالتفاف في الاتجاه المعاكس.</li>
+        </ul>
+
+
+        <h2>18. Align Content — محاذاة الصفوف</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>align-content</strong>
+            للتحكم في توزيع الصفوف أو الأعمدة عندما تكون هناك عدة أسطر
+            من عناصر Flexbox.
+        </p>
+
+        <div class="code">
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+            }
+        </div>
+
+        <p dir="rtl">
+            تستخدم هذه الخاصية بشكل أساسي عندما يكون هناك أكثر من
+            Flex Line.
+        </p>
+
+
+        <h2>19. Align Self — محاذاة عنصر واحد</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>align-self</strong>
+            لتغيير محاذاة عنصر Flex واحد دون التأثير على باقي العناصر.
+        </p>
+
+        <div class="code">
+            .item {
+                align-self: flex-end;
+            }
+        </div>
+
+
+        <h2>20. Flex Grow — نمو العنصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>flex-grow</strong>
+            لتحديد قدرة العنصر على النمو واستغلال المساحة الإضافية
+            داخل الحاوية.
+        </p>
+
+        <div class="code">
+            .item {
+                flex-grow: 1;
+            }
+        </div>
+
+        <p dir="rtl">
+            يمكن أن تسمح هذه الخاصية لعنصر بالاستفادة من المساحة المتبقية
+            داخل الحاوية.
+        </p>
+
+
+        <h2>21. Flex Shrink — تقليص العنصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>flex-shrink</strong>
+            لتحديد قدرة العنصر على الانكماش عندما لا تكون المساحة المتاحة
+            كافية.
+        </p>
+
+        <div class="code">
+            .item {
+                flex-shrink: 1;
+            }
+        </div>
+
+
+        <h2>22. Flex Basis — الحجم الأساسي</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>flex-basis</strong>
+            لتحديد الحجم الأساسي للعنصر قبل توزيع المساحة المتاحة.
+        </p>
+
+        <div class="code">
+            .item {
+                flex-basis: 200px;
+            }
+        </div>
+
+
+        <h2>23. Flex Shorthand — اختصار Flex</h2>
+
+        <p dir="rtl">
+            يمكن استخدام الخاصية
+            <strong>flex</strong>
+            كاختصار للخصائص:
+            <strong>flex-grow</strong>،
+            <strong>flex-shrink</strong>،
+            و<strong>flex-basis</strong>.
+        </p>
+
+        <div class="code">
+            .item {
+                flex: 1;
+            }
+        </div>
+
+
+        <h2>24. Order — ترتيب العناصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>order</strong>
+            لتغيير ترتيب ظهور عناصر Flexbox.
+        </p>
+
+        <div class="code">
+            .item1 {
+                order: 2;
+            }
+
+            .item2 {
+                order: 1;
+            }
+        </div>
+
+        <p dir="rtl">
+            العنصر الذي يمتلك قيمة
+            <strong>order</strong>
+            أصغر يظهر قبل العناصر التي تمتلك قيمة أكبر.
+        </p>
+
+
+        <h2>25. Flexbox Navigation Example — مثال على قائمة باستخدام Flexbox</h2>
+
+        <div class="code">
+            .nav {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 15px;
+            }
+        </div>
+
+        <p dir="rtl">
+            يمكن استخدام Flexbox بسهولة لإنشاء قوائم التنقل وترتيب
+            الروابط بجانب بعضها.
+        </p>
+
+
+        <h2>26. Flexbox Cards Example — مثال على ترتيب العناصر</h2>
+
+        <div class="code">
+            .container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                width: 250px;
+                padding: 20px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يمكن ترتيب عدة عناصر بجانب بعضها،
+            وعندما تقل المساحة يمكن أن تنتقل العناصر إلى سطر جديد
+            بسبب استخدام
+            <strong>flex-wrap</strong>.
+        </p>
+
+
+        <h2>27. Flexbox Properties for Container — خصائص الحاوية</h2>
+
+        <ul dir="rtl">
+            <li><strong>display</strong> — تشغيل Flexbox.</li>
+            <li><strong>flex-direction</strong> — تحديد اتجاه العناصر.</li>
+            <li><strong>justify-content</strong> — توزيع العناصر على المحور الرئيسي.</li>
+            <li><strong>align-items</strong> — محاذاة العناصر على المحور المتقاطع.</li>
+            <li><strong>flex-wrap</strong> — التحكم في التفاف العناصر.</li>
+            <li><strong>align-content</strong> — توزيع الصفوف.</li>
+            <li><strong>gap</strong> — المسافة بين العناصر.</li>
+        </ul>
+
+
+        <h2>28. Flexbox Properties for Items — خصائص العناصر</h2>
+
+        <ul dir="rtl">
+            <li><strong>order</strong> — تغيير ترتيب العنصر.</li>
+            <li><strong>flex-grow</strong> — تحديد قدرة العنصر على النمو.</li>
+            <li><strong>flex-shrink</strong> — تحديد قدرة العنصر على الانكماش.</li>
+            <li><strong>flex-basis</strong> — تحديد الحجم الأساسي.</li>
+            <li><strong>flex</strong> — اختصار خصائص Flex.</li>
+            <li><strong>align-self</strong> — محاذاة عنصر منفرد.</li>
+        </ul>
+
+
+        <h2>29. Complete Flexbox Example — مثال كامل على Flexbox</h2>
+
+        <div class="code">
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .item {
+                width: 200px;
+                padding: 20px;
+            }
+        </div>
+
+        <p dir="rtl">
+            يجمع المثال السابق بين مجموعة من خصائص Flexbox
+            لإنشاء تخطيط مرن ومنظم للعناصر.
+        </p>
+
+
+        <h2>30. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء حاوية تحتوي على ثلاثة أو أربعة عناصر،
+            ثم استخدم
+            <strong>display: flex</strong>
+            لترتيبها بجانب بعضها.
+        </p>
+
+        <p dir="rtl">
+            جرب تغيير قيمة
+            <strong>flex-direction</strong>
+            بين
+            <strong>row</strong>
+            و<strong>column</strong>
+            ولاحظ الفرق.
+        </p>
+
+        <p dir="rtl">
+            بعد ذلك جرب
+            <strong>justify-content</strong>
+            و<strong>align-items</strong>
+            و<strong>gap</strong>
+            و<strong>flex-wrap</strong>
+            ولاحظ كيف تتغير أماكن العناصر.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Flexbox = نظام تخطيط مرن.</li>
+            <li>Flex Container = الحاوية المرنة.</li>
+            <li>Flex Item = العنصر المرن.</li>
+            <li>display: flex = تشغيل Flexbox.</li>
+            <li>flex-direction = تحديد اتجاه العناصر.</li>
+            <li>row = اتجاه أفقي.</li>
+            <li>column = اتجاه رأسي.</li>
+            <li>justify-content = توزيع العناصر على المحور الرئيسي.</li>
+            <li>align-items = محاذاة العناصر على المحور المتقاطع.</li>
+            <li>gap = المسافة بين العناصر.</li>
+            <li>flex-wrap = السماح بالتفاف العناصر.</li>
+            <li>align-content = توزيع الصفوف.</li>
+            <li>align-self = محاذاة عنصر منفرد.</li>
+            <li>flex-grow = نمو العنصر.</li>
+            <li>flex-shrink = انكماش العنصر.</li>
+            <li>flex-basis = الحجم الأساسي للعنصر.</li>
+            <li>flex = اختصار خصائص Flex.</li>
+            <li>order = تغيير ترتيب العناصر.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

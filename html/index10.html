@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+    <div id="progressBar"></div>
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../html/index9.html" class="but">Previous Lesson</a>
+        <a href="../html/index2.html" class="but">HTML Lessons</a>
+        <a href="../html/index11.html" class="but" onclick="completeLesson(event, this.href, 8)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 8 : Semantic HTML</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is Semantic HTML? — ما هو HTML الدلالي؟</h2>
+
+        <p dir="rtl">
+            <strong>Semantic HTML — HTML الدلالي</strong> هو استخدام عناصر HTML
+            التي توضح معنى ووظيفة الجزء الموجود داخل صفحة الويب.
+            أي أن اسم العنصر نفسه يساعد المطور والمتصفح على فهم طبيعة المحتوى.
+        </p>
+
+        <p dir="rtl">
+            على سبيل المثال، عندما نستخدم
+            <strong>&lt;header&gt;</strong> فإننا نوضح أن هذا الجزء يمثل
+            رأس الصفحة أو رأس جزء معين منها، بينما
+            <strong>&lt;footer&gt;</strong> يستخدم للدلالة على تذييل الصفحة
+            أو القسم.
+        </p>
+
+
+        <h2>2. Semantic vs Non-Semantic Elements — العناصر الدلالية وغير الدلالية</h2>
+
+        <p dir="rtl">
+            العناصر الدلالية <strong>Semantic Elements</strong> تعطي معنى واضحًا
+            للمحتوى، بينما العناصر غير الدلالية
+            <strong>Non-Semantic Elements</strong> لا توضح معنى المحتوى من اسمها.
+        </p>
+
+        <p dir="rtl">
+            من أمثلة العناصر غير الدلالية:
+            <strong>&lt;div&gt;</strong> و<strong>&lt;span&gt;</strong>.
+            أما العناصر الدلالية فمن أمثلتها:
+            <strong>&lt;header&gt;</strong> و<strong>&lt;nav&gt;</strong>
+            و<strong>&lt;main&gt;</strong> و<strong>&lt;article&gt;</strong>.
+        </p>
+
+
+        <h2>3. Why Use Semantic HTML? — لماذا نستخدم HTML الدلالي؟</h2>
+
+        <p dir="rtl">
+            استخدام العناصر الدلالية يجعل كود HTML أكثر وضوحًا وتنظيمًا،
+            ويساعد المطور على معرفة وظيفة كل جزء من الصفحة بسهولة.
+        </p>
+
+        <p dir="rtl">
+            كما تساعد العناصر الدلالية التقنيات المساعدة
+            <strong>Assistive Technologies — التقنيات المساعدة</strong>
+            على فهم بنية الصفحة والتنقل بين أجزائها بصورة أفضل.
+        </p>
+
+
+        <h2>4. Header — رأس الصفحة</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;header&gt;</strong> يعني
+            <strong>Header — رأس الصفحة أو القسم</strong>.
+            يستخدم لتمثيل الجزء التمهيدي من الصفحة أو من أحد أقسامها.
+        </p>
+
+        <p dir="rtl">
+            يمكن أن يحتوي الـ Header على عنوان الصفحة أو الشعار أو معلومات
+            تمهيدية أو عناصر أخرى مرتبطة ببداية المحتوى.
+        </p>
+
+        <div class="code">
+            &lt;header&gt;
+
+            &lt;h1&gt;HAnova&lt;/h1&gt;
+
+            &lt;p&gt;Learn Web Development&lt;/p&gt;
+
+            &lt;/header&gt;
+        </div>
+
+
+        <h2>5. Nav — قائمة التنقل</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;nav&gt;</strong> يعني
+            <strong>Navigation — التنقل</strong>.
+            يستخدم لتجميع روابط التنقل الرئيسية في الموقع.
+        </p>
+
+        <p dir="rtl">
+            يمكن استخدامه لروابط الانتقال إلى الصفحة الرئيسية أو الدروس
+            أو الأقسام الأساسية في الموقع.
+        </p>
+
+        <div class="code">
+            &lt;nav&gt;
+
+            &lt;a href="index.html"&gt;Home&lt;/a&gt;
+
+            &lt;a href="lessons.html"&gt;Lessons&lt;/a&gt;
+
+            &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+
+            &lt;/nav&gt;
+        </div>
+
+
+        <h2>6. Main — المحتوى الرئيسي</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;main&gt;</strong> يعني
+            <strong>Main Content — المحتوى الرئيسي</strong>.
+            ويستخدم لتحديد المحتوى الأساسي في الصفحة.
+        </p>
+
+        <p dir="rtl">
+            يجب أن يمثل المحتوى الموجود داخل main الجزء الأساسي الذي تدور حوله
+            الصفحة، مثل محتوى درس تعليمي أو مقال أو صفحة منتج.
+        </p>
+
+        <div class="code">
+            &lt;main&gt;
+
+            &lt;h1&gt;HTML Course&lt;/h1&gt;
+
+            &lt;p&gt;Welcome to our HTML course.&lt;/p&gt;
+
+            &lt;/main&gt;
+        </div>
+
+
+        <h2>7. Section — القسم</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;section&gt;</strong> يعني
+            <strong>Section — قسم</strong>.
+            يستخدم لتجميع محتوى مرتبط بموضوع أو فكرة معينة داخل الصفحة.
+        </p>
+
+        <p dir="rtl">
+            غالبًا يحتوي القسم على عنوان يوضح الموضوع الذي يتحدث عنه.
+        </p>
+
+        <div class="code">
+            &lt;section&gt;
+
+            &lt;h2&gt;HTML Lessons&lt;/h2&gt;
+
+            &lt;p&gt;Learn the basics of HTML.&lt;/p&gt;
+
+            &lt;/section&gt;
+        </div>
+
+
+        <h2>8. Article — المقال أو المحتوى المستقل</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;article&gt;</strong> يعني
+            <strong>Article — مقال أو محتوى مستقل</strong>.
+            يستخدم للمحتوى الذي يمكن أن يكون له معنى مستقل عن باقي الصفحة.
+        </p>
+
+        <p dir="rtl">
+            يمكن استخدامه للمقالات، المنشورات، الأخبار، أو أي محتوى مستقل
+            يمكن قراءته أو استخدامه بشكل منفصل.
+        </p>
+
+        <div class="code">
+            &lt;article&gt;
+
+            &lt;h2&gt;Introduction to HTML&lt;/h2&gt;
+
+            &lt;p&gt;HTML is the foundation of web pages.&lt;/p&gt;
+
+            &lt;/article&gt;
+        </div>
+
+
+        <h2>9. Aside — المحتوى الجانبي</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;aside&gt;</strong> يعني
+            <strong>Aside — محتوى جانبي</strong>.
+            يستخدم للمحتوى المرتبط بالمحتوى الرئيسي ولكنه ليس جزءًا أساسيًا منه.
+        </p>
+
+        <p dir="rtl">
+            يمكن استخدامه للمعلومات الإضافية أو الروابط المرتبطة بالموضوع
+            أو الملاحظات الجانبية.
+        </p>
+
+        <div class="code">
+            &lt;aside&gt;
+
+            &lt;h3&gt;Useful Information&lt;/h3&gt;
+
+            &lt;p&gt;HTML was created for web documents.&lt;/p&gt;
+
+            &lt;/aside&gt;
+        </div>
+
+
+        <h2>10. Footer — تذييل الصفحة</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;footer&gt;</strong> يعني
+            <strong>Footer — تذييل الصفحة أو القسم</strong>.
+            يستخدم للمعلومات الموجودة في نهاية الصفحة أو القسم.
+        </p>
+
+        <p dir="rtl">
+            يمكن أن يحتوي على معلومات حقوق النشر أو معلومات التواصل
+            أو روابط إضافية.
+        </p>
+
+        <div class="code">
+            &lt;footer&gt;
+
+            &lt;p&gt;Copyright 2026 HAnova&lt;/p&gt;
+
+            &lt;/footer&gt;
+        </div>
+
+
+        <h2>11. Figure — المحتوى المرئي المستقل</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;figure&gt;</strong> يستخدم لتمثيل محتوى مستقل
+            مثل صورة أو رسم توضيحي أو مخطط أو مثال يمكن الرجوع إليه
+            بشكل منفصل عن النص الأساسي.
+        </p>
+
+        <div class="code">
+            &lt;figure&gt;
+
+            &lt;img src="HTML.jpeg" alt="HTML Logo"&gt;
+
+            &lt;/figure&gt;
+        </div>
+
+
+        <h2>12. Figcaption — وصف المحتوى</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;figcaption&gt;</strong> يعني
+            <strong>Figure Caption — وصف أو عنوان الشكل</strong>.
+            يستخدم لإضافة وصف أو عنوان للمحتوى الموجود داخل
+            <strong>&lt;figure&gt;</strong>.
+        </p>
+
+        <div class="code">
+            &lt;figure&gt;
+
+            &lt;img src="HTML.jpeg" alt="HTML Logo"&gt;
+
+            &lt;figcaption&gt;
+            HTML Logo
+            &lt;/figcaption&gt;
+
+            &lt;/figure&gt;
+        </div>
+
+
+        <h2>13. Details — تفاصيل قابلة للفتح</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;details&gt;</strong> يستخدم لإنشاء جزء من
+            المحتوى يمكن للمستخدم فتحه وإخفاؤه.
+        </p>
+
+        <p dir="rtl">
+            يعتبر هذا العنصر مفيدًا عند وجود معلومات إضافية لا نريد عرضها
+            بشكل كامل منذ بداية تحميل الصفحة.
+        </p>
+
+        <div class="code">
+            &lt;details&gt;
+
+            &lt;p&gt;
+            HTML stands for HyperText Markup Language.
+            &lt;/p&gt;
+
+            &lt;/details&gt;
+        </div>
+
+
+        <h2>14. Summary — عنوان التفاصيل</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;summary&gt;</strong> يستخدم كعنوان أو وصف
+            للجزء القابل للفتح داخل <strong>&lt;details&gt;</strong>.
+        </p>
+
+        <div class="code">
+            &lt;details&gt;
+
+            &lt;summary&gt;
+            What is HTML?
+            &lt;/summary&gt;
+
+            &lt;p&gt;
+            HTML is the standard markup language for web pages.
+            &lt;/p&gt;
+
+            &lt;/details&gt;
+        </div>
+
+
+        <h2>15. Complete Semantic Structure — هيكل دلالي كامل</h2>
+
+        <p dir="rtl">
+            يمكن دمج العناصر الدلالية السابقة لإنشاء هيكل واضح ومنظم
+            لصفحة ويب تعليمية.
+        </p>
+
+        <div class="code">
+
+            &lt;header&gt;
+
+            &lt;h1&gt;HAnova&lt;/h1&gt;
+
+            &lt;/header&gt;
+
+            <br>
+
+            &lt;nav&gt;
+
+            &lt;a href="index.html"&gt;Home&lt;/a&gt;
+
+            &lt;a href="lessons.html"&gt;Lessons&lt;/a&gt;
+
+            &lt;/nav&gt;
+
+            <br>
+
+            &lt;main&gt;
+
+            &lt;section&gt;
+
+            &lt;h2&gt;HTML Course&lt;/h2&gt;
+
+            &lt;p&gt;
+            Learn HTML step by step.
+            &lt;/p&gt;
+
+            &lt;/section&gt;
+
+            <br>
+
+            &lt;article&gt;
+
+            &lt;h2&gt;Lesson 8&lt;/h2&gt;
+
+            &lt;p&gt;
+            Learn Semantic HTML.
+            &lt;/p&gt;
+
+            &lt;/article&gt;
+
+            <br>
+
+            &lt;aside&gt;
+
+            &lt;p&gt;
+            Additional Information
+            &lt;/p&gt;
+
+            &lt;/aside&gt;
+
+            &lt;/main&gt;
+
+            <br>
+
+            &lt;footer&gt;
+
+            &lt;p&gt;
+            Copyright 2026 HAnova
+            &lt;/p&gt;
+
+            &lt;/footer&gt;
+
+        </div>
+
+
+        <h2>16. Semantic HTML and Accessibility — HTML الدلالي وإمكانية الوصول</h2>
+
+        <p dir="rtl">
+            <strong>Accessibility — إمكانية الوصول</strong> تعني تصميم صفحات
+            يمكن لمختلف المستخدمين الوصول إلى محتواها وفهمه، بما في ذلك
+            المستخدمون الذين يعتمدون على التقنيات المساعدة.
+        </p>
+
+        <p dir="rtl">
+            استخدام العناصر الدلالية يساعد في توضيح بنية الصفحة، مما يجعل
+            فهم أجزاء الموقع أسهل بالنسبة للمستخدمين والتقنيات المساعدة.
+        </p>
+
+
+        <h2>17. Div vs Semantic Elements — الفرق بين div والعناصر الدلالية</h2>
+
+        <p dir="rtl">
+            العنصر <strong>&lt;div&gt;</strong> عنصر غير دلالي يستخدم كحاوية
+            عامة لتجميع العناصر، ولكنه لا يخبرنا من اسمه عن طبيعة المحتوى.
+        </p>
+
+        <p dir="rtl">
+            أما العناصر مثل <strong>header</strong> و<strong>main</strong>
+            و<strong>section</strong> و<strong>article</strong> فهي توضح
+            معنى الجزء الذي تحتويه.
+        </p>
+
+        <div class="code">
+            &lt;div&gt;
+
+            &lt;h2&gt;HTML Course&lt;/h2&gt;
+
+            &lt;/div&gt;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق لا نعرف من اسم div وظيفة المحتوى.
+            بينما يمكن استخدام section إذا كان هذا المحتوى يمثل قسمًا
+            واضحًا من الصفحة.
+        </p>
+
+
+        <h2>18. Semantic HTML Best Practices — أفضل الممارسات</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                استخدام العنصر الدلالي المناسب لمعنى المحتوى.
+            </li>
+
+            <li>
+                استخدام <strong>main</strong> للمحتوى الرئيسي للصفحة.
+            </li>
+
+            <li>
+                استخدام <strong>nav</strong> لمجموعة روابط التنقل الرئيسية.
+            </li>
+
+            <li>
+                استخدام <strong>article</strong> للمحتوى المستقل.
+            </li>
+
+            <li>
+                استخدام <strong>section</strong> لتقسيم المحتوى المرتبط بموضوع معين.
+            </li>
+
+            <li>
+                استخدام <strong>header</strong> و<strong>footer</strong>
+                في الأماكن المناسبة.
+            </li>
+
+            <li>
+                عدم استخدام العناصر الدلالية لمجرد استخدامها؛ يجب أن يكون
+                العنصر مناسبًا لمعنى المحتوى.
+            </li>
+
+        </ul>
+
+
+        <h2>19. Common Mistakes — الأخطاء الشائعة</h2>
+
+        <ul dir="rtl">
+
+            <li>
+                استخدام <strong>div</strong> لكل أجزاء الصفحة دون التفكير
+                في المعنى الدلالي للمحتوى.
+            </li>
+
+            <li>
+                استخدام <strong>main</strong> أكثر من مرة في الصفحة نفسها
+                بطريقة غير صحيحة.
+            </li>
+
+            <li>
+                استخدام <strong>nav</strong> لأي مجموعة صغيرة من الروابط
+                حتى لو لم تكن روابط تنقل رئيسية.
+            </li>
+
+            <li>
+                الخلط بين <strong>section</strong> و<strong>article</strong>.
+            </li>
+
+            <li>
+                استخدام العناصر الدلالية بطريقة لا تتناسب مع محتواها.
+            </li>
+
+        </ul>
+
+
+        <h2>20. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            أنشئ صفحة تعليمية بسيطة باستخدام العناصر الدلالية.
+            اجعل الصفحة تحتوي على:
+            <strong>header</strong> لعنوان الموقع،
+            و<strong>nav</strong> لروابط التنقل،
+            و<strong>main</strong> للمحتوى الأساسي،
+            و<strong>section</strong> لقسم الدروس،
+            و<strong>article</strong> لشرح درس،
+            و<strong>aside</strong> لمعلومة إضافية،
+            و<strong>footer</strong> في نهاية الصفحة.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+
+            <li><strong>Semantic HTML</strong> = HTML الدلالي.</li>
+            <li><strong>Header</strong> = رأس الصفحة أو القسم.</li>
+            <li><strong>Nav</strong> = التنقل.</li>
+            <li><strong>Main</strong> = المحتوى الرئيسي.</li>
+            <li><strong>Section</strong> = قسم.</li>
+            <li><strong>Article</strong> = محتوى مستقل أو مقال.</li>
+            <li><strong>Aside</strong> = محتوى جانبي.</li>
+            <li><strong>Footer</strong> = تذييل الصفحة أو القسم.</li>
+            <li><strong>Figure</strong> = محتوى مرئي مستقل.</li>
+            <li><strong>Figcaption</strong> = وصف أو عنوان الشكل.</li>
+            <li><strong>Details</strong> = تفاصيل قابلة للفتح.</li>
+            <li><strong>Summary</strong> = عنوان التفاصيل.</li>
+            <li><strong>Accessibility</strong> = إمكانية الوصول.</li>
+            <li><strong>Semantic Element</strong> = عنصر له معنى دلالي واضح.</li>
+            <li><strong>Non-Semantic Element</strong> = عنصر لا يوضح معنى المحتوى من اسمه.</li>
+
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+
+    </div>
+    <button id="topBtn">↑</button>
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../js/index4.html" class="but">Previous Lesson</a>
+        <a href="../js/index2.html" class="but">JavaScript Lessons</a>
+        <a href="../js/index6.html" class="but" onclick="completeLesson(event, this.href, 3)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 3 : Operators and Expressions</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is an Operator? — ما هو العامل؟</h2>
+
+        <p dir="rtl">
+            <strong>Operator — العامل</strong>
+            هو رمز أو كلمة تستخدم لتنفيذ عملية معينة على قيمة واحدة أو أكثر
+            داخل JavaScript.
+        </p>
+
+        <p dir="rtl">
+            تستخدم العوامل في العمليات الحسابية والمقارنات والعمليات المنطقية
+            وإسناد القيم إلى المتغيرات.
+        </p>
+
+        <div class="code">
+            let result = 10 + 5;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم استخدام العامل
+            <strong>+</strong>
+            لإجراء عملية الجمع بين الرقمين
+            <strong>10</strong>
+            و<strong>5</strong>.
+        </p>
+
+
+        <h2>2. What is an Expression? — ما هو التعبير؟</h2>
+
+        <p dir="rtl">
+            <strong>Expression — التعبير</strong>
+            هو مجموعة من القيم والمتغيرات والعوامل تنتج عنها قيمة معينة.
+        </p>
+
+        <div class="code">
+            10 + 5
+        </div>
+
+        <p dir="rtl">
+            التعبير السابق ينتج عنه القيمة
+            <strong>15</strong>.
+        </p>
+
+        <p dir="rtl">
+            ويمكن أن تحتوي الـ Expression على متغيرات أيضًا.
+        </p>
+
+        <div class="code">
+            let x = 10;
+            let y = 5;
+
+            let result = x + y;
+        </div>
+
+
+        <h2>3. Arithmetic Operators — العوامل الحسابية</h2>
+
+        <p dir="rtl">
+            <strong>Arithmetic Operators — العوامل الحسابية</strong>
+            تستخدم لإجراء العمليات الحسابية على الأرقام.
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>+</strong> — Addition — الجمع.</li>
+            <li><strong>-</strong> — Subtraction — الطرح.</li>
+            <li><strong>*</strong> — Multiplication — الضرب.</li>
+            <li><strong>/</strong> — Division — القسمة.</li>
+            <li><strong>%</strong> — Modulus — باقي القسمة.</li>
+            <li><strong>**</strong> — Exponentiation — الأس.</li>
+        </ul>
+
+
+        <h2>4. Addition Operator (+) — عامل الجمع</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>+</strong>
+            لإجراء عملية الجمع بين القيم.
+        </p>
+
+        <div class="code">
+            let x = 10;
+            let y = 5;
+
+            let result = x + y;
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة:
+            <strong>15</strong>.
+        </p>
+
+
+        <h2>5. Subtraction Operator (-) — عامل الطرح</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>-</strong>
+            لإجراء عملية الطرح.
+        </p>
+
+        <div class="code">
+            let x = 10;
+            let y = 5;
+
+            let result = x - y;
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة:
+            <strong>5</strong>.
+        </p>
+
+
+        <h2>6. Multiplication Operator (*) — عامل الضرب</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>*</strong>
+            لإجراء عملية الضرب.
+        </p>
+
+        <div class="code">
+            let x = 10;
+            let y = 5;
+
+            let result = x * y;
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة:
+            <strong>50</strong>.
+        </p>
+
+
+        <h2>7. Division Operator (/) — عامل القسمة</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>/</strong>
+            لإجراء عملية القسمة.
+        </p>
+
+        <div class="code">
+            let x = 10;
+            let y = 5;
+
+            let result = x / y;
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة:
+            <strong>2</strong>.
+        </p>
+
+
+        <h2>8. Modulus Operator (%) — باقي القسمة</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>%</strong>
+            للحصول على باقي عملية القسمة.
+        </p>
+
+        <div class="code">
+            let result = 10 % 3;
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            عند قسمة
+            <strong>10</strong>
+            على
+            <strong>3</strong>
+            يكون باقي القسمة
+            <strong>1</strong>.
+        </p>
+
+
+        <h2>9. Exponentiation Operator (**) — عامل الأس</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>**</strong>
+            لحساب قوة رقم معين.
+        </p>
+
+        <div class="code">
+            let result = 2 ** 3;
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم حساب
+            <strong>2</strong>
+            أس
+            <strong>3</strong>،
+            ولذلك تكون النتيجة
+            <strong>8</strong>.
+        </p>
+
+
+        <h2>10. Assignment Operator (=) — عامل الإسناد</h2>
+
+        <p dir="rtl">
+            <strong>Assignment Operator — عامل الإسناد</strong>
+            يستخدم لإعطاء قيمة لمتغير.
+        </p>
+
+        <div class="code">
+            let age = 20;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إسناد القيمة
+            <strong>20</strong>
+            إلى المتغير
+            <strong>age</strong>.
+        </p>
+
+
+        <h2>11. Compound Assignment Operators — عوامل الإسناد المركبة</h2>
+
+        <p dir="rtl">
+            يمكن استخدام عوامل مختصرة لتعديل قيمة المتغير وإسناد النتيجة
+            إليه في نفس الوقت.
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>+=</strong> — الجمع ثم الإسناد.</li>
+            <li><strong>-=</strong> — الطرح ثم الإسناد.</li>
+            <li><strong>*=</strong> — الضرب ثم الإسناد.</li>
+            <li><strong>/=</strong> — القسمة ثم الإسناد.</li>
+            <li><strong>%=</strong> — باقي القسمة ثم الإسناد.</li>
+        </ul>
+
+        <div class="code">
+            let x = 10;
+
+            x += 5;
+
+            console.log(x);
+        </div>
+
+        <p dir="rtl">
+            أصبحت قيمة
+            <strong>x</strong>
+            تساوي
+            <strong>15</strong>.
+        </p>
+
+
+        <h2>12. Increment Operator (++) — عامل الزيادة</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>++</strong>
+            لزيادة قيمة المتغير بمقدار واحد.
+        </p>
+
+        <div class="code">
+            let x = 5;
+
+            x++;
+
+            console.log(x);
+        </div>
+
+        <p dir="rtl">
+            بعد تنفيذ العملية تصبح قيمة
+            <strong>x</strong>
+            تساوي
+            <strong>6</strong>.
+        </p>
+
+
+        <h2>13. Decrement Operator (--) — عامل النقصان</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>--</strong>
+            لتقليل قيمة المتغير بمقدار واحد.
+        </p>
+
+        <div class="code">
+            let x = 5;
+
+            x--;
+
+            console.log(x);
+        </div>
+
+        <p dir="rtl">
+            بعد تنفيذ العملية تصبح قيمة
+            <strong>x</strong>
+            تساوي
+            <strong>4</strong>.
+        </p>
+
+
+        <h2>14. Comparison Operators — عوامل المقارنة</h2>
+
+        <p dir="rtl">
+            <strong>Comparison Operators — عوامل المقارنة</strong>
+            تستخدم لمقارنة قيمتين، وتكون النتيجة عادةً قيمة منطقية
+            <strong>true</strong>
+            أو
+            <strong>false</strong>.
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>==</strong> — Equal — يساوي مع مقارنة القيمة.</li>
+            <li><strong>===</strong> — Strict Equal — يساوي في القيمة والنوع.</li>
+            <li><strong>!=</strong> — Not Equal — لا يساوي.</li>
+            <li><strong>!==</strong> — Strict Not Equal — لا يساوي في القيمة أو النوع.</li>
+            <li><strong>&gt;</strong> — Greater Than — أكبر من.</li>
+            <li><strong>&lt;</strong> — Less Than — أصغر من.</li>
+            <li><strong>&gt;=</strong> — Greater Than or Equal — أكبر من أو يساوي.</li>
+            <li><strong>&lt;=</strong> — Less Than or Equal — أصغر من أو يساوي.</li>
+        </ul>
+
+
+        <h2>15. Equal Operator (==) — عامل المساواة</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>==</strong>
+            لمقارنة قيمتين مع السماح بتحويل النوع عند الحاجة.
+        </p>
+
+        <div class="code">
+            console.log(5 == "5");
+        </div>
+
+        <p dir="rtl">
+            تكون النتيجة
+            <strong>true</strong>
+            لأن العامل
+            <strong>==</strong>
+            يقارن القيمة مع إمكانية تحويل النوع.
+        </p>
+
+
+        <h2>16. Strict Equal Operator (===) — المساواة الصارمة</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>===</strong>
+            للمقارنة بين القيمة والنوع معًا.
+        </p>
+
+        <div class="code">
+            console.log(5 === "5");
+        </div>
+
+        <p dir="rtl">
+            تكون النتيجة
+            <strong>false</strong>
+            لأن الرقم
+            <strong>5</strong>
+            والنص
+            <strong>"5"</strong>
+            لهما نوعان مختلفان.
+        </p>
+
+
+        <h2>17. Greater Than and Less Than — أكبر من وأصغر من</h2>
+
+        <p dir="rtl">
+            يمكن استخدام
+            <strong>&gt;</strong>
+            لمعرفة إذا كانت قيمة أكبر من قيمة أخرى،
+            واستخدام
+            <strong>&lt;</strong>
+            لمعرفة إذا كانت قيمة أصغر من قيمة أخرى.
+        </p>
+
+        <div class="code">
+            console.log(10 &gt; 5);
+
+            console.log(10 &lt; 5);
+        </div>
+
+        <p dir="rtl">
+            النتيجة الأولى ستكون
+            <strong>true</strong>،
+            بينما النتيجة الثانية ستكون
+            <strong>false</strong>.
+        </p>
+
+
+        <h2>18. Logical Operators — العوامل المنطقية</h2>
+
+        <p dir="rtl">
+            <strong>Logical Operators — العوامل المنطقية</strong>
+            تستخدم لدمج أو عكس القيم المنطقية
+            <strong>true</strong>
+            و<strong>false</strong>.
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>&&</strong> — AND — و.</li>
+            <li><strong>||</strong> — OR — أو.</li>
+            <li><strong>!</strong> — NOT — عكس القيمة.</li>
+        </ul>
+
+
+        <h2>19. AND Operator (&&) — العامل AND</h2>
+
+        <p dir="rtl">
+            يرجع العامل
+            <strong>&&</strong>
+            قيمة صحيحة عندما تكون الشروط المستخدمة معه صحيحة.
+        </p>
+
+        <div class="code">
+            let age = 20;
+            let hasCard = true;
+
+            console.log(age &gt;= 18 &amp;&amp; hasCard);
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق الشرطان صحيحان، لذلك تكون النتيجة
+            <strong>true</strong>.
+        </p>
+
+
+        <h2>20. OR Operator (||) — العامل OR</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>||</strong>
+            عندما نريد أن يكون أحد الشروط على الأقل صحيحًا.
+        </p>
+
+        <div class="code">
+            let isStudent = true;
+            let isTeacher = false;
+
+            console.log(isStudent || isTeacher);
+        </div>
+
+        <p dir="rtl">
+            تكون النتيجة
+            <strong>true</strong>
+            لأن الشرط الأول صحيح.
+        </p>
+
+
+        <h2>21. NOT Operator (!) — العامل NOT</h2>
+
+        <p dir="rtl">
+            يستخدم العامل
+            <strong>!</strong>
+            لعكس القيمة المنطقية.
+        </p>
+
+        <div class="code">
+            let isOnline = true;
+
+            console.log(!isOnline);
+        </div>
+
+        <p dir="rtl">
+            ستكون النتيجة
+            <strong>false</strong>
+            لأن العامل
+            <strong>!</strong>
+            عكس القيمة من
+            <strong>true</strong>
+            إلى
+            <strong>false</strong>.
+        </p>
+
+
+        <h2>22. Operator Precedence — أولوية العمليات</h2>
+
+        <p dir="rtl">
+            عند وجود أكثر من عملية في تعبير واحد، تقوم JavaScript بتنفيذ
+            العمليات وفق ترتيب معين يسمى
+            <strong>Operator Precedence — أولوية العمليات</strong>.
+        </p>
+
+        <div class="code">
+            let result = 10 + 5 * 2;
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            يتم تنفيذ الضرب أولًا، لذلك تكون النتيجة
+            <strong>20</strong>
+            وليس
+            <strong>30</strong>.
+        </p>
+
+        <p dir="rtl">
+            ويمكن استخدام الأقواس
+            <strong>( )</strong>
+            لتحديد العملية التي نريد تنفيذها أولًا.
+        </p>
+
+        <div class="code">
+            let result = (10 + 5) * 2;
+
+            console.log(result);
+        </div>
+
+        <p dir="rtl">
+            في هذه الحالة يتم تنفيذ الجمع أولًا، ولذلك تكون النتيجة
+            <strong>30</strong>.
+        </p>
+
+
+        <h2>23. Combining Operators — دمج العوامل</h2>
+
+        <p dir="rtl">
+            يمكن استخدام أكثر من نوع من العوامل داخل نفس البرنامج للوصول
+            إلى النتيجة المطلوبة.
+        </p>
+
+        <div class="code">
+            let age = 20;
+            let result = age + 5;
+
+            console.log(result &gt; 20);
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم استخدام عامل حسابي ثم عامل مقارنة
+            للحصول على نتيجة منطقية.
+        </p>
+
+
+        <h2>24. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء متغيرين يحتويان على رقمين، ثم استخدم العوامل الحسابية
+            لتنفيذ عمليات الجمع والطرح والضرب والقسمة وباقي القسمة.
+        </p>
+
+        <p dir="rtl">
+            بعد ذلك جرب استخدام عوامل المقارنة والعوامل المنطقية،
+            ولاحظ النتائج التي تظهر في الـ Console.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Operator = العامل.</li>
+            <li>Expression = التعبير.</li>
+            <li>+ = الجمع.</li>
+            <li>- = الطرح.</li>
+            <li>* = الضرب.</li>
+            <li>/ = القسمة.</li>
+            <li>% = باقي القسمة.</li>
+            <li>** = الأس.</li>
+            <li>= = الإسناد.</li>
+            <li>++ = زيادة القيمة بمقدار واحد.</li>
+            <li>-- = تقليل القيمة بمقدار واحد.</li>
+            <li>== = مقارنة القيمة.</li>
+            <li>=== = مقارنة القيمة والنوع.</li>
+            <li>&gt; و &lt; = أكبر من وأصغر من.</li>
+            <li>&amp;&amp; = AND.</li>
+            <li>|| = OR.</li>
+            <li>! = NOT.</li>
+            <li>Operator Precedence = أولوية العمليات.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

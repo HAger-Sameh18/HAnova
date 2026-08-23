@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../css/index7.html" class="but">Previous Lesson</a>
+        <a href="../css/index2.html" class="but">CSS Lessons</a>
+        <a href="../css/index9.html" class="but"onclick="completeLesson(event, this.href, 6)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 6 : Backgrounds and Borders</h1>
+
+    <div class="lesson">
+
+        <h2>1. CSS Backgrounds — خلفيات CSS</h2>
+
+        <p dir="rtl">
+            تستخدم CSS للتحكم في خلفيات عناصر HTML، مثل تحديد لون الخلفية،
+            أو إضافة صورة للخلفية، أو التحكم في حجم الصورة ومكانها وطريقة تكرارها.
+        </p>
+
+        <p dir="rtl">
+            تساعد خصائص
+            <strong>Background — الخلفية</strong>
+            على تحسين شكل صفحات الويب وإعطاء العناصر مظهرًا أكثر تنظيمًا.
+        </p>
+
+
+        <h2>2. Background Color — لون الخلفية</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>background-color</strong>
+            لتحديد لون خلفية العنصر.
+        </p>
+
+        <div class="code">
+            body {
+                background-color: #1e293b;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد لون خلفية الصفحة باستخدام
+            <strong>Hex Color</strong>.
+        </p>
+
+
+        <h2>3. Background Color with Color Name — استخدام اسم اللون</h2>
+
+        <p dir="rtl">
+            يمكن تحديد لون الخلفية باستخدام اسم لون معروف.
+        </p>
+
+        <div class="code">
+            div {
+                background-color: blue;
+            }
+        </div>
+
+        <p dir="rtl">
+            سيؤدي الكود السابق إلى جعل خلفية العنصر باللون الأزرق.
+        </p>
+
+
+        <h2>4. Background Image — صورة الخلفية</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>background-image</strong>
+            لإضافة صورة كخلفية للعنصر.
+        </p>
+
+        <div class="code">
+            body {
+                background-image: url("background.jpg");
+            }
+        </div>
+
+        <p dir="rtl">
+            يتم استخدام الدالة
+            <strong>url()</strong>
+            لتحديد مسار الصورة التي سيتم استخدامها كخلفية.
+        </p>
+
+
+        <h2>5. Background Image URL — مسار صورة الخلفية</h2>
+
+        <p dir="rtl">
+            يجب كتابة مسار الصورة بشكل صحيح داخل
+            <strong>url()</strong>
+            حتى يستطيع المتصفح الوصول إليها.
+        </p>
+
+        <div class="code">
+            div {
+                background-image: url("../images/bg.jpg");
+            }
+        </div>
+
+        <p dir="rtl">
+            يمكن أن يكون المسار للصورة داخل نفس المجلد أو داخل مجلد آخر
+            حسب تنظيم ملفات المشروع.
+        </p>
+
+
+        <h2>6. Background Repeat — تكرار الخلفية</h2>
+
+        <p dir="rtl">
+            بشكل افتراضي قد تتكرر صورة الخلفية إذا كانت أصغر من مساحة العنصر.
+            ويمكن التحكم في ذلك باستخدام الخاصية
+            <strong>background-repeat</strong>.
+        </p>
+
+        <div class="code">
+            div {
+                background-repeat: no-repeat;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>no-repeat</strong>
+            تمنع تكرار صورة الخلفية.
+        </p>
+
+
+        <h2>7. Repeat Background — تكرار الصورة</h2>
+
+        <p dir="rtl">
+            يمكن أيضًا تحديد طريقة تكرار صورة الخلفية.
+        </p>
+
+        <div class="code">
+            div {
+                background-repeat: repeat;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>repeat</strong>
+            تسمح بتكرار الصورة أفقيًا ورأسيًا.
+        </p>
+
+
+        <h2>8. Repeat-x and Repeat-y — التكرار الأفقي والرأسي</h2>
+
+        <p dir="rtl">
+            يمكن التحكم في اتجاه تكرار الخلفية باستخدام:
+            <strong>repeat-x</strong>
+            أو
+            <strong>repeat-y</strong>.
+        </p>
+
+        <div class="code">
+            div {
+                background-repeat: repeat-x;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>repeat-x</strong>
+            تجعل الصورة تتكرر أفقيًا فقط.
+        </p>
+
+        <div class="code">
+            div {
+                background-repeat: repeat-y;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>repeat-y</strong>
+            تجعل الصورة تتكرر رأسيًا فقط.
+        </p>
+
+
+        <h2>9. Background Size — حجم الخلفية</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>background-size</strong>
+            للتحكم في حجم صورة الخلفية.
+        </p>
+
+        <div class="code">
+            div {
+                background-size: cover;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>cover</strong>
+            تجعل الصورة تغطي مساحة العنصر بالكامل مع الحفاظ على نسبة أبعادها،
+            وقد يتم قص جزء من الصورة.
+        </p>
+
+
+        <h2>10. Contain — احتواء صورة الخلفية</h2>
+
+        <p dir="rtl">
+            يمكن استخدام القيمة
+            <strong>contain</strong>
+            مع
+            <strong>background-size</strong>
+            لجعل الصورة تظهر بالكامل داخل العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                background-size: contain;
+            }
+        </div>
+
+        <p dir="rtl">
+            في هذه الحالة يتم الحفاظ على نسبة أبعاد الصورة،
+            وقد تظهر مساحة فارغة إذا كانت أبعاد العنصر مختلفة عن أبعاد الصورة.
+        </p>
+
+
+        <h2>11. Background Position — موضع الخلفية</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>background-position</strong>
+            لتحديد مكان ظهور صورة الخلفية داخل العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                background-position: center;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>center</strong>
+            تضع الصورة في منتصف العنصر.
+        </p>
+
+
+        <h2>12. Common Background Positions — أشهر مواضع الخلفية</h2>
+
+        <p dir="rtl">
+            يمكن استخدام قيم مختلفة لتحديد مكان الصورة، مثل:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>center</strong> — المنتصف.</li>
+            <li><strong>top</strong> — أعلى العنصر.</li>
+            <li><strong>bottom</strong> — أسفل العنصر.</li>
+            <li><strong>left</strong> — اليسار.</li>
+            <li><strong>right</strong> — اليمين.</li>
+        </ul>
+
+        <div class="code">
+            div {
+                background-position: top right;
+            }
+        </div>
+
+
+        <h2>13. Background Attachment — تثبيت الخلفية</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>background-attachment</strong>
+            للتحكم في طريقة تحرك صورة الخلفية عند تمرير الصفحة.
+        </p>
+
+        <div class="code">
+            body {
+                background-attachment: fixed;
+            }
+        </div>
+
+        <p dir="rtl">
+            القيمة
+            <strong>fixed</strong>
+            تجعل الخلفية ثابتة بالنسبة لنافذة العرض أثناء التمرير.
+        </p>
+
+
+        <h2>14. Background Shorthand — اختصار خصائص الخلفية</h2>
+
+        <p dir="rtl">
+            يمكن كتابة عدة خصائص للخلفية في سطر واحد باستخدام الخاصية
+            <strong>background</strong>.
+        </p>
+
+        <div class="code">
+            div {
+                background: #1e293b url("background.jpg") center / cover no-repeat;
+            }
+        </div>
+
+        <p dir="rtl">
+            يساعد هذا الاختصار على تقليل عدد الأسطر المستخدمة في كتابة CSS.
+        </p>
+
+
+        <h2>15. CSS Borders — حدود CSS</h2>
+
+        <p dir="rtl">
+            تستخدم CSS لإضافة حدود حول عناصر HTML.
+            ويمكن التحكم في سمك الحدود ونوعها ولونها وشكل زواياها.
+        </p>
+
+
+        <h2>16. Border Property — خاصية Border</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>border</strong>
+            لإضافة حد حول العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                border: 2px solid #6c63ff;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق:
+            <strong>2px</strong>
+            تحدد سمك الحد،
+            و<strong>solid</strong>
+            تحدد نوعه،
+            و<strong>#6c63ff</strong>
+            تحدد لونه.
+        </p>
+
+
+        <h2>17. Border Width — سمك الحدود</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>border-width</strong>
+            لتحديد سمك الحدود.
+        </p>
+
+        <div class="code">
+            div {
+                border-width: 5px;
+            }
+        </div>
+
+
+        <h2>18. Border Style — نوع الحدود</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>border-style</strong>
+            لتحديد شكل الحدود.
+        </p>
+
+        <div class="code">
+            div {
+                border-style: solid;
+            }
+        </div>
+
+        <p dir="rtl">
+            من أشهر أنواع الحدود:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>solid</strong> — خط متصل.</li>
+            <li><strong>dashed</strong> — خط متقطع.</li>
+            <li><strong>dotted</strong> — نقاط.</li>
+            <li><strong>double</strong> — خط مزدوج.</li>
+            <li><strong>none</strong> — بدون حدود.</li>
+        </ul>
+
+
+        <h2>19. Border Color — لون الحدود</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>border-color</strong>
+            لتحديد لون الحدود.
+        </p>
+
+        <div class="code">
+            div {
+                border-color: #6c63ff;
+            }
+        </div>
+
+
+        <h2>20. Border Radius — تدوير زوايا الحدود</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>border-radius</strong>
+            لتدوير زوايا العنصر.
+        </p>
+
+        <div class="code">
+            div {
+                border-radius: 15px;
+            }
+        </div>
+
+        <p dir="rtl">
+            كلما زادت قيمة
+            <strong>border-radius</strong>
+            أصبحت زوايا العنصر أكثر استدارة.
+        </p>
+
+
+        <h2>21. Rounded Circle — إنشاء دائرة</h2>
+
+        <p dir="rtl">
+            يمكن استخدام قيمة
+            <strong>50%</strong>
+            مع
+            <strong>border-radius</strong>
+            لإنشاء شكل دائري عندما يكون العنصر مربعًا.
+        </p>
+
+        <div class="code">
+            div {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+        </div>
+
+
+        <h2>22. Individual Borders — تحديد كل حد بشكل منفصل</h2>
+
+        <p dir="rtl">
+            يمكن التحكم في كل جانب من جوانب الحدود بشكل منفصل.
+        </p>
+
+        <div class="code">
+            div {
+                border-top: 3px solid blue;
+                border-right: 3px solid green;
+                border-bottom: 3px solid red;
+                border-left: 3px solid purple;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد حدود مختلفة للجهات الأربع.
+        </p>
+
+
+        <h2>23. Border Top, Right, Bottom and Left — اتجاهات الحدود</h2>
+
+        <p dir="rtl">
+            يمكن استخدام الخصائص التالية للتحكم في كل جانب:
+        </p>
+
+        <ul dir="rtl">
+            <li><strong>border-top</strong> — الحد العلوي.</li>
+            <li><strong>border-right</strong> — الحد الأيمن.</li>
+            <li><strong>border-bottom</strong> — الحد السفلي.</li>
+            <li><strong>border-left</strong> — الحد الأيسر.</li>
+        </ul>
+
+
+        <h2>24. Border Shorthand — اختصار الحدود</h2>
+
+        <p dir="rtl">
+            يمكن كتابة سمك الحد ونوعه ولونه في سطر واحد.
+        </p>
+
+        <div class="code">
+            div {
+                border: 3px solid #6c63ff;
+            }
+        </div>
+
+        <p dir="rtl">
+            وهذا هو الأسلوب الأكثر استخدامًا عندما نريد نفس الحدود
+            في جميع الجهات.
+        </p>
+
+
+        <h2>25. Background and Border Together — الخلفية والحدود معًا</h2>
+
+        <p dir="rtl">
+            يمكن استخدام خصائص الخلفية والحدود معًا للحصول على تصميم متكامل.
+        </p>
+
+        <div class="code">
+            .box {
+                background-color: #1e293b;
+                border: 3px solid #6c63ff;
+                border-radius: 15px;
+                padding: 20px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد لون الخلفية والحدود وتدوير الحواف
+            وإضافة مساحة داخلية للعنصر.
+        </p>
+
+
+        <h2>26. Complete Background Example — مثال كامل على الخلفية</h2>
+
+        <div class="code">
+            body {
+                background-color: #1e293b;
+                background-image: url("background.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        </div>
+
+        <p dir="rtl">
+            يجمع المثال السابق بين عدة خصائص للتحكم في صورة خلفية الصفحة.
+        </p>
+
+
+        <h2>27. Complete Border Example — مثال كامل على الحدود</h2>
+
+        <div class="code">
+            .box {
+                border-width: 3px;
+                border-style: solid;
+                border-color: #6c63ff;
+                border-radius: 20px;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم التحكم في سمك ونوع ولون الحدود
+            بالإضافة إلى تدوير زوايا العنصر.
+        </p>
+
+
+        <h2>28. Important Background Properties — أهم خصائص الخلفيات</h2>
+
+        <ul dir="rtl">
+            <li><strong>background-color</strong> — لون الخلفية.</li>
+            <li><strong>background-image</strong> — صورة الخلفية.</li>
+            <li><strong>background-repeat</strong> — تكرار الخلفية.</li>
+            <li><strong>background-size</strong> — حجم الخلفية.</li>
+            <li><strong>background-position</strong> — موضع الخلفية.</li>
+            <li><strong>background-attachment</strong> — طريقة تثبيت الخلفية.</li>
+            <li><strong>background</strong> — اختصار خصائص الخلفية.</li>
+        </ul>
+
+
+        <h2>29. Important Border Properties — أهم خصائص الحدود</h2>
+
+        <ul dir="rtl">
+            <li><strong>border-width</strong> — سمك الحدود.</li>
+            <li><strong>border-style</strong> — نوع الحدود.</li>
+            <li><strong>border-color</strong> — لون الحدود.</li>
+            <li><strong>border-radius</strong> — تدوير زوايا العنصر.</li>
+            <li><strong>border</strong> — اختصار خصائص الحدود.</li>
+            <li><strong>border-top</strong> — الحد العلوي.</li>
+            <li><strong>border-right</strong> — الحد الأيمن.</li>
+            <li><strong>border-bottom</strong> — الحد السفلي.</li>
+            <li><strong>border-left</strong> — الحد الأيسر.</li>
+        </ul>
+
+
+        <h2>30. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء عنصر
+            <strong>&lt;div&gt;</strong>
+            وأضف إليه لون خلفية وصورة خلفية وحدودًا.
+        </p>
+
+        <p dir="rtl">
+            حاول تغيير
+            <strong>background-size</strong>
+            و<strong>background-position</strong>
+            و<strong>background-repeat</strong>
+            ولاحظ تأثير كل خاصية.
+        </p>
+
+        <p dir="rtl">
+            جرب أيضًا تغيير نوع الحدود بين
+            <strong>solid</strong>
+            و<strong>dashed</strong>
+            و<strong>dotted</strong>
+            ثم قم بتغيير قيمة
+            <strong>border-radius</strong>.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>background-color = لون الخلفية.</li>
+            <li>background-image = صورة الخلفية.</li>
+            <li>background-repeat = تكرار الخلفية.</li>
+            <li>background-size = حجم الخلفية.</li>
+            <li>background-position = موضع الخلفية.</li>
+            <li>background-attachment = تثبيت الخلفية.</li>
+            <li>background = اختصار خصائص الخلفية.</li>
+            <li>border = إضافة حدود للعنصر.</li>
+            <li>border-width = سمك الحدود.</li>
+            <li>border-style = نوع الحدود.</li>
+            <li>border-color = لون الحدود.</li>
+            <li>border-radius = تدوير زوايا العنصر.</li>
+            <li>border-top = الحد العلوي.</li>
+            <li>border-right = الحد الأيمن.</li>
+            <li>border-bottom = الحد السفلي.</li>
+            <li>border-left = الحد الأيسر.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../css/index10.html" class="but">Previous Lesson</a>
+        <a href="../css/index2.html" class="but">CSS Lessons</a>
+        <a href="../css/index12.html" class="but" onclick="completeLesson(event, this.href, 9)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 9 : Pseudo-classes and Effects</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is a Pseudo-class? — ما هي Pseudo-class؟</h2>
+
+        <p dir="rtl">
+            <strong>Pseudo-class — المحدد الوهمي</strong>
+            هو كلمة مفتاحية يتم إضافتها إلى Selector في CSS
+            لتحديد حالة معينة للعنصر.
+        </p>
+
+        <p dir="rtl">
+            تستخدم Pseudo-classes لتغيير شكل العنصر عندما تحدث حالة معينة،
+            مثل مرور مؤشر الفأرة فوق العنصر أو الضغط عليه أو تحديد عنصر معين.
+        </p>
+
+        <div class="code">
+            a:hover {
+            color: red;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم تغيير لون الرابط عندما يمر مؤشر الفأرة فوقه.
+        </p>
+
+
+        <h2>2. Hover — عند مرور مؤشر الفأرة</h2>
+
+        <p dir="rtl">
+            تعتبر
+            <strong>:hover</strong>
+            من أشهر Pseudo-classes في CSS.
+            وتستخدم عندما يمر مؤشر الفأرة فوق العنصر.
+        </p>
+
+        <p dir="rtl">
+            عند تحريك مؤشر الفأرة فوق الزر، يتم تطبيق التنسيق الموجود
+            داخل
+            <strong>:hover</strong>.
+        </p>
+
+        <div class="code">
+            button:hover {
+            background-color: #1e293b;
+            color: white;
+            }
+        </div>
+
+        <h2>3. Active — أثناء الضغط</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:active</strong>
+            لتحديد حالة العنصر أثناء الضغط عليه.
+        </p>
+
+        <p dir="rtl">
+            يمكن استخدام هذه الحالة لإعطاء المستخدم تأثيرًا بصريًا
+            عند الضغط على الزر.
+        </p>
+        <div class="code">
+            button:active {
+            transform: scale(0.95);
+            }
+        </div>
+
+        <h2>4. Focus — حالة التركيز</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:focus</strong>
+            عندما يكون العنصر في حالة تركيز،
+            مثل حقل الإدخال الذي تم تحديده للكتابة بداخله.
+        </p>
+
+         <p dir="rtl">
+            عند الضغط على حقل الإدخال وبدء الكتابة بداخله،
+            يمكن تطبيق التنسيق الموجود في
+            <strong>:focus</strong>.
+        </p>
+
+        <div class="code">
+            input:focus {
+            border: 2px solid #6c63ff;
+            }
+        </div>
+
+       
+
+        <h2>5. Visited — الرابط الذي تمت زيارته</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:visited</strong>
+            لتحديد الروابط التي سبق للمستخدم زيارتها.
+        </p>
+
+           <p dir="rtl">
+            يمكن للمتصفح تطبيق التنسيق على الرابط بعد زيارته.
+        </p>
+
+        <div class="code">
+            a:visited {
+            color: purple;
+            }
+        </div>
+
+     
+
+        <h2>6. Link — الرابط غير المزور</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:link</strong>
+            لتحديد الروابط التي لم تتم زيارتها بعد.
+        </p>
+
+        <div class="code">
+            a:link {
+            color: blue;
+            }
+        </div>
+
+
+        <h2>7. First-child — أول عنصر ابن</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:first-child</strong>
+            لتحديد العنصر الذي يكون أول ابن داخل العنصر الأب.
+        </p>
+
+        <div class="code">
+            p:first-child {
+            color: red;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم تحديد عنصر
+            <strong>p</strong>
+            إذا كان هو أول عنصر ابن داخل العنصر الأب.
+        </p>
+
+
+        <h2>8. Last-child — آخر عنصر ابن</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:last-child</strong>
+            لتحديد العنصر الذي يكون آخر ابن داخل العنصر الأب.
+        </p>
+
+        <div class="code">
+            p:last-child {
+            color: blue;
+            }
+        </div>
+
+
+        <h2>9. Nth-child — تحديد عنصر حسب ترتيبه</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:nth-child()</strong>
+            لتحديد عنصر بناءً على ترتيبه بين العناصر الأبناء.
+        </p>
+
+        <div class="code">
+            li:nth-child(2) {
+            color: #6c63ff;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم تحديد العنصر الثاني من عناصر
+            <strong>li</strong>.
+        </p>
+
+
+        <h2>10. Odd and Even — العناصر الفردية والزوجية</h2>
+
+        <p dir="rtl">
+            يمكن استخدام
+            <strong>odd</strong>
+            و<strong>even</strong>
+            مع
+            <strong>:nth-child()</strong>
+            لتحديد العناصر الفردية والزوجية.
+        </p>
+
+                <p dir="rtl">
+            القيمة
+            <strong>odd</strong>
+            تحدد العناصر ذات الترتيب الفردي،
+            بينما
+            <strong>even</strong>
+            تحدد العناصر ذات الترتيب الزوجي.
+        </p>
+
+        <div class="code">
+            li:nth-child(odd) {
+            background-color: #1e293b;
+            }
+
+            li:nth-child(even) {
+            background-color: #5B4BDB;
+            }
+        </div>
+
+
+
+
+        <h2>11. First-of-type — أول عنصر من نفس النوع</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:first-of-type</strong>
+            لتحديد أول عنصر من نوع معين داخل العنصر الأب.
+        </p>
+
+        <div class="code">
+            p:first-of-type {
+            color: red;
+            }
+        </div>
+
+
+        <h2>12. Last-of-type — آخر عنصر من نفس النوع</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:last-of-type</strong>
+            لتحديد آخر عنصر من نوع معين داخل العنصر الأب.
+        </p>
+
+        <div class="code">
+            p:last-of-type {
+            color: blue;
+            }
+        </div>
+
+
+        <h2>13. Not — عكس التحديد</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:not()</strong>
+            لتحديد العناصر التي لا تطابق Selector معين.
+        </p>
+
+        <div class="code">
+            p:not(.special) {
+            color: white;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق سيتم تطبيق التنسيق على عناصر
+            <strong>p</strong>
+            التي لا تحتوي على Class باسم
+            <strong>special</strong>.
+        </p>
+
+
+        <h2>14. Empty — العنصر الفارغ</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:empty</strong>
+            لتحديد العناصر التي لا تحتوي على محتوى أو عناصر أخرى بداخلها.
+        </p>
+
+        <div class="code">
+            div:empty {
+            display: none;
+            }
+        </div>
+
+
+        <h2>15. Checked — العنصر المحدد</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:checked</strong>
+            مع عناصر مثل
+            <strong>checkbox</strong>
+            و<strong>radio</strong>
+            عندما يكون العنصر محددًا.
+        </p>
+
+        <div class="code">
+            input:checked {
+            accent-color: #6c63ff;
+            }
+        </div>
+
+
+        <h2>16. Disabled — العنصر المعطل</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:disabled</strong>
+            لتحديد العناصر التي تم تعطيلها.
+        </p>
+
+        <div class="code">
+            button:disabled {
+            opacity: 0.5;
+            }
+        </div>
+
+
+        <h2>17. Enabled — العنصر المتاح</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>:enabled</strong>
+            لتحديد العناصر التي تكون متاحة للاستخدام.
+        </p>
+
+        <div class="code">
+            input:enabled {
+            background-color: white;
+            }
+        </div>
+
+
+        <h2>18. CSS Transitions — الانتقالات</h2>
+
+        <p dir="rtl">
+            تستخدم خاصية
+            <strong>transition</strong>
+            لإنشاء انتقال تدريجي بين حالتين مختلفتين للعنصر.
+        </p>
+
+            <p dir="rtl">
+            بدلًا من تغيير اللون بشكل مفاجئ،
+            تجعل
+            <strong>transition</strong>
+            التغيير يحدث تدريجيًا.
+        </p>
+
+        <div class="code">
+            button {
+            background-color: #6c63ff;
+            transition: 0.5s;
+            }
+
+            button:hover {
+            background-color: #1e293b;
+            }
+        </div>
+
+    
+
+
+        <h2>19. Transition Duration — مدة الانتقال</h2>
+
+        <p dir="rtl">
+            يمكن تحديد مدة الانتقال باستخدام
+            <strong>transition-duration</strong>.
+        </p>
+
+        <div class="code">
+            .box {
+            transition-duration: 1s;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يستغرق الانتقال ثانية واحدة.
+        </p>
+
+
+        <h2>20. Transition Property — الخاصية التي يتم انتقالها</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>transition-property</strong>
+            لتحديد الخاصية التي نريد تطبيق الانتقال عليها.
+        </p>
+
+        <div class="code">
+            .box {
+            transition-property: background-color;
+            }
+        </div>
+
+
+        <h2>21. Transform — التحويلات</h2>
+
+        <p dir="rtl">
+            تستخدم خاصية
+            <strong>transform</strong>
+            لتغيير شكل أو موضع العنصر بطريقة مرئية،
+            مثل التكبير أو التدوير أو التحريك.
+        </p>
+
+
+        <h2>22. Scale — التكبير والتصغير</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>scale()</strong>
+            لتكبير أو تصغير العنصر.
+        </p>
+
+          <p dir="rtl">
+            القيمة
+            <strong>1.1</strong>
+            تجعل العنصر أكبر قليلًا من حجمه الأصلي.
+        </p>
+
+        <div class="code">
+            .box:hover {
+            transform: scale(1.1);
+            }
+        </div>
+
+      
+
+        <h2>23. Rotate — تدوير العنصر</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>rotate()</strong>
+            لتدوير العنصر بدرجة معينة.
+        </p>
+
+        <div class="code">
+            .box:hover {
+            transform: rotate(5deg);
+            }
+        </div>
+
+
+        <h2>24. Translate — تحريك العنصر</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>translate()</strong>
+            لتحريك العنصر أفقيًا أو رأسيًا.
+        </p>
+
+        <div class="code">
+            .box:hover {
+            transform: translateY(-10px);
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتحرك العنصر إلى أعلى بمقدار
+            <strong>10px</strong>.
+        </p>
+
+
+        <h2>25. Combining Transform Functions — دمج التحويلات</h2>
+
+        <p dir="rtl">
+            يمكن دمج أكثر من Transform Function في نفس السطر.
+        </p>
+
+        <div class="code">
+            .box:hover {
+            transform: translateY(-5px) scale(1.05);
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتحرك العنصر إلى أعلى قليلًا
+            ثم يكبر بنسبة بسيطة.
+        </p>
+
+
+        <h2>26. Transition with Transform — استخدام Transition مع Transform</h2>
+
+        <p dir="rtl">
+            يمكن دمج
+            <strong>transition</strong>
+            مع
+            <strong>transform</strong>
+            لإنشاء تأثيرات أكثر سلاسة.
+        </p>
+
+        <div class="code">
+            .box {
+            transition: transform 0.5s;
+            }
+
+            .box:hover {
+            transform: scale(1.1);
+            }
+        </div>
+
+
+        <h2>27. Opacity — الشفافية</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>opacity</strong>
+            للتحكم في درجة شفافية العنصر.
+        </p>
+
+               <p dir="rtl">
+            قيمة
+            <strong>1</strong>
+            تعني أن العنصر ظاهر بالكامل،
+            بينما قيمة
+            <strong>0</strong>
+            تعني أن العنصر شفاف تمامًا.
+        </p>
+
+        <div class="code">
+            .box {
+            opacity: 0.5;
+            }
+        </div>
+
+        <h2>28. Opacity with Hover — الشفافية مع Hover</h2>
+
+        <div class="code">
+            .image {
+            opacity: 0.7;
+            transition: 0.5s;
+            }
+
+            .image:hover {
+            opacity: 1;
+            }
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تصبح الصورة أكثر وضوحًا عند مرور مؤشر الفأرة عليها.
+        </p>
+
+
+        <h2>29. Box Shadow — ظل العنصر</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>box-shadow</strong>
+            لإضافة ظل حول العنصر.
+        </p>
+
+              <p dir="rtl">
+            يمكن استخدام الظلال لإعطاء العناصر مظهرًا أكثر وضوحًا
+            وإبرازها عن الخلفية.
+        </p>
+
+        <div class="code">
+            .box {
+            box-shadow: 0 0 15px #000000;
+            }
+        </div>
+
+        <h2>30. Complete Hover Effect — تأثير Hover كامل</h2>
+
+        <div class="code">
+            .card {
+            background-color: #1e293b;
+            border-radius: 15px;
+            transition: 0.5s;
+            }
+
+            .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 0 20px #000000;
+            }
+        </div>
+
+        <p dir="rtl">
+            يجمع المثال السابق بين
+            <strong>hover</strong>
+            و<strong>transition</strong>
+            و<strong>transform</strong>
+            و<strong>box-shadow</strong>
+            لإنشاء تأثير تفاعلي عند مرور مؤشر الفأرة.
+        </p>
+
+
+        <h2>31. Common Pseudo-classes — أشهر Pseudo-classes</h2>
+
+        <ul dir="rtl">
+            <li><strong>:hover</strong> — عند مرور مؤشر الفأرة.</li>
+            <li><strong>:active</strong> — أثناء الضغط.</li>
+            <li><strong>:focus</strong> — عند التركيز على العنصر.</li>
+            <li><strong>:visited</strong> — الرابط الذي تمت زيارته.</li>
+            <li><strong>:link</strong> — الرابط الذي لم تتم زيارته.</li>
+            <li><strong>:first-child</strong> — أول عنصر ابن.</li>
+            <li><strong>:last-child</strong> — آخر عنصر ابن.</li>
+            <li><strong>:nth-child()</strong> — عنصر حسب ترتيبه.</li>
+            <li><strong>:not()</strong> — العناصر التي لا تطابق المحدد.</li>
+            <li><strong>:checked</strong> — العنصر المحدد.</li>
+            <li><strong>:disabled</strong> — العنصر المعطل.</li>
+            <li><strong>:enabled</strong> — العنصر المتاح.</li>
+            <li><strong>:empty</strong> — العنصر الفارغ.</li>
+        </ul>
+
+
+        <h2>32. Important Effects — أهم التأثيرات</h2>
+
+        <ul dir="rtl">
+            <li><strong>transition</strong> — إنشاء انتقال تدريجي.</li>
+            <li><strong>transform</strong> — تغيير شكل أو موضع العنصر.</li>
+            <li><strong>scale()</strong> — تكبير أو تصغير العنصر.</li>
+            <li><strong>rotate()</strong> — تدوير العنصر.</li>
+            <li><strong>translate()</strong> — تحريك العنصر.</li>
+            <li><strong>opacity</strong> — التحكم في الشفافية.</li>
+            <li><strong>box-shadow</strong> — إضافة ظل للعنصر.</li>
+        </ul>
+
+
+        <h2>33. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء زر باستخدام HTML، ثم استخدم
+            <strong>:hover</strong>
+            لتغيير لونه عند مرور مؤشر الفأرة عليه.
+        </p>
+
+        <p dir="rtl">
+            أضف
+            <strong>transition</strong>
+            لجعل التغيير تدريجيًا،
+            ثم استخدم
+            <strong>transform: scale()</strong>
+            لجعل الزر يكبر قليلًا عند المرور عليه.
+        </p>
+
+        <p dir="rtl">
+            حاول أيضًا إنشاء عدة عناصر واستخدام
+            <strong>:first-child</strong>
+            و<strong>:last-child</strong>
+            و<strong>:nth-child()</strong>
+            لتغيير شكل عناصر معينة.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Pseudo-class = المحدد الوهمي.</li>
+            <li>:hover = عند مرور مؤشر الفأرة.</li>
+            <li>:active = أثناء الضغط.</li>
+            <li>:focus = عند التركيز على العنصر.</li>
+            <li>:visited = الرابط الذي تمت زيارته.</li>
+            <li>:link = الرابط غير المزور.</li>
+            <li>:first-child = أول عنصر ابن.</li>
+            <li>:last-child = آخر عنصر ابن.</li>
+            <li>:nth-child() = تحديد عنصر حسب ترتيبه.</li>
+            <li>:not() = عكس التحديد.</li>
+            <li>:checked = العنصر المحدد.</li>
+            <li>:disabled = العنصر المعطل.</li>
+            <li>transition = الانتقال التدريجي.</li>
+            <li>transform = التحويل.</li>
+            <li>scale() = التكبير والتصغير.</li>
+            <li>rotate() = التدوير.</li>
+            <li>translate() = التحريك.</li>
+            <li>opacity = الشفافية.</li>
+            <li>box-shadow = ظل العنصر.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

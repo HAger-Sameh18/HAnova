@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../js/index11.html" class="but">Previous Lesson</a>
+        <a href="../js/index2.html" class="but">JavaScript Lessons</a>
+        <a href="../js/index13.html" class="but" onclick="completeJavaScript(event, this.href)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 10 : JavaScript Events</h1>
+
+    <div class="lesson">
+
+        <h2>1. What are Events? — ما هي الأحداث؟</h2>
+
+        <p dir="rtl">
+            <strong>Event — الحدث</strong>
+            هو شيء يحدث داخل صفحة الويب نتيجة تفاعل المستخدم مع الصفحة
+            أو نتيجة حدوث شيء معين في المتصفح.
+        </p>
+
+        <p dir="rtl">
+            من أمثلة الأحداث:
+        </p>
+
+        <ul dir="rtl">
+            <li>الضغط على زر.</li>
+            <li>تحريك مؤشر الماوس.</li>
+            <li>الكتابة داخل مربع نص.</li>
+            <li>إرسال نموذج.</li>
+            <li>تحميل الصفحة.</li>
+            <li>الضغط على لوحة المفاتيح.</li>
+        </ul>
+
+
+        <h2>2. Why Do We Use Events? — لماذا نستخدم Events؟</h2>
+
+        <p dir="rtl">
+            نستخدم الأحداث لجعل صفحات الويب
+            <strong>Interactive — تفاعلية</strong>.
+        </p>
+
+        <p dir="rtl">
+            فعلى سبيل المثال يمكننا جعل زر يقوم بتغيير النص عند الضغط عليه،
+            أو تغيير لون عنصر عندما يمر فوقه المستخدم بالماوس.
+        </p>
+
+
+        <h2>3. Event Handler — معالج الحدث</h2>
+
+        <p dir="rtl">
+            <strong>Event Handler — معالج الحدث</strong>
+            هو الكود الذي يتم تنفيذه عندما يحدث Event معين.
+        </p>
+
+        <div class="code">
+            button.onclick = function() {
+
+                alert("Hello!");
+
+            };
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم تنفيذ الكود الموجود داخل الدالة عندما
+            يتم الضغط على الزر.
+        </p>
+
+
+        <h2>4. onclick — حدث الضغط</h2>
+
+        <p dir="rtl">
+            <strong>onclick</strong>
+            يحدث عندما يقوم المستخدم بالضغط على عنصر.
+        </p>
+
+        <div class="code">
+            &lt;button id="btn"&gt;Click Me&lt;/button&gt;
+
+            &lt;script&gt;
+
+                let button = document.getElementById("btn");
+
+                button.onclick = function() {
+                    alert("Button Clicked");
+                };
+
+            &lt;/script&gt;
+        </div>
+
+        <p dir="rtl">
+            عند الضغط على الزر ستظهر رسالة.
+        </p>
+
+
+        <h2>5. addEventListener() — إضافة مستمع للحدث</h2>
+
+        <p dir="rtl">
+            من أفضل الطرق للتعامل مع الأحداث استخدام
+            <strong>addEventListener()</strong>.
+        </p>
+
+        <p dir="rtl">
+            تسمح هذه الطريقة بتحديد الحدث والدالة التي سيتم تنفيذها عند
+            حدوثه.
+        </p>
+
+        <div class="code">
+            button.addEventListener("click", function() {
+
+                alert("Button Clicked");
+
+            });
+        </div>
+
+
+        <h2>6. click Event — حدث النقر</h2>
+
+        <p dir="rtl">
+            يستخدم
+            <strong>click</strong>
+            عندما نريد تنفيذ كود عند الضغط على عنصر.
+        </p>
+
+        <div class="code">
+            let button = document.getElementById("btn");
+
+            button.addEventListener("click", function() {
+
+                console.log("Clicked");
+
+            });
+        </div>
+
+
+        <h2>7. mouseover Event — مرور الماوس</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>mouseover</strong>
+            عندما يمر مؤشر الماوس فوق عنصر.
+        </p>
+
+        <div class="code">
+            let box = document.getElementById("box");
+
+            box.addEventListener("mouseover", function() {
+
+                box.style.backgroundColor = "purple";
+
+            });
+        </div>
+
+
+        <h2>8. mouseout Event — خروج الماوس</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>mouseout</strong>
+            عندما يخرج مؤشر الماوس من فوق العنصر.
+        </p>
+
+        <div class="code">
+            box.addEventListener("mouseout", function() {
+
+                box.style.backgroundColor = "white";
+
+            });
+        </div>
+
+
+        <h2>9. mousemove Event — تحريك الماوس</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>mousemove</strong>
+            عند تحريك مؤشر الماوس داخل العنصر.
+        </p>
+
+        <div class="code">
+            box.addEventListener("mousemove", function() {
+
+                console.log("Mouse is moving");
+
+            });
+        </div>
+
+
+        <h2>10. mousedown Event — الضغط على زر الماوس</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>mousedown</strong>
+            عندما يبدأ المستخدم بالضغط على أحد أزرار الماوس.
+        </p>
+
+        <div class="code">
+            button.addEventListener("mousedown", function() {
+
+                console.log("Mouse Down");
+
+            });
+        </div>
+
+
+        <h2>11. mouseup Event — رفع زر الماوس</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>mouseup</strong>
+            عندما يرفع المستخدم إصبعه بعد الضغط على زر الماوس.
+        </p>
+
+        <div class="code">
+            button.addEventListener("mouseup", function() {
+
+                console.log("Mouse Up");
+
+            });
+        </div>
+
+
+        <h2>12. mouseenter Event — دخول الماوس</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>mouseenter</strong>
+            عندما يدخل مؤشر الماوس إلى منطقة العنصر.
+        </p>
+
+        <div class="code">
+            box.addEventListener("mouseenter", function() {
+
+                console.log("Mouse Entered");
+
+            });
+        </div>
+
+
+        <h2>13. mouseleave Event — مغادرة العنصر</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>mouseleave</strong>
+            عندما يغادر مؤشر الماوس منطقة العنصر.
+        </p>
+
+        <div class="code">
+            box.addEventListener("mouseleave", function() {
+
+                console.log("Mouse Left");
+
+            });
+        </div>
+
+
+        <h2>14. keydown Event — الضغط على لوحة المفاتيح</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>keydown</strong>
+            عندما يضغط المستخدم على أحد مفاتيح لوحة المفاتيح.
+        </p>
+
+        <div class="code">
+            document.addEventListener("keydown", function() {
+
+                console.log("Key Pressed");
+
+            });
+        </div>
+
+
+        <h2>15. keyup Event — رفع المفتاح</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>keyup</strong>
+            عندما يرفع المستخدم إصبعه عن المفتاح.
+        </p>
+
+        <div class="code">
+            document.addEventListener("keyup", function() {
+
+                console.log("Key Released");
+
+            });
+        </div>
+
+
+        <h2>16. input Event — الكتابة داخل Input</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>input</strong>
+            عندما تتغير قيمة عنصر الإدخال أثناء الكتابة.
+        </p>
+
+        <div class="code">
+            let input = document.getElementById("name");
+
+            input.addEventListener("input", function() {
+
+                console.log(input.value);
+
+            });
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم الحصول على القيمة الجديدة كلما قام
+            المستخدم بالكتابة داخل مربع الإدخال.
+        </p>
+
+
+        <h2>17. change Event — تغيير القيمة</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>change</strong>
+            عندما تتغير قيمة عنصر معين ويتم تأكيد التغيير.
+        </p>
+
+        <div class="code">
+            let input = document.getElementById("name");
+
+            input.addEventListener("change", function() {
+
+                console.log(input.value);
+
+            });
+        </div>
+
+
+        <h2>18. focus Event — التركيز على العنصر</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>focus</strong>
+            عندما يصبح عنصر الإدخال في حالة تركيز،
+            مثل الضغط داخل مربع النص.
+        </p>
+
+        <div class="code">
+            input.addEventListener("focus", function() {
+
+                input.style.backgroundColor = "lightblue";
+
+            });
+        </div>
+
+
+        <h2>19. blur Event — فقدان التركيز</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>blur</strong>
+            عندما يفقد عنصر الإدخال التركيز.
+        </p>
+
+        <div class="code">
+            input.addEventListener("blur", function() {
+
+                input.style.backgroundColor = "white";
+
+            });
+        </div>
+
+
+        <h2>20. submit Event — إرسال Form</h2>
+
+        <p dir="rtl">
+            يحدث
+            <strong>submit</strong>
+            عندما يقوم المستخدم بإرسال نموذج
+            <strong>Form</strong>.
+        </p>
+
+        <div class="code">
+            let form = document.getElementById("form");
+
+            form.addEventListener("submit", function(event) {
+
+                console.log("Form Submitted");
+
+            });
+        </div>
+
+
+        <h2>21. preventDefault() — منع السلوك الافتراضي</h2>
+
+        <p dir="rtl">
+            بعض الأحداث لها سلوك افتراضي في المتصفح.
+            يمكن استخدام
+            <strong>preventDefault()</strong>
+            لمنع هذا السلوك.
+        </p>
+
+        <div class="code">
+            form.addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                console.log("Form submission stopped");
+
+            });
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم منع النموذج من تنفيذ السلوك الافتراضي
+            للإرسال.
+        </p>
+
+
+        <h2>22. The Event Object — كائن الحدث</h2>
+
+        <p dir="rtl">
+            عند حدوث Event يمكن لـ JavaScript الحصول على معلومات عن هذا
+            الحدث من خلال
+            <strong>Event Object — كائن الحدث</strong>.
+        </p>
+
+        <div class="code">
+            button.addEventListener("click", function(event) {
+
+                console.log(event);
+
+            });
+        </div>
+
+
+        <h2>23. event.target — العنصر الذي حدث عليه Event</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>event.target</strong>
+            لمعرفة العنصر الذي حدث عليه الحدث.
+        </p>
+
+        <div class="code">
+            button.addEventListener("click", function(event) {
+
+                console.log(event.target);
+
+            });
+        </div>
+
+
+        <h2>24. Event Listener with Function — Event مع Function</h2>
+
+        <p dir="rtl">
+            يمكن كتابة الدالة بشكل منفصل ثم تمرير اسمها إلى
+            <strong>addEventListener()</strong>.
+        </p>
+
+        <div class="code">
+            function showMessage() {
+
+                alert("Hello HAnova");
+
+            }
+
+            button.addEventListener("click", showMessage);
+        </div>
+
+        <p dir="rtl">
+            عند الضغط على الزر سيتم استدعاء الدالة
+            <strong>showMessage</strong>.
+        </p>
+
+
+        <h2>25. Multiple Events — أكثر من Event</h2>
+
+        <p dir="rtl">
+            يمكن إضافة أكثر من Event إلى نفس العنصر.
+        </p>
+
+        <div class="code">
+            button.addEventListener("click", function() {
+
+                console.log("Clicked");
+
+            });
+
+            button.addEventListener("mouseover", function() {
+
+                console.log("Mouse Over");
+
+            });
+        </div>
+
+
+        <h2>26. Events and DOM — العلاقة بين Events و DOM</h2>
+
+        <p dir="rtl">
+            عند الجمع بين
+            <strong>DOM</strong>
+            و
+            <strong>Events</strong>
+            يمكن إنشاء صفحات تفاعلية بشكل كبير.
+        </p>
+
+        <div class="code">
+            let button = document.getElementById("btn");
+
+            let title = document.getElementById("title");
+
+            button.addEventListener("click", function() {
+
+                title.textContent = "Welcome to JavaScript";
+
+                title.style.color = "purple";
+
+            });
+        </div>
+
+        <p dir="rtl">
+            عند الضغط على الزر سيتم تغيير نص العنوان ولونه.
+        </p>
+
+
+        <h2>27. Common JavaScript Events — أشهر أحداث JavaScript</h2>
+
+        <ul dir="rtl">
+            <li><strong>click</strong> — الضغط على العنصر.</li>
+            <li><strong>dblclick</strong> — الضغط مرتين.</li>
+            <li><strong>mouseover</strong> — مرور الماوس فوق العنصر.</li>
+            <li><strong>mouseout</strong> — خروج الماوس من العنصر.</li>
+            <li><strong>mousemove</strong> — تحريك الماوس.</li>
+            <li><strong>mousedown</strong> — الضغط على زر الماوس.</li>
+            <li><strong>mouseup</strong> — رفع زر الماوس.</li>
+            <li><strong>keydown</strong> — الضغط على مفتاح.</li>
+            <li><strong>keyup</strong> — رفع المفتاح.</li>
+            <li><strong>input</strong> — تغيير قيمة Input أثناء الكتابة.</li>
+            <li><strong>change</strong> — تغيير قيمة العنصر.</li>
+            <li><strong>focus</strong> — الحصول على التركيز.</li>
+            <li><strong>blur</strong> — فقدان التركيز.</li>
+            <li><strong>submit</strong> — إرسال Form.</li>
+        </ul>
+
+
+        <h2>28. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء صفحة HTML تحتوي على عنوان وزر ومربع إدخال.
+        </p>
+
+        <p dir="rtl">
+            استخدم
+            <strong>click</strong>
+            لتغيير نص العنوان عند الضغط على الزر.
+        </p>
+
+        <p dir="rtl">
+            ثم استخدم
+            <strong>mouseover</strong>
+            لتغيير لون العنوان عندما يمر الماوس فوقه.
+        </p>
+
+        <p dir="rtl">
+            وأخيرًا استخدم
+            <strong>input</strong>
+            لعرض النص الذي يكتبه المستخدم داخل مربع الإدخال.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>Event = الحدث.</li>
+            <li>Event Handler = معالج الحدث.</li>
+            <li>addEventListener() = إضافة مستمع للحدث.</li>
+            <li>click = حدث الضغط.</li>
+            <li>mouseover = مرور الماوس.</li>
+            <li>mouseout = خروج الماوس.</li>
+            <li>mousemove = تحريك الماوس.</li>
+            <li>keydown = الضغط على مفتاح.</li>
+            <li>keyup = رفع المفتاح.</li>
+            <li>input = تغيير قيمة Input أثناء الكتابة.</li>
+            <li>change = تغيير قيمة العنصر.</li>
+            <li>focus = الحصول على التركيز.</li>
+            <li>blur = فقدان التركيز.</li>
+            <li>submit = إرسال Form.</li>
+            <li>preventDefault() = منع السلوك الافتراضي.</li>
+            <li>event.target = العنصر الذي حدث عليه الحدث.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>

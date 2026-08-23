@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAnova</title>
+    <link rel="stylesheet" href="../st/lesson.css">
+</head>
+
+<body>
+        <div id="progressBar"></div>
+
+<button id="themeBtn">☀️</button>
+
+    <div id="nav">
+        <a href="../js/index10.html" class="but">Previous Lesson</a>
+        <a href="../js/index2.html" class="but">JavaScript Lessons</a>
+        <a href="../js/index12.html" class="but" onclick="completeLesson(event, this.href, 9)">Next Lesson</a>
+    </div>
+
+    <h1>Lesson 9 : DOM and HTML Manipulation</h1>
+
+    <div class="lesson">
+
+        <h2>1. What is the DOM? — ما هو DOM؟</h2>
+
+        <p dir="rtl">
+            <strong>DOM</strong> هي اختصار للمصطلح
+            <strong>Document Object Model</strong>
+            أي <strong>نموذج كائن المستند</strong>.
+        </p>
+
+        <p dir="rtl">
+            الـ DOM هو الطريقة التي يستخدمها المتصفح لتمثيل صفحة HTML
+            على شكل مجموعة من العناصر والكائنات التي يمكن لـ JavaScript
+            الوصول إليها والتعامل معها.
+        </p>
+
+        <p dir="rtl">
+            باستخدام DOM يمكننا تغيير محتوى الصفحة، وتغيير خصائص العناصر،
+            وإضافة عناصر جديدة أو حذف عناصر موجودة، والتعامل مع الأحداث.
+        </p>
+
+
+        <h2>2. HTML and DOM — العلاقة بين HTML و DOM</h2>
+
+        <p dir="rtl">
+            عندما يقوم المتصفح بتحميل صفحة HTML فإنه يقوم بإنشاء
+            <strong>DOM Tree — شجرة DOM</strong>
+            تمثل عناصر الصفحة وعلاقتها ببعضها.
+        </p>
+
+        <div class="code">
+            &lt;html&gt;
+
+                &lt;body&gt;
+
+                    &lt;h1&gt;Welcome&lt;/h1&gt;
+
+                    &lt;p&gt;Hello&lt;/p&gt;
+
+                &lt;/body&gt;
+
+            &lt;/html&gt;
+        </div>
+
+        <p dir="rtl">
+            يقوم المتصفح بتمثيل العناصر السابقة داخل DOM بحيث تستطيع
+            JavaScript الوصول إليها والتعامل معها.
+        </p>
+
+
+        <h2>3. document Object — كائن document</h2>
+
+        <p dir="rtl">
+            يوفر JavaScript كائنًا يسمى
+            <strong>document</strong>
+            يمثل صفحة HTML الحالية.
+        </p>
+
+        <p dir="rtl">
+            من خلال
+            <strong>document</strong>
+            يمكننا الوصول إلى عناصر الصفحة وتعديلها.
+        </p>
+
+        <div class="code">
+            console.log(document);
+        </div>
+
+
+        <h2>4. Selecting Elements — تحديد العناصر</h2>
+
+        <p dir="rtl">
+            يمكننا استخدام JavaScript لتحديد عناصر HTML الموجودة داخل
+            الصفحة حتى نستطيع التعامل معها.
+        </p>
+
+        <p dir="rtl">
+            توجد عدة طرق لتحديد العناصر، ومن أهمها:
+            <strong>getElementById()</strong>،
+            <strong>getElementsByClassName()</strong>،
+            <strong>getElementsByTagName()</strong>،
+            و<strong>querySelector()</strong>.
+        </p>
+
+
+        <h2>5. getElementById() — تحديد عنصر باستخدام ID</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>getElementById()</strong>
+            للوصول إلى عنصر HTML باستخدام قيمة
+            <strong>id</strong>.
+        </p>
+
+        <div class="code">
+            &lt;h1 id="title"&gt;Welcome&lt;/h1&gt;
+
+            &lt;script&gt;
+
+                let title = document.getElementById("title");
+
+                console.log(title);
+
+            &lt;/script&gt;
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تحديد العنصر الذي يحمل
+            <strong>id="title"</strong>.
+        </p>
+
+
+        <h2>6. getElementsByClassName() — تحديد العناصر باستخدام Class</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>getElementsByClassName()</strong>
+            للوصول إلى العناصر التي تحمل Class معين.
+        </p>
+
+        <div class="code">
+            &lt;p class="text"&gt;First Paragraph&lt;/p&gt;
+            &lt;p class="text"&gt;Second Paragraph&lt;/p&gt;
+
+            &lt;script&gt;
+
+                let paragraphs =
+                    document.getElementsByClassName("text");
+
+                console.log(paragraphs);
+
+            &lt;/script&gt;
+        </div>
+
+        <p dir="rtl">
+            يمكن أن تعيد هذه الطريقة مجموعة من العناصر التي تحمل نفس
+            الـ Class.
+        </p>
+
+
+        <h2>7. getElementsByTagName() — تحديد العناصر باستخدام Tag</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>getElementsByTagName()</strong>
+            للوصول إلى جميع العناصر التي تحمل اسم Tag معين.
+        </p>
+
+        <div class="code">
+            let paragraphs =
+                document.getElementsByTagName("p");
+
+            console.log(paragraphs);
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم تحديد جميع عناصر
+            <strong>&lt;p&gt;</strong>
+            الموجودة في الصفحة.
+        </p>
+
+
+        <h2>8. querySelector() — تحديد أول عنصر</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>querySelector()</strong>
+            لتحديد أول عنصر يطابق الـ CSS Selector الذي نكتبه.
+        </p>
+
+        <div class="code">
+            let title = document.querySelector("#title");
+
+            console.log(title);
+        </div>
+
+        <p dir="rtl">
+            يمكن استخدامها مع ID أو Class أو اسم عنصر HTML.
+        </p>
+
+        <div class="code">
+            document.querySelector("#title");
+
+            document.querySelector(".text");
+
+            document.querySelector("p");
+        </div>
+
+
+        <h2>9. querySelectorAll() — تحديد جميع العناصر</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>querySelectorAll()</strong>
+            لتحديد جميع العناصر التي تطابق الـ Selector المحدد.
+        </p>
+
+        <div class="code">
+            let paragraphs =
+                document.querySelectorAll("p");
+
+            console.log(paragraphs);
+        </div>
+
+        <p dir="rtl">
+            سيتم تحديد جميع عناصر
+            <strong>&lt;p&gt;</strong>
+            الموجودة في الصفحة.
+        </p>
+
+
+        <h2>10. Changing HTML Content — تغيير محتوى HTML</h2>
+
+        <p dir="rtl">
+            يمكن تغيير محتوى عنصر HTML باستخدام الخاصية
+            <strong>innerHTML</strong>.
+        </p>
+
+        <div class="code">
+            &lt;h1 id="title"&gt;Hello&lt;/h1&gt;
+
+            &lt;script&gt;
+
+                let title = document.getElementById("title");
+
+                title.innerHTML = "Welcome to JavaScript";
+
+            &lt;/script&gt;
+        </div>
+
+        <p dir="rtl">
+            سيتم استبدال محتوى العنوان بالنص الجديد.
+        </p>
+
+
+        <h2>11. textContent — تغيير النص</h2>
+
+        <p dir="rtl">
+            تستخدم الخاصية
+            <strong>textContent</strong>
+            للوصول إلى النص الموجود داخل العنصر أو تغييره.
+        </p>
+
+        <div class="code">
+            let title = document.getElementById("title");
+
+            title.textContent = "Hello JavaScript";
+        </div>
+
+
+        <h2>12. innerHTML vs textContent — الفرق بينهما</h2>
+
+        <p dir="rtl">
+            يمكن استخدام
+            <strong>innerHTML</strong>
+            لإضافة HTML داخل العنصر، بينما
+            <strong>textContent</strong>
+            تتعامل مع المحتوى كنص.
+        </p>
+
+        <div class="code">
+            title.innerHTML = "&lt;strong&gt;Hello&lt;/strong&gt;";
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق يتم تفسير
+            <strong>&lt;strong&gt;</strong>
+            كعنصر HTML.
+        </p>
+
+        <div class="code">
+            title.textContent = "&lt;strong&gt;Hello&lt;/strong&gt;";
+        </div>
+
+        <p dir="rtl">
+            هنا يتم التعامل مع العلامات كنص وليس كعنصر HTML.
+        </p>
+
+
+        <h2>13. Changing Styles — تغيير تنسيق العنصر</h2>
+
+        <p dir="rtl">
+            يمكن تغيير تنسيق عنصر HTML باستخدام الخاصية
+            <strong>style</strong>.
+        </p>
+
+        <div class="code">
+            let title = document.getElementById("title");
+
+            title.style.color = "blue";
+            title.style.fontSize = "30px";
+        </div>
+
+        <p dir="rtl">
+            سيتم تغيير لون العنوان وحجم الخط باستخدام JavaScript.
+        </p>
+
+
+        <h2>14. Changing Background — تغيير الخلفية</h2>
+
+        <p dir="rtl">
+            يمكن تغيير لون خلفية العنصر باستخدام
+            <strong>backgroundColor</strong>.
+        </p>
+
+        <div class="code">
+            let box = document.getElementById("box");
+
+            box.style.backgroundColor = "purple";
+        </div>
+
+
+        <h2>15. Changing Attributes — تغيير خصائص العناصر</h2>
+
+        <p dir="rtl">
+            يمكن استخدام JavaScript لتغيير خصائص HTML مثل
+            <strong>src</strong>
+            و<strong>href</strong>
+            و<strong>alt</strong>.
+        </p>
+
+        <div class="code">
+            let image = document.getElementById("photo");
+
+            image.src = "new-image.jpg";
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم تغيير مصدر الصورة باستخدام
+            <strong>src</strong>.
+        </p>
+
+
+        <h2>16. getAttribute() — الحصول على Attribute</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>getAttribute()</strong>
+            للحصول على قيمة Attribute موجودة في عنصر HTML.
+        </p>
+
+        <div class="code">
+            let link = document.getElementById("link");
+
+            console.log(link.getAttribute("href"));
+        </div>
+
+
+        <h2>17. setAttribute() — إضافة أو تغيير Attribute</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>setAttribute()</strong>
+            لإضافة Attribute أو تغيير قيمته.
+        </p>
+
+        <div class="code">
+            let link = document.getElementById("link");
+
+            link.setAttribute("href", "https://example.com");
+        </div>
+
+
+        <h2>18. classList — التعامل مع Classes</h2>
+
+        <p dir="rtl">
+            توفر الخاصية
+            <strong>classList</strong>
+            مجموعة من الأدوات للتعامل مع Classes الخاصة بعنصر HTML.
+        </p>
+
+        <div class="code">
+            let box = document.getElementById("box");
+
+            console.log(box.classList);
+        </div>
+
+
+        <h2>19. classList.add() — إضافة Class</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>classList.add()</strong>
+            لإضافة Class إلى عنصر.
+        </p>
+
+        <div class="code">
+            let box = document.getElementById("box");
+
+            box.classList.add("active");
+        </div>
+
+
+        <h2>20. classList.remove() — حذف Class</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>classList.remove()</strong>
+            لحذف Class من العنصر.
+        </p>
+
+        <div class="code">
+            let box = document.getElementById("box");
+
+            box.classList.remove("active");
+        </div>
+
+
+        <h2>21. classList.toggle() — تبديل Class</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>classList.toggle()</strong>
+            لإضافة Class إذا لم يكن موجودًا أو حذفه إذا كان موجودًا.
+        </p>
+
+        <div class="code">
+            let box = document.getElementById("box");
+
+            box.classList.toggle("active");
+        </div>
+
+
+        <h2>22. Creating Elements — إنشاء عناصر جديدة</h2>
+
+        <p dir="rtl">
+            يمكن إنشاء عنصر HTML جديد باستخدام
+            <strong>createElement()</strong>.
+        </p>
+
+        <div class="code">
+            let paragraph = document.createElement("p");
+
+            paragraph.textContent = "New Paragraph";
+        </div>
+
+        <p dir="rtl">
+            في المثال السابق تم إنشاء عنصر
+            <strong>&lt;p&gt;</strong>
+            جديد باستخدام JavaScript.
+        </p>
+
+
+        <h2>23. appendChild() — إضافة عنصر</h2>
+
+        <p dir="rtl">
+            تستخدم
+            <strong>appendChild()</strong>
+            لإضافة عنصر جديد داخل عنصر آخر.
+        </p>
+
+        <div class="code">
+            let paragraph = document.createElement("p");
+
+            paragraph.textContent = "Hello";
+
+            document.body.appendChild(paragraph);
+        </div>
+
+        <p dir="rtl">
+            سيتم إضافة الفقرة الجديدة إلى نهاية
+            <strong>body</strong>.
+        </p>
+
+
+        <h2>24. remove() — حذف عنصر</h2>
+
+        <p dir="rtl">
+            يمكن حذف عنصر من الصفحة باستخدام
+            <strong>remove()</strong>.
+        </p>
+
+        <div class="code">
+            let paragraph = document.getElementById("text");
+
+            paragraph.remove();
+        </div>
+
+        <p dir="rtl">
+            سيتم حذف العنصر من الصفحة.
+        </p>
+
+
+        <h2>25. Changing Form Values — تغيير قيم النماذج</h2>
+
+        <p dir="rtl">
+            يمكن استخدام JavaScript للوصول إلى قيم عناصر النماذج
+            <strong>Forms</strong>
+            وتغييرها.
+        </p>
+
+        <div class="code">
+            &lt;input id="name" type="text"&gt;
+
+            &lt;script&gt;
+
+                let input = document.getElementById("name");
+
+                input.value = "Hager";
+
+            &lt;/script&gt;
+        </div>
+
+        <p dir="rtl">
+            سيتم وضع النص
+            <strong>Hager</strong>
+            داخل مربع الإدخال.
+        </p>
+
+
+        <h2>26. DOM Navigation — التنقل داخل DOM</h2>
+
+        <p dir="rtl">
+            يمكن التنقل بين العناصر الموجودة داخل DOM باستخدام خصائص مثل:
+            <strong>parentElement</strong>،
+            <strong>children</strong>،
+            و<strong>nextElementSibling</strong>.
+        </p>
+
+        <div class="code">
+            let element = document.getElementById("title");
+
+            console.log(element.parentElement);
+        </div>
+
+        <p dir="rtl">
+            يقوم
+            <strong>parentElement</strong>
+            بالوصول إلى العنصر الأب للعنصر الحالي.
+        </p>
+
+
+        <h2>27. DOM and JavaScript — العلاقة بين DOM و JavaScript</h2>
+
+        <p dir="rtl">
+            باستخدام JavaScript وDOM يمكننا إنشاء صفحات ويب تفاعلية
+            تتغير أثناء تشغيل الصفحة دون الحاجة إلى إعادة تحميلها بالكامل.
+        </p>
+
+        <div class="info">
+            <h3>HTML — Structure</h3>
+            <p dir="rtl">
+                HTML تنشئ هيكل ومحتوى الصفحة.
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>CSS — Style</h3>
+            <p dir="rtl">
+                CSS تتحكم في شكل وتنسيق الصفحة.
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>JavaScript + DOM — Interaction</h3>
+            <p dir="rtl">
+                JavaScript باستخدام DOM تتحكم في محتوى وعناصر الصفحة
+                وتجعلها تفاعلية.
+            </p>
+        </div>
+
+
+        <h2>28. Try It Yourself — جرب بنفسك</h2>
+
+        <p dir="rtl">
+            قم بإنشاء صفحة HTML تحتوي على عنوان وفقرة وزر.
+            أعطِ كل عنصر ID مناسبًا.
+        </p>
+
+        <p dir="rtl">
+            ثم استخدم JavaScript لتحديد العناصر وتغيير نص العنوان،
+            وتغيير لون الفقرة، وتغيير لون خلفية الصفحة.
+        </p>
+
+        <p dir="rtl">
+            حاول أيضًا إنشاء عنصر جديد باستخدام
+            <strong>createElement()</strong>
+            وإضافته إلى الصفحة باستخدام
+            <strong>appendChild()</strong>.
+        </p>
+
+
+        <h2>Quick Review — مراجعة سريعة</h2>
+
+        <ul dir="rtl">
+            <li>DOM = Document Object Model = نموذج كائن المستند.</li>
+            <li>document = كائن يمثل صفحة HTML.</li>
+            <li>getElementById() = تحديد عنصر باستخدام ID.</li>
+            <li>getElementsByClassName() = تحديد عناصر باستخدام Class.</li>
+            <li>getElementsByTagName() = تحديد عناصر باستخدام Tag.</li>
+            <li>querySelector() = تحديد أول عنصر مطابق.</li>
+            <li>querySelectorAll() = تحديد جميع العناصر المطابقة.</li>
+            <li>innerHTML = قراءة أو تغيير محتوى HTML.</li>
+            <li>textContent = قراءة أو تغيير النص.</li>
+            <li>style = تغيير تنسيق العنصر.</li>
+            <li>getAttribute() = الحصول على قيمة Attribute.</li>
+            <li>setAttribute() = إضافة أو تغيير Attribute.</li>
+            <li>classList = التعامل مع Classes.</li>
+            <li>createElement() = إنشاء عنصر جديد.</li>
+            <li>appendChild() = إضافة عنصر.</li>
+            <li>remove() = حذف عنصر.</li>
+            <li>parentElement = الوصول إلى العنصر الأب.</li>
+        </ul>
+
+    </div>
+
+    <br><br>
+
+    <div id="nav">
+
+        <a href="https://hager-sameh18.github.io/ME/" target="_blank" class="but">
+            Designed by: Eng/ HAger
+        </a>
+
+    </div>
+        <button id="topBtn">↑</button>
+
+    <script src="../j/theme.js"></script>
+
+</body>
+
+</html>
