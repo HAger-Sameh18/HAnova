@@ -278,27 +278,33 @@ body.light #themeBtn:hover {
     }
 
     .pp video {
-        width: 260px;
-        height: 260px;
+        width: 220px;
+        height: 220px;
         aspect-ratio: 1 / 1;
     }
 
-   .HA {
-    width: 260px;
-    height: auto;
-    padding: 15px;
-    margin: auto;
-}
+    .pp h3 {
+        font-size: 23px;
+        margin: 15px;
+    }
 
-.HA h3 {
-    font-size: 24px;
-    margin: 15px;
-}
+    .HA {
+        width: 220px;
+        height: auto;
+        padding: 10px;
+        margin: auto;
+    }
 
-.HA p {
-    font-size: 16px;
-    line-height: 1.6;
-}
+    .HA h3 {
+        font-size: 22px;
+        margin: 10px;
+    }
+
+    .HA p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 8px;
+    }
 }
 
 #topBtn {
@@ -337,6 +343,7 @@ body.light #topBtn:hover {
 }
 
 @media (max-width: 600px) {
+
     #topBtn {
         right: 10px;
         bottom: 15px;
@@ -375,6 +382,7 @@ body.light #topBtn:hover {
 }
 
 @keyframes messageShow {
+
     from {
         opacity: 0;
         transform: translate(-50%, -55%);
@@ -387,8 +395,8 @@ body.light #topBtn:hover {
 }
 
 @media (max-width: 600px) {
+
     #completeMessage {
         width: 85%;
     }
-}
 }
