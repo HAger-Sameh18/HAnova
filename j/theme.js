@@ -53,14 +53,13 @@ const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
 const welcomeMessage = document.getElementById("welcomeMessage");
 
 if (welcomeMessage) {
-setTimeout(function () {
-welcomeMessage.style.opacity = "0";
-
     setTimeout(function () {
-        welcomeMessage.remove();
-    }, 500);
-}, 3000);
+        welcomeMessage.classList.add("hide");
 
+        setTimeout(function () {
+            welcomeMessage.remove();
+        }, 500);
+    }, 3000);
 }
 
 function completeLesson(event, nextPage, lessonNumber) {
