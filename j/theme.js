@@ -47,14 +47,15 @@ window.addEventListener("scroll", function () {
 
 const welcomeMessage = document.getElementById("welcomeMessage");
 
-setTimeout(function () {
-    welcomeMessage.style.opacity = "0";
-
+if (welcomeMessage) {
     setTimeout(function () {
-        welcomeMessage.remove();
-    }, 500);
+        welcomeMessage.style.opacity = "0";
 
-}, 3000);
+        setTimeout(function () {
+            welcomeMessage.remove();
+        }, 500);
+    }, 3000);
+}
 
 function completeLesson(event, nextPage, lessonNumber) {
     event.preventDefault();
