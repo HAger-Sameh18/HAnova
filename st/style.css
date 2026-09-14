@@ -387,6 +387,8 @@ body.light #topBtn:hover {
     text-align: center;
     box-shadow: 0 0 20px #000000;
     z-index: 10000;
+    opacity: 1;
+    transition: opacity 0.5s ease;
     animation: welcomeShow 0.6s ease;
 }
 
